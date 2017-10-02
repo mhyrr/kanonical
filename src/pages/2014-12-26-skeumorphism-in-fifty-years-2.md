@@ -2,6 +2,7 @@
 title: Skeumorphism in Fifty Years
 date: 2014-12-26T19:48:44.000Z
 path: /2014-12-26-skeumorphism-in-fifty-years-2/
+draft: true
 ---
 
 

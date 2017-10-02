@@ -2,6 +2,7 @@
 title: Vampires are Popular
 date: 2014-06-29T20:31:46.000Z
 path: /2014-06-29-vampires-are-popular/
+draft: true
 ---
 
 Why are vampires so popular in culture right now?

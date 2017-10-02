@@ -2,21 +2,22 @@
 title: The Future of Telepathy
 date: 2014-06-29T20:26:15.000Z
 path: /2014-06-29-the-future-of-telepathy/
+draft: true
 ---
 
 
 
 Recently, a good friend and I had an interesting back and forth over email.  A snippet:
 
-	Him: On the other hand, I really can't stand people who actually think that we are in 
+	Him: On the other hand, I really can't stand people who actually think that we are in
 	some unprecedented stage of human progress, siting facebook and twitter as two reasons!
-	
-	Me: You really don't think we are in an unprecendented age of progress?   I would say 
-	FB and Twitter are more symptoms than signs, but I definitely think what's been 
+
+	Me: You really don't think we are in an unprecendented age of progress?   I would say
+	FB and Twitter are more symptoms than signs, but I definitely think what's been
 	happening over the last ten or twenty years is new and game changing.
-	
+
 	Him: It's the word 'progress' that bothers me.  We have progressed in terms of noise.  
-	In terms of information.  But Game changing?  [...]  Progress implies that man is striving 
+	In terms of information.  But Game changing?  [...]  Progress implies that man is striving
 	toward something.  What has the technological boom progressed?  I'm honestly curious.  
 	I don't understand.
 
@@ -50,7 +51,7 @@ To borrow a word from religion, there is a soteriology of technology here.  'Com
 
 Once they were connected together, they could disperse and touch nearly every problem humans have.  Computers deal with heart problems, medical imaging, space science, travel bookings and money transfers.  They manage stock markets and search for patterns in science and commerce.  They handle massive amounts of manufacturing and track agricultural efficiency.  Name a branch of modern humanity, and it's likely we would be far less sophisticated without computers.
 
-This is literally the only human invention in the history of our civilization that can make such a claim.  The book is the only other thing that even comes close.  And this new technology is well less than a century old!  We are in the earliest infancy of an age of revolution. 
+This is literally the only human invention in the history of our civilization that can make such a claim.  The book is the only other thing that even comes close.  And this new technology is well less than a century old!  We are in the earliest infancy of an age of revolution.
 
 ### A definition
 
@@ -83,7 +84,7 @@ Bucket theory, books and computers and the internet: the bucket of all smaller b
 
 Soteriology of computer languages.. you couldn't really use java to do what C did.. you can't really use X to do what Y did..  not that you couldn't in the Turing meaning, but that you couldn't in the humans-couldn't-grok-it way.  So are we evolving towards smaller DSL style languages for particular applications?  Variations on a theme?
 
-Programming languages alone are a microcosm of this soteriology.  The original machine languages of the 40s and 50s were operationally sparse.  They were theoretically Turing-complete, but they could never do what later languages could do.  They had to be built on a big stack.  You had to have assembly to get C.  You needed C to get Java.  You needed well-defined machines and virtual machines to get higher-level languages.  Lisp stands out in this stack, because it's ancient but so detached from the machine itself.  Abelson said famously that "programs should be written for a human to understand, and only incidentally for a machine to compute" (get ) 
+Programming languages alone are a microcosm of this soteriology.  The original machine languages of the 40s and 50s were operationally sparse.  They were theoretically Turing-complete, but they could never do what later languages could do.  They had to be built on a big stack.  You had to have assembly to get C.  You needed C to get Java.  You needed well-defined machines and virtual machines to get higher-level languages.  Lisp stands out in this stack, because it's ancient but so detached from the machine itself.  Abelson said famously that "programs should be written for a human to understand, and only incidentally for a machine to compute" (get )
 
 
 Definition of a computer: a novel container for information.  It's gone far past its original meaning of a complex calulator.  

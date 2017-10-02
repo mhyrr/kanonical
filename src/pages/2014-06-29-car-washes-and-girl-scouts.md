@@ -2,6 +2,7 @@
 title: Car Washes and Girl Scout Cookies
 date: 2014-06-29T20:18:19.000Z
 path: /2014-06-29-car-washes-and-girl-scouts/
+draft: true
 ---
 
 I'm going to talk about some traditions we have with our kids in a rather stern way, so if you're easily offended, feel free to leave now.
@@ -14,7 +15,7 @@ These and similar activities are pretty common these days, and are often conside
 
 Sounds wrong.
 
-What they actually do is suck out the innate drive that kids have to help themselves and others.  They drive kids to get ready for the modern working world: 40 hours a week and a boss.  They teach you to do your two pence of work for your shilling and go home.  You know, a fair wage for fair work. 
+What they actually do is suck out the innate drive that kids have to help themselves and others.  They drive kids to get ready for the modern working world: 40 hours a week and a boss.  They teach you to do your two pence of work for your shilling and go home.  You know, a fair wage for fair work.
 
 (Fair work: I hope you don't consider a bunch of suds in a bucket or a box of pre-wrapped cookies as the only viable work our kids can do.  Shows what we think of them, doesn't it?  Do you think they don't get the message we're accidentally teaching them?  They do, for sure.)
 

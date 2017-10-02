@@ -2,6 +2,7 @@
 title: Strong Opinions
 date: 2014-06-29T20:25:31.000Z
 path: /2014-06-29-strong-opinions/
+draft: true
 ---
 
 Strong opinions..
@@ -13,5 +14,5 @@ My wife says I have very strong opinions.  She complains about it actually.  She
 I think this is the real reason both geeks and introverts don't like smalltalk.  When you engage in smalltalk and something that's not just surface comes up, you feel almost bound to agree with the person.  It's almost rude not to.  The only othe rpossible action is to ask "Really?  Why?", and when you do that the person usually launches into a one or two sentence diatribe with some faux-witty pessimism like "oh the world is just getting screwed more and more", "they don't make em like they used to" or "what is the world coming to?"  Geeks and introverts on the other hand have an almost obsessive interest in truth.   Geeks because they want to know how things work.  They want to decompose a system and understand it, and it's impossible to do that and still have wool in front of your eyes.  Introverts on the other hand derive their energy from within.  They aren't swayed by Yes-Men the same way.  By their very nature, they have to follow Hamlet's famous quip "To thine ownself be true".  If they don't, they have at least a little knowledge of their self-deception.  Extraverts on the other hand, feel vindicated by throwing an idea out there and having a person swat it right back in agreement.  And it's no wonder they enjoy smalltalk so much.
 
 Have you ever noticed that those who feel entitlement never actually deserve it, and those who actually deserve it never feel entitled?  I think strong opinions and truth can be the same way.  Those that have strong opinions without a search for truth don't really have opinions, they have parroted words from past authority figures.  Similarly, those seeking the truth never actually have strong opinions, they just have reasonable theories that they want to batter against reality, to see if they hold up.  If and when they don't hold up, they are happy, because it gets them that much closer to the truth they seek.
- 
+
 I don't think this is hereditary or anything.  Both of these behaviors can be learned.  It takes practice of the mind, and that's something that seems to be most especially the territory of both geeks and introverts.

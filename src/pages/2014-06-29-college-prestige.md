@@ -2,6 +2,7 @@
 title: College Prestige
 date: 2014-06-29T20:18:42.000Z
 path: /2014-06-29-college-prestige/
+draft: true
 ---
 
 ### Worth
@@ -46,7 +47,7 @@ This is not a justification for going to any of these schools.  An experience at
 
 A lot of colleges might disagree with this.  *You* might disagree with it, and that's a testament to how well colleges market prestige, because what I'm actually advocating is that it doesn't matter at all.  They'll tell you that it matters where you go, that their English department is better than other schools of a similar size or price.  Their swimming pools are bigger, the dorms are better, the computer labs are more complete.
 
-No.  For the core competency of any college - that is to say *learning* - none of that matters at all.  I heard the provost of some university or other on NPR awhile ago say (paraphrasing) "but we're an academic institution.  Teaching is what we do."  That's a big difference from a statement like "Learning is what we do".  You can teach to a completely passive audience. 
+No.  For the core competency of any college - that is to say *learning* - none of that matters at all.  I heard the provost of some university or other on NPR awhile ago say (paraphrasing) "but we're an academic institution.  Teaching is what we do."  That's a big difference from a statement like "Learning is what we do".  You can teach to a completely passive audience.
 
 ### Idle and Idyll
 
@@ -109,7 +110,7 @@ That word seems to keep coming up.  Part of the problem is that, in modern terms
 > has driven honest speculation from the intellectual economy, just as bad money drives out good.  This
 > Gresham's law of the intellect operates wherever university teachers in the humanities exchange knowledge
 > and imagination for the chimera of scientific 'research'.  A philosopher should certainly make room for
-> scholarship: but scholarship has no 'results', no explanatory 'theories', no methods of experimentation. 
+> scholarship: but scholarship has no 'results', no explanatory 'theories', no methods of experimentation.
 > It is, at best, a spiritual discipline, and what will emerge from scholarship depends intimately on the
 > soul of the person who engages in it.  
 
@@ -152,7 +153,7 @@ I'm not sure yet how valid this is, but there's some sense to it.  In college, y
 When you're in college, you have it all.  Most people subconsciously perceive this life as the ideal life waiting for them when they finally succeed.  When they "make it" out in the world, they'll have the basketball court next to the garage with their 8 cars.  They'll laugh while sipping drinks with all their friends in the middle of the day.  It's good to have
 
 
-Community college, skilled labor, thinking and Veritas 
+Community college, skilled labor, thinking and Veritas
 
 An employee needs to be able to write well. Speak well think well. So a vocational school would teach that in the ideal. So there shouldn't be a real difference between that and college. Note that medieval history doesn't help this especially the shopping mall curricula we have now.
 

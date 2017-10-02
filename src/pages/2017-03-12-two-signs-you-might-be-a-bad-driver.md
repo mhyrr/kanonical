@@ -1,7 +1,7 @@
 ---
 title: Two Signs You Might Be A Bad Driver
-date: 2014-06-29T20:17:51.000Z
-path: /2014-06-29-two-signs-you-might-be-a-bad-driver/
+date: 2017-03-12T20:17:51.000Z
+path: /2017-03-12-two-signs-you-might-be-a-bad-driver/
 ---
 
 There's a lot of bad drivers out there.  Most of them don't know it.  It's really hard to measure something like that.  Heck, there's a lot of obese people that somehow don't know it too, and that's easy to measure.  
@@ -21,7 +21,7 @@ Knowing your surroundings means knowing what's happening ahead of you, on your s
 *Corollary* - Premature optimization.  I see this all the time.  There will be two left hand turn lanes and one lane is empty while the other is backed up ten cars deep.  Awareness also means understanding where you're going and how traffic around you is flowing on your route.
 
 ### You create large speed deltas compared to the flow of traffic
- 
+
 This symptom speaks to at least one of two things.  The first is arrogance.  It portrays the following viewpoint: "I know better than everyone else and they should all drive like me."  Hopefully that thought doesn't feel familiar.
 
 Far more insidious is a lack of knowledge.  It could mean you have a lack of knowledge of the rules of the road.  As a consequence, it means you don't understand the real problem.  This is probably not your fault, as the government bodies designed to teach you such things perform abysmally.  The assumption they make is that high speeds are bad.  This is absolutely false.  It just requires a very basic, simple set of rules to follow, and everything would work just fine.  Unfortunately, those rules are almost universally disregarded.  Differences of 10-15 mph aren't large.  It would be easy for a four lane highway to have a very safe gradient from 55 up to 90+ if we just followed rules across the lanes of traffic.  
@@ -34,7 +34,7 @@ Interestingly, an equivalently false statement you'll hear is that speed kills. 
 <br>*Corollary* - If you think troopers are your best protection.  You've all seen the bumper stickers that say this.  It's junk.  YOU (or your driver) are your best protection.  A trooper is not.  There are circumstances when troopers come in very handy, and we should all have huge respect for the civic importance of police and the men and women who admirably perform that duty.  But in everyday driving, they have very little to do with you.  And that's the way it should be.
 
 Travel in (parts of) Europe a bit and you'll notice two interesting things.  First, that everyone follows certain rules.  For instance, passing on the left (or right, on the British Isles).  The equivalent is that if you're not going that fast, you stay on the right (or left).  And second, you'll see very few cops.  The only time I've ever seen cops on the road while *not* in a city is when passing an accident.  That's it.  Their function is to protect, not as an additional tax revenue source.  They have cameras for that.
- 
+
 If we accept that the real problem is speed deltas, we've done lots of things very stupidly when designing our road system.  Exit/Entry lanes for highways should provide proper merge lengths.  Exit/Entry lanes should only ever merge onto the slow lanes, not onto the fast lane.  Cloverleafs are typically decreasing radius, slowing you down the most right before you merge.  They should allow for acceleration up to speed onto a highway, rather than diminishing it.  
 
 We've got a huge infrastructure project to update our roads over the next twenty years, we'll fix it then right?

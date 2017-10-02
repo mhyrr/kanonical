@@ -2,6 +2,7 @@
 title: On the Dangers of Measurement
 date: 2014-06-29T20:22:59.000Z
 path: /2014-06-29-on-the-dangers-of-measurement/
+draft: true
 ---
 
 

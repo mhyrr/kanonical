@@ -2,6 +2,7 @@
 title: What I'm Looking To Change
 date: 2015-05-17T18:35:14.000Z
 path: /2015-05-17-what-im-looking-to-change/
+draft: true
 ---
 
 I've been looking for a change lately, and to figure out what the next step is, it seems important to figure out what's missing first.  Here's an attempt at a list:
