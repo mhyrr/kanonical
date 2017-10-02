@@ -56,19 +56,23 @@ Fortunately, urban planning seems to be migrating much more towards the [New Urb
 
 Corbusier:
 
-	We must create a mass-production state of mind:
-	A state of mind for building mass-production housing.
-	A state of mind for living in mass-production housing.
-	A state of mind for conceiving mass-production housing.
+>We must create a mass-production state of mind:
+>A state of mind for building mass-production housing.
+>A state of mind for living in mass-production housing.
+>A state of mind for conceiving mass-production housing.
 
 Jane Jacobs (from [The Death and Life of Great American Cities](http://www.amazon.com/American-Cities-Anniversary-Edition-Library/dp/0679644334/ref=reg_hu-rd_add_1_dp)):
 
-	The necessity for these four conditions is the most important point this book has to make. 
-	In combination, these conditions create effective economic pools of use:
-		Mixed uses, activating streets at different times of the day
-		Short blocks, allowing high pedestrian permeability.
-		Buildings of various ages & states of repair.
-		Density.
+>The necessity for these four conditions is the most important point this book has to make.
+>In combination, these conditions create effective economic pools of use:
+>
+>-Mixed uses, activating streets at different times of the day
+>
+>-Short blocks, allowing high pedestrian permeability.
+>
+>-Buildings of various ages & states of repair.
+>
+>-Density.
 
 It's ants vs. humans.
 
@@ -85,10 +89,3 @@ The next few decades will see a revolution in the planning of towns and cities, 
 The larger moral question of pursuing the truth remains.  The abandonment of truth for truthiness, so easy in our modern era, needs a level of [meta](http://en.wikipedia.org/wiki/Meta)-thinking that is still unfortunately rarely seen.  We need to build frameworks for more intellectual honesty and questioning to understand the impact of either wrong solutions or wrong problems.  These all start with truth and have some sort of honestly that allows sideways and contrarian views to turn problems around.  And they absolutely require meta-thinking.
 
 Getting the meta right will be the quintessential human challenge of the 21st century.
-
-
-
-
-
-
-
