@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Kanonical",
     author: "",
+    siteUrl: "http://www.kanonical.io",
   },
   plugins: [
     {
@@ -48,6 +49,15 @@ module.exports = {
       options: {
         pathToConfigModule: "src/utils/typography",
       },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap"
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: 'UA-101072268-1',
+      }
     },
   ],
 }
