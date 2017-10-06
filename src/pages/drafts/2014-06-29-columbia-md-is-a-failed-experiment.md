@@ -1,7 +1,7 @@
 ---
 title: Columbia, MD Is A Failed Experiment
 date: 2014-06-29T20:19:09.000Z
-path: /2014-06-29-columbia-md-is-a-failed-experiment/
+path: /columbia-md-is-a-failed-experiment/
 draft: true
 ---
 

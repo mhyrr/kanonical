@@ -1,7 +1,7 @@
 ---
 title: Aran Islands
 date: 2008-05-03T03:00:00.000Z
-path: /2008-05-03-aran_islands/
+path: /aran_islands/
 ---
 
 We had a full day for exploring Galway before embarking for Inishmor.  It was spent leisurely - walking about, peeking into little shops, eating.  We trekked up to Salthill, a slightly ritzier area just west of the town center.  Apparently there's a wall around that has the magical ability to add seven years to your life should you kick it.  Our expected time to burial remains unchanged however, as it's a hidden wonder, especially from foolish stateside travels that happen to hear of it. 

@@ -1,7 +1,7 @@
 ---
 title: Freaking Out.
 date: 2016-07-05T18:22:11.000Z
-path: /2016-07-05-freaking-out/
+path: /freaking-out/
 ---
 
 So I'm freaking out.  Like totally.  Just because I read something.

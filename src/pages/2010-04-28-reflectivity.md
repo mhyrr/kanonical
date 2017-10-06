@@ -1,7 +1,7 @@
 ---
 title: Reflectivity
 date: 2010-04-28T03:00:00.000Z
-path: /2010-04-28-reflectivity/
+path: /reflectivity/
 ---
 
 My friend Chris is a great reflector.  I bounce shit off him all the time: questions, ideas of some sort or other, both work-related and not.  He's the perfect person to do this with.

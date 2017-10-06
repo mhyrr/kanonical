@@ -1,7 +1,7 @@
 ---
 title: Strong Opinions
 date: 2014-06-29T20:25:31.000Z
-path: /2014-06-29-strong-opinions/
+path: /strong-opinions/
 draft: true
 ---
 

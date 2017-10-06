@@ -1,7 +1,7 @@
 ---
 title: Voting With Your Pocketbook?
 date: 2012-11-03T04:00:00.000Z
-path: /2012-11-03-pocketbook/
+path: /pocketbook/
 ---
 
 Everyone seems to have this idea that Republican policy favors the rich while Democratic policy favors the poor.  Additionally, everyone assumes the rich support Republican policies, while the poor support Democratic policies.  I decided to see if a bit of data would support this in the voting record.  Here's what I came up with:

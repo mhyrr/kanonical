@@ -1,7 +1,7 @@
 ---
 title: Six Relaxing and Enjoyable Things You Probably Already Do But Could Be Done Better
 date: 2008-04-14T03:00:00.000Z
-path: /2008-04-14-six_relaxing_and_enjoyable_things_you_probably_already_do_but_could_be_done_better/
+path: /six_relaxing_and_enjoyable_things_you_probably_already_do_but_could_be_done_better/
 ---
 
 Wow.  That's a really long post title.  It gets the point across though.

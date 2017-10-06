@@ -1,7 +1,7 @@
 ---
 title: Constitutionalism
 date: 2012-02-26T05:00:00.000Z
-path: /2012-02-26-constitutionalism/
+path: /constitutionalism/
 ---
 
 A very curious thing has happened over the last fifty years or so.  Politics has been ruined by technology and media.  It started somewhat innocently with television, but as more media, more connections and more technology have come online, the information flood has ruined the idealistic American view of politics.  It's simply not possible to be a Washington, Jefferson, Lincoln, or even a Roosevelt today.

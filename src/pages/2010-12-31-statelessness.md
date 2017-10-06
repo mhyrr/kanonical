@@ -1,7 +1,7 @@
 ---
 title: Statelessness
 date: 2010-12-31T05:00:00.000Z
-path: /2010-12-31-statelessness/
+path: /statelessness/
 ---
 
 I have, at the same time, both a wonderful and an abysmal memory.  I cannot remember many conversations with friends; to their frustration I tell them the same things over and over sometimes.  But I can remember numbers, algorithms, or "relevant" facts with ease.  (For a definition of relevant, see [Rands' The Nerd Handbook and the annoyingly efficient relevancy engine](http://randsinrepose.com/archives/2007/11/11/the_nerd_handbook.html).)  This odd property, and the growing complexity of my life has forced me to trend towards a certain kind of operating procedure that I've started to call statelessness.

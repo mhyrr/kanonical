@@ -1,7 +1,7 @@
 ---
 title: Customer Service Matters
 date: 2009-01-10T05:00:00.000Z
-path: /2009-01-10-customerservice/
+path: /customerservice/
 ---
 
 Recently, I've had a couple of extremely positive experiences in customer service that have made me consider just how important it can be.  I wanted to share them with you.

@@ -1,7 +1,7 @@
 ---
 title: We Need More Economist Saints
 date: 2014-06-29T20:43:33.000Z
-path: /2014-06-29-we-need-more-economist-saints/
+path: /we-need-more-economist-saints/
 draft: true
 ---
 

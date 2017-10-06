@@ -1,7 +1,7 @@
 ---
 title: Some Haiku
 date: 2016-10-15T21:15:37.000Z
-path: /2016-10-15-some-haiku/
+path: /some-haiku/
 ---
 
 Haven't been writing a ton, but I have accumulated some haiku over the last couple years.  I figured I would put them all in one place, so here they are.

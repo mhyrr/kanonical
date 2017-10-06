@@ -1,7 +1,7 @@
 ---
 title: A Brief Introduction to Britain
 date: 2008-05-13T03:00:00.000Z
-path: /2008-05-13-a_brief_introduction_to_britain/
+path: /a_brief_introduction_to_britain/
 ---
 
 Libby and I continued the next day to London, while Katie headed back to DC.  We flew Ryan Air to Stansted (unbelievably cheap, although watch out for checked luggage charges - there's a 15kg maximum and they bite you with last minute checked bags), a far nicer airport than Heathrow.  I'm not too keen on flying so I was pleased it was only an hour flight.

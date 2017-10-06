@@ -1,7 +1,7 @@
 ---
 title: Short-circuiting the Question of Passion
 date: 2014-06-29T20:40:30.000Z
-path: /2014-06-29-short-circuiting-the-question-of-passion/
+path: /short-circuiting-the-question-of-passion/
 draft: true
 ---
 

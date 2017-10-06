@@ -1,7 +1,7 @@
 ---
 title: Why Robert Reich is Both Right and Wrong
 date: 2011-08-15T03:00:00.000Z
-path: /2011-08-15-robertreich/
+path: /robertreich/
 ---
 
 I've seen [this 2 minute economic summation from Robert Reich](http://front.moveon.org/scribbling-sharpie-illustrates-the-truth-about-our-economy/) floating around in a bunch of different places and it has bugged me, so I've been trying to figure out why.  Reich has clearly thought about this a lot, but my first reaction is that nobody can really explain what's going on in 2 minutes.  After watching it, I still think it's impossible.  Here's why:

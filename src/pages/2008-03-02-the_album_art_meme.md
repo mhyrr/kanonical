@@ -1,7 +1,7 @@
 ---
 title: The Album Art Meme
 date: 2008-03-02T05:00:00.000Z
-path: /2008-03-02-the_album_art_meme/
+path: /the_album_art_meme/
 ---
 
 Here's a fun way to come up with a piece of album art that, despite first impressions,  works surprisingly well.  It comes from [The Fishbowl](http://fishbowl.pastiche.org/2008/01/12/album_art_meme), and here's how it works:

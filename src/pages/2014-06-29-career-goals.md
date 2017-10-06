@@ -1,7 +1,7 @@
 ---
 title: Career Goals
 date: 2014-06-29T20:33:08.000Z
-path: /2014-06-29-career-goals/
+path: /career-goals/
 ---
 
 When I got out of college, I set my first career goal.  I think everyone does this at some point - it's a natural and almost expected thing to do.  Everyone uses the same barometers too, and mine was no different.  My first career goal was to make $100,000 a year in salary.

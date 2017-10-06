@@ -1,7 +1,7 @@
 ---
 title: The Incredible Shrinking Man
 date: 2013-01-29T05:00:00.000Z
-path: /2013-01-29-shrinking/
+path: /shrinking/
 ---
 
 I had planned this to be a two week checkpoint.. I think at this point I'm just over three weeks.

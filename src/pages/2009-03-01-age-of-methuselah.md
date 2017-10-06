@@ -1,7 +1,7 @@
 ---
 title: The Age of Methuselah
 date: 2009-03-01T05:00:00.000Z
-path: /2009-03-01-age-of-methuselah/
+path: /age-of-methuselah/
 ---
 
 There's been an increasing amount of discussion about human lifespan and the potential through medicine and technology to extend it past what could be considered natural.  [Hans Rosling](http://tools.google.com/gapminder) and others have described the massive jumps the last century has seen in life expectancy and relative quality of life.  These jumps have occurred around the world, not just in the more developed countries.  

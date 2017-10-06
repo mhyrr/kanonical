@@ -1,7 +1,7 @@
 ---
 title: What I'm Looking To Change
 date: 2015-05-17T18:35:14.000Z
-path: /2015-05-17-what-im-looking-to-change/
+path: /what-im-looking-to-change/
 draft: true
 ---
 

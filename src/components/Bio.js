@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 // Import typefaces
 import 'typeface-montserrat'
@@ -13,7 +14,7 @@ class Bio extends React.Component {
       <p
         style={{
           marginBottom: rhythm(2.5),
-          verticalAlign: 'middle', 
+          verticalAlign: 'middle',
         }}
       >
         <img
@@ -27,7 +28,15 @@ class Bio extends React.Component {
             height: rhythm(2),
           }}
         />
-        Musings from a scattered brain.
+
+        <br/>
+        Hi I'm Greg.  Occasionally, I do things.
+        <Link
+          style={{ float: 'right' }}
+          to='archive'
+        >
+          Archive
+        </Link>
       </p>
     )
   }

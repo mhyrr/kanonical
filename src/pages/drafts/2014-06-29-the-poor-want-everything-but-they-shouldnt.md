@@ -1,7 +1,7 @@
 ---
 title: The Poor Want Everything, But They Shouldn't
 date: 2014-06-29T20:42:55.000Z
-path: /2014-06-29-the-poor-want-everything-but-they-shouldnt/
+path: /the-poor-want-everything-but-they-shouldnt/
 draft: true
 ---
 

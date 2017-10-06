@@ -1,7 +1,7 @@
 ---
 title: Scraping PBase
 date: 2008-03-02T05:00:00.000Z
-path: /2008-03-02-scraping_pbase/
+path: /scraping_pbase/
 ---
 
 While I've liked having PBase, my family has decided to move to SmugMug. This was for a number of reasons, but the biggest is simply that PBase works on bandwidth, while SmugMug is a flat annual fee for unlimited storage (I'm not a huge fan of Flickr's interface).

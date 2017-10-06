@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <Bio />
+        
         {posts.map(post => {
           if (post.node.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
@@ -22,7 +22,6 @@ class BlogIndex extends React.Component {
               <div key={post.node.frontmatter.path}>
                 <h3
                   style={{
-                    display: 'inline',
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
@@ -33,10 +32,7 @@ class BlogIndex extends React.Component {
                     {post.node.frontmatter.title}
                   </Link>
                 </h3>
-                <small style={{
-                  display: 'inline',
-                  float: 'right',
-                }}>{post.node.frontmatter.date}</small>
+                <small>{post.node.frontmatter.date}</small>
                 <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
               </div>
             )
@@ -54,7 +50,7 @@ BlogIndex.propTypes = {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ArchiveQuery {
     site {
       siteMetadata {
         title
@@ -63,7 +59,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC },
         filter: {frontmatter: {draft: {ne: true}}},
-        limit: 5,) {
+      ) {
       edges {
         node {
           excerpt

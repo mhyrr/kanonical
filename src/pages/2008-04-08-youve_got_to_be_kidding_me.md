@@ -1,7 +1,7 @@
 ---
 title: You've Got To Be Kidding Me
 date: 2008-04-08T03:00:00.000Z
-path: /2008-04-08-youve_got_to_be_kidding_me/
+path: /youve_got_to_be_kidding_me/
 ---
 
 <img src="http://imgs.xkcd.com/comics/e_to_the_pi_times_i.png" height="481" width="400" />

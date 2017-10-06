@@ -1,7 +1,7 @@
 ---
 title: Money - Income, Expenses, and Value
 date: 2011-11-22T05:00:00.000Z
-path: /2011-11-22-practical/
+path: /practical/
 ---
 
 This is where we get into the meat and potatoes.  This is where things get more fun.  Since money is a tool, how and why should I use it?

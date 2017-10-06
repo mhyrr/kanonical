@@ -1,7 +1,7 @@
 ---
 title: Knowing How to Not Know
 date: 2010-04-25T03:00:00.000Z
-path: /2010-04-25-knowing_how_to_not_know/
+path: /knowing_how_to_not_know/
 ---
 
 ### What We Want To Know

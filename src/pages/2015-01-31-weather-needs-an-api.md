@@ -1,7 +1,7 @@
 ---
 title: Weather Needs An API
 date: 2015-01-31T14:14:05.000Z
-path: /2015-01-31-weather-needs-an-api/
+path: /weather-needs-an-api/
 ---
 
 Weather really needs an API.

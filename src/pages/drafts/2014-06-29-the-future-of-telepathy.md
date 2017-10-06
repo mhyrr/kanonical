@@ -1,7 +1,7 @@
 ---
 title: The Future of Telepathy
 date: 2014-06-29T20:26:15.000Z
-path: /2014-06-29-the-future-of-telepathy/
+path: /the-future-of-telepathy/
 draft: true
 ---
 

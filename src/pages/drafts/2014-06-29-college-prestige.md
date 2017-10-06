@@ -1,7 +1,7 @@
 ---
 title: College Prestige
 date: 2014-06-29T20:18:42.000Z
-path: /2014-06-29-college-prestige/
+path: /college-prestige/
 draft: true
 ---
 

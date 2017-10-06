@@ -1,7 +1,7 @@
 ---
 title: Public Insurance
 date: 2011-05-03T03:00:00.000Z
-path: /2011-05-03-public_insurance/
+path: /public_insurance/
 ---
 
 I've finally figured out what insurance is, aside from an elusive concept that everyone talks about and knows they need.

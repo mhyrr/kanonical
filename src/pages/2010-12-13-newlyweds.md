@@ -1,7 +1,7 @@
 ---
 title: Remarks from a Newlywed
 date: 2010-12-13T05:00:00.000Z
-path: /2010-12-13-newlyweds/
+path: /newlyweds/
 ---
 
 About a month ago, I got married.  It was the best day of my life.

@@ -1,7 +1,7 @@
 ---
 title: Apple Computers, Microsoft Keyboards (Keyboardists, Mousers, and Tapists)
 date: 2010-06-09T03:00:00.000Z
-path: /2010-06-09-keyboards/
+path: /keyboards/
 ---
 
 I bought an iPad.  It's an experiment in trying to be more mobile.  My goal is to find out if it can replace my laptop.  I have my doubts so far, but it's worth a shot.  My main concern has been input.

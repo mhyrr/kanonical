@@ -1,7 +1,7 @@
 ---
 title: Letter to the SEB - 2009 Nationals Courses, Thoughts, and Thanks
 date: 2009-09-24T03:00:00.000Z
-path: /2009-09-24-sebletter/
+path: /sebletter/
 ---
 
 SEB,

@@ -1,7 +1,7 @@
 ---
 title: Apple's Recent Missteps
 date: 2008-07-27T03:00:00.000Z
-path: /2008-07-27-apples_recent_missteps/
+path: /apples_recent_missteps/
 ---
 
 Apple is known for its exceedingly well planned and executed products.  They charge a premium for them and they've built a fiercely loyal customer base because of the quality level.  Mac computers are simply the best computers available, iPods are the best music players, and the iPhone is the best phone - all by a wide margin.  But they've started blundering ever so slightly.  Not enough to destroy any of the religiosity surrounding them just yet, but they need to pick their pace back up to its normal level.

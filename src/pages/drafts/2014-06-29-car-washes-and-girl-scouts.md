@@ -1,7 +1,7 @@
 ---
 title: Car Washes and Girl Scout Cookies
 date: 2014-06-29T20:18:19.000Z
-path: /2014-06-29-car-washes-and-girl-scouts/
+path: /car-washes-and-girl-scouts/
 draft: true
 ---
 

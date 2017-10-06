@@ -1,7 +1,7 @@
 ---
 title: Speed Traps Are Dangerous
 date: 2012-03-21T04:00:00.000Z
-path: /2012-03-21-speedtraps/
+path: /speedtraps/
 ---
 
 I want to talk about something we all think we know.  Speed traps, especially the unmanned stationary kind all over my home county in Maryland, are revenue generating, machine perpetuating products of bureaucracy.  Unfortunately, bureaucracy is perhaps the most regenerating organism ever invented, so there is no way to ever overcome speed traps by conveying such a rational argument.  The only way to actually demolish these outposts of revenue is to declare them as dangerous.  I hope to show that they are, in fact, dangerous.

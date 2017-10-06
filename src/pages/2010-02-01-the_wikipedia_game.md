@@ -1,7 +1,7 @@
 ---
 title: Wikiracing
 date: 2010-02-01T05:00:00.000Z
-path: /2010-02-01-the_wikipedia_game/
+path: /the_wikipedia_game/
 ---
 
 ### Edit:

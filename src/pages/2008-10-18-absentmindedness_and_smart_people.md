@@ -1,7 +1,7 @@
 ---
 title: Absentmindedness and Smart People
 date: 2008-10-18T03:00:00.000Z
-path: /2008-10-18-absentmindedness_and_smart_people/
+path: /absentmindedness_and_smart_people/
 ---
 
 I had an interesting experience a little while back visiting a user of the product I help develop at work.  This particular user was clearly bright.  He had a firm grasp of the tool and its capabilities.  But I was struck watching him manipulate a computer.  This guy was leaning forward in his seat, angled towards the screen that sat on the narrowest part of his desk.  The keyboard and mouse on his desk seemed an afterthought.  His feet were planted firmly on the ground out in the open of the cubicle rather than under the desk.  He stared at the screen waiting expectantly, as if you had to get a response from the computer before doing anything else.  His input was synchronous - give an input, take an output, evaluate, and give another input.  As he manipulated the mouse, he actively searched for the commands he wanted, rather than knowing exactly where to guide the mouse next.  

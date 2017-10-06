@@ -1,7 +1,7 @@
 ---
 title: Driving to the Cliffs of Moher
 date: 2008-05-12T03:00:00.000Z
-path: /2008-05-12-driving_to_the_cliffs_of_moher/
+path: /driving_to_the_cliffs_of_moher/
 ---
 
 #### Pictures

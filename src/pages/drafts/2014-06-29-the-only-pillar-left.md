@@ -1,7 +1,7 @@
 ---
 title: The Only Pillar Left
 date: 2014-06-29T20:41:14.000Z
-path: /2014-06-29-the-only-pillar-left/
+path: /the-only-pillar-left/
 draft: true
 ---
 

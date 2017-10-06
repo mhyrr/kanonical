@@ -1,7 +1,7 @@
 ---
 title: Proprioception
 date: 2015-03-06T16:06:25.000Z
-path: /2015-03-06-proprioception/
+path: /proprioception/
 ---
 
 Most people think of our interaction with the world through the traditional five senses: vision, hearing, taste, smell, touch.  But there are quite a few others to control or sense things like balance and temperature.

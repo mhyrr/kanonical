@@ -1,7 +1,7 @@
 ---
 title: Living Memory
 date: 2011-01-29T05:00:00.000Z
-path: /2011-01-29-livingmemory/
+path: /livingmemory/
 ---
 
 [Walter Breuning](http://en.wikipedia.org/wiki/Walter_Breuning) is a fascinating person I'm almost sure you've never heard of.  Walter is 114 years old.  He's the oldest living man.  He lives in a nursing home in Montana.  Until very recently, he still walked daily.  He still wears a suit.  He's very lucid and his memory is clearly intact.

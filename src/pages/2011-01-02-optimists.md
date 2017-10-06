@@ -1,7 +1,7 @@
 ---
 title: The Optimist's Dilemma
 date: 2011-01-02T05:00:00.000Z
-path: /2011-01-02-optimists/
+path: /optimists/
 ---
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Glass-of-water.jpg/409px-Glass-of-water.jpg"/>

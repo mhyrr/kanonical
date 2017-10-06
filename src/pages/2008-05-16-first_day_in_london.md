@@ -1,7 +1,7 @@
 ---
 title: First Day in London
 date: 2008-05-16T03:00:00.000Z
-path: /2008-05-16-first_day_in_london/
+path: /first_day_in_london/
 ---
 
 #### Insta-Travel!

@@ -1,7 +1,7 @@
 ---
 title: Real Work Happens in Dark Rooms
 date: 2008-03-27T04:00:00.000Z
-path: /2008-03-27-real_work_happens_in_dark_rooms/
+path: /real_work_happens_in_dark_rooms/
 ---
 
 Sometime when I was young, my family got dimmer switches in our family room.  I used to make it my goal in the evening to set the switch to the lowest possible setting that would still emit light from the bulbs.  It was fun to see just how little light could illuminate objects across the room.

@@ -1,7 +1,7 @@
 ---
 title: Favorite Scenes
 date: 2014-06-29T20:25:22.000Z
-path: /2014-06-29-favorite-scenes/
+path: /favorite-scenes/
 draft: true
 ---
 

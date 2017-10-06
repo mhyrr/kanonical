@@ -1,7 +1,7 @@
 ---
 title: Bacon as a Health Food.
 date: 2017-06-15T01:39:14.000Z
-path: /2017-06-15-bacon-as-a-health-food/
+path: /bacon-as-a-health-food/
 ---
 
 So recently.. this happened:

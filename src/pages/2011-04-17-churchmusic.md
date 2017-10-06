@@ -1,7 +1,7 @@
 ---
 title: Church Music
 date: 2011-04-17T03:00:00.000Z
-path: /2011-04-17-churchmusic/
+path: /churchmusic/
 ---
 
 Last week I went to Mass and it was frustrating.  I wanted to share why.

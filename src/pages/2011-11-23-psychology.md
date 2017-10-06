@@ -1,7 +1,7 @@
 ---
 title: Money - Psychology
 date: 2011-11-23T05:00:00.000Z
-path: /2011-11-23-psychology/
+path: /psychology/
 ---
 
 ## Psychology
