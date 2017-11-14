@@ -2,6 +2,7 @@
 title: Scraping PBase
 date: 2008-03-02T05:00:00.000Z
 path: /scraping_pbase/
+draft: true
 ---
 
 While I've liked having PBase, my family has decided to move to SmugMug. This was for a number of reasons, but the biggest is simply that PBase works on bandwidth, while SmugMug is a flat annual fee for unlimited storage (I'm not a huge fan of Flickr's interface).
@@ -16,4 +17,3 @@ Note also that curl is Mac's version of wget.
 
 Here's the script:
 <script src="http://gist.github.com/38239.js"></script>
-

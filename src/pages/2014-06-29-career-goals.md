@@ -12,7 +12,7 @@ I'm past 30 now, and I've seen more than just my own career goals come and go.  
 
 #### Wrong Metrics
 
-We gravitate to the most direct and available metrics to measure anything.  For a career, the most direct metrics are: 
+We gravitate to the most direct and available metrics to measure anything.  For a career, the most direct metrics are:
 
 1. How high have I risen on the corporate ladder?
 2. How much money do I make?
@@ -45,12 +45,12 @@ First, these are the kind of life-enhancing virtues that qualify as valid criter
 
 Second, there's actually quite a list of things that need to line up to make a summer at the beach happen.  Let's enumerate, shall we?
 
-1. **Flexibility.** Most importantly, this goal is not an excuse to not work.  I want to work.  As I said earlier, good work is vital to a good life.  I'm not a teacher (currently and for the foreseeable future), but I also wouldn't expect to just take a 3 month hiatus.  I plan to work at least 20 hours a week during the summer.  So, I'll need the flexibility to work at the beach, whatever that means.  Obviously, it could mean a lot, but probably some combintion of:
- * My work can be done virtually
- * Whoever I'm working *for* provides a great deal of freedom and responsibility
- * Whoever I'm working *with* has similar principles
- * My workload is variable and can scale up/down as needed.  Maybe some weeks will be 0 and some will be 40.
- * I'm working for myself or with others and can dictate my own schedule and workload
+1. **Flexibility.** Most importantly, this goal is not an excuse to not work.  I want to work.  As I said earlier, good work is vital to a good life.  I'm not a teacher (currently and for the foreseeable future), but I also wouldn't expect to just take a 3 month hiatus.  I plan to work at least 20 hours a week during the summer.  So, I'll need the flexibility to work at the beach, whatever that means.  Obviously, it could mean a lot, but probably some combination of:
+    * My work can be done virtually
+    * Whoever I'm working *for* provides a great deal of freedom and responsibility
+    * Whoever I'm working *with* has similar principles
+    * My workload is variable and can scale up/down as needed.  Maybe some weeks will be 0 and some will be 40.
+    * I'm working for myself or with others and can dictate my own schedule and workload
 2. **Financial Success.** Living at the beach for 3 months requires a significant financial commitment.  We either need to own our own house there (vastly preferable) or be able to rent and pay for the whole summer.  Either way, in the more traditional characteristics of a career goal this is a high bar, and will require a large degree of financial success.
 3. **Personal Discipline.** Even though work is important, it's not often at the very top of our list of things-we'd-like-to-do-right-now.  Even less so at the beach when the rest of the family is relaxing on the sand.  Doing this successfully will require a good amount of personal discipline.
 4. **Family Discipline.** My family will need some discipline too.  They'll need to know that 8-11a is Dad's work time and be willing to leave me be for awhile each day.
@@ -62,12 +62,3 @@ I wish I had that view of life when I was in my early 20's.  It's an incredibly 
 I missed that chance and went the more typical route - a job with salary plus benis.  I had "expensive" tastes and liked cars too much.  I'm slowly learning my lesson and starting to pursue freedoms and passions over belongings and belonging.  
 
 I gave myself about ten years for my first career goal.  I'm hoping to do the same this time around.  Hopefully by the time I'm in my early 40's, I'll be spending every summer at the beach with my family.
-
-
-
-
-
-
-
-
-

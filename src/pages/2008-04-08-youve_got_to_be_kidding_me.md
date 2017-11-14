@@ -87,8 +87,5 @@ Here's the results from 2 runs:
 	Door 3:	333159
 	Correct: 666985, 67%
 	Incorrect: 333015, 33%
-	
-It works out.  But it's still non-intuitive.  I just love that the world works like that sometimes.  If things were always real simple, the entire Universe would be completely knowable, and that would be boring.  So rejoice when things are weird.
 
-Here's the bad code to do it:
-<script src="http://gist.github.com/42591.js"> </script>
+It works out.  But it's still non-intuitive.  I just love that the world works like that sometimes.  If things were always real simple, the entire Universe would be completely knowable, and that would be boring.  So rejoice when things are weird.

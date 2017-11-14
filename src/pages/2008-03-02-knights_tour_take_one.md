@@ -1,6 +1,6 @@
 ---
 title: Knight's Tour, Take One
-date: 2008-03-02T05:00:00.000Z
+date: 2008-03-02T04:00:00.000Z
 path: /knights_tour_take_one/
 ---
 

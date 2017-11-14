@@ -8,66 +8,66 @@ Haven't been writing a ton, but I have accumulated some haiku over the last coup
 
 **Patience**
 
-Articulation
-is a precise art, and so
-I fear my great thoughts.
+Articulation</br>
+is a precise art, and so</br>
+I fear my great thoughts.</br>
 
 **Awareness**
 
-I conform, and they
-see it as maturity.
-But I know better.
+I conform, and they</br>
+see it as maturity.</br>
+But I know better.</br>
 
 **Death**
 
-Knowing that the end 
-Is not the end of all things 
-Allows one to live.
+Knowing that the end</br>
+Is not the end of all things</br>
+Allows one to live.</br>
 
 **Example**
 
-Birds fly focused-- on 
-Important matters, but what 
-If I'm not that smart?
+Birds fly focused-- on</br>
+Important matters, but what</br>
+If I'm not that smart?</br>
 
 **Constant**
 
-Metamorphosis 
-does not end with shedding a 
-butterfly's cocoon.
+Metamorphosis</br>
+does not end with shedding a</br>
+butterfly's cocoon.</br>
 
 **Silence**
 
-All that I can do 
-sometimes is shake my head in
-exasperation.
+All that I can do</br>
+sometimes is shake my head in</br>
+exasperation.</br>
 
 **Towards Faith**
 
-Tyrannical doubt 	
-holds the truth hostage in the 
-guise of longing hope.
+Tyrannical doubt 	</br>
+holds the truth hostage in the</br>
+guise of longing hope.</br>
 
 **Growing Old**
 
-Being wrong is hard 
-And more conscious as time is 
-Inexorable.
+Being wrong is hard</br>
+And more conscious as time is</br>
+Inexorable.</br>
 
 **A Better Person**
 
-What choice do I have?
-But fucking, pissing, puking
-Through life, except you. 
+What choice do I have?</br>
+But fucking, pissing, puking</br>
+Through life, except you.</br>
 
 **Wabi**
 
-Bricks stacked end on end
-Make romance in a facade
-Rustic, imperfect.
+Bricks stacked end on end</br>
+Make romance in a facade</br>
+Rustic, imperfect.</br>
 
 **Hubris**
 
-When one has answers
-To every situation
-There are really none. 
+When one has answers</br>
+To every situation</br>
+There are really none.</br>
