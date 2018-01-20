@@ -15,4 +15,6 @@ I think this is the real reason both geeks and introverts don't like smalltalk. 
 
 Have you ever noticed that those who feel entitlement never actually deserve it, and those who actually deserve it never feel entitled?  I think strong opinions and truth can be the same way.  Those that have strong opinions without a search for truth don't really have opinions, they have parroted words from past authority figures.  Similarly, those seeking the truth never actually have strong opinions, they just have reasonable theories that they want to batter against reality, to see if they hold up.  If and when they don't hold up, they are happy, because it gets them that much closer to the truth they seek.
 
+PG's keep your identity small
+
 I don't think this is hereditary or anything.  Both of these behaviors can be learned.  It takes practice of the mind, and that's something that seems to be most especially the territory of both geeks and introverts.
