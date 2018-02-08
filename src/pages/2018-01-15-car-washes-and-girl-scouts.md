@@ -101,7 +101,7 @@ This is also not service.  Service is different.  Service is about focusing comp
 
 Kids should be served by their schools, by the organizations they belong to, and by those that support the skills they want to learn.  They should learn that they're being served and feel honor, respect, and gratitude.  **They shouldn't be taught to pay it back (or to help pay for it), they should learn to pay it forward.**  Being served is about learning how to find opportunities to serve.
 
-And when you serve others, especially as a child, I think one of the fundamental keys should be that you have to look them in the face.  It shouldn't be about raising money by sitting in front of a grocery store for hours reselling a box made my a national You should learn that service is about caring for people.  You learn that by looking people in the face.
+And when you serve others, especially as a child, I think one of the fundamental keys should be that you have to look them in the face.  Service isn't about raising money by sitting in front of a grocery store for hours reselling a box made by some national industrial food company.  You should learn that service is about caring for people.  You learn that by looking people in the face.
 
 When you help handicapped kids on a field trip, you have to look them in the face.  If you volunteer at a senior home, you have to look those people in the face.  If you volunteer at a zoo, you have to look the animals (and humans) in the face.  You have to foster a relationship that is more than dollars and cents.
 

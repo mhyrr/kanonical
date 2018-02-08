@@ -2,7 +2,6 @@
 title: On the Dangers of Potential Energy
 date: 2018-02-07T21:31:46.000Z
 path: /potential-energy/
-draft: true
 ---
 
 My last goal of 2018 was to [focus on doing](/2018-baller/), and to revive the joy of doing, without regard for the outcome.  I've been trying to understand for myself exactly what this means.  It's been a struggle to formulate the idea properly - it's kind of complex - but I think I have a metaphor for it that fits.
@@ -58,13 +57,13 @@ This was an expertise I developed completely unconsciously.  I just did it becau
 
 I loved racing (and still do!), but I wish I would have made that decision more consciously.  This is a difficult concept, because the subjects in which you have more passion inherently become the subjects in which you do more work, but it seems important to me to try.  Actually, passion is probably the chief indicator that will drive you towards kinetic energy and true expertise.  Maybe it's simple enough to follow your passions and enjoy the ride.  
 
-> The road to wisdom? Well it's plan
+> The road to wisdom? Well it's plain
 > and simple to express:
-> Err
+> Err..
 > and err..
 > and err again..
-> But less
-> and less
+> But less..
+> and less..
 > and less.
 
 One key I briefly mentioned earlier is not to tie your identity to the subjects where you remain an armchair expert.  When the question of who you are gets wrapped up in this whole equation, the ability to learn and develop your expertise tends to go sideways.  Learning is a continual process of getting it wrong over and over and over.. until you get it right.  So tying your sense of self to some halfway, iterative point in that learning process means that it becomes harder (or impossible!) to detach yourself from the knowledge, principles, theories, and applications that you espouse.  No matter what our expertise, no matter how broad or deep, there's always more to learn.
@@ -84,7 +83,7 @@ And this works on any subject too.  Jeff Bezos has a recipe for success that out
 True expertise often maintains a beginner's mind, enjoys the process, and focuses on long-term orientation.
 
 ##### How to Move with Effort
- 
+
 One of the things I like the most about this metaphor is how it translates the focus away from ability, and onto effort.  
 
 *Effort is the key*.  Expend energy.  Do things.  Don't worry too much about where it will go.  Even [Brownian motion](https://en.wikipedia.org/wiki/Brownian_motion) (random motion) will eventually get you going somewhere.
@@ -103,7 +102,7 @@ The entire idea that a machine with thousands of vacuum tubes could be used reli
 
 These processes are fascinating to me, because they provide provable mathematical theories and thoughts as an allegory to the idea of focusing on effort.  And however much I'm bastardizing them, I still feel more strongly attached to them then the more typical lines we hear sometimes, because they tie the idea of working hard to provable mathematics that work in a similar, confusing, and somewhat opaque way.  
 
-But the tropes work too: 
+But the tropes work too:
 
 Quantity over quality.  Malcolm Gladwell's 10,000 hours of practice.  Practice makes perfect.
 
@@ -124,4 +123,3 @@ I don't like tropes, but there's something to them.  One of my closest friend ga
 > Just do the best you can, every day.
 
 Move with effort.  Over and over and over.  [Sisyphus](https://en.wikipedia.org/wiki/Sisyphus) might have a repetitive job sometimes, but I bet he's a strong motherfucker.
-
