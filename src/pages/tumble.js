@@ -5,12 +5,12 @@ import StackGrid from "react-stack-grid"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Card from '../components/Card'
+import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
 import Bio from '../components/Bio'
 
 class Tumble extends React.Component {
 
-  quoteEnd(str) {    
+  quoteEnd(str) {
     var p = new RegExp("(”|\")\\s+\-+\\s*.*$");
     return p.test(str);
   }
@@ -103,8 +103,8 @@ class Tumble extends React.Component {
 
         <StackGrid
           columnWidth={300}
-          appearDelay={10}
-          duration={560}
+          appearDelay={100}
+          duration={260}
           gutterWidth={20}
           gutterHeight={20}
           style={{marginTop: '60px'}}>
@@ -161,15 +161,15 @@ class Tumble extends React.Component {
 
             return (
 
-              <Card key={link.node.path}>
+              <Card type={type} key={link.node.path}>
 
-                {element}
+                <CardLink>{element}</CardLink>
 
-                <h5>
-                  {this.courtesyOf(link.node.content, link.node.title, type)}
-                </h5>
+                <CardAttr type={type}>
+                  <span>{this.courtesyOf(link.node.content, link.node.title, type)}</span>
+                </CardAttr>
 
-                <span title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</span>
+                <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
               </Card>
 
 
