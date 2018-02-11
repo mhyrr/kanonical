@@ -59,5 +59,13 @@ module.exports = {
         trackingId: 'UA-101072268-1',
       }
     },
+    {
+    resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1xyxBcVq5TehTu3mW1lL8N0lhTEr0eUUvnH9b16raj8w',
+        worksheetTitle: 'links',
+        credentials: require('./src/client_secret.json')
+      }
+    },
   ],
 }
