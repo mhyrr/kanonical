@@ -14,7 +14,7 @@ If you remember your basic science classes, potential energy is the kind of ener
 
 On the other hand, kinetic energy is *in motion*.  The ball rolling down the hill.  The compressed spring bouncing out.  The crossbow firing it's bolt.  It is active and working, literally.  
 
-The scientific definition of work is force over distance.  You literally get shit done (work) by *moving with effort*.
+**The scientific definition of work is force over distance.  You literally get shit done (work) by *moving with effort*.**
 
 This translates surprisingly well when thinking about what it is you want to achieve:
 - Want to be stronger?  Technique is important, but you need to literally expend effort to move a lot of weight over and over.  The amount of volume (total lbs. moved in a workout) is one of the keys to gaining strength.
