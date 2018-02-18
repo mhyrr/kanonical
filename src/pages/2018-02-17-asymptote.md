@@ -6,7 +6,7 @@ path: /change-to-truth/
 
 Awhile back, a friend pointed out an apparent conundrum in his world view.  His opinions, he said, aligned to what ended up being provably correct with surprising frequency.  And yet, his opinions are also always changing, sometimes quite a bit over time.  How can both these things be true?
 
-Setting aside things like confirmation bias, he was right about being right very frequently.  But his observation isn't a paradox, it's actually the root cause.
+Setting aside things like confirmation bias, he was right about being right very frequently.  He is, a lot.  But his observation isn't a paradox, it's actually the causal relationship.
 
 The quality of being able to change your opinions and views over time is the reason that you can be right so frequently.  As you learn more you abandon the incorrect or false, and walk an asymptotic path towards truth.  
 

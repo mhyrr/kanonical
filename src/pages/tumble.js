@@ -112,6 +112,7 @@ class Tumble extends React.Component {
           if (link.node.path !== '/404/') {
             const title = get(link, 'node.title') || link.node.path
 
+            link.node.date = link.node.date || "19700101";
             // Do some date function
             var isoDate = link.node.date.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
             // console.log(isoDate);
