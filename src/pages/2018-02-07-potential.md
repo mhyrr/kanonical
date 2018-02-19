@@ -123,3 +123,10 @@ I don't like tropes, but there's something to them.  One of my closest friend ga
 > Just do the best you can, every day.
 
 Move with effort.  Over and over and over.  [Sisyphus](https://en.wikipedia.org/wiki/Sisyphus) might have a repetitive job sometimes, but I bet he's a strong motherfucker.
+
+
+---
+
+My friend Matt offered a useful criticism.  He said "I don't think you can get to expertise just by doing.  Eventually you start wasting time with trial and error and hit diminishing returns.  And that's when you need to stop doing and reflect.  So my new theory is that the best way to learn is through a cycle of action and reflection."
+
+I agree completely.  The title of this was *On the Dangers* of Potential Energy intentionally.  It's not that potential energy is inherently bad; it's that it can lead to laziness, stagnation or an illusion of progress.  It's still completely a requirement to gain expertise, but must be tempered in the forge of action.
