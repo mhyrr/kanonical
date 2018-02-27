@@ -1,6 +1,6 @@
 ---
 title: Photos Are Better Than Video
-date: 2018-02-28T20:25:31.000Z
+date: 2018-02-25T11:02:31.000Z
 path: /photos-win/
 ---
 
@@ -34,11 +34,10 @@ It's way, way harder to do that with video.  Hollywood can do it, but even they 
 
 I got sent a few homemade videos from my wedding of some of the dancing and partying at the reception.  I remember that too - everyone grooving with the band singing in the middle of the crowd.  I watched ten seconds or so of the video and turned it off.  It ruined my memory.  It was too realistic; not everyone can dance, not everyone is always out there, and not every moment is filled with enormous energy.  But in my head it is, and I prefer that.
 
-Which is the main point.  We don't want a perfect retelling of the past.  The energy of the concert isn't the same the second time, and watching your kids take their first steps is a little different on the tenth viewing.  But having pictures from those days isn't like watching it over and over again.  It's not a playback.  Instead, it *takes you back*.  It lets you rekindle and relive the feelings, emotions, or excitement of that day.  You've already got that in your head, you just need a little help to remember.
+Which is the main point.  We don't want a perfect retelling of the past.  The energy of the concert isn't the same the second time, and watching your kids take their first steps is a little different on the tenth viewing.  But having pictures from those days isn't like watching it over and over again.  It's not a playback.  Instead, it *takes you back*.  It's evocative.  It lets you rekindle and relive the feelings, emotions, or excitement of that day.  You've already got that in your head, you just need a little help to remember.
 
 Oh, and there's another little problem with video.  Taking video often ruins the special quality of that first memory too.  By trying to record it, it's possible to completely miss the experience in the first place!  A picture is quick, video is not, and seeing something through a screen is not the same.  (That being said, I worry about taking pictures sometimes for the same reason.)
 
 Live in the moment.  Build your experiences and cherish them.  Let the sands of time pass; let your memories have a life of their own.
 
 ![Street scene](https://photos.smugmug.com/Weddings/Our-Wedding/i-Kwgs8DS/0/e5ea2625/XL/busbw-XL.jpg)
-
