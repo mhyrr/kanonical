@@ -1,6 +1,6 @@
 ---
 title: Math for Theologians
-date: 2018-03-10T20:25:31.000Z
+date: 2018-03-30T20:25:31.000Z
 path: /theology-and-math/
 ---
 
@@ -172,7 +172,9 @@ I've found that people that have studied math tend to have more care in how they
 
 [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)) - a brilliant mathematician - said that "language is froth on the surface of thought."  That brilliant phrase provides exactly what I mean while also serving as a wonderful example.
 
-> Language is froth on the surface of thought. --McCarthy
+> Language is froth on the surface of thought.
+>
+> --McCarthy
 
 Our own minds are wild, unruly places.  We all have whole jungles in there, but we can also construct elaborate and beautiful crystal palaces of thought worth sharing with others.  Language is the primary tool we have to get those thoughts out.  If we can't speak or write what we're thinking with precision, the crystal palaces you build up there are basically worthless.  Language is the medium by which we express our ideas.
 
@@ -182,7 +184,7 @@ Math in this context is just another language.  But it's a language that maps *e
 
 we are referencing a very specific idea.  When anyone who knows the language of math sees this, they know *precisely* the idea that is being described.  *Math is the most precise language ever invented.*
 
-It's valuable for anyone to learn this language, but it's particularly valuable for theologians.  For most people, religion and theology are on the other side of the spectrum; they're subjects full of feeling, emotions, and ambiguity.  Because of this, it can be natural for people to move towards an idea called relativism: the idea that absolute truth doesn't exist.  You'll often hear things like “This is true for me and so I believe it” or “What’s right for you might not be right for me.”  And yet, religion and the search for the divine is a search for absolute truth.  
+It's valuable for anyone to learn this language, but it's particularly valuable for theologians.  For most people, religion and theology are on the other side of the spectrum; they're subjects full of feeling and emotions, allegory and metaphor, ambiguity and opinions.  Because of this, it can be natural for people to move towards an idea called relativism: the idea that absolute truth doesn't exist.  You'll often hear things like “This is true for me and so I believe it” or “What’s right for you might not be right for me.”  And yet, religion and the search for the divine is a search for absolute truth.  
 
 [St. Thomas Aquinas](https://en.wikipedia.org/wiki/Thomas_Aquinas) provides an outstanding example of this.  He took Aristotelean logic and applied it to theology with precision.  I've also been listening lately to some of the lectures of Jordan Peterson.  Peterson is a clinical psychologist who dives into many of the Biblical stories from the perspective of human psychology.  (He's also been surrounded with some controversy over the subject of free speech; controversy that seems completely ill-founded.)  He's a fantastic modern example of the type of precision we all need in our language.  He works very hard to say exactly what he means - an effort, depending on his audience, that is lost - and to break down questions and pursue the goal of truth.
 
@@ -194,7 +196,10 @@ And speaking of the Bible and it's beautiful stories, here's another place I thi
 
 Why heartbreaking?  Because fundamentalism is so often not actually about beliefs and faith.  It becomes about power, authority and identity.  People end up believing more in the fact that they're right than they do in their original beliefs.  They become impossible to debate because they aren't on a search for the truth.  They end up following powerful ministers that create what can only be described as cults of personality.  [John Oliver documents some of these](https://www.youtube.com/watch?v=7y1xJAVZxXg) in hilarious and frightening fashion.
 
-Math can help solve the problem of quacks.  Learning a bit of really interesting math - like the actual concept of infinity - can help shake loose some of the thinking that allows people to turn to things like Biblical literalism.  These sorts of belief systems always end up being a combination of two things: 1. A method of applying power over people's lives in a way of saying "I know better than you" and 2. A God-of-the-gaps argument to give people some level of meaning in the world.
+Math can help solve the problem of quacks.  Learning a bit of really interesting math - like the actual concept of infinity - can help shake loose some of the thinking that allows people to turn to things like Biblical literalism.  These sorts of belief systems always end up being a combination of two things: 
+
+1. A method of applying power over people's lives in a way of saying "I know better than you" 
+2. A God-of-the-gaps argument to give people some level of meaning in the world.
 
 I'm not suggesting that teaching a bunch of fundamentalists math will suddenly make them a bit more open to thought.  They've already been inculcated in a system of belief, and once that happens it's really hard to undo it.  Rather, I think it can be dealt with generationally.  
 
@@ -210,34 +215,80 @@ My favorite example of this level of intimacy is [St. Therese of Liseux](https:/
 
 This focus on intimacy, compassion, love, and personal encounters is rightly central to Christianity.  We should focus on the people that are right in front of us.  We should focus on the poor.  We should focus on proper order and uprightness in our own lives.
 
-But there's a complement to this focus, that is rarely, if ever, talked about.  Individuals in today's world can have larger effects and interact directly with more people than ever before.   How do we love, in aggregate?  What can we do to ensure our larger actions do good not harm?
+But there's a complement to this focus that is rarely, if ever, talked about.  Individuals in today's world can have larger effects and interact directly with more people than ever before.   How do we love, in aggregate?  What can we do to ensure our larger actions do good rather than harm?
 
-I tried to write about this before, talking about [scientist saints](/scientistsaints/).  I think a better name would've been economist saints.  We need to be able to think about doing good in aggregate.  We need to learn and understand more about the consequences of actions taken.
+I tried to write about this before, talking about [scientist saints](/scientistsaints/).  I think a better name for that would've been economist saints.  We need to be able to think about doing good in aggregate and to measure it.  We need to learn and understand more about the consequences of actions taken.
 
-This is almost impossibly hard.  The problem space of unintended consequences is large.  But it's also incredibly worthwhile, and the incredible potential of negative unintended consequences makes it critical to learn more about.  It is also absolutely certain that math underpins the entire enterprise.
+This is almost impossibly hard.  Almost.  The problem space of unintended consequences is certainly very large.  But it's also the most worthwhile of endeavors, and the incredible potential of negative unintended consequences makes it critical to learn more about.  It is also absolutely certain that math underpins the entire enterprise.
 
-In 2013, the United Nations published an update to their [Millennium Development Goals](http://www.un.org/millenniumgoals/bkgd.shtml).  Their first goal was to halve global extreme poverty by 2015.  This was [achieved two years ahead of schedule](http://www.un.org/millenniumgoals/pdf/Goal_1_fs.pdf).
+In 2013, the United Nations published an update to their [Millennium Development Goals](http://www.un.org/millenniumgoals/bkgd.shtml).  Their first goal was to halve global extreme poverty by 2015.  This was [achieved two years ahead of schedule](http://www.un.org/millenniumgoals/pdf/Goal_1_fs.pdf).  I don't think the UN actually did that much to bring this about, it just sort of happened.  It was natural fallout from the dizzying progress of the last few decades.  
 
+> Anxiety is the dizziness of freedom 
+>
+> --Kierkegaard
 
-Religious people don't often deal with probabilities, with populations, or with trends.  But there's a lot of good to be done in the world with this line of thinking.  It's also impossibly hard.. the realm of unintended consequences is very large.  So knowing the types of problems and the method of thinking is hugely important.
+If we can halve extreme poverty in today's world in 15 years without really trying, what can we do with a measurement feedback loop?   Probabilities, populations, and trends aren't often the topic of religious conversation or direction.  But there's a lot of good to be done in the world with this line of thinking.  And if you're scared by the possibilities, good.  There's also a huge amount of bad that can be done, with intent and without.  Kierkegaard said that "Anxiety is the dizziness of freedom."  We have a truly epochal amount of freedom, ability,  and knowledge in the 21st century.  We need better systems to use it for good.  Math can help.
 
 #### Thinking in a Scientific World
 
-The world is trending more scientific.  Slowly, the public is  catching up.  One danger is scientism.  But another is credibility.  Already the educated elite is highly skeptical of any religious position.  They consider it backwards and parochial.
+And this trend is only increasing in speed.  The world is getting more scientific and reliant on ever more complex technology.  All built with varying degrees of math.
 
-This quote rings true in context (I've used it before and it's stuck with me):
+The world is trending more scientific.  The public is following along.  I already mentioned one primary danger: Scientism.    But for religion, there's an entirely different danger: credibility.  
+
+Here's two graphs to show the problem.  The first describes the [correlation between intelligence scores and religiosity](https://www.quora.com/How-is-it-that-my-belief-in-God-implies-a-lack-of-intelligence-and-common-sense-How-do-others-arrive-at-that-conclusion-and-what-evidence-do-they-have-to-support-such-claim), which also has a [nice Wikipedia page](https://en.wikipedia.org/wiki/Religiosity_and_intelligence) with lots of citations.
+
+![Religiosity vs Intelligence](https://qph.fs.quoracdn.net/main-qimg-7f8d72bb877aeae9b33c0f4c3679da16-c)
+
+This one's worse.  This one describes how positively you feel towards religion in general.  The trend with more education isn't great.
+
+![Positive views vs Education](https://qph.fs.quoracdn.net/main-qimg-df17e89dbe98979f63fe4594eb3d90b2)
+
+The educated elite is highly skeptical of any religious position.  They consider it backwards and parochial.
+
+If theologians want a place in the conversation, they need to be able to keep up.  This doesn't mean embracing the philosophies of the modern world, which can be just as broken as ever, but it does mean understanding the context in which people live today.  
+
+There's still a place for the monastics who live separate from the world to contemplate God.  There's still a place for the Franciscans who own nothing and live on charity.  But we need to be able to understand those perspectives and why they're good and important.  We can't do that based on a 15th century world.  We need to focus on their place and importance in a 21st century world.
+
+The debates around science and religion still happen all the time today.  But they usually still focus on events like [Galileo](https://en.wikipedia.org/wiki/Galileo_affair).  We still need to have these conversations, but we need to have it around modern science and math and modern religion.  We should focus on things like the theory of Stellar Nucleosynthesis I mentioned earlier. Or perhaps the Big Bang Theory - conceived by the Catholic priest [Georges Lemaitre](https://en.wikipedia.org/wiki/Georges_Lema%C3%AEtre) and his dialogue with Pope Pius XII.
+
+Theologians today need math.  We need new sources of beauty and wonder.  It's not that the old visions of wonder don't work anymore, it's that our world has grown.  We know more and we have more tools for understanding.  We can manipulate matter at the level of atoms and molecules and we can see into space as far as it's physically possible to see.  The balance between providing beauty and wonder without relying on it as a God-of-the-gaps argument is critical.  Math pushes the boundaries of our world ever outward, and so reinforces that balance by confounding us with unintuitive truths.  
+
+#### Identity Functions
+
+This quote has [resonated to me](/churchmusic/) for a long time in describing how people fall away from religion:
 
 >People don't usually lose their faith because they've slogged through 600-page books by Protestant fundamentalists, or even by Richard McBrien. Many more just slip-slide away after watching a hundred monologues by George Carlin or Ricky Gervais that make the Church seem silly. Not false -- calling the Church's teachings false raises the squirmy question of Truth, which Screwtape rightly warned his tempters to stay away from. Just silly.
 
+We need to be continually concerned with the silly and the convenient in today's world.  We need to continually search for Truth.  We need to continually be inspired and believe in the wondrous.  There are no greater tools in the world for conceiving of some truths and wonders than math.
 
-You shouldn’t mix up the moon with the finger pointing at the moon. Islam and Jewish tradition of images of god. The more you know about reality, the more you appreciate the grandeur of the absolute. 
+The two examples of Infinity and Decidability I provided align much more closely to wonder.  They are inherently beautiful, amazing results.  The probability and Universal Turing Machine examples map to truth, and perhaps end up more interesting.  They are unintuitive, paradoxical, and, most importantly, far-reaching truths.  They have so many consequences that we're still only scratching the surface.
 
-Humility in approaching people (Jordan Peterson)
-
-Chesterton and the difference between miracles and supernatural everything.
-
-“Poetry is sane because it floats easily in an infinite sea; reason seeks to cross the infinite sea, and so make it finite. The result is mental exhaustion. To accept everything is an exercise, to understand everything a strain.” 
-
-The list of amazing math goes on.  waitbutwhy's number posts.  Banach-Tarski.  Learning AND, OR, XOR, and that all logic can be made with NOR.  Euler's identity.
+I gave only four examples and still probably rambled on too long.  The corpus of [amazing and beautiful math](https://en.wikipedia.org/wiki/Mathematical_beauty) is huge!  The [Banach Tarski paradox](https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox): amazing.  The [NAND (Not AND) gate](https://en.wikipedia.org/wiki/NAND_logic)'s ability to convert all logic: amazing.    And here's a simple one I completely forgot!  [Euler's identity](https://en.wikipedia.org/wiki/Euler%27s_identity) is so simple yet so staggering, it's practically equivalent to a Buddhist's contemplative koan:
 
 > e<sup>iπ</sup> + 1 = 0
+
+Combining imaginary numbers, the natural log e, pi, 1 and 0.  How is that even possible?  The created world is an amazing and mysterious place.
+
+In his defining book *Orthodoxy*, Chesterton describes strongly the mental burden of reason:
+
+>Poetry is sane because it floats easily in an infinite sea; reason seeks to cross the infinite sea, and so make it finite. The result is mental exhaustion. To accept everything is an exercise, to understand everything a strain.
+>
+>...
+>
+>Imagination does not breed insanity. Exactly what does breed insanity is reason. Poets do not go mad; but chess-players do. Mathematicians go mad, and cashiers; but creative artists very seldom. I am not, as will be seen, in any sense attacking logic: I only say that this danger does lie in logic, not in imagination.
+
+I don't think he's giving enough credit to creatives and their mental burdens, and in the modern world there's a strong history of alcoholic, addicted, depressed and suicidal artists, writers, and creatives.
+
+But he's right about the burden of reason.  The demands of precision are inestimable and we can't hope to understand everything.  The world, the whole world - "everything that is the case" - is constructed on top of reason.  If we have the faith to accept that our thoughts correlate to reality (another point of Chesterton's), then one of the most important ways to understand the Absolute, the Divine, the Creator, or God, is to ponder the beauty and truth of the foundational constructs of our world.  Many of those constructs are math.
+
+The beginning of the Gospel of John begins:
+
+> In the beginning was the Word: the Word was with God and the Word was God.  He was with God in the beginning. Through him all things came into being, not one thing came into being except through him.
+
+The Greek word that maps to this vision of Christ is [Logos](https://en.wikipedia.org/wiki/Logos_(Christianity)) - meaning "word, discourse, or reason".  The Logos brought all things into being.  Math, in this sense, has a stunning theological component.  We need to explore it more.
+
+
+
+
+
+
