@@ -4,7 +4,7 @@ date: 2018-04-17T07:50:31.000Z
 path: /theology-and-math/
 ---
 
-*Caveat lector*: 
+*Caveat lector*:
 
 This is an opinionated piece around topics that have a shared surface area of controversy.  The endless and unendable debate around science (often as a proxy for rationality or humanism) and religion seems to rankle almost all that consider the subject.  The below may induce this rankle on both sides.  It calls out math as not only the language of science but as it's primary form.  It also implicitly dismisses any high ground that some may give science and math, and makes them vulnerable to the same scales of beauty, wonder and emotion that religion fosters.  On the other hand, it generalizes the word theologian to mean anyone interested in concepts of religion or evangelization.  And it suggests (again, implicitly) that most people engaged in that practice - including pastors, peers, and priests - are, at best, struggling against the monumental size of the task and, at worst, are willfully ignorant and doing a substandard job of it, usually by acting as if it's 1618, not 2018.
 
@@ -32,7 +32,7 @@ Still, the God of the Gaps is a fairly natural line of thinking, and it happens 
 
 And yet the process of learning and understanding the whole world is equally beautiful.  It's easy to forget this in our culture.  Being smart, or a nerd, or a geek is far more fashionable today than it was when I was growing up.  But there's still a set of cultural limits that seems to exist on what subjects are cool.  For instance, computers and the act of making things with them today is cool, but some of the math behind it is still not cool.  I think we're trending in the right direction at least.
 
-Anyway, here's an example of the beauty of learning more about the world and filling in gaps.  This is another idea that would be on my most-beautiful-ideas list: [stellar nucleosynthesis](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis.  This scientific theory describes - amazingly - how [all the elements](https://www.ptable.com/Images/periodic%20table.png) in the universe came to be.  The early universe had only Hydrogen and some Helium.  The formation of most matter on the periodic table up to Iron (like Oxygen, Carbon, Aluminum, Silicon, etc) were formed by the process of nuclear fusion in stars.  But to get heavier elements than Iron, you need even more energy than what's in stars.  Most of the matter in the universe that's heavier than Iron was actually formed during supernova explosions.  This includes things like Gold and Silver.  That silver jewelry you have?  Created during a supernova.  Same with the Nickel and Copper and Zinc in all of the coins in your pocket.
+Anyway, here's an example of the beauty of learning more about the world and filling in gaps.  This is another idea that would be on my most-beautiful-ideas list: [stellar nucleosynthesis](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis).  This scientific theory describes - amazingly - how [all the elements](https://www.ptable.com/Images/periodic%20table.png) in the universe came to be.  The early universe had only Hydrogen and some Helium.  The formation of most matter on the periodic table up to Iron (like Oxygen, Carbon, Aluminum, Silicon, etc) were formed by the process of nuclear fusion in stars.  But to get heavier elements than Iron, you need even more energy than what's in stars.  Most of the matter in the universe that's heavier than Iron was actually formed during supernova explosions.  This includes things like Gold and Silver.  That silver jewelry you have?  Created during a supernova.  Same with the Nickel and Copper and Zinc in all of the coins in your pocket.
 
 How wild is that?!  How beautiful?  How incredible?  And perhaps even more incredible is that we can learn and prove all of this.  One of the initial papers on this was published in the 50s and is known as the [B2FH paper](https://en.wikipedia.org/wiki/B2FH_paper).  They were able to use spectral analysis of stars to prove some of the details of these processes.  Neil deGrasse Tyson gave this knowledge as [his most astounding fact that we know about the universe](https://www.youtube.com/watch?v=9D05ej8u-gU).
 
@@ -74,7 +74,7 @@ Take some time to look through the links in this and chew on it a bit.  It's wor
 
 We tend to think of problems in only one way.  That is, we define the problem, figure out how to solve it, and then come up with the solution.  Math has codified that "figure out how to solve it" part into the [algorithm](https://en.wikipedia.org/wiki/Algorithm).  But there's a sort of meta-problem about problems: is it possible for you to figure out how to solve it?  In other words, is there actually a way to know for sure that a problem can be solved?  In essence, that's [decidability](https://en.wikipedia.org/wiki/Decision_problem).
 
-Math has been able to formalize this question across a wide breadth of fields and types of systems.  Perhaps the most far reaching result in this area is [Godel's Incompleteness Theorem](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems#Formal_systems:_completeness,_consistency,_and_effective_axiomatization).  Godel proved that all mathematical logic systems will have properties that can neither be proved nor disproved. 
+Math has been able to formalize this question across a wide breadth of fields and types of systems.  Perhaps the most far reaching result in this area is [Godel's Incompleteness Theorem](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems#Formal_systems:_completeness,_consistency,_and_effective_axiomatization).  Godel proved that all mathematical logic systems will have properties that can neither be proved nor disproved.
 
 If it sounds like this has no practical value whatsoever, consider one version related to computability called the [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem).  This version asks for a way to tell whether or not a computer program run over a given input will actually stop with an answer or whether it will run forever.  Alan Turing and Alonso Church proved (independently) that this is impossible to answer for all programs.  There is no rigor you can apply that is strong enough to guarantee this ability.  
 
@@ -113,7 +113,7 @@ If we control the inputs of our sampling, or the information we know about our s
 Here's the first fun example, usually known as the [Monty Hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
 
 >Imagine you're on a game show, and the host gives you a choice of three doors. Behind one door is a car, but behind the other two is a goat.  You pick a door, and the host, who knows what's behind the doors, opens a different door and shows you a goat.  He then asks "Do you want to stick with your choice, or switch to the other unopened door?"  
->	
+>
 >Should you stay with your first choice, or switch?
 
 The unintuitive answer is that if you switch doors, you have a 2/3 change of winning the car, but if you stay with your original choice you only have a 1/3 chance.  
@@ -121,7 +121,7 @@ The unintuitive answer is that if you switch doors, you have a 2/3 change of win
 Why?  The secret is that new information about the probabilities of the game was introduced *after* your choice.  When you picked a door, you had a 1 in 3 chance.  But then you got additional information that changed your knowledge about the game.  Weird right?  Let's restate the problem with slightly different numbers to get the point across.  Strictly speaking this is slightly different, but it's the same basic scenario:
 
 >Imagine you're on a game show, and the host gives you a choice of 1,000 doors. Behind one door is a car, but behind the other 999 is a goat.  You pick a door, and the host, who knows what's behind the doors, opens 998 other doors and shows you goats.  He then asks "Do you want to stick with your choice, or switch to the other unopened door?"  
->	
+>
 >Should you stay with your first choice, or switch?
 
 Seems obvious now right?  Your 1 in 1000 choice seems way less likely to be correct.  Adding more information about the problem has changed the probable outcomes.
@@ -158,7 +158,7 @@ But we know at least one is a Girl Named Florida.  So we can eliminate a bunch..
 GF/B | B/GF | GF/GN | GN/GF
 -|-|-|-|
 
-Those are all the options.  So, amazingly, if we know there's a Girl named Florida in the family, the odds that both kids are girls is now only *1 in 2*! 
+Those are all the options.  So, amazingly, if we know there's a Girl named Florida in the family, the odds that both kids are girls is now only *1 in 2*!
 
 Problems where knowledge of conditions affect an event are usually dealt with using [Bayesian Analysis](https://en.wikipedia.org/wiki/Bayes%27_theorem), which, just like the problems above, is a really weird approach.   But if we can get past the weirdness and realize the power of both randomness and information in probability, we acquire a lot more power with which to view the world.
 
@@ -169,7 +169,7 @@ Hopefully I haven't overloaded you yet, and hopefully it's not boring.  Math don
 Shel Kaphan, the first engineer at Amazon, gave an interview awhile back.  He's retired now - very wealthy - and the interviewer wondered how he spends his time.  He was surprised by one part of the answer:
 
 > You mentioned you like to spend time with a math professor friend tinkering with new mathematical methods and ideas, just for fun.  Really?
-> 
+>
 > "People who don't do that for fun don't understand why it could be fun.  It is actually one of the more beautiful areas of reality for people that have the tool box to be able to appreciate it."
 
 More people need this tool box.  And theologians need this tool box *particularly*.  Back to that.
@@ -190,7 +190,7 @@ I've found that people that have studied math tend to have more care in how they
 
 Our own minds are wild, unruly places.  We all have whole jungles in there, but we can also construct elaborate and beautiful crystal palaces of thought worth sharing with others.  Language is the primary tool we have to get those thoughts out.  If we can't speak or write what we're thinking with precision, the crystal palaces you build up there are basically worthless.  Language is the medium by which we express our ideas.
 
-Math in this context is just another language.  But it's a language that maps *exactly* to a specific idea.  When we write 
+Math in this context is just another language.  But it's a language that maps *exactly* to a specific idea.  When we write
 
 > f(x) = x<sup>2</sup>
 
@@ -210,9 +210,9 @@ And speaking of the Bible and it's beautiful stories, here's another place I thi
 
 Why heartbreaking?  Because fundamentalism is so often not actually about beliefs and faith.  It becomes about power, authority and identity.  People end up believing more in the fact that they're right than they do in their original beliefs.  They become impossible to debate because they aren't actually on a search for the truth, they're on a search for power.  They end up following powerful ministers that create what can only be described as cults of personality.  [John Oliver documents some of these](https://www.youtube.com/watch?v=7y1xJAVZxXg) in hilarious and frightening fashion.
 
-Math can help solve the problem of quacks.  Learning a bit of really interesting math - like the actual concept of infinity - can help shake loose some of the thinking that allows people to turn to things like Biblical literalism.  These sorts of belief systems always end up being a combination of two things: 
+Math can help solve the problem of quacks.  Learning a bit of really interesting math - like the actual concept of infinity - can help shake loose some of the thinking that allows people to turn to things like Biblical literalism.  These sorts of belief systems always end up being a combination of two things:
 
-1. A method of applying power over people's lives in a way of saying "I know better than you" 
+1. A method of applying power over people's lives in a way of saying "I know better than you"
 2. A God-of-the-gaps argument to give people some level of meaning in the world.
 
 I'm not suggesting that teaching a bunch of fundamentalists math will suddenly make them a bit more open to thought.  They've already been inculcated in a system of belief, and once that happens it's really hard to undo it.  Rather, I think it can be dealt with generationally.  
@@ -239,7 +239,7 @@ This is almost impossibly hard.  Almost.  The problem space of unintended conseq
 
 In 2013, the United Nations published an update to their [Millennium Development Goals](http://www.un.org/millenniumgoals/bkgd.shtml).  Their first goal was to halve global extreme poverty by 2015.  This was [achieved two years ahead of schedule](http://www.un.org/millenniumgoals/pdf/Goal_1_fs.pdf).  I don't think the UN actually did that much to bring this about, it just sort of happened.  It was natural fallout from the dizzying progress of the last few decades.  
 
-> Anxiety is the dizziness of freedom 
+> Anxiety is the dizziness of freedom
 >
 > --Kierkegaard
 
@@ -263,7 +263,7 @@ The educated elite is highly skeptical of any religious position.  They consider
 
 If theologians want a place in the conversation, they need to be able to keep up.  This doesn't mean embracing the philosophies of the modern world, which can be just as broken as ever, but it does mean understanding the context in which people live today.  
 
-There's still a place for the monastics who live separate from the world to contemplate God.  There's still a place for the Franciscans who own nothing and live on charity.  But we need to be able to understand those perspectives and why they're good and important.  We can't do that based on a 15th century world.  The world has grown and will continue to grow.  We need to focus on their place and importance in a 21st century world and beyond, as it continues to grow.  We need to recognize their timeless quality and show how it's applicable in any time in any place. 
+There's still a place for the monastics who live separate from the world to contemplate God.  There's still a place for the Franciscans who own nothing and live on charity.  But we need to be able to understand those perspectives and why they're good and important.  We can't do that based on a 15th century world.  The world has grown and will continue to grow.  We need to focus on their place and importance in a 21st century world and beyond, as it continues to grow.  We need to recognize their timeless quality and show how it's applicable in any time in any place.
 
 The debates around science and religion still happen all the time today.  But they usually still focus on events like [Galileo](https://en.wikipedia.org/wiki/Galileo_affair).  We still need to have these conversations, but we need to have it around modern science and math and modern religion.  We should focus on things like the theory of Stellar Nucleosynthesis I mentioned earlier. Or perhaps the Big Bang Theory - conceived by the Catholic priest [Georges Lemaitre](https://en.wikipedia.org/wiki/Georges_Lema%C3%AEtre) and his dialogue with Pope Pius XII.
 
@@ -311,8 +311,6 @@ The Greek word that maps to this vision of Christ is [Logos](https://en.wikipedi
 
 My friend Matt put this together as a summary, which I like:
 
-(1) You can't explore the divine without forming ideas. 
-(2) You can't form ideas without language. 
-(3) All language is imprecise except for Math. 
-
-
+(1) You can't explore the divine without forming ideas.
+(2) You can't form ideas without language.
+(3) All language is imprecise except for Math.
