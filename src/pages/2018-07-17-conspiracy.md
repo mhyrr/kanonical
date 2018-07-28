@@ -1,5 +1,5 @@
 ---
-title: Book Review: Conspiracy
+title: Book Review - Conspiracy
 date: 2018-07-17T07:14:14.000Z
 path: /conspiracy/
 ---
@@ -17,4 +17,3 @@ We have a natural negative connotation around a conspiracy, and in fact the norm
 One of my own conspiracies is to become a published fiction author.  This is a long term plan, and recognizing this takes the pressure off and let's me focus on taking it one step at a time.  It's something I need to be consistent about over the long term; writing something like a novel required daily input for weeks, months, or years.  And it's far better for both the outcome of this conspiracy and for my own psyche that this goal remain at least semi-secret (some already know I want to do this, and the intersection of that set of people with the set that would read this is large).
 
 I've never thought about long term plans and goals this way, but I find it useful.
-
