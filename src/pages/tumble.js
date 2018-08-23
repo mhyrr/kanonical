@@ -33,6 +33,8 @@ class Tumble extends React.Component {
 
   timeSince(date) {
 
+    // console.log("Date: " + date);
+
     var seconds = Math.floor((new Date() - date) / 1000);
 
     var interval = Math.floor(seconds / 31536000);
@@ -114,7 +116,8 @@ class Tumble extends React.Component {
 
             link.node.date = link.node.date || "19700101";
             // Do some date function
-            var isoDate = link.node.date.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
+            // console.log(link.node.date);
+            var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
             // console.log(isoDate);
             var formattedDate = Date.parse(isoDate);
 
