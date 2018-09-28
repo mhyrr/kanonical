@@ -1,82 +1,155 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { Container } from 'react-responsive-grid'
+import '../assets/scss/main.scss'
+import Helmet from 'react-helmet'
 
-import { rhythm, scale } from '../utils/typography'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Footer from '../components/Footer'
 
 class Template extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isArticleVisible: false,
+      timeout: false,
+      articleTimeout: false,
+      article: '',
+      loading: 'is-loading'
+    }
+    this.handleOpenArticle = this.handleOpenArticle.bind(this)
+    this.handleCloseArticle = this.handleCloseArticle.bind(this)
+  }
+
+  componentDidMount () {
+    this.timeoutId = setTimeout(() => {
+        this.setState({loading: ''});
+    }, 100);
+  }
+
+  componentWillUnmount () {
+    if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+    }
+  }
+
+  handleOpenArticle(article) {
+
+    this.setState({
+      isArticleVisible: !this.state.isArticleVisible,
+      article
+    })
+
+    setTimeout(() => {
+      this.setState({
+        timeout: !this.state.timeout
+      })
+    }, 325)
+
+    setTimeout(() => {
+      this.setState({
+        articleTimeout: !this.state.articleTimeout
+      })
+    }, 350)
+
+  }
+
+  handleCloseArticle() {
+
+    this.setState({
+      articleTimeout: !this.state.articleTimeout
+    })
+
+    setTimeout(() => {
+      this.setState({
+        timeout: !this.state.timeout
+      })
+    }, 325)
+
+    setTimeout(() => {
+      this.setState({
+        isArticleVisible: !this.state.isArticleVisible,
+        article: ''
+      })
+    }, 350)
+
+  }
+
   render() {
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteDescription = this.props.data.site.siteMetadata.description
     const { location, children } = this.props
-    let header
 
     let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
-    }
 
-    console.log("path: " + location.pathname)
+    let content;
 
     if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Kanonical
-          </Link>
-        </h1>
+      content = (
+        <div id="wrapper">
+          <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+          <Main
+            isArticleVisible={this.state.isArticleVisible}
+            timeout={this.state.timeout}
+            articleTimeout={this.state.articleTimeout}
+            article={this.state.article}
+            onCloseArticle={this.handleCloseArticle}
+          />
+        
+        </div>
       )
     } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Kanonical
-          </Link>
-        </h3>
+      content = (
+        <div id="wrapper" className="page">
+          <div style={{
+            maxWidth: '1140px'
+          }}>
+            {children()}
+          </div>
+        </div>
       )
     }
+
     return (
-      <Container
-        style={{
-          maxWidth: rhythm( location.pathname == "/tumble" ? 48 : 24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children()}
-      </Container>
+      <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
+        <Helmet>
+            <title>{siteTitle}</title>
+            <meta name="description" content={siteDescription} />
+        </Helmet>
+
+        {content}
+
+        <div id="bg"></div>
+      </div>
     )
   }
 }
 
-Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
-}
-
 export default Template
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {frontmatter: {draft: {ne: true}}},
+        limit: 7,) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            path
+            date(formatString: "DD MMMM, YYYY")
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
