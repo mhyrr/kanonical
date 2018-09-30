@@ -1,0 +1,66 @@
+///
+/// Dimension by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Wrapper */
+
+	#wrapper {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
+		@include vendor('align-items', 'center');
+		@include vendor('justify-content', 'space-between');
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		padding: 4rem 4rem;
+		z-index: 3;
+
+		&:before {
+			content: '';
+			display: block;
+		}
+
+		@include breakpoint(xlarge) {
+			padding: 10rem 2rem;
+
+
+		}
+
+		@include breakpoint(small) {
+			padding: 2rem 1rem;
+
+			.mask {
+				height: 60px;
+			}
+
+			.anim li.anim1 {
+				padding: 0 0 0 24px;
+			}
+			.anim li.anim2 {
+				padding: 0 0 0 16px;
+			}
+			.anim li.anim3 {
+				padding: 0 0 0 16px;
+			}
+			.anim li.anim4 {
+				padding: 0 0 0 0px;
+				min-height: 2rem;
+				max-width: 340px;
+			}
+			.anim li.anim5 {
+				padding: 0 0 0 0px;
+				min-height: 2rem;
+				max-width: 340px;
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			padding: 1rem;
+		}
+
+		&.page {
+			@include vendor('justify-content', 'flex-start');
+		}
+	}

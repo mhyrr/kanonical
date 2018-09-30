@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Kanonical",
+    description: "Hi, I'm Greg.  Occasionally, I do things.",
     author: "",
     siteUrl: "http://www.kanonical.io",
   },
@@ -20,6 +21,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              linkImagesToOriginal: false,
             },
           },
           {
@@ -67,5 +69,6 @@ module.exports = {
         credentials: require('./src/client_secret.json')
       }
     },
+    `gatsby-plugin-sass`,
   ],
 }
