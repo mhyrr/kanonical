@@ -47,6 +47,25 @@ class Main extends React.Component {
           {close}
         </article>
 
+        <article id="about" className={`${this.props.article === 'about' ? 'active about' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+            <h3 >No really, I'm still Greg. </h3>
+
+            <ul >
+              <li>Made with <span className="fa-heart icon"></span> using <a target="_blank" href="https://www.gatsbyjs.org/">GatsbyJS</a></li>
+
+              <li>Design adapted from the awesome work of <a target="_blank" href="https://html5up.net/">HTML5Up</a>.  Thanks! <span className="fa-thumbs-up icon"></span> </li>
+
+              <li>Contact coming soon..  <span className="fa-envelope-square icon"></span> </li>
+
+
+              {/*<li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+              <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+              <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+              <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>*/}
+            </ul>
+          {close}
+        </article>
+
 
       </div>
     )

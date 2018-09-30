@@ -41,6 +41,31 @@
 				opacity: 1;
 			}
 
+			&.active.about {
+				width: 35rem;
+
+				background-color: transparentize(_palette(bg), 0.45);
+
+				h3 {
+					text-align: center;
+				}
+
+				ul {
+					text-align: center;
+				}
+
+				li {
+					display: block;
+					padding-top: 2rem;
+					&:last-child {
+						padding-right: 12px;
+					}
+				}
+
+
+
+			}
+
 			&.active {
 				display: block !important;
 			}
@@ -84,6 +109,13 @@
 						background-color: _palette(border-bg-alt);
 					}
 				}
+			}
+
+			blockquote {
+				border-left-color: rgba( 0, 0, 0, 0.75);
+				color: rgb( 254, 249, 214);
+				font-weight: bold;
+
 			}
 
 		}
