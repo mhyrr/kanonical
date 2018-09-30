@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/scss/main.scss'
 import Helmet from 'react-helmet'
-
+import get from 'lodash/get'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
@@ -93,8 +93,9 @@ class Template extends React.Component {
             articleTimeout={this.state.articleTimeout}
             article={this.state.article}
             onCloseArticle={this.handleCloseArticle}
+            posts= {this.props.data.allMarkdownRemark.edges}
           />
-        
+
         </div>
       )
     } else {
@@ -137,7 +138,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC },
         filter: {frontmatter: {draft: {ne: true}}},
-        limit: 7,) {
+        ) {
       edges {
         node {
           excerpt
