@@ -35,10 +35,12 @@
 		bg:							#1b1f22,
 		bg-alt:						#000000,
 		bg-overlay:					rgba(19,21,25,0.5),
-		fg:							#ffffff,
-		fg-bold:					#ffffff,
+		fg:							rgba(254, 249, 214, 1),
+		fg-bold:					rgba(254, 249, 214, 1),
 		fg-light:					rgba(255,255,255,0.5),
 		border:						rgba(254, 249, 214, 1),
 		border-bg:					rgba(255,255,255,0.25),
-		border-bg-alt:				rgba(255,255,255,0.25)
+		border-bg-alt:				rgba(255,255,255,0.25),
+
+		nav-link:  rgba(214, 249, 214, .25)
 	);

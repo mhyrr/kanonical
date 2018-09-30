@@ -24,10 +24,36 @@
 
 		@include breakpoint(xlarge) {
 			padding: 10rem 2rem;
+
+
 		}
 
 		@include breakpoint(small) {
 			padding: 2rem 1rem;
+
+			.mask {
+				height: 60px;
+			}
+
+			.anim li.anim1 {
+				padding: 0 0 0 24px;
+			}
+			.anim li.anim2 {
+				padding: 0 0 0 16px;
+			}
+			.anim li.anim3 {
+				padding: 0 0 0 16px;
+			}
+			.anim li.anim4 {
+				padding: 0 0 0 0px;
+				min-height: 2rem;
+				max-width: 340px;
+			}
+			.anim li.anim5 {
+				padding: 0 0 0 0px;
+				min-height: 2rem;
+				max-width: 340px;
+			}
 		}
 
 		@include breakpoint(xsmall) {
