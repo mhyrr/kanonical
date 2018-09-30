@@ -1,0 +1,47 @@
+import React from 'react'
+import profilePic from './profile.png'
+import Link from 'gatsby-link'
+
+const Header = (props) => (
+    <header id="header" style={props.timeout ? {display: 'none'} : {}}>
+        <div className="logo">
+          <img
+            src={profilePic}
+            alt={`Greg Olsen`}
+            style={{
+              float: 'left'
+            }}
+          />
+        </div>
+        <div className="content">
+            <div className="inner anim">
+                <h1>Hi, I'm Greg.</h1>
+                <div className="mask">
+                  <ul>
+                    <li className="anim1"><p>Occasionally, I <i>do</i> things.</p></li>
+                    <li className="anim2"><p>Occasionally, I <a href="javascript:;" onClick={() => {props.onOpenArticle('blog')}}><i>write</i></a> things.</p></li>
+                    <li className="anim3"><p>Occasionally, I <Link to={'/tumble'}><i>think</i></Link> things.</p></li>
+                    <li className="anim4"><p>Occasionally, I <a target="_blank" href="https://www.gregolsen.photography/"><i>photograph</i></a> things.</p></li>
+                    <li className="anim5"><p>And sometimes, I'm just <a target="_blank" href="https://justadream.co/"><i>beachin' it.</i></a></p></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <nav className="navAnim">
+            <ul>
+                <li className="navanim2"><a href="javascript:;" onClick={() => {props.onOpenArticle('blog')}}>Blog</a></li>
+                <li className="navanim3"><Link to={'/tumble'}>Tumble</Link></li>
+                <li className="navanim4"><a target="_blank" href="https://www.gregolsen.photography/">Photos</a></li>
+                <li className="navanim5"><a target="_blank" href="https://justadream.co/">Beach</a></li>
+                <li className="navanim"><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
+            </ul>
+        </nav>
+    </header>
+)
+
+Header.propTypes = {
+    onOpenArticle: React.PropTypes.func,
+    timeout: React.PropTypes.bool
+}
+
+export default Header
