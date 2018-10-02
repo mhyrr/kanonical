@@ -14,42 +14,43 @@
 
 .mask {
   overflow: hidden;
-  height: 40px;
+  height: 60px;
 }
 
+
 .anim li.anim1 {
-  padding: 0 0 0 114px;
-  -moz-animation: cycle 15s linear infinite;
-  -webkit-animation: cycle 15s linear infinite;
-  animation: cycle 15s linear infinite;
+   padding: 0 0 0 114px;
+  -moz-animation: cycle 20s linear infinite;
+  -webkit-animation: cycle 20s linear infinite;
+  animation: cycle 20s linear infinite;
 }
 
 .anim li.anim2 {
   padding: 0 0 0 108px;
-  -moz-animation: cycle2 15s linear infinite;
-  -webkit-animation: cycle2 15s linear infinite;
-  animation: cycle2 15s linear infinite;
+  -moz-animation: cycle2 20s linear infinite;
+  -webkit-animation: cycle2 20s linear infinite;
+  animation: cycle2 20s linear infinite;
 }
 
 .anim li.anim3 {
   padding: 0 0 0 104px;
-  -moz-animation: cycle3 15s linear infinite;
-  -webkit-animation: cycle3 15s linear infinite;
-  animation: cycle3 15s linear infinite;
+  -moz-animation: cycle3 20s linear infinite;
+  -webkit-animation: cycle3 20s linear infinite;
+  animation: cycle3 20s linear infinite;
 }
 
 .anim li.anim4 {
   padding: 0 0 0 80px;
-  -moz-animation: cycle4 15s linear infinite;
-  -webkit-animation: cycle4 15s linear infinite;
-  animation: cycle4 15s linear infinite;
+  -moz-animation: cycle4 20s linear infinite;
+  -webkit-animation: cycle4 20s linear infinite;
+  animation: cycle4 20s linear infinite;
 }
 
 .anim li.anim5  {
   padding: 0 0 0 68px;
-  -moz-animation: cycle5 15s linear infinite;
-  -webkit-animation: cycle5 15s linear infinite;
-  animation: cycle5 15s linear infinite;
+  -moz-animation: cycle5 20s linear infinite;
+  -webkit-animation: cycle5 20s linear infinite;
+  animation: cycle5 20s linear infinite;
 }
 
 /* Need to be able to pause nav too
@@ -62,27 +63,27 @@
 
 
 .navAnim li.navanim2 {
-  -moz-animation: navCycle2 15s linear infinite;
-  -webkit-animation: navCycle2 15s linear infinite;
-  animation: navCycle2 15s linear infinite;
+  -moz-animation: navCycle2 20s linear infinite;
+  -webkit-animation: navCycle2 20s linear infinite;
+  animation: navCycle2 20s linear infinite;
 }
 
 .navAnim li.navanim3 {
-  -moz-animation: navCycle3 15s linear infinite;
-  -webkit-animation: navCycle3 15s linear infinite;
-  animation: navCycle3 15s linear infinite;
+  -moz-animation: navCycle3 20s linear infinite;
+  -webkit-animation: navCycle3 20s linear infinite;
+  animation: navCycle3 20s linear infinite;
 }
 
 .navAnim li.navanim4 {
-  -moz-animation: navCycle4 15s linear infinite;
-  -webkit-animation: navCycle4 15s linear infinite;
-  animation: navCycle4 15s linear infinite;
+  -moz-animation: navCycle4 20s linear infinite;
+  -webkit-animation: navCycle4 20s linear infinite;
+  animation: navCycle4 20s linear infinite;
 }
 
 .navAnim li.navanim5 {
-  -moz-animation: navCycle5 15s linear infinite;
-  -webkit-animation: navCycle5 15s linear infinite;
-  animation: navCycle5 15s linear infinite;
+  -moz-animation: navCycle5 20s linear infinite;
+  -webkit-animation: navCycle5 20s linear infinite;
+  animation: navCycle5 20s linear infinite;
 }
 
 /* ############################# Content Cycle ####################### */

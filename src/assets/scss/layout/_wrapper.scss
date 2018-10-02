@@ -22,17 +22,62 @@
 			display: block;
 		}
 
+
+
+
 		@include breakpoint(xlarge) {
 			padding: 10rem 2rem;
+		}
 
+		@include breakpoint(medium) {
+
+			#main {
+				width: 40rem;
+			}
 
 		}
+
+		// @include breakpoint(xxl) {
+		// 	padding: 8rem 1rem;
+		//
+		// 	.mask {
+		// 		height: 100px;
+		// 	}
+		//
+		// 	#main {
+		// 		width: 25rem;
+		// 	}
+		//
+		// 	.anim li.anim1 {
+		// 		padding: 0 0 0 152px;
+		// 	}
+		// 	.anim li.anim2 {
+		// 		padding: 0 0 0 140px;
+		// 	}
+		// 	.anim li.anim3 {
+		// 		padding: 0 0 0 140px;
+		// 	}
+		// 	.anim li.anim4 {
+		// 		padding: 0 0 0 100px;
+		// 		// min-height: 2rem;
+		// 		// max-width: 340px;
+		// 	}
+		// 	.anim li.anim5 {
+		// 		padding: 0 0 0 100px;
+		// 		// min-height: 2rem;
+		// 		// max-width: 340px;
+		// 	}
+		// }
 
 		@include breakpoint(small) {
 			padding: 2rem 1rem;
 
 			.mask {
 				height: 60px;
+			}
+
+			#main {
+				width: 25rem;
 			}
 
 			.anim li.anim1 {

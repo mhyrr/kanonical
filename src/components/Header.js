@@ -19,10 +19,10 @@ const Header = (props) => (
                 <div className="mask">
                   <ul>
                     <li className="anim1"><p>Occasionally, I <i>do</i> things.</p></li>
-                    <li className="anim2"><p>Occasionally, I <a href="javascript:;" onClick={() => {props.onOpenArticle('blog')}}><i>write</i></a> things.</p></li>
-                    <li className="anim3"><p>Occasionally, I <Link to={'/tumble'}><i>think</i></Link> things.</p></li>
-                    <li className="anim4"><p>Occasionally, I <a target="_blank" href="https://www.gregolsen.photography/"><i>photograph</i></a> things.</p></li>
-                    <li className="anim5"><p>And sometimes, I'm just <a target="_blank" href="https://justadream.co/"><i>beachin' it.</i></a></p></li>
+                    <li className="anim2"><p>Occasionally, I <i>write</i> things.</p></li>
+                    <li className="anim3"><p>Occasionally, I <i>think</i> things.</p></li>
+                    <li className="anim4"><p>Occasionally, I <i>photograph</i> things.</p></li>
+                    <li className="anim5"><p>And sometimes, I'm just <i>beachin' it.</i></p></li>
                   </ul>
                 </div>
             </div>
