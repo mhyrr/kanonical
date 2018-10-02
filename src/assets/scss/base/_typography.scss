@@ -9,6 +9,10 @@
 	html {
 		font-size: 16pt;
 
+		@include breakpoint(xxl) {
+			font-size: 16pt;
+		}
+
 		@include breakpoint(xlarge) {
 			font-size: 12pt;
 		}
