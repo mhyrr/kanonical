@@ -1,0 +1,28 @@
+
+.tumble {
+
+  @include breakpoint(medium) {
+    width: 40rem;
+  }
+
+  @include breakpoint(xsmall) {
+    width: 25rem;
+  }
+
+  width:60rem;
+
+  h2 {
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  h6 {
+    text-align: right;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: lighter;
+    padding: 10px;
+    color: rgba(254, 249, 214, 0.5);
+  }
+
+}
