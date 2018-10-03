@@ -99,21 +99,26 @@ class Tumble extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const links = get(this, 'props.data.allGoogleSheetLinksRow.edges')
 
+    var key = 0;
+
     return (
-      <div width="100%">
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+      <div className="tumble" width="100%">
+
+        <h2>A list of things I've read or thought about, collated over ten years..</h2>
+
+        <h6>May load slowly..</h6>
 
         <StackGrid
           columnWidth={300}
-          appearDelay={100}
-          duration={260}
+          appearDelay={150}
+          duration={20}
           gutterWidth={20}
           gutterHeight={20}
-          style={{marginTop: '60px'}}>
+          >
         {links.map(link => {
           if (link.node.path !== '/404/') {
             const title = get(link, 'node.title') || link.node.path
-
+            key++;
             link.node.date = link.node.date || "19700101";
             // Do some date function
             // console.log(link.node.date);
@@ -165,7 +170,7 @@ class Tumble extends React.Component {
 
             return (
 
-              <Card type={type} key={link.node.path}>
+              <Card type={type} key={key}>
 
                 <CardLink>{element}</CardLink>
 

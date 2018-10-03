@@ -15,13 +15,13 @@ class BlogPostTemplate extends React.Component {
       <div id="main" style={{display: 'flex'}}>
         <article className={'active timeout'}>
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-          <h1>{post.frontmatter.title}</h1>
+          <h1 style={{letterSpacing: '0.2rem', margin: '0'}}>{post.frontmatter.title}</h1>
           <p
             style={{
               ...scale(-1 / 5),
               display: 'block',
               marginBottom: rhythm(1),
-              marginTop: rhythm(-1),
+              marginTop: rhythm(.25),
             }}
           >
             {post.frontmatter.date}

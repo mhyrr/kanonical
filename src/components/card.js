@@ -63,7 +63,7 @@ export const CardDate = styled.span`
   padding: 10px 10px 4px 10px;
   width: 100%;
   display: inline-block;
-  font-size: .5em;
+  font-size: .8em;
 `;
 
 CardAttr.defaultProps = {
