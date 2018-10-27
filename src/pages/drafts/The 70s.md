@@ -1,6 +1,6 @@
 ---
 title: OMG The 70s
-date: 2014-06-29T20:25:31.000Z
+date: 2018-10-27T20:25:31.000Z
 path: /strong-opinions/
 draft: true
 ---
