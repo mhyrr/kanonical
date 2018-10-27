@@ -1,7 +1,7 @@
 ---
 title: The Personal MBA
 date: 2018-10-26T20:25:31.000Z
-path: /personal-mba/
+path: /personalmba/
 ---
 
 > You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.
@@ -48,5 +48,3 @@ On the other hand, if my kid wants to do physics then they should probably go to
 The reason Careers became majors in the first place is because the college degree became a credential for employers.  I think over the next couple of decades we'll see some changes in this trend.  The credential is already all but worthless in today's job market because everyone has one.
 
 I hope this happens, and I want to plan for it.  We've got 529 college funds for our 3 kids, but I also want to have pots of money available to them for other ventures.  The 529 money will be there for college if they need it.  But if they want to start a business instead or do an apprenticeship in a career they like, I'd like to give them a pile of books and a pile of money.
-
-
