@@ -104,7 +104,7 @@ class Tumble extends React.Component {
     return (
       <div className="tumble" width="100%">
 
-        <h2>A list of things I've read or thought about, collated over ten years..</h2>
+        <h2>A list of things I've read or thought about, collated over ten plus years..</h2>
 
         <h6>May load slowly..</h6>
 
