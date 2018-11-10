@@ -100,7 +100,7 @@ This is naive to the point of being foolish.  A big organization requires strong
 
 Is that fair?  I don't know.  There's a balance, since internal nodes need to have a strong sense of what it is they're communicating.  But a lot of the skills for handling vision, strategy, and reporting that are an internal node's responsibility are just different than pure engineering.  
 
-Organizations still have a long way - probably decades - before we have a good handle on this problem.  There's a lot that needs to change, and a lot of is simply historical artifacts.  
+Organizations still have a long way - probably decades - before we have a good handle on this problem.  There's a lot that needs to change, and a lot of it is simply historical artifacts.  
 
 A first step, for each of us individual nodes, is to appreciate the different choices and tradeoffs that come with each.  A leaf node will have a lot of specific focus, but will have a significant lack of understanding and input into strategy, vision and communication.  An internal node won't have near as much bandwidth to focus on the specific details of what the organization is trying to do, but will have a better understanding of the overall goals and will be able to effect more change.  
 
