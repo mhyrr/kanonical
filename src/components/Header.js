@@ -31,7 +31,7 @@ const Header = (props) => (
             <ul>
                 <li className="navanim2"><a href="javascript:;" onClick={() => {props.onOpenArticle('blog')}}>Blog</a></li>
                 <li className="navanim3"><Link to={'/tumble'}>Tumble</Link></li>
-                <li className="navanim4"><a target="_blank" href="https://www.gregolsen.photography/">Photos</a></li>
+                <li className="navanim4"><a target="_blank" href="https://12inchesbehind.com/">Photos</a></li>
                 <li className="navanim5"><a target="_blank" href="https://justadream.co/">Beach</a></li>
                 <li className="navanim"><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
             </ul>
