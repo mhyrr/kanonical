@@ -1,7 +1,7 @@
 ---
-title: Strong Opinions
+title: Kids as Excuse
 date: 2014-06-29T20:25:31.000Z
-path: /strong-opinions/
+path: //
 draft: true
 ---
 
