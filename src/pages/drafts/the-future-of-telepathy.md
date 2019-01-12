@@ -112,6 +112,7 @@ The future of telepathy - how different is the way we text now from telepathy?  
 
 Human communication - when people talk they talk over each other constantly, they don't listen, they don't  say what they mean and the other person doesn't get what they say.  College students embrace this in IM.  High school students embrace this in text.  I can, with written communication, embrace what I want to say as closely as possible with no such distraction as facing another human being directly.  I can accommodate my thought completely and then hopefully pass it on for appropriate response.
 
+
 Does this sound stoic?  I hope not, it's a riot.  The written word, not speech, is the most fundamental communicative medium of civilization.  And it's the one that will last in the 21st century and beyond.  Not voice, not video.  Text.  There's a reason books have survived this long.
 
 
