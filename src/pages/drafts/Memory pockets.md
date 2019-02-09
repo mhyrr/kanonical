@@ -6,3 +6,5 @@ draft: true
 ---
 
 Memory pockets. Have caches to put stuff in long term memory that doesn’t take your 7 short term slots. Similar to what memory comptetitors do.
+
+
