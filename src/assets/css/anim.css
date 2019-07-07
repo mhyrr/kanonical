@@ -1,4 +1,12 @@
 
+.anim h1 {
+  color: rgba(254, 251, 232, 1);
+}
+
+.mask p {
+  color: rgba(254, 251, 232, 1);
+}
+
 .anim li {
    position: absolute;
    text-align: center;
