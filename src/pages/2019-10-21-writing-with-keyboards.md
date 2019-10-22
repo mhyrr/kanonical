@@ -1,12 +1,12 @@
 ---
 title: Keyboards vs. Long Form
-date: 2019-10-2T07:58:15.000Z
+date: 2019-10-21T07:58:15.000Z
 path: /keyboards-vs-notebooks/
 ---
 
 I’ve been writing a decent amount this year, including some longer-for-me stuff that I’m reasonably content with.  I do all of my writing on my laptop, with a keyboard, and I’ve wondered for awhile if that’s a hindrance at all to actual writing.  The problem is that my laptop has multiple purposes that all fight for top billing in my headspace.  There’s work, there’s coding, there’s the endless, boundless distraction of the internet, and there’s even the distraction of all the other writing ideas and projects I have sitting in my folder tantalizing me.
 
-It’s gotten better since I switched to using Ulysses.  This is hands down the best writing app I’ve used, and I’ve used a lot of em.  The three killer features in my mind:
+It’s gotten better since I switched to using [Ulysses](https://ulysses.app/).  This is hands down the best writing app I’ve used, and I’ve used a lot of em.  The three killer features in my mind:
 
 - Distraction free and full screen mode is very well done.  It’s simple, elegant, and highlights to maintain your focus very well.  If I want to be actively working on something for my next writing session, I just leave the app in this state and I’m able to dive right in the next time I sit down.
 - The organizational structure is actually useful.  I’m not doing anything particularly complicated just yet, but the folder and label construction and display is well thought out and useful.  I can see how it will expand to something with chapters.
