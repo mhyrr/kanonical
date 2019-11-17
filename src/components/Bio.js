@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './profile.png'
+import profilePic from './profile_new.png'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {

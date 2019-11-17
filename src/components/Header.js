@@ -1,5 +1,5 @@
 import React from 'react'
-import profilePic from './profile.png'
+import profilePic from './profile_new.png'
 import Link from 'gatsby-link'
 
 const Header = (props) => (
