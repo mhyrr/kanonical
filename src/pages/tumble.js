@@ -1,7 +1,7 @@
 
 import React, {component} from 'react'
 import Link from 'gatsby-link'
-import StackGrid from "react-stack-grid"
+import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
@@ -75,8 +75,8 @@ class Tumble extends React.Component {
         }
       }
       else if (type == "quote") {
-        console.log(url.substring(0,12));
-        console.log(title.substring(0,12));
+        // console.log(url.substring(0,12));
+        // console.log(title.substring(0,12));
         if (url.substring(1,12) === title.substring(1,12)) {
           return "The internet is searchable, so if this quote is unattributed, you should still be able to find it!";
         } else {
@@ -95,98 +95,118 @@ class Tumble extends React.Component {
 
   }
 
+  buildCards(links) {
+    var key = 0;
+
+    return links.map(link => {
+      if (link.node.path !== '/404/') {
+        const title = get(link, 'node.title') || link.node.path
+        key++;
+        link.node.date = link.node.date || "19700101";
+        // Do some date function
+        // console.log(link.node.date);
+        var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
+        // console.log(isoDate);
+        var formattedDate = Date.parse(isoDate);
+
+        var element
+        var type = "link"
+        if (link.node.content != undefined) {
+
+          if (link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif")) {
+            element = (
+              <a href={link.node.content} target="_blank">
+                <img src={link.node.content} style={{
+                  float: 'left',
+                }} />
+              </a>
+            );
+            type = "img";
+          }
+          else if ( link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://")) {
+
+            element = (
+              <a href={link.node.content} target="_blank">{link.node.title}</a>
+            );
+
+          }
+          else if (
+            (link.node.content.trim().startsWith("\"") && link.node.content.trim().endsWith("\"")) ||
+            (link.node.content.trim().startsWith("*") && link.node.content.trim().endsWith("*")) ||
+            (link.node.content.trim().startsWith("“") && link.node.content.trim().endsWith("”")) ||
+            (link.node.content.trim().startsWith("“") && this.quoteEnd(link.node.content.trim())) ||
+            (link.node.content.trim().startsWith("\"") && this.quoteEnd(link.node.content.trim()))
+            ) {
+            type = "quote";
+            element = (
+              <div className="quote" style={{marginTop: '5px'}}>{link.node.content}</div>
+            );
+
+          }
+          else {
+            element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
+          }
+        }
+        else {
+          element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
+        }
+
+        return (
+
+          <li key={key} style={{ width:300}}>
+            <Card type={type}>
+
+              <CardLink>{element}</CardLink>
+
+              <CardAttr type={type}>
+                <span>{this.courtesyOf(link.node.content, link.node.title, type)}</span>
+              </CardAttr>
+
+              <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
+            </Card>
+
+          </li>
+
+
+        )
+      }
+    })
+
+  }
+
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const links = get(this, 'props.data.allGoogleSheetLinksRow.edges')
 
-    var key = 0;
+    const Grid = makeResponsive(measureItems(CSSGrid), {
+      maxWidth: 1920,
+      minPadding: 100
+    });
+
+    var cards = this.buildCards(links)
+    // console.log(cards)
 
     return (
-      <div className="tumble" width="100%">
+      <div className="tumble" width="90%">
 
         <h2>A list of things I've read or thought about, collated over ten plus years..</h2>
 
         <h6>May load slowly..</h6>
 
-        <StackGrid
+        <Grid
+          className="tumbleGrid"
+          component="ul"
+          columns={3}
           columnWidth={300}
-          appearDelay={150}
-          duration={20}
-          gutterWidth={20}
-          gutterHeight={20}
+          gutterWidth={6}
+          gutterHeight={12}
+          layout={layout.pinterest}
+          duration={800}
+          easing="ease-out"
           >
-        {links.map(link => {
-          if (link.node.path !== '/404/') {
-            const title = get(link, 'node.title') || link.node.path
-            key++;
-            link.node.date = link.node.date || "19700101";
-            // Do some date function
-            // console.log(link.node.date);
-            var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
-            // console.log(isoDate);
-            var formattedDate = Date.parse(isoDate);
-
-            var element
-            var type = "link"
-            if (link.node.content != undefined) {
-
-              if (link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif")) {
-                element = (
-                  <a href={link.node.content} target="_blank">
-                    <img src={link.node.content} style={{
-                      float: 'left',
-                    }} />
-                  </a>
-                );
-                type = "img";
-              }
-              else if ( link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://")) {
-
-                element = (
-                  <a href={link.node.content} target="_blank">{link.node.title}</a>
-                );
-
-              }
-              else if (
-                (link.node.content.trim().startsWith("\"") && link.node.content.trim().endsWith("\"")) ||
-                (link.node.content.trim().startsWith("*") && link.node.content.trim().endsWith("*")) ||
-                (link.node.content.trim().startsWith("“") && link.node.content.trim().endsWith("”")) ||
-                (link.node.content.trim().startsWith("“") && this.quoteEnd(link.node.content.trim())) ||
-                (link.node.content.trim().startsWith("\"") && this.quoteEnd(link.node.content.trim()))
-                ) {
-                type = "quote";
-                element = (
-                  <h3 style={{marginTop: '5px'}}>{link.node.content}</h3>
-                );
-
-              }
-              else {
-                element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
-              }
-            }
-            else {
-              element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
-            }
-
-            return (
-
-              <Card type={type} key={key}>
-
-                <CardLink>{element}</CardLink>
-
-                <CardAttr type={type}>
-                  <span>{this.courtesyOf(link.node.content, link.node.title, type)}</span>
-                </CardAttr>
-
-                <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
-              </Card>
-
-
-            )
-          }
-        })}
-
-        </StackGrid>
+            {cards}
+        </Grid>
 
       </div>
     )
