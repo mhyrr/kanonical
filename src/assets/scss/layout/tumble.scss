@@ -1,19 +1,23 @@
 
 .tumble {
 
-  @include breakpoint(medium) {
-    width: 40rem;
+  .navAnim {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem;
   }
 
-  @include breakpoint(xsmall) {
-    width: 25rem;
-  }
-
-  width:60rem;
+  max-width: none;
 
   h2 {
     text-align: center;
     letter-spacing: normal;
+    color: #fef9d6;
+  }
+
+  h5 {
+    text-transform: none;
+    letter-spacing: 0rem;
+    // font-weight: lighter;
   }
 
   h6 {
@@ -22,7 +26,22 @@
     text-transform: none;
     font-weight: lighter;
     padding: 10px;
-    color: rgba(254, 249, 214, 0.5);
+    color: rgba(254, 249, 214, 0.2);
   }
 
+}
+
+  .hide {
+    display: none;
+  }
+
+.quote {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.tumbleGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
 }
