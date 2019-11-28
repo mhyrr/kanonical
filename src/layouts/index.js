@@ -101,9 +101,7 @@ class Template extends React.Component {
     } else {
       content = (
         <div id="wrapper" className="page">
-          <div style={{
-            maxWidth: '1140px'
-          }}>
+          <div>
             {children()}
           </div>
         </div>

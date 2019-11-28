@@ -1,7 +1,7 @@
 
 import React, {component} from 'react'
 import Link from 'gatsby-link'
-import StackGrid from "react-stack-grid"
+import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
@@ -9,6 +9,22 @@ import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
 import Bio from '../components/Bio'
 
 class Tumble extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      cards: {},
+      links: get(this, 'props.data.allGoogleSheetLinksRow.edges'),
+      showLinks: true,
+      showQuotes: true,
+      showPics: true,
+      showVids: true,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({cards: this.buildCards()})
+  }
 
   quoteEnd(str) {
     var p = new RegExp("(”|\")\\s+\-+\\s*.*$");
@@ -75,8 +91,8 @@ class Tumble extends React.Component {
         }
       }
       else if (type == "quote") {
-        console.log(url.substring(0,12));
-        console.log(title.substring(0,12));
+        // console.log(url.substring(0,12));
+        // console.log(title.substring(0,12));
         if (url.substring(1,12) === title.substring(1,12)) {
           return "The internet is searchable, so if this quote is unattributed, you should still be able to find it!";
         } else {
@@ -95,82 +111,111 @@ class Tumble extends React.Component {
 
   }
 
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const links = get(this, 'props.data.allGoogleSheetLinksRow.edges')
+  isPic(link) {
+    return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
+  }
 
+  isVid(link) {
+    return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
+  }
+
+  isLink(link) {
+    return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
+  }
+
+  buildCards() {
     var key = 0;
 
-    return (
-      <div className="tumble" width="100%">
+    console.log("buidling cards..");
 
-        <h2>A list of things I've read or thought about, collated over ten plus years..</h2>
+    return this.state.links.filter(link => {
+      if (link.node.content != undefined) {
+        // console.log(this.state.showPics)
+        // console.log(this.state.showVids)
+        // console.log(this.state.showLinks)
+        // console.log(this.state.showQuotes)
 
-        <h6>May load slowly..</h6>
+        if (this.isPic(link) ) {
+          return this.state.showPics;
+        }
+        else if (this.isVid(link) ) {
+          return this.state.showVids;
+        }
+        else if (this.isLink(link) ) {
+          return this.state.showLinks;
+        }
+        else {
+          return this.state.showQuotes;
+        }
+      }
+      return false;
+      }).map(link => {
 
-        <StackGrid
-          columnWidth={300}
-          appearDelay={150}
-          duration={20}
-          gutterWidth={20}
-          gutterHeight={20}
-          >
-        {links.map(link => {
-          if (link.node.path !== '/404/') {
-            const title = get(link, 'node.title') || link.node.path
-            key++;
-            link.node.date = link.node.date || "19700101";
-            // Do some date function
-            // console.log(link.node.date);
-            var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
-            // console.log(isoDate);
-            var formattedDate = Date.parse(isoDate);
+        if (link.node.path !== '/404/') {
+          const title = get(link, 'node.title') || link.node.path
+          key++;
+          link.node.date = link.node.date || "19700101";
+          // Do some date function
+          // console.log(link.node.date);
+          var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
+          // console.log(isoDate);
+          var formattedDate = Date.parse(isoDate);
 
-            var element
-            var type = "link"
-            if (link.node.content != undefined) {
+          var element
+          var type = "link"
 
-              if (link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif")) {
-                element = (
-                  <a href={link.node.content} target="_blank">
-                    <img src={link.node.content} style={{
-                      float: 'left',
-                    }} />
-                  </a>
-                );
-                type = "img";
-              }
-              else if ( link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://")) {
+          if (link.node.content != undefined) {
+            link.node.content = link.node.content.replace("“", "\"").replace("”", "\"")
+            if (this.isPic(link)) {
+              element = (
+                <a href={link.node.content} target="_blank">
+                  <img src={link.node.content} style={{
+                    float: 'left',
+                  }} />
+                </a>
+              );
+              type = "img";
+            }
+            else if ( this.isVid(link) ) {
+              type = "vid";
 
-                element = (
-                  <a href={link.node.content} target="_blank">{link.node.title}</a>
-                );
+              element = (
+                <div>
+                  <h5>{link.node.title}</h5>
+                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com", "youtube.com/embed").replace("youtu.be", "youtube.com/embed")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              );
+            }
+            else if ( this.isLink(link) ) {
 
-              }
-              else if (
-                (link.node.content.trim().startsWith("\"") && link.node.content.trim().endsWith("\"")) ||
-                (link.node.content.trim().startsWith("*") && link.node.content.trim().endsWith("*")) ||
-                (link.node.content.trim().startsWith("“") && link.node.content.trim().endsWith("”")) ||
-                (link.node.content.trim().startsWith("“") && this.quoteEnd(link.node.content.trim())) ||
-                (link.node.content.trim().startsWith("\"") && this.quoteEnd(link.node.content.trim()))
-                ) {
-                type = "quote";
-                element = (
-                  <h3 style={{marginTop: '5px'}}>{link.node.content}</h3>
-                );
+              element = (
+                <a href={link.node.content} target="_blank">{link.node.title}</a>
+              );
 
-              }
-              else {
-                element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
-              }
+            }
+            else if (
+              (link.node.content.trim().startsWith("\"") && link.node.content.trim().endsWith("\"")) ||
+              (link.node.content.trim().startsWith("*") && link.node.content.trim().endsWith("*")) ||
+              (link.node.content.trim().startsWith("“") && link.node.content.trim().endsWith("”")) ||
+              (link.node.content.trim().startsWith("“") && this.quoteEnd(link.node.content.trim())) ||
+              (link.node.content.trim().startsWith("\"") && this.quoteEnd(link.node.content.trim()))
+              ) {
+              type = "quote";
+              element = (
+                <div className="quote" style={{marginTop: '5px'}}>{link.node.content}</div>
+              );
+
             }
             else {
               element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
             }
+          }
+          else {
+            element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
+          }
 
-            return (
-
-              <Card type={type} key={key}>
+          let card = <li className={type} key={key} style={{ width:350}}>
+              <Card type={type}>
 
                 <CardLink>{element}</CardLink>
 
@@ -181,12 +226,111 @@ class Tumble extends React.Component {
                 <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
               </Card>
 
+            </li>
 
-            )
-          }
-        })}
+          return (
+            card
+          )
+        }
+    })
 
-        </StackGrid>
+  }
+
+  toggleLinks() {
+
+    this.state.showLinks = true;
+    this.state.showPics = false;
+    this.state.showQuotes = false;
+    this.state.showVids = false;
+    console.log(this.state.showLinks)
+    this.setState({cards: this.buildCards()})
+  }
+
+  togglePics() {
+
+    this.state.showPics = true;
+    this.state.showLinks = false;
+    this.state.showQuotes = false;
+    this.state.showVids = false;
+    console.log(this.state.showPics)
+    this.setState({cards: this.buildCards()})
+  }
+
+  toggleQuotes() {
+
+    this.state.showQuotes = true;
+    this.state.showLinks = false;
+    this.state.showVids = false;
+    this.state.showPics = false;
+    console.log(this.state.showQuotes)
+    this.setState({cards: this.buildCards()})
+  }
+
+  toggleVids() {
+
+    this.state.showVids = true;
+    this.state.showPics = false;
+    this.state.showQuotes = false;
+    this.state.showLinks = false;
+    console.log(this.state.showVids)
+    this.setState({cards: this.buildCards()})
+  }
+
+  setAll() {
+    this.state.showPics = true;
+    this.state.showQuotes = true;
+    this.state.showLinks = true;
+    this.state.showVids = true;
+    this.setState({cards: this.buildCards()})
+  }
+
+
+  render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+
+    this.state.cards = this.buildCards();
+    // if (Object.keys(this.state.cards).length === 0 && this.state.cards.constructor === Object) {
+    //   this.state.cards: this.buildCards()})
+    // }
+
+    console.log(this.state.cards)
+
+    let Grid = makeResponsive(measureItems(CSSGrid), {
+      maxWidth: 1920,
+      minPadding: 100
+    });
+
+    return (
+      <div className="tumble" width="90%">
+
+        <header id="header">
+          <h2>A list of things I've read or thought about, collated over ten plus years..</h2>
+
+          <nav className="navAnim">
+              <ul>
+                  <li className="navanim2"><a href="javascript:;" onClick={() => {this.toggleLinks()}}>Links</a></li>
+                  <li className="navanim3"><a href="javascript:;" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
+                  <li className="navanim4"><a href="javascript:;" onClick={() => {this.togglePics()}}>Pics</a></li>
+                  <li className="navanim5"><a href="javascript:;" onClick={() => {this.toggleVids()}}>Vids</a></li>
+                  <li className="navanim5"><a href="javascript:;" onClick={() => {this.setAll()}}>All</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <Grid
+          ref={elem => this.grid = elem}
+          className="tumbleGrid"
+          component="ul"
+          columns={3}
+          columnWidth={350}
+          gutterWidth={6}
+          gutterHeight={12}
+          layout={layout.pinterest}
+          duration={800}
+          easing="ease-out"
+          >
+           {this.state.cards}
+        </Grid>
 
       </div>
     )
