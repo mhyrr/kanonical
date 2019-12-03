@@ -176,7 +176,7 @@ The format is also different.  Twitter threads have actually become a really int
 - Parents and children want very different things from college.
 
 
-- Parents want the credential college provides.  They want their kids to start taking that stable path towards a career.  This may be a proxy for the desire for grandchildren, but it’s the normal way people hope for success for their children.  Everyone tends to be very risk averse for their children.
+- Parents want the credential college provides.  They want their kids to start taking that stable path towards a career.  This may be a proxy for the desire for grandchildren, but it’s the normal way people hope for success for their children.  Everyone tends to be very risk averse for their own children.
 
 
 - The kids want the adventure, they don’t think much about the credential.  They want to be out on their own.  To be individuals.  Adults.  Out in the real world and learning advanced and interesting things.
@@ -194,7 +194,7 @@ The format is also different.  Twitter threads have actually become a really int
 - Similarly, the adventure is also muted.  Nearly everything is taken care of for college students today.  Parents or family that have taken care of them since birth are only a text message way.
 
 
-- As soon as they can, many run off the deep end of individuality.  A sense of self is replaced by a sense of tribe, the more specific and misunderstood the better.  The sense of adventure often turns into an endless social sequence of parties and drinking.
+- As soon as they can, many run off the deep end of individuality.  A sense of self is - ironically - replaced by a sense of tribe, the more specific and misunderstood the better.  The sense of adventure often turns into an endless social sequence of parties and drinking.
 
 
 - There is perhaps no more squandered resource in this country than the capacities of smart and capable 18-22 year olds.
@@ -214,7 +214,7 @@ The format is also different.  Twitter threads have actually become a really int
 4. **Everything else.**  Sorry, that's just the way it is.
 
 
-- This is not a popular view, because everyone wants to value the education and choices they make.  The [importance of this choice has been overhyped](https://www.theatlantic.com/education/archive/2017/09/education-and-economic-mobility/541041/?utm_source=atlfb), and it is absolutely true that some schools will be better for a specific person than others.  But that’s not how schools do their marketing and branding.  They’re mostly still trying to imitate the prestigious institutions at the top of this list and buy admissions based on brand and prestige.
+- This is not a popular view, because everyone wants to value the education and choices they make themselves.  The [importance of this choice has been overhyped](https://www.theatlantic.com/education/archive/2017/09/education-and-economic-mobility/541041/?utm_source=atlfb), and it is absolutely true that some schools will be better for a specific person than others.  But that’s not how schools do their marketing and branding.  They’re mostly still trying to imitate the elite institutions at the top of this list and buy admissions based on brand and prestige.
 
 
 - This only works at the top.  Elite colleges manage brand better than almost anything else on the planet.   They take an academic tradition of hundreds of years and use it to sell an environment that caters to tomorrow’s rich and powerful.  Harvard is the pinnacle of educational prestige, but let’s be clear, the reason you go to Harvard isn’t the great education you’ll get.  It’s the connections you’ll make and the value of the credential you’ll have afterward.  In essence, it’s a very expensive social club for intelligent people.  And the secret societies on Ivy League campuses are just an extension of that.
@@ -326,7 +326,9 @@ The format is also different.  Twitter threads have actually become a really int
 - The evaluation that demonstrates the second value direction is the cost/benefit analysis.  What type of college should someone who is looking to enter an elementary education career choose?  The answer seems to be: the one that is the cheapest.  Despite the work being important, the earning potential of a teacher is limited (assuming they actually want to teach).  The goal of college is to get the credential and learn how to teach while inflicting the least amount of pain possible.  You don’t need a $50k/year degree from Villanova for this.
 
 
-- On the other hand, for a chemical engineering major with immediate six-figure earning potential it isn’t unreasonable to spend a significant amount of money on a degree.  One big reason for this is that intellectual rigor also matters more in some majors than it does in others.
+- On the other hand, for a chemical engineering major with immediate six-figure earning potential it isn’t unreasonable to spend a significant amount of money on a degree.  One big reason for this is that conceptual rigor also matters more in some majors than it does in others.  This can be seen by comparing the return on investment in more selective colleges on earnings across majors.  In more selective colleges, earnings can skyrocket for math, physics and computer science.  But in the same elite schools, the impact on earnings in the humanities is negligible.
+
+![Selectivity matters selectively](img/value_earnings.jpg)
 
 
 - A lot of people really don’t like this statement, but it’s just true. The conceptual load required for some majors is higher.  Physics, math, engineering and others require a very significant amount of intellectual ability and knowledge to produce work in their fields.
@@ -339,7 +341,7 @@ The format is also different.  Twitter threads have actually become a really int
 From _[College: The Easy Way](https://www.nytimes.com/2011/03/05/opinion/05herbert.html)_
 
 
-- Let me be clear: I’m not suggesting that some majors are “better”.  They’re different.  We’ve considering elementary education majors a couple of times, so let’s also point out that teaching is a noble, meaningful calling requiring high degrees of empathy and the ability to make big impacts on children’s lives.  It’s possible you can have far more impact on the world as a teacher than as an engineer.  And the creativity and inspiration behind great writing and literature can outstrip both.  Unfortunately, there’s a natural perception to consider majors requiring higher conceptual loads to be better, and this has caused a trend of Scientism in our colleges.  Roger Scruton put it best:
+- Let me be clear: I’m not suggesting that some majors are “better”.  They’re different.  We’ve considering elementary education majors a couple of times, so let’s also point out that teaching is a noble, meaningful calling requiring high degrees of empathy and the ability to make big impacts on children’s lives.  It’s possible you can have far more impact on the world as a teacher than as an engineer.  And the creativity and inspiration behind great writing and literature can outstrip both teaching and engineering.  Unfortunately, there’s a natural perception to consider majors requiring higher conceptual loads to be better, and this has caused a trend of Scientism in our colleges.  Roger Scruton put it best:
 
 	> “Philosophy is not the only subject that has been 'scientized' by the modern university: literature has been shrunk to 'literary theory', music has been colonized by set theory, Schenkerian analysis, and generative linguistics, and architecture has been all but abolished by engineering.  Pretended science has driven honest speculation from the intellectual economy, just as bad money drives out good.  This Gresham's law of the intellect operates wherever university teachers in the humanities exchange knowledge and imagination for the chimera of scientific 'research'.  A philosopher should certainly make room for scholarship: but scholarship has no 'results', no explanatory 'theories', no methods of experimentation. It is, at best, a spiritual discipline, and what will emerge from scholarship depends intimately on the soul of the person who engages in it.“
 
