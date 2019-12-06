@@ -9,7 +9,7 @@ path: /education-backwards/
 
 This started out as a simple idea: to work backwards from the adults we hope our children will be and use this to think about how we raise our kids now.  9,000 words later it turns out there was a lot to say (sorry about that).  
 
-The format is also different.  Twitter threads have actually become a really interesting way to lay out an argument, set of axioms or principles in a fairly concise way.  Two great examples of this are [Naval on getting rich](https://twitter.com/naval/status/1002103360646823936) and [@vgr on Waldenponding](https://twitter.com/vgr/status/1047925106423603200?lang=fi).
+The format is also different.  Tweetstorms on Twitter have actually become a really interesting way to lay out an argument, set of axioms or principles in a fairly concise way.  Two great examples of this are [Naval on getting rich](https://twitter.com/naval/status/1002103360646823936) and [@vgr on Waldenponding](https://twitter.com/vgr/status/1047925106423603200?lang=fi).
 
 ---
 
