@@ -17,20 +17,24 @@ class Bio extends React.Component {
           verticalAlign: 'middle',
         }}
       >
-        <img
-          src={profilePic}
-          alt={`Greg Olsen`}
-          style={{
-            float: 'left',
-            marginRight: rhythm(1 / 4),
-            marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
-          }}
-        />
-
+        <Link
+          to='/'
+        >
+          <img
+            src={profilePic}
+            alt={`Greg Olsen`}
+            style={{
+              float: 'left',
+              marginRight: rhythm(1 / 4),
+              marginBottom: 0,
+              width: rhythm(2),
+              height: rhythm(2),
+            }}
+          />
+        </Link>
         <br/>
-        Hi I'm Greg.  Occasionally, I do things.
+        Hi I'm <Link to='/'>Greg</Link>.  Occasionally, I do things.
+        
         <Link
           style={{ float: 'right', marginRight: '8px', paddingRight: '8px' }}
           to='archive'

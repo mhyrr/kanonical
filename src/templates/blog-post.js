@@ -13,6 +13,13 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div id="main" style={{display: 'flex'}}>
+        <h1 id="hdr" style={{display: 'flex', color: 'rgba(254, 251, 232, 0.75)'}}>
+          <Link
+            style={{ float: 'left', marginLeft: '2rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
+            to='/'>
+            Kanonical
+          </Link>
+        </h1>
         <article className={'active timeout'}>
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
           <h1 style={{letterSpacing: '0.2rem', margin: '0'}}>{post.frontmatter.title}</h1>
@@ -24,7 +31,7 @@ class BlogPostTemplate extends React.Component {
               marginTop: rhythm(.25),
             }}
           >
-            {post.frontmatter.date}
+            {post.frontmatter.date},
           </p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr

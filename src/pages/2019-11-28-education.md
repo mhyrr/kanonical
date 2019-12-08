@@ -51,7 +51,7 @@ The format is also different.  Tweetstorms on Twitter have actually become a rea
 ![Not Straight](img/path.jpg)
 
 
-- Somehow, this leads to a lot of people wasting a lot of life focused on the wrong things.  We miss important things in high school, party and drink too much in college, accrue huge mountains of college debt, pick majors that don’t matter, and careers that we don’t like.
+- Somehow, a lot of people end up wasting a lot of life focused on the wrong things.  We miss important things in high school, party and drink too much in college, accrue huge mountains of college debt, pick majors that don’t matter, and careers that we don’t like.
 
 
 - The motivations and interior mindset of our kids is at least as important as what you see on the outside.  For example, a 19 year old backpacking across Europe.  They could be entitled, lazy and letting their parents pay for it.  Or they could have planned the whole trip themselves, figured out how to save for it, pay for it, and have some idea of what they want to get out of it (experience, culture, a job in Europe, writing, etc).  It could be really great.
