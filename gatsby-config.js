@@ -69,6 +69,14 @@ module.exports = {
         credentials: require('./src/client_secret.json')
       }
     },
+    {
+    resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1pam_ovDuYjkp5Zm52Y_TgCCTFSbEFjVHWzc_uwNjSQA',
+        worksheetTitle: 'words',
+        credentials: require('./src/client_secret.json')
+      }
+    },
     `gatsby-plugin-sass`,
   ],
 }

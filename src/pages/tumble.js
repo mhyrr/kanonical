@@ -13,13 +13,16 @@ class Tumble extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: {},
+      cards: [],
       links: get(this, 'props.data.allGoogleSheetLinksRow.edges'),
+      words: get(this, 'props.data.allGoogleSheetWordsRow.edges'),
       showLinks: true,
       showQuotes: true,
+      showWords: true,
       showPics: true,
       showVids: true,
     };
+    // console.log(this.props.match.path)
   }
 
   componentDidMount() {
@@ -126,9 +129,11 @@ class Tumble extends React.Component {
   buildCards() {
     var key = 0;
 
-    console.log("buidling cards..");
+    // console.log("buidling cards..");
 
-    return this.state.links.filter(link => {
+    var cards = [];
+
+    cards.push(this.state.links.filter(link => {
       if (link.node.content != undefined) {
         // console.log(this.state.showPics)
         // console.log(this.state.showVids)
@@ -229,10 +234,57 @@ class Tumble extends React.Component {
             </li>
 
           return (
-            card
+            {date: link.node.date, card: card}
           )
         }
-    })
+    }))
+
+    cards.push(this.state.words.filter(word => {
+        if (word.node.definition != undefined) {
+          // console.log(this.state.showPics)
+          // console.log(this.state.showVids)
+          // console.log(this.state.showLinks)
+          // console.log(this.state.showQuotes)
+          return this.state.showWords;
+        }
+        return false;
+      }).map(word => {
+        key++;
+        
+        var element = (
+          <div className="word" style={{marginTop: '5px'}}>{word.node.definition}</div>
+        );
+        var type = "word";
+        var isoDate = word.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
+        // console.log(isoDate);
+        var formattedDate = Date.parse(isoDate);
+
+
+        let card = <li className={type} key={key} style={{ width:350}}>
+            <Card type={type}>
+
+              <CardLink><a href={word.node.word.replace(/^/, 'https://www.merriam-webster.com/dictionary/')} target="_blank">{word.node.word}</a></CardLink>
+
+              <CardLink>{element}</CardLink>
+
+              <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
+            </Card>
+
+          </li>
+
+        return (
+          {date: word.node.date, card: card}
+        )
+      })
+    )
+
+    // console.log(cards);
+
+    return cards.flat().sort(function(a, b) {
+      a = new Date(a.date);
+      b = new Date(b.date);
+      return a>b ? -1 : a<b ? 1 : 0;
+    });
 
   }
 
@@ -242,6 +294,7 @@ class Tumble extends React.Component {
     this.state.showPics = false;
     this.state.showQuotes = false;
     this.state.showVids = false;
+    this.state.showWords = false;
     console.log(this.state.showLinks)
     this.setState({cards: this.buildCards()})
   }
@@ -252,6 +305,7 @@ class Tumble extends React.Component {
     this.state.showLinks = false;
     this.state.showQuotes = false;
     this.state.showVids = false;
+    this.state.showWords = false;
     console.log(this.state.showPics)
     this.setState({cards: this.buildCards()})
   }
@@ -259,6 +313,18 @@ class Tumble extends React.Component {
   toggleQuotes() {
 
     this.state.showQuotes = true;
+    this.state.showLinks = false;
+    this.state.showVids = false;
+    this.state.showPics = false;
+    this.state.showWords = false;
+    console.log(this.state.showQuotes)
+    this.setState({cards: this.buildCards()})
+  }
+
+  toggleWords() {
+
+    this.state.showWords = true;
+    this.state.showQuotes = false;
     this.state.showLinks = false;
     this.state.showVids = false;
     this.state.showPics = false;
@@ -272,6 +338,7 @@ class Tumble extends React.Component {
     this.state.showPics = false;
     this.state.showQuotes = false;
     this.state.showLinks = false;
+    this.state.showWords = false;
     console.log(this.state.showVids)
     this.setState({cards: this.buildCards()})
   }
@@ -281,6 +348,7 @@ class Tumble extends React.Component {
     this.state.showQuotes = true;
     this.state.showLinks = true;
     this.state.showVids = true;
+    this.state.showWords = true;
     this.setState({cards: this.buildCards()})
   }
 
@@ -288,12 +356,13 @@ class Tumble extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 
-    this.state.cards = this.buildCards();
+    this.state.cards = this.buildCards().map(a => a.card);
     // if (Object.keys(this.state.cards).length === 0 && this.state.cards.constructor === Object) {
     //   this.state.cards: this.buildCards()})
     // }
 
-    console.log(this.state.cards)
+    // console.log("Links: " + this.state.links)
+    // console.log("Cards: " + this.state.cards);
 
     let Grid = makeResponsive(measureItems(CSSGrid), {
       maxWidth: 1920,
@@ -308,11 +377,12 @@ class Tumble extends React.Component {
 
           <nav className="navAnim">
               <ul>
-                  <li className="navanim2"><a href="javascript:;" onClick={() => {this.toggleLinks()}}>Links</a></li>
-                  <li className="navanim3"><a href="javascript:;" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
-                  <li className="navanim4"><a href="javascript:;" onClick={() => {this.togglePics()}}>Pics</a></li>
-                  <li className="navanim5"><a href="javascript:;" onClick={() => {this.toggleVids()}}>Vids</a></li>
-                  <li className="navanim5"><a href="javascript:;" onClick={() => {this.setAll()}}>All</a></li>
+                  <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
+                  <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
+                  <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
+                  <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
+                  <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
+                  <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
               </ul>
           </nav>
         </header>
@@ -358,6 +428,17 @@ export const pageQuery = graphql`
           date
           title
           content
+        }
+      }
+    }
+
+    allGoogleSheetWordsRow {
+      totalCount
+      edges {
+        node {
+          date
+          word
+          definition
         }
       }
     }
