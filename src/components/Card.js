@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-  background: linear-gradient(to bottom, ${props => props.type == 'link' ? 'rgba(218, 176, 161, .9)' : (props.type == 'quote' ? 'rgba(116, 164, 195,  .9)' : 'rgba(255, 156, 122, .9)')} 0%,rgba(255,255,255,.4) 100%);
+  background: linear-gradient(to bottom, ${props => props.type == 'link' ? 'rgba(218, 176, 161, .9)' : (props.type == 'word' ? 'rgba(195,124,116, .9)' : (props.type == 'quote' ? 'rgba(116, 164, 195,  .9)' : 'rgba(255, 156, 122, .9)'))} 0%,rgba(255,255,255,.4) 100%);
   box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
   transition:all 0.2s; */
   transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, .6);
@@ -20,7 +20,7 @@ export const Card = styled.div`
 
   &:hover {
     box-shadow: 0px 4px 8px -9px rgba(0, 10, 30, 0.6);
-    background: ${props => props.type == 'link' ? 'rgba(218, 176, 161, .9)' : (props.type == 'quote' ? 'rgba(116, 164, 195,  .9)' : 'rgba(255, 156, 122, .9)')};
+    background: ${props => props.type == 'link' ? 'rgba(218, 176, 161, .9)' : (props.type == 'word' ? 'rgba(195,124,116, .9)' : (props.type == 'quote' ? 'rgba(116, 164, 195,  .9)' : 'rgba(255, 156, 122, .9)'))};
     text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
   }
 
