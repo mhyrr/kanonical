@@ -4,7 +4,7 @@ date: 2020-03-05T08:41:00.000Z
 path: /2010-predictions-review/
 ---
 
-Ten years ago, I made [some predictions](https://www.kanonical.io/some_predictions/).  It was bound to fail, unless I turned out to be some kind of [Superforecaster](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718).  It did and I’m not.  Ten years later, some of these things sound like the silliest, unlikeliest things that you could imagine.
+Ten years ago, I made [some predictions](https://www.kanonical.io/some_predictions/).  It was bound to fail, unless I turned out to be some kind of [Superforecaster](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718).  It did and I’m not.  Ten years later some of these things sound like the silliest and unlikeliest things that you could imagine.
 
 And that’s really the fun of it.
 
@@ -44,11 +44,11 @@ Mail isn’t completely gone, but it’s definitely on it’s way out.  The USPS
 
 ##### No More Books
 
-This one rings more true.  Mainstream media is performing the hysterical death throes of a dying monster.  Magazines are less and less common, and people get their news from Twitter and Reddit.  One thing I wonder about is just how pervasive this shift actually is.  In other words, Twitter and Reddit are filling the holes left after the screams of mainstream media are gone, but what about the non-techno-elites on the coasts?  Are newspapers and magazines and 6 o’clock news still holding strong?  I really don’t know.
+This one rings more true.  Mainstream media is performing the hysterical death throes of a dying monster.  Magazines are less and less common, and people get their news from Twitter and Reddit.  One thing I wonder about is just how pervasive this shift actually is.  In other words, Twitter and Reddit are filling the holes left after the screams of mainstream media are gone, but there's a giant world beyond the coastal techno-elites.  What about them?  Are newspapers and magazines and 6 o’clock news still holding strong?  I really don’t know.
 
-Either way, screens are where people tend to read these days, when they read.  People seem to read less in general and they read shorter too.  Books are less common and most people read articles and blogs and tweets at a time.  This is changing the way we formulate our thought, which is something I hope to explore more deeply soon.
+Either way, screens are where people tend to read these days, _when_ they read.  People seem to read less in general and they read shorter lengths too.  Articles, blogs, and tweets are favored over longform books.  This is changing the way we formulate our thought, which is something I hope to explore more deeply soon.
 
-I wish this weren’t so, and [more research](https://hechingerreport.org/evidence-increases-for-reading-on-paper-instead-of-screens/) is pointing to the value of reading on paper vs on a screen.  Regardless of how much screen time I get - which is a lot - most of my reading will stay on paper.  You’ll never tear me away from my books.
+I wish this weren’t so, and [more research](https://hechingerreport.org/evidence-increases-for-reading-on-paper-instead-of-screens/) is pointing to the value of reading on paper versus on a screen.  Regardless of how much screen time I get - which is a lot - most of my reading will stay on paper.  You’ll never tear me away from my books.
 
 **Status: Mostly correct, but slow**
 
@@ -60,7 +60,7 @@ Welllllllll, sort of.  This was actually a few predictions rolled up in one.  Le
 
 Amazingly, it feels like [transistor counts](https://en.wikipedia.org/wiki/Transistor_count) have been tracking pretty closely.
 
-But I was precise in my prediction.  I said the exponential curve will hold for processing speed and memory.  CPU speed is officially dead per chip, with speeds still generally in the 2-4 GHz range. The industry has completely cycled over to multi-core and GPU acceleration trends, which are working quite well, thank you very much, and so overall processing capabilities are still trending upward quite quickly.  Meanwhile, it’s not that expensive to go get a 16TB hard drive these days, which is only one doubling off of what I said (32 TB).  Laptops regularly have 16 or 32 GB of RAM and, if you have briefcases full of cash, you can get a _desktop_ with RAM measured in terabytes.  Whether you are actually capable of using all of that is another question, as few people are.
+But I was precise in my prediction.  I said the exponential curve will hold for processing speed and memory.  CPU speed is officially dead per chip, with speeds still generally in the 2-4 GHz range. The industry has completely cycled over to multi-core and GPU acceleration trends, which are working quite well, thank you very much, and so overall processing capabilities are still trending upward quite quickly.  Meanwhile, it’s not that expensive to go get a 16TB hard drive these days, which is only one doubling off of what I said (32 TB).  Laptops regularly have 16 or 32 GB of RAM and, if you have a briefcase full of cash, you can get a _desktop_ with RAM measured in terabytes.  Whether you are actually capable of using all of that is another question; few people are.
 
 Which brings me to the last part of the prediction:
 
@@ -70,7 +70,7 @@ That’s pretty much true.  Only alpha-nerds and the kind of people that know bo
 
 **Status: I’m going to take a win here**
 
-There’s one other minor thing I’d like to point out here: you shouldn’t bet against exponential curves.. until you shouldn’t.  We talk a lot about exponential growth, especially as it pertains to economic, GDP, the internet and related topics.  I’ve begun to wonder for awhile now if we’re doing that wrong.  If the exponential is only half of the story.  If so, we really should be thinking about sigmoid curves and, in particular, the [Gompertz distribution](https://en.wikipedia.org/wiki/Gompertz_distribution).  Moore’s Law is a great example.  We’re smart apes, so we’re going to keep pushing the social construct that is Moore’s Law until we run up against physical barriers that prevent us going further.  Heat dissipation and manufacturing is going to kill it pretty soon, at which point we’ll start asymptoting out towards the limits and find new and interesting dimensions to optimize.
+There’s one other minor thing I’d like to point out here: you shouldn’t bet against exponential curves until.. you shouldn’t.  We talk a lot about exponential growth, especially as it pertains to economics, GDP, the internet and related topics.  I’ve begun to wonder for awhile now if we’re doing that wrong.  If the exponential is only half of the story.  If so, we really should be thinking about sigmoid curves and, in particular, the [Gompertz distribution](https://en.wikipedia.org/wiki/Gompertz_distribution).  Moore’s Law is a great example.  It's a prediction and a social marker for the semiconductor industry.  We’re smart apes, so we’re going to keep pushing the social construct that is Moore’s Law until we run up against physical barriers that prevent us going further.  Heat dissipation and manufacturing problems are going to kill it pretty soon, at which point we’ll start asymptoting out towards the limits and find new and interesting dimensions to optimize.
 
 ##### Less Than 50% Market Penetration For Windows and Most People Will See A Computer As An Internet Appliance
 
@@ -78,13 +78,13 @@ Again, there’s nuance.  And not just because I don’t want all of these to be
 
 ![![](https://venturebeat.com/wp-content/uploads/2019/09/os-market-share-august-2019.png)](https://venturebeat.com/wp-content/uploads/2019/09/os-market-share-august-2019.png "Yes, well")
 
-That’s a big fat no.  And huge credit to Microsoft, who have surged out of the post-Ballmer era and become a respected giant in computing once more.  I use an MS product as an editor these days (on my Mac), and it’s damned good.  And GitHub is not a Microsoft product too.  I railed against their developer experience before; it’s full 180 from me now.
+That’s a big fat no.  And huge credit to Microsoft, who have surged out of the post-Ballmer era and become a respected giant in computing once more.  I use an MS product as an editor these days (on my Mac) and it’s damned good.  GitHub is now a Microsoft product too.  They're recaptured the development segment in a way that seemed impossible ten years ago.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Satya Nadella became CEO of Microsoft in February 2014.<br><br>He 5X’d a multi-hundred billion company in less than six years.<br><br>Has to be in the conversation for greatest CEO of all time. <a href="https://t.co/gC7to2YfOe">pic.twitter.com/gC7to2YfOe</a></p>&mdash; Alec 🌐 (@AlecStapp) <a href="https://twitter.com/AlecStapp/status/1223050615854706693?ref_src=twsrc%5Etfw">January 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-But who uses laptops/desktops these days?  Workers and computer nerds like me.  Everyone else is on a phone or a tablet.  And in that sense, Windows is almost nowhere.  Look around your local coffee shop and you won’t see it.  You'll see everyone connected to the internet and using all sorts of different services.  And most people don’t even think about the computer their using, or that it fits easily in their hand.
+But who uses laptops/desktops these days?  Workers and computer nerds like me and that's about it.  Everyone else is on a phone or a tablet.  And in that sense, Windows is almost nowhere.  Look around your local coffee shop and you won’t see it.  You'll see everyone connected to the internet and using all sorts of different services and software.  And most people don’t even think about the computer they're using, or that it fits easily in their hand.
 
-People don’t care about computers, they care about what they can do with them.  This was famously captured in Marc Andreseen’s [Software Is Eating The World](https://a16z.com/2011/08/20/why-software-is-eating-the-world/) and it’s as true now as when that was published in 2011.
+People don’t care about computers, they care about what they can do with them.  This was famously captured in Marc Andreessen’s [Software Is Eating The World](https://a16z.com/2011/08/20/why-software-is-eating-the-world/) and it’s as true now as when it was published in 2011.
 
 **Status:**
 
@@ -94,10 +94,10 @@ People don’t care about computers, they care about what they can do with them.
 
 ##### New Input Methods
 
-I didn’t know what this was going to be and I think the reason I’m wrong on this one is that we really still don’t.  It _looks like_ AR and VR are the way to go.  There’s where the research, discovery and company creation is going.  Oculus was the first to hit this big, but it’s still in nascent stages and nothing has captured a meaningful percentage of the world’s interest yet.  Again, I think this is still coming.  But I think I was wrong on the timeframe.  I’m going to give it another ten years.
+I didn’t know what new inputs would really take off and I think the reason I’m wrong on this one is that we really _still_ don’t.  It _looks like_ AR and VR are the way to go.  That’s where the research, discovery, and company creation is going.  Oculus was the first to hit a small jackpot here, but the field is still in nascent stages and nothing has captured a meaningful percentage of the world’s interest yet.  Again, I think this will still come.  But I think I was wrong on the timeframe.  I’m going to give it another ten years.
 
 **Status: Probably correct, but slow**
 
 ##### 2020
 
-Most of these were wrong, but there was some germ of truth in them that’s nice to see in retrospect.  I’ve got a budding 2020 list as well, and it will be to see just how things look in 2030 - there’s at least as much change coming in the next decade as there was in this one!
+Most of these were wrong, but there was some germ of truth in them that’s nice to see in retrospect.  I’ve got a budding 2020 list coming soon, and it will be fun to see just how things look in 2030 - there’s at least as much change coming in the next decade as there was in this one!
