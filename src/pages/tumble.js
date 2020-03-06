@@ -187,7 +187,7 @@ class Tumble extends React.Component {
               element = (
                 <div>
                   <h5>{link.node.title}</h5>
-                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com", "youtube.com/embed").replace("youtu.be", "youtube.com/embed")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               );
             }
@@ -250,7 +250,7 @@ class Tumble extends React.Component {
         return false;
       }).map(word => {
         key++;
-        
+
         var element = (
           <div className="word" style={{marginTop: '5px'}}>{word.node.definition}</div>
         );
