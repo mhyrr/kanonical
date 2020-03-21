@@ -1,9 +1,8 @@
 ---
-title: Formative vs. Performative
+title: Formative vs Performative
 date: 2020-03-18T08:04:00.000Z
 path: /per-formative/
 ---
-
 
 This past weekend we tuned into a streaming broadcast of Mass amidst the outbreak.
 
