@@ -8,7 +8,7 @@ This past weekend we tuned into a streaming broadcast of Mass amidst the outbrea
 
 I couldn’t stand it.  This has been a long running problem that I wrote about almost ten years ago too.  I thought then that it was just [the dreadful music](https://www.kanonical.io/churchmusic/).  Now I’m wondering if that's just a symptom of how we treat Mass.
 
-Many of our institutions that used to be _formative_ are nor _performative_.  They’re not about shaping, they’re about seeing and - even more so - being seen.
+Many of our institutions that used to be _formative_ are now _performative_.  They’re not about shaping, they’re about seeing and - even more so - being seen.
 
 Here’s a [quote from Russ Roberts](https://www.econtalk.org/yuval-levin-on-a-time-to-build/) from an interview on Yuval Levin’s book _A Time To Build_:
 
@@ -18,6 +18,6 @@ Here’s a [quote from Russ Roberts](https://www.econtalk.org/yuval-levin-on-a-t
 
 > But they pretended to be and they at least strove to be. They tried to be. And now they seem like they don't try to be.
 
-There’s always been a bit of performance in Church.  It’s a part of the community building that takes place there.  A part of doing it together.  Admittedly, this was one of my problems with the streaming Internet version of Mass - it wasn’t my community.  Different communities have different capacities for the performative part of worship.  I prefer spoken Mass with no music.  But in general, it’s also true that there’s a danger in moving the communal nature of worship in the same direction as the rest of our culture, where the Most Important Thing is to see and be seen.
+There’s always been a bit of performance in Church.  It’s a part of the worship and the community building that takes place there.  A part of doing it together.  Admittedly, this was one of my problems with the streaming Internet version of Mass - it wasn’t my community.  Different communities have different capacities for the performative part of worship.  I prefer spoken Mass with no music.  But in general, it’s also true that there’s a danger in moving the communal nature of worship in the same direction as the rest of our culture, where The Most Important Thing isn't substance but to see and be seen.
 
-We’re all reeling from the change that’s happened in journalism.  Journalists were never objective, as Russ says, but at least they tried to be.  In the search for Truth and God that is Mass and worship, we need to focus on the formative aspects even more.  
+We’re all reeling from the change that’s happened in journalism.  Journalists were never objective, as Russ says, but at least they tried to be.  In the search for Truth and God that is Mass and worship, we need to keep our focus on the experience being formative.
