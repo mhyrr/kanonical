@@ -13,14 +13,14 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div id="main" style={{display: 'flex'}}>
-        <h1 id="hdr" style={{display: 'flex', color: 'rgba(254, 251, 232, 0.75)'}}>
+        <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
           <Link
             style={{ float: 'left', marginLeft: '2rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
             to='/'>
             Kanonical
           </Link>
         </h1>
-        <article className={'active timeout'}>
+        <article className={'active timeout'} style={{backgroundColor: 'rgba(250, 250, 248, 0.9)'}}>
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
           <h1 style={{letterSpacing: '0.2rem', margin: '0'}}>{post.frontmatter.title}</h1>
           <p

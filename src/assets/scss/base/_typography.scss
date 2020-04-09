@@ -170,7 +170,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid _size(border-width) _palette(border);
+		border-bottom: solid _size(border-width) _palette(fg);
 		margin: (_size(element-margin) * 1.375) 0;
 	}
 
