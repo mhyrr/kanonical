@@ -14,7 +14,7 @@ class Main extends React.Component {
     return (
       <div id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
-        <article id="blog" className={`${this.props.article === 'blog' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article id="blog" className={`${this.props.article === 'blog' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none', backgroundColor: 'rgba(250, 250, 248, 0.9)'}}>
           <h2 className="major">Articles</h2>
 
             {this.props.posts.map(post => {
