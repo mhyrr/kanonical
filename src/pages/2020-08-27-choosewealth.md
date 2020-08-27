@@ -26,7 +26,7 @@ So let’s make it concrete and start off with a little thought experiment.  Let
 
 Take a couple minutes and think about it.
 
-$50 million is an interesting number.  It’s a whole ton of money, but it doesn’t sound as completely radical and insane as being a billionaire.  You might know a couple people worth that much, or they're separated you by only one degree of separation.  There are [estimated](https://dqydj.com/how-many-millionaires-decamillionaires-america/#:~:text=off%20home%20equity.)-,How%20many%20multimillionaires%20are%20there%20in%20the%20United%20States%3F,or%20more%20in%20net%20worth.) to be nearly 100,000 households in the US worth $50 million or more, and there are probably over a million households worth at least $10 million.  So while these numbers are stratospheric, they’re not unreachable moonshots like Jeff Bezos and Mark Zuckerberg, and this constituency can still lead relatively anonymous lives.
+$50 million is an interesting number.  It’s a whole ton of money, but it doesn’t sound as completely radical and insane as being a billionaire.  You might know a couple people worth that much, or they're separated you by only one degree of separation.  There are [estimated](https://dqydj.com/how-many-millionaires-decamillionaires-america/) to be nearly 100,000 households in the US worth $50 million or more, and there are probably over a million households worth at least $10 million.  So while these numbers are stratospheric, they’re not unreachable moonshots like Jeff Bezos and Mark Zuckerberg, and this constituency can still lead relatively anonymous lives.
 
 It’s an interesting number for another reason too.  If you had $50 million, you basically have the means to buy just about any consumable good you want.  Million dollar sports car?  No problem.  100ft super yacht for $5mm?  In range.  $15mm dreamhouse in Malibu?  Check.  The variance between your buying power at this level and a billioinaire’s is much less than you think.
 
@@ -34,7 +34,7 @@ So take another minute to reconsider what you would do.  How would you be setup?
 
 Well, here’s my answer:
 
-- We’re fortunate to have two houses already and we love them both.  We don’t feel like we want or need a bigger or better house, although we enjoy doing projects on what we have and fixing them up.  They’d be completely paid off and I’d do a few more projects and definitely build a combined garage/workshop in my backyard.  Figure $700k
+- We’re fortunate to have two houses already and we love them both.  We don’t feel like we want or need a bigger or better house, although we enjoy doing projects on what we have and fixing them up.  They’d be completely paid off and I’d do a few more projects and definitely build a combined garage/workshop in my backyard.  Figure $700k.
 - We know where we likely want to retire and I’d buy a really nice spot there.  I’d also buy a bunch of land nearby so that we can use it and maybe have a shared retreat area for our friends.  Figure $2 million.
 - We’d want to be on the water a lot and I’d like a boat.  Figure $200k.
 - I’d love to have a spot in Florida somewhere for some of those long winter months.  Figure $700k.
@@ -42,7 +42,7 @@ Well, here’s my answer:
 - Cars.  We’re back to my poster but I don’t need that many.  I enjoy driving them not admiring them.  Porsche GT3 would be on the list.  Audi S8 for a daily.  Some flavor of convertible - maybe a used Lamborghini.  A nice truck for towing.  Definitely a project car or two.  All told, that’s probably $500k.  And I’d rotate them.  I’d probably get more, but only when others are gone.  More than that number of cars and it starts to become a real chore to manage them all.
 - I’d set aside additional money for my family and my children for sure.  There’s a lot of factors here and this wouldn’t be more than a million.
 - Back to that garage and workshop.  Woodworking is the newest hobby and I’d spec the shop out with a ton of great tools.  That’s probably $50k.  A lift and tools for working on cars is another $20k.
-- I’ve always had a thing for old wine, especially old Madeira.  I’d probably go on a spree there and enjoy collecting some 19th century stuff to share with friends. Same goes for rare Bourbons.  Figure $50k
+- I’ve always had a thing for old wine, especially old Madeira.  I’d probably go on a spree there and enjoy collecting some 19th century stuff to share with friends. Same goes for rare Bourbons.  Figure $50k.
 - Assorted and random toys and vacations.  There’s places I’d like to go and future hobbies I’m sure I’d like to do.  Add another $500k to cover all of that.
 
 I’m trying to be liberal with my money but also realistic about what I’d _actually_ do.  Think about all the things that are NOT on this list.   I don’t need and also don’t want a 15,000 square foot house.  I know people that do (both need and want it) but it’s not for me.  I also don’t need a really crazy hypercar, even though I’m a heavy car guy.  At some point cars become pieces of engineering art.  And just like I can go to a Museum to admire a Da Vinci, I can go to an exhibition or (if I’m lucky) a Cars and Coffee to admire a Bugatti.
