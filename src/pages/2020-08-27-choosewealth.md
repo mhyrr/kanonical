@@ -184,8 +184,10 @@ And even if that doesn’t happen the way you want, once you have wealth, you ca
 
 ---
 
-##### Footnote
+##### Footnotes
 
-It’s true that wealth isn’t the only way to change the world.  Politicians, philosophers, and others do that too.  It’s debatable just how many politicians change the world in a truly revolutionary way by building the future.  At best they have a marginal positive or negative impact on the status quo right now.  Very seldomly do they have lasting impact, and when they do it’s not what they’re known for at the time (like Eisenhower and the federal highway system).
+[1] It’s true that wealth isn’t the only way to change the world.  Politicians, philosophers, and others do that too.  It’s debatable just how many politicians change the world in a truly revolutionary way by building the future.  At best they have a marginal positive or negative impact on the status quo right now.  Very seldomly do they have lasting impact, and when they do it’s not what they’re known for at the time (like Eisenhower and the federal highway system).
 
 There’s a quip about this that reminds me of some of the trade-off here: you can be rich or famous and still be a good person, but not both.
+
+[2] The most obvious criticism of this idea is that not everyone can be wealthy and not everyone can start something new and be at the top.  I agree with that, but we are also nowhere near the limit.  Creating more wealth in this world is a good thing, especially if that means lifting people out of the lower class either directly or indirectly.  Just like you've never met anyone who's brain is full and can't hold more, the world is never full of interesting new ideas or means of conveying value to others.  And the point of this little rant is to convince more young people to try it.  Sure, there will be failure, but even that will often be more valuable than some of the staid and standard career trajectories.  Even if starting something new isn't for you, try to be a part of the team that gets assembled to capitalize on ideas, rather than just a cog in the machine.  How can you tell the difference?  A good litmus test is how much authority and decision making you can provide, regardless of your station, and how much of an opportunity there is for very large increases in income/wealth if successful.
