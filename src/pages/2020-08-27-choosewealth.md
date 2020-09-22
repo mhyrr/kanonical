@@ -4,7 +4,6 @@ date: 2020-08-27T11:00:00.000Z
 path: /the-options/
 ---
 
-# The Options
 
 When I was a kid, this was my favorite poster.
 
