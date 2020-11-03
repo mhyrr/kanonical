@@ -34,19 +34,8 @@ class Bio extends React.Component {
         </Link>
         <br/>
         Hi I'm <Link to='/'>Greg</Link>.  Occasionally, I do things.
+
         
-        <Link
-          style={{ float: 'right', marginRight: '8px', paddingRight: '8px' }}
-          to='archive'
-        >
-          Archive
-        </Link>
-        <Link
-          style={{ float: 'right', marginRight: '8px', paddingRight: '8px'  }}
-          to='tumble'
-        >
-          Tumble
-        </Link>
       </p>
     )
   }
