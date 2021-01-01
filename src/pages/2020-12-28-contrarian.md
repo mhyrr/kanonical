@@ -23,14 +23,14 @@ But that's not it.  Contrarianism is wondering if the common view isn't quite ri
 Being contrarian has societal value too.  Consider this metaphor by[SlateStarCodex](https://slatestarcodex.com/2014/09/30/i-can-tolerate-anything-except-the-outgroup/).
 
 > There are certain theories of dark matter where it barely interacts with the regular world at all, such that we could have a dark matter planet exactly co-incident with Earth and never know. Maybe dark matter people are walking all around us and through us, maybe my house is in the Times Square of a great dark matter city, maybe a few meters away from me a dark matter blogger is writing on his dark matter computer about how weird it would be if there was a light matter person he couldn’t see right next to him.
-
+>
 > This is sort of how I feel about conservatives.
 
 In our increasingly polarized world, the social connections, online personalities and influences, and news cycles we tune into are increasingly echo chambers for outlooks or opinions to which we already subscribe.  Contrarianism should serve as a bulwark against this too.  
 
 > "It is never worth a first class mans time to express a majority opinion. By definition, there are plenty of others to do that."
 >
-> - GH Hardy
+> -- GH Hardy
 
 My favorite example of this is [The Deep Hot Biosphere](https://www.amazon.com/Deep-Hot-Biosphere-Fossil-Fuels/dp/0387985468) by Tommy Gold.  Gold was a physicist out of his depth when it came to geology and biology.  His theory was that hydrocarbons and fossil fuels do not come from broken down biomass, but rather from deep within the mantle of the Earth itself.  He also believed that there was a huge biosphere of single-celled life in the entire crust of the earth all the way down to the mantle.  
 
