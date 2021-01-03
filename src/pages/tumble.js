@@ -373,7 +373,14 @@ class Tumble extends React.Component {
       <div className="tumble" width="90%">
 
         <header id="header">
-          <h2>A list of things I've read or thought about, collated over ten plus years..</h2>
+          <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
+            <Link
+              style={{ float: 'left', marginLeft: '3rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
+              to='/'>
+              Kanonical
+            </Link>
+          </h1>
+          <h2>A list of things I've read or thought about,</h2><h2 style={{marginTop: '-1rem'}}>collated over ten plus years..</h2>
 
           <nav className="navAnim">
               <ul>
