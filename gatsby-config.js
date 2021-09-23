@@ -1,16 +1,34 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: "Kanonical",
-    description: "Hi, I'm Greg.  Occasionally, I do things.",
-    author: "",
-    siteUrl: "http://www.kanonical.io",
+    title: `Gatsby Starter Blog`,
+    author: {
+      name: `Kyle Mathews`,
+      summary: `who lives and works in San Francisco building useful things.`,
+    },
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    social: {
+      twitter: `kylemathews`,
+    },
   },
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -20,8 +38,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-              linkImagesToOriginal: false,
+              maxWidth: 630,
             },
           },
           {
@@ -30,53 +47,192 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Blog`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-101072268-1`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-typography",
+      resolve: "gatsby-source-google-spreadsheet",
       options: {
-        pathToConfigModule: "src/utils/typography",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-sitemap"
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: 'UA-101072268-1',
+        // The `spreadsheetId` is required, it is found in the url of your document:
+        // https://docs.google.com/spreadsheets/d/<spreadsheetId>/edit#gid=0
+        spreadsheetId: "1xyxBcVq5TehTu3mW1lL8N0lhTEr0eUUvnH9b16raj8w",
+
+        // The `spreadsheetName` is recommended, but optional
+        // It is used as part of the id's during the node creation, as well as in the generated GraphQL-schema
+        // If you are sourcing multiple sheets, you can set this to distringuish between the source data
+        spreadsheetName: "links",
+
+        // The `typePrefix` is optional, default value is "GoogleSpreadsheet"
+        // It is used as part of the id's during the node creation, as well as in the generated GraphQL-schema
+        // It can be overridden to fully customize the root query
+        typePrefix: "GoogleSpreadsheet",
+
+        // The `credentials` are only needed when you need to be authenticated to read the document.
+        // It's an object with the following shape:
+        // {
+        //   client_email: "<your service account email address>",
+        //   private_key: "<the prive key for your service account>"
+        // }
+        //
+        // Refer to googles own documentation to retrieve the credentials for your service account:
+        //   - https://github.com/googleapis/google-api-nodejs-client#service-to-service-authentication
+        //   - https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+        //
+        // When you have generated your credentials, it's easiest to refer to them from an environment variable
+        // and parse it directly:
+        credentials: JSON.parse(process.env.KANONICAL_SHEET_CRED),
+
+        // Simple node transformation during node sourcing can be achieved by implementing the following functions
+        // - `filterNode`
+        // - `mapNode`
+        //
+        // By implementing a `filterNode(node): boolean` function, you can choose to eliminate some nodes before
+        // they're added to Gatsby, the default behaviour is to include all nodes:
+        filterNode: () => true,
+
+        // By implementing a `mapNode(node): node` function, you can provide your own node transformations directly
+        // during node sourcing, the default implementation is to return the node as is:
+        mapNode: node => node
       }
     },
     {
-    resolve: 'gatsby-source-google-sheets',
+      resolve: "gatsby-source-google-spreadsheet",
       options: {
-        spreadsheetId: '1xyxBcVq5TehTu3mW1lL8N0lhTEr0eUUvnH9b16raj8w',
-        worksheetTitle: 'links',
-        credentials: require('./src/client_secret.json')
+        // The `spreadsheetId` is required, it is found in the url of your document:
+        // https://docs.google.com/spreadsheets/d/<spreadsheetId>/edit#gid=0
+        spreadsheetId: "1pam_ovDuYjkp5Zm52Y_TgCCTFSbEFjVHWzc_uwNjSQA",
+
+        // The `spreadsheetName` is recommended, but optional
+        // It is used as part of the id's during the node creation, as well as in the generated GraphQL-schema
+        // If you are sourcing multiple sheets, you can set this to distringuish between the source data
+        spreadsheetName: "words",
+
+        // The `typePrefix` is optional, default value is "GoogleSpreadsheet"
+        // It is used as part of the id's during the node creation, as well as in the generated GraphQL-schema
+        // It can be overridden to fully customize the root query
+        typePrefix: "GoogleSpreadsheet",
+
+        // The `credentials` are only needed when you need to be authenticated to read the document.
+        // It's an object with the following shape:
+        // {
+        //   client_email: "<your service account email address>",
+        //   private_key: "<the prive key for your service account>"
+        // }
+        //
+        // Refer to googles own documentation to retrieve the credentials for your service account:
+        //   - https://github.com/googleapis/google-api-nodejs-client#service-to-service-authentication
+        //   - https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+        //
+        // When you have generated your credentials, it's easiest to refer to them from an environment variable
+        // and parse it directly:
+        credentials: JSON.parse(process.env.KANONICAL_SHEET_CRED),
+
+        // Simple node transformation during node sourcing can be achieved by implementing the following functions
+        // - `filterNode`
+        // - `mapNode`
+        //
+        // By implementing a `filterNode(node): boolean` function, you can choose to eliminate some nodes before
+        // they're added to Gatsby, the default behaviour is to include all nodes:
+        filterNode: () => true,
+
+        // By implementing a `mapNode(node): node` function, you can provide your own node transformations directly
+        // during node sourcing, the default implementation is to return the node as is:
+        mapNode: node => node
       }
     },
-    {
-    resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId: '1pam_ovDuYjkp5Zm52Y_TgCCTFSbEFjVHWzc_uwNjSQA',
-        worksheetTitle: 'words',
-        credentials: require('./src/client_secret.json')
-      }
-    },
-    `gatsby-plugin-sass`,
+
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

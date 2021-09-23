@@ -1,44 +1,58 @@
-import React from 'react'
-import Link from 'gatsby-link'
+/**
+ * Bio component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import profilePic from './profile_new1.png'
-import { rhythm } from '../utils/typography'
+const Bio = () => {
+  const data = useStaticQuery(graphql`
+    query BioQuery {
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+          }
+        }
+      }
+    }
+  `)
 
-class Bio extends React.Component {
-  render() {
-    return (
-      <p
-        style={{
-          marginBottom: rhythm(2.5),
-          verticalAlign: 'middle',
-        }}
-      >
-        <Link
-          to='/'
-        >
-          <img
-            src={profilePic}
-            alt={`Greg Olsen`}
-            style={{
-              float: 'left',
-              marginRight: rhythm(1 / 4),
-              marginBottom: 0,
-              width: rhythm(2),
-              height: rhythm(2),
-            }}
-          />
-        </Link>
-        <br/>
-        Hi I'm <Link to='/'>Greg</Link>.  Occasionally, I do things.
+  // Set these values by editing "siteMetadata" in gatsby-config.js
+  const author = data.site.siteMetadata?.author
+  const social = data.site.siteMetadata?.social
 
-        
-      </p>
-    )
-  }
+  return (
+    <div className="bio">
+      <StaticImage
+        className="bio-avatar"
+        layout="fixed"
+        formats={["auto", "webp", "avif"]}
+        src="../images/profile-pic.png"
+        width={50}
+        height={50}
+        quality={95}
+        alt="Profile picture"
+      />
+      {author?.name && (
+        <p>
+          Written by <strong>{author.name}</strong> {author?.summary || null}
+          {` `}
+          <a href={`https://twitter.com/${social?.twitter || ``}`}>
+            You should follow them on Twitter
+          </a>
+        </p>
+      )}
+    </div>
+  )
 }
 
 export default Bio
