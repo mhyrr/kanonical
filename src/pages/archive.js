@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
-import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
@@ -22,7 +21,7 @@ class BlogIndex extends React.Component {
               <div key={post.node.frontmatter.path}>
                 <h3
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    marginBottom: 0,
                   }}
                 >
                   <Link
@@ -59,7 +58,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC },
         filter: {frontmatter: {draft: {ne: true}}},
-        
+
       ) {
       edges {
         node {

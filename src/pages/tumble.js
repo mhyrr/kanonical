@@ -1,12 +1,15 @@
 
 import React, {component} from 'react'
+import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
 import Bio from '../components/Bio'
+import Layout from "../components/layout"
 
 class Tumble extends React.Component {
 
@@ -14,8 +17,8 @@ class Tumble extends React.Component {
     super(props);
     this.state = {
       cards: [],
-      links: get(this, 'props.data.allGoogleSheetLinksRow.edges'),
-      words: get(this, 'props.data.allGoogleSheetWordsRow.edges'),
+      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges'),
+      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges'),
       showLinks: true,
       showQuotes: true,
       showWords: true,
@@ -370,46 +373,48 @@ class Tumble extends React.Component {
     });
 
     return (
-      <div className="tumble" width="90%">
+      <Layout>
+        <div className="tumble" width="90%">
 
-        <header id="header">
-          <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
-            <Link
-              style={{ float: 'left', marginLeft: '3rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
-              to='/'>
-              Kanonical
-            </Link>
-          </h1>
-          <h2>A list of things I've read or thought about,</h2><h2 style={{marginTop: '-1rem'}}>collated over ten plus years..</h2>
+          <header id="header">
+            <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
+              <Link
+                style={{ float: 'left', marginLeft: '3rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
+                to='/'>
+                Kanonical
+              </Link>
+            </h1>
+            <h2>A list of things I've read or thought about,</h2><h2 style={{marginTop: '-1rem'}}>collated over ten plus years..</h2>
 
-          <nav className="navAnim">
-              <ul>
-                  <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
-                  <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
-                  <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
-                  <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
-                  <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
-                  <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
-              </ul>
-          </nav>
-        </header>
+            <nav className="navAnim">
+                <ul>
+                    <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
+                    <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
+                    <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
+                    <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
+                    <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
+                    <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
+                </ul>
+            </nav>
+          </header>
 
-        <Grid
-          ref={elem => this.grid = elem}
-          className="tumbleGrid"
-          component="ul"
-          columns={3}
-          columnWidth={350}
-          gutterWidth={6}
-          gutterHeight={12}
-          layout={layout.pinterest}
-          duration={800}
-          easing="ease-out"
-          >
-           {this.state.cards}
-        </Grid>
+          <Grid
+            ref={elem => this.grid = elem}
+            className="tumbleGrid"
+            component="ul"
+            columns={3}
+            columnWidth={350}
+            gutterWidth={6}
+            gutterHeight={12}
+            layout={layout.pinterest}
+            duration={800}
+            easing="ease-out"
+            >
+             {this.state.cards}
+          </Grid>
 
-      </div>
+        </div>
+      </Layout>
     )
   }
 }
@@ -422,9 +427,6 @@ Object.defineProperty(Array.prototype, 'flat', {
   }
 });
 
-Tumble.propTypes = {
-  route: React.PropTypes.object,
-}
 
 export default Tumble
 
@@ -436,7 +438,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allGoogleSheetLinksRow {
+    allGoogleSpreadsheetLinksLinks {
       totalCount
       edges {
         node {
@@ -447,7 +449,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allGoogleSheetWordsRow {
+    allGoogleSpreadsheetWordsWords {
       totalCount
       edges {
         node {

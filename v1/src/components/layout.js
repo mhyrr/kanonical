@@ -102,7 +102,7 @@ class Template extends React.Component {
       content = (
         <div id="wrapper" className="page">
           <div>
-            {children()}
+            {children}
           </div>
         </div>
       )
