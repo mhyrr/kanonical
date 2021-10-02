@@ -14,17 +14,17 @@ The _real_ use of the word Malthusian ought to be for the extrapolation of data 
 
 World population is one of those.  If you look back at history, it looks even worse than when Malthus saw it.  We went from 2 billion people to nearly 8 billion in the last hundred years.
 
-![](https://en.wikipedia.org/wiki/Projections_of_population_growth#/media/File:World_population_growth,_1700-2100,_2019_revision.png)
+![](https://upload.wikimedia.org/wikipedia/commons/5/51/World_population_growth%2C_1700-2100%2C_2019_revision.png)
 
 But that’s been changing now for a few decades and it may be the most important trend that hardly anybody thinks about.  We can measure this trend by [fertility rate](https://en.wikipedia.org/wiki/Total_fertility_rate) - how many children per woman are being born.  Just over 2 children per woman is the replacement rate for a steady-state population.  Above 2 and the population is growing.  Below 2 and it’s shrinking.
 
 The entire developed world is well below 2.  The only continent that is consistently above 2 is Africa.  If you plot fertility rate against wealth, you get a consistent relationship - as areas of the world get richer and more developed, the number of children decreases.  This tracks over time too.  Countries that advance rapidly like China or India decrease their growth rate at the same time.
 
-![](https://en.wikipedia.org/wiki/Total_fertility_rate#/media/File:CIA_WFB_TotFertilityRate-GDP-Population_-_Simplified_2016.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/CIA_WFB_TotFertilityRate-GDP-Population_-_Simplified_2016.png/800px-CIA_WFB_TotFertilityRate-GDP-Population_-_Simplified_2016.png)
 
 I’ve never thought before what it means to have a [sub-replacement fertility](https://en.wikipedia.org/wiki/Sub-replacement_fertility) rate.  [Japan](https://en.wikipedia.org/wiki/Aging_of_Japan#Effects) and South Korea are aging incredibly rapidly and dealing with the changes now.  It’s certainly true that some positives will come out of it - overcrowded metro areas will be less crowded for instance.  But a much larger concern is economic.  Ever since World War 2, every advanced economy has been focused on growth and driven by an increasing population and steadily increasing GDP.  And then they can pay for retirees through taxes and growth from the next, larger generation down the line.  But what happens [when that ends](https://en.wikipedia.org/wiki/Steady-state_economy)?  When there are fewer 20 year olds than 60 year olds?  The retirement age will have to be pushed way back and taxes will increase.  Young people won’t like paying for all the grandmas out there and grandma won’t like working when she’s 80.  And that’s just the start.
 
-![](https://en.wikipedia.org/wiki/Demographics_of_Japan#/media/File:Japan_population_pyramid_10.01.2019.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Japan_population_pyramid_10.01.2019.png/1091px-Japan_population_pyramid_10.01.2019.png)
 
 ## Theme For English B
 

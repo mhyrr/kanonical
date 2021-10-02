@@ -4,15 +4,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Kanonical`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Greg`,
+      summary: `Occasionally, I do things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Everything you never wanted to know about what I think and how I do.`,
+    siteUrl: `https://www.kanonical.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `mhyrr`,
     },
   },
   plugins: [
@@ -22,6 +22,7 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+        maxWidth: 630,
       },
     },
     {

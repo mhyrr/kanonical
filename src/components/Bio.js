@@ -6,8 +6,12 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+
+// Import typefaces
+import 'typeface-montserrat'
+import 'typeface-merriweather'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -36,22 +40,26 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
+        src="../images/profile.png"
+        width={64}
+        height={64}
         quality={95}
-        alt="Profile picture"
+        alt="Me and my better half"
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Hi I'm <strong>{author.name}</strong>. {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
+
+
+          {/*<a href={`https://twitter.com/${social?.twitter || ``}`}>
             You should follow them on Twitter
-          </a>
+          </a>*/}
         </p>
       )}
+
     </div>
+
   )
 }
 

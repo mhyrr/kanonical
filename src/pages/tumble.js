@@ -373,7 +373,6 @@ class Tumble extends React.Component {
     });
 
     return (
-      <Layout>
         <div className="tumble" width="90%">
 
           <header id="header">
@@ -414,7 +413,6 @@ class Tumble extends React.Component {
           </Grid>
 
         </div>
-      </Layout>
     )
   }
 }
