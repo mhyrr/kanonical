@@ -17,7 +17,7 @@ import 'typeface-merriweather'
 const BioHeader = styled.div`
   display:flex;
   padding-top: 0rem;
-  padding-bottom: 5rem;
+  padding-bottom: .5rem;
 `;
 
 const BioTitle = styled.div`
