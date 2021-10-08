@@ -25,6 +25,7 @@ const BioTitle = styled.div`
   padding-left: 1rem;
 `;
 
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -50,7 +51,7 @@ const Bio = () => {
     <BioHeader className="bio" >
       <StaticImage
         className="bio-avatar"
-        layout="fixed"
+        layout="constrained"
         formats={["auto", "webp", "avif"]}
         src="../images/profile.png"
         width={64}
