@@ -1,3 +1,10 @@
+
+
+## Sheet Credentials  
+
+Make sure you've got this envvar set:
+`export KANONICAL_SHEET_CRED=$(<v1/src/client_secret.json)`
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
