@@ -92,7 +92,7 @@ export const NavigationStyles = styled.nav`
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 1.15rem;
-      font-family: "Playfair Display";
+      font-family: "Roboto";
       font-weight: 300;
     }
 
