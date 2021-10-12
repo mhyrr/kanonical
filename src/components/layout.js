@@ -38,7 +38,7 @@ const Layout = ({ location, title, children }) => {
         <Typography />
         <Header></Header>
         <div className="global-wrapper" data-is-root-path={isRootPath}>
-          <main>{children}</main>
+          <main className="main-body">{children}</main>
 
         </div>
         <footer>

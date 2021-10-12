@@ -10,34 +10,34 @@ const GlobalStyles = createGlobalStyle`
     --primaryColor: #939393;
     --serif: "Montserrat", serif;
     --sansSerif: "Lato", sans-serif;
-    --h1: 2rem;
-    --h2: 1.8rem;
-    --h3: 1.5rem;
-    --h4: 1.25rem;
-    --h5: 1.15rem;
-    --h6: 1rem;
+    --h1: 1.8rem;
+    --h2: 1.5rem;
+    --h3: 1.3rem;
+    --h4: 1.15rem;
+    --h5: 1rem;
+    --h6: .8rem;
     --footerMenuItem: 0.85rem;
     --para: 1rem;
     --spacing: 1rem;
 
     @media (min-width: 768px) {
-      --h1: 2.6rem;
-      --h2: 2.4rem;
-      --h3: 1.75rem;
-      --h4: 1.5rem;
-      --h5: 1.25rem;
-      --h6: 1.1rem;
+      --h1: 2.2rem;
+      --h2: 2rem;
+      --h3: 1.5rem;
+      --h4: 1.25rem;
+      --h5: 1rem;
+      --h6: .8rem;
       --footerMenuItem: 1rem;
-      --para: 1.1rem;
+      --para: 1rem;
     }
 
     @media (min-width: 1200px) {
-      --h1: 3rem;
-      --h2: 2.8rem;
-      --h3: 2rem;
-      --h4: 1.75rem;
-      --h5: 1.35rem;
-      --para: 1.15rem;
+      --h1: 2.2rem;
+      --h2: 1.6rem;
+      --h3: 1.4rem;
+      --h4: 1.2rem;
+      --h5: 1.1rem;
+      --para: 1rem;
     }
   }
 

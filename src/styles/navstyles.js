@@ -9,7 +9,8 @@ export const HeaderStyles = styled.header`
   justify-content: space-between;
   grid-template-columns: 200px auto;
   grid-gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  padding-bottom: 0rem;
   background-color: #fff;
   transition: box-shadow var(--transMed) ease;
 

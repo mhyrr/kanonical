@@ -21,7 +21,7 @@ const BioHeader = styled.div`
 `;
 
 const BioTitle = styled.div`
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   padding-left: 1rem;
 `;
 
@@ -57,7 +57,7 @@ const Bio = () => {
         width={64}
         height={64}
         quality={95}
-        style={{marginTop:"-6px"}}
+        style={{minWidth: "64px"}}
         alt="Me and my better half"
       />
       {author?.name && (
