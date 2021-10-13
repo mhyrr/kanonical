@@ -13,6 +13,7 @@ module.exports = {
     siteUrl: `https://www.kanonical.io/`,
     social: {
       twitter: `mhyrr`,
+      github: `https://github.com/mhyrr`
     },
   },
   plugins: [

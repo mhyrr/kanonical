@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import GlobalStyles from '../styles/globalstyles'
 import Typography from '../styles/typography'
 import { motion } from 'framer-motion'
@@ -33,7 +34,7 @@ const Layout = ({ location, title, children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.2, delay: 0.1 }}
       >
         <Typography />
         <Header></Header>
@@ -41,11 +42,7 @@ const Layout = ({ location, title, children }) => {
           <main className="main-body">{children}</main>
 
         </div>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer></Footer>
       </motion.div>
     </div>
   )

@@ -49,17 +49,19 @@ const Bio = () => {
 
   return (
     <BioHeader className="bio" >
-      <StaticImage
-        className="bio-avatar"
-        layout="constrained"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile.png"
-        width={64}
-        height={64}
-        quality={95}
-        style={{minWidth: "64px"}}
-        alt="Me and my better half"
-      />
+      <Link to="/">
+        <StaticImage
+          className="bio-avatar"
+          layout="constrained"
+          formats={["auto", "webp", "avif"]}
+          src="../images/profile.png"
+          width={64}
+          height={64}
+          quality={95}
+          style={{minWidth: "64px"}}
+          alt="Me and my better half"
+        />
+      </Link>
       {author?.name && (
         <BioTitle>
           Hi I'm <strong>{author.name}</strong>. {author?.summary || null}
@@ -71,7 +73,6 @@ const Bio = () => {
           </a>*/}
         </BioTitle>
       )}
-
     </BioHeader>
 
   )
