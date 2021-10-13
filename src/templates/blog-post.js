@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Share from "../components/ShareContainer"
 
 
 const BlogPostStyles = styled.div`
@@ -21,6 +22,10 @@ const BlogPostStyles = styled.div`
     @media (min-width: 1200px) {
       margin: calc(var(--spacing) * 4) 0;
     }
+  }
+
+  img {
+    max-width: 860px;
   }
 
   font-weight: 400;
@@ -90,9 +95,27 @@ const BlogPostTemplate = ({ data, location }) => {
             />
             <hr />
             <footer>
-              <Bio />
+              {/* If there are tags for the post, render this section */}
+              {post.frontmatter.tags && (
+                <>
+                  <hr />
+                  <h4>
+                    Posted under /{" "}
+                    {post.frontmatter.tags.map((tagName, index) => {
+                      return (
+                        <Link to={`/tags/${tagName}`} key={index}>
+                          {tagName}
+                        </Link>
+                      )
+                    })}
+                  </h4>
+                </>
+              )}
+              <Share twitter  href={location.href} />
             </footer>
           </article>
+
+
           <nav className="blog-post-nav">
             <ul
               style={{

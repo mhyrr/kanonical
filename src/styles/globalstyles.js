@@ -3,8 +3,8 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
   :root {
     --heavyWeight: 900;
-    --transMed: 0.3s;
-    --transSlow: 0.5s;
+    --transMed: 0.1s;
+    --transSlow: 0.3s;
     --black: #2d2828;
     --charcoal: #3e3e3e;
     --primaryColor: #939393;
