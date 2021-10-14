@@ -27,6 +27,9 @@ const Layout = ({ location, title, children }) => {
     )
   }
 
+
+  const target = React.createRef();
+
   return (
     <div>
       <GlobalStyles />
@@ -37,9 +40,9 @@ const Layout = ({ location, title, children }) => {
         transition={{ duration: 0.2, delay: 0.1 }}
       >
         <Typography />
-        <Header></Header>
+        <Header target={target}></Header>
         <div className="global-wrapper" data-is-root-path={isRootPath}>
-          <main className="main-body">{children}</main>
+          <main className="main-body" ref={target}>{children}</main>
 
         </div>
         <Footer></Footer>

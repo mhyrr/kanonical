@@ -1,22 +1,26 @@
 import styled from "styled-components"
 
-export const HeaderStyles = styled.header`
+export const HeaderContainer = styled.header`
   z-index: 3;
   position: fixed;
   left: 0;
   right: 0;
+  transition: box-shadow var(--transMed) ease;
+  background-color: #fff;
+
+  &.scrolled {
+    box-shadow: -1px 5px 11px 0px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const HeaderStyles = styled.div`
   display: flex;
   justify-content: space-between;
   grid-template-columns: 200px auto;
   grid-gap: 1rem;
   padding: 0.5rem 2rem;
   padding-bottom: 0rem;
-  background-color: #fff;
-  transition: box-shadow var(--transMed) ease;
 
-  &.scrolled {
-    box-shadow: -1px 5px 11px 0px rgba(0, 0, 0, 0.1);
-  }
 
   .logo-cont {
     display: flex;
