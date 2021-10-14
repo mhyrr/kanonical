@@ -5,28 +5,9 @@ import Footer from "../components/footer"
 import GlobalStyles from '../styles/globalstyles'
 import Typography from '../styles/typography'
 import { motion } from 'framer-motion'
-
+import CookieConsent from "react-cookie-consent"
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  console.log(location)
-  const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
-
 
   const target = React.createRef();
 
@@ -41,11 +22,36 @@ const Layout = ({ location, title, children }) => {
       >
         <Typography />
         <Header target={target}></Header>
-        <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <div className="global-wrapper" >
           <main className="main-body" ref={target}>{children}</main>
 
         </div>
         <Footer></Footer>
+        <CookieConsent
+          location="bottom"
+          buttonText="Okay"
+          cookieName="kanonicalCookie"
+          expires={150}
+          style={{
+            background: "var(--black)",
+            padding: "var(--spacing)",
+            fontSize: "16px",
+            boxSizing: "border-box",
+          }}
+          buttonStyle={{
+            padding: "1rem",
+            color: "var(--black)",
+            backgroundColor: "#fff",
+            fontSize: "16px",
+          }}
+        >
+          This website uses cookies to help improve your experience. By using
+          this site you agree to the
+          <Link to="/privacy" style={{ color: "#fff" }}>
+            privacy statement
+          </Link>
+          .
+        </CookieConsent>
       </motion.div>
     </div>
   )

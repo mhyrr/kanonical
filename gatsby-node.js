@@ -7,6 +7,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
+
+  const pageTemplate = path.resolve("src/templates/page.js")
+
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -56,7 +59,40 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+
+  // Auto generate pages
+  // Pages built using templates/page-template.js
+  const pageData = [
+    {
+      name: "privacy",
+      title:
+        "Privacy",
+      content:
+        "Thanks for coming to Kanonical! This site is simply a small corner of the world to share things that I'm thinking about.  As part of that, the site policy is to respect your privacy regarding any information we may collect from you.  We don’t share any private infromation publicly or with third-parties, except when required to by law.  The personal data that may be collected, by itself or through third parties, includes: Cookies, usage data, and email addresses. The cookies we track are technical and anonymous statistical cookies through Google Analytics, so that you can have a better experience on our site.",
+    },
+    {
+      name: "cookies",
+      title:
+        "Cookies",
+      content:
+        "The cookies we track are technical and anonymous statistical cookies through Google Analytics, so that you can have a better experience on our site.  You can choose to turn cookies off in the \"help\" section of your browser toolbar or to receive a notification when you are receiving a new cookie.",
+    },
+    {
+      name: "404",
+      title:
+        "Oops!  You sure about that??",
+    },
+  ]
+  pageData.forEach(page => {
+    createPage({
+      path: `/${page.name}`,
+      component: pageTemplate,
+      context: { page },
+    })
+  })
 }
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

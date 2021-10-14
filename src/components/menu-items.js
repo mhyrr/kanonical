@@ -4,8 +4,8 @@ import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 export const mainMenuItems = [
   {
-    path: "/",
-    title: "kanonical",
+    path: "/blog",
+    title: "Blog",
   },
   {
     path: "/tumble",

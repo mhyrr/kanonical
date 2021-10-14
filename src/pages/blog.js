@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
+      <h2>All of the blog things..</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -61,7 +61,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       nodes {
-        excerpt
+        excerpt(pruneLength: 320)
         fields {
           slug
         }
