@@ -76,12 +76,13 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Layout location={location} title={siteTitle}>
+      <Layout className="reading" location={location} title={siteTitle}>
 
 
-        <BlogPostStyles>
+        <BlogPostStyles id="reading">
           <article
             className="blog-post"
+
             itemScope
             itemType="http://schema.org/Article"
           >
