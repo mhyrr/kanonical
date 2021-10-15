@@ -1,5 +1,5 @@
 
-import React, {component} from 'react'
+import React, { component, useState, useEffect, useRef } from "react"
 import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter"
@@ -366,6 +366,8 @@ class Tumble extends React.Component {
 
     // console.log("Links: " + this.state.links)
     // console.log("Cards: " + this.state.cards);
+
+
 
     let Grid = makeResponsive(measureItems(CSSGrid), {
       maxWidth: 1920,
