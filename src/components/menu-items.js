@@ -1,11 +1,11 @@
 import React from "react"
 import { DiGithubBadge } from "react-icons/di"
-import { FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 export const mainMenuItems = [
   {
-    path: "/",
-    title: "kanonical",
+    path: "/blog",
+    title: "Blog",
   },
   {
     path: "/tumble",
@@ -26,20 +26,21 @@ export const mainMenuItems = [
 ]
 
 export const socialMenuItems = [
-  {
-    icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness",
-    name: "LinkedIn",
-  },
+
   {
     icon: <FaTwitter />,
-    url: "https://www.twitter.com",
+  url: "https://www.twitter.com/mhyrr",
     name: "Twitter",
   },
   {
     icon: <DiGithubBadge />,
-    url: "https://github.com/bagseye",
+    url: "https://github.com/mhyrr",
     name: "GitHub",
+  },
+  {
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/mhyrr",
+    name: "Insta",
   },
 ]
 

@@ -31,24 +31,43 @@ I’ve never thought before what it means to have a [sub-replacement fertility](
 Langston Hughes is my favorite American 20th century poet - his poems are like jazz on the page.  One of my favorites is something he wrote for a college class when he was 20.  [You should read it](https://www.poetryfoundation.org/poems/47880/theme-for-english-b) (it’s not long), but here’s the ending.
 
 > Well, I like to eat, sleep, drink, and be in love.   
+>
 > I like to work, read, learn, and understand life.   
+>
 > I like a pipe for a Christmas present,
+>
 > or records—Bessie, bop, or Bach.
+>
 > I guess being colored doesn’t make me not like
+>
 > the same things other folks like who are other races.   
+>
 > So will my page be colored that I write?   
+>
 > Being me, it will not be white.
+>
 > But it will be
+>
 > a part of you, instructor.
+>
 > You are white—
+>
 > yet a part of me, as I am a part of you.
+>
 > That’s American.
+>
 > Sometimes perhaps you don’t want to be a part of me.   
+>
 > Nor do I often want to be a part of you.
+>
 > But we are, that’s true!
+>
 > As I learn from you,
+>
 > I guess you learn from me—
+>
 > although you’re older—and white—
+>
 > and somewhat more free.
 
 It’s hard to be more honest than that.  It’s a form of truth, and this kind of personalized perspective is what I think people mean when they tell you to “speak your truth”.  But it’s not The Truth in an objective or verifiable or scientific way.  It’s storytelling.  Delightful and insightful storytelling with different aspects of truth woven like thread, but storytelling nonetheless.

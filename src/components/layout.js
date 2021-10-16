@@ -1,30 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import GlobalStyles from '../styles/globalstyles'
 import Typography from '../styles/typography'
 import { motion } from 'framer-motion'
-
+import CookieConsent from "react-cookie-consent"
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  console.log(location)
-  const isRootPath = location.pathname === rootPath
-  let header
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+  const target = React.createRef();
 
   return (
     <div>
@@ -33,19 +18,40 @@ const Layout = ({ location, title, children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.2, delay: 0.1 }}
       >
         <Typography />
-        <Header></Header>
-        <div className="global-wrapper" data-is-root-path={isRootPath}>
-          <main>{children}</main>
+        <Header target={target}></Header>
+        <div className="global-wrapper" >
+          <main className="main-body" ref={target}>{children}</main>
 
         </div>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer></Footer>
+        <CookieConsent
+          location="bottom"
+          buttonText="Okay"
+          cookieName="kanonicalCookie"
+          expires={150}
+          style={{
+            background: "var(--black)",
+            padding: "var(--spacing)",
+            fontSize: "16px",
+            boxSizing: "border-box",
+          }}
+          buttonStyle={{
+            padding: "1rem",
+            color: "var(--black)",
+            backgroundColor: "#fff",
+            fontSize: "16px",
+          }}
+        >
+          This website uses cookies to help improve your experience. By using
+          this site you agree to the
+          <Link to="/privacy" style={{ color: "#fff" }}>
+            privacy statement
+          </Link>
+          .
+        </CookieConsent>
       </motion.div>
     </div>
   )
