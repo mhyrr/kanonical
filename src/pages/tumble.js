@@ -8,7 +8,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
-import Bio from '../components/Bio'
+import Bio from '../components/bio'
 import Layout from "../components/layout"
 
 class Tumble extends React.Component {
