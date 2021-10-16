@@ -4,7 +4,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Bio from "./bio"
 import Burger from "./burger"
 import Navigation from "./navigation"
-import { HeaderStyles } from "../styles/navstyles"
+import { HeaderStyles, HeaderContainer } from "../styles/navstyles"
+import ReadingProgress from "./readingprogress"
 
 const Container = styled.div`
   padding: 0;
@@ -15,7 +16,7 @@ const Container = styled.div`
   margin: 0;
 `;
 
-const Header = () => {
+const Header = (target) => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -42,13 +43,16 @@ const Header = () => {
     })
   }, [])
 
-
   return (
-    <HeaderStyles className={scroll ? "scrolled" : null}>
-      <Bio />
-      <Burger />
-      <Navigation />
-    </HeaderStyles>
+
+    <HeaderContainer className={scroll ? "scrolled" : null}>
+      <HeaderStyles>
+        <Bio />
+        <Burger />
+        <Navigation />
+      </HeaderStyles>
+      <ReadingProgress target={target} />
+    </HeaderContainer>
   )
 
 }
