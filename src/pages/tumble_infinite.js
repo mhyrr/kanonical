@@ -6,7 +6,7 @@ import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import moment from 'moment'
+
 import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
 import Bio from '../components/bio'
 import Layout from "../components/layout"
@@ -19,6 +19,62 @@ const Tumbler = ({data}) => {
     const siteTitle = data.site.siteMetadata.title
 
     const all = links.concat(words).sort( (a, b) => { return (b.node.date).localeCompare(a.node.date) });
+    console.log(all);
+
+    // State for the list
+    const [list, setList] = useState([...all.slice(0, 30)])
+
+    // State to trigger load more
+    const [loadMore, setLoadMore] = useState(false)
+
+    // State of whether there is more to load
+    const [hasMore, setHasMore] = useState(all.length > 10)
+
+    //Set a ref for the loading div
+    const loadRef = useRef()
+
+    // Handle intersection with load more div
+    const handleObserver = (entities) => {
+        const target = entities[0]
+        if (target.isIntersecting) {
+        setLoadMore(true)
+        }
+    }
+
+    //Initialize the intersection observer API
+    useEffect(() => {
+        var options = {
+        root: null,
+        rootMargin: "20px",
+        threshold: 1.0,
+        }
+        const observer = new IntersectionObserver(handleObserver, options)
+        if (loadRef.current) {
+        observer.observe(loadRef.current)
+        }
+    }, [])
+
+    // Handle loading more articles
+    useEffect(() => {
+        if (loadMore && hasMore) {
+        const currentLength = list.length
+        const isMore = currentLength < all.length
+        const nextResults = isMore
+            ? all.slice(currentLength, currentLength + 10)
+            : []
+        setList([...list, ...nextResults])
+        setLoadMore(false)
+        }
+    }, [loadMore, hasMore]) //eslint-disable-line
+
+    //Check if there is more
+    useEffect(() => {
+        const isMore = list.length < all.length
+        setHasMore(isMore)
+    }, [list]) //eslint-disable-line
+
+
+
 
 
     const courtesyOf = (url, title, type) => {
@@ -85,6 +141,7 @@ const Tumbler = ({data}) => {
             }
             return true;
         }).map(item => {
+            console.log ("link or word")
             if (item.node.content != undefined) {
                 if (item.node.path !== '/404/') {
                     const title = get(item, 'node.title') || item.node.path
@@ -117,7 +174,7 @@ const Tumbler = ({data}) => {
                         element = (
                           <div>
                             <h5>{item.node.title}</h5>
-                            <iframe width="322" height="180" src={item.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="322" height="180" src={item.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                           </div>
                         );
                       }
@@ -158,7 +215,7 @@ const Tumbler = ({data}) => {
                             <span>{courtesyOf(item.node.content, item.node.title, type)}</span>
                           </CardAttr>
           
-                          <CardDate title={moment(formattedDate).fromNow()}>{moment(formattedDate).fromNow()}</CardDate>
+                          <CardDate title={formattedDate}>{formattedDate} ago</CardDate>
                         </Card>
           
                       </li>
@@ -188,7 +245,7 @@ const Tumbler = ({data}) => {
         
                       <CardLink>{element}</CardLink>
         
-                      <CardDate title={moment(formattedDate).fromNow()}>{moment(formattedDate).fromNow()}</CardDate>
+                      <CardDate title={formattedDate}>{formattedDate} ago</CardDate>
                     </Card>
         
                   </li>
@@ -251,8 +308,11 @@ const Tumbler = ({data}) => {
           duration={800}
           easing="ease-out"
           >
-           {buildCards(all, siteTitle).map(a => a.card)}
+           {buildCards(list, siteTitle).map(a => a.card)}
         </Grid>
+        <div ref={loadRef}>
+            {hasMore ? <p>Loading...</p> : <p></p>}
+        </div>
       </div>
         
     )
@@ -264,7 +324,7 @@ export default Tumbler
 
 
 export const pageQuery = graphql`
-  query TumblerQuery {
+  query TumblerInfiniteQuery {
     site {
       siteMetadata {
         title
