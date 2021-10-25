@@ -6,7 +6,7 @@ path: /bacon-as-a-health-food/
 
 So recently.. this happened:
 
-<iframe src="https://www.instagram.com/p/BUMVNBWl0p3/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+![Holy crap what a difference](img/2017me.png)
 
 And through this process, I've learned I have a lot to say.  And even more strangely, people sometimes listen<sup>[1](#friends)</sup>.  So I've decided to consolidate the advice that I've given in one semi-long diatribe about health, food, and our bodies.
 
