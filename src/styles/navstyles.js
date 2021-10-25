@@ -6,10 +6,10 @@ export const HeaderContainer = styled.header`
   left: 0;
   right: 0;
   transition: box-shadow var(--transMed) ease;
-  background-color: #fff;
+  background-color: var(--light);
 
   &.scrolled {
-    box-shadow: -1px 5px 11px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 5px 11px 0px rgba(var(--primaryRGB), 0.1);
   }
 `;
 
@@ -20,6 +20,7 @@ export const HeaderStyles = styled.div`
   grid-gap: 1rem;
   padding: 0.5rem 2rem;
   padding-bottom: 0rem;
+  background-color: var(--light);
 
 
   .logo-cont {
@@ -31,13 +32,13 @@ export const HeaderStyles = styled.div`
     a {
       display: inline-block;
       line-height: 2.5rem;
-      color: var(--black);
+      color: var(--dark);
       text-decoration: none;
       transition: var(--transMed);
       position: relative;
 
       &:hover {
-        color: var(--primaryColor);
+        color: var(--primary);
       }
     }
 
@@ -69,7 +70,7 @@ export const NavigationStyles = styled.nav`
     width: 100%;
     bottom: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--light);
     z-index: 2;
     transform: translateX(100%);
     transition: var(--transMed);
@@ -117,7 +118,7 @@ export const BurgerStyles = styled.button`
   border: none;
   background-color: transparent;
   font-family: var(--serif);
-  color: var(--charcoal);
+  color: var(--dark);
   display: flex;
   align-items: center;
   padding: 0;
@@ -133,7 +134,7 @@ export const BurgerStyles = styled.button`
 
     span {
       display: block;
-      background-color: var(--charcoal);
+      background-color: var(--dark);
       transition: width 0.3s ease;
       width: 30px;
       height: 1px;

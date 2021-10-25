@@ -5,11 +5,24 @@ const GlobalStyles = createGlobalStyle`
     --heavyWeight: 900;
     --transMed: 0.1s;
     --transSlow: 0.3s;
+
+    --dark: #313349;
+    --darkRGB: 49, 51, 73;
+    --light: #fffdfa;
+    --primary: #81B29A;
+    --primaryRGB: 129, 178, 154;
+    --secondary: #DB6443;
+    --secondaryRGB: 219, 100, 67;
+    --yellowHighlight: F4D7A4;
+    --alpha: 0.2;
+
+
     --black: #2d2828;
     --charcoal: #3e3e3e;
     --primaryColor: #939393;
-    --serif: "Montserrat", serif;
-    --sansSerif: "Lato", sans-serif;
+    --lobster-two: "Lobster Two";
+    --serif: Poppins, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    --sansSerif: Poppins, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     --h1: 1.8rem;
     --h2: 1.5rem;
     --h3: 1.3rem;
@@ -43,7 +56,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: var(--sansSerif);
-    color: var(--black);
+    background-color: var(--light);
+    color: var(--dark);
     font-size: var(--para);
     margin: 0;
   }
@@ -58,7 +72,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: var(--charcoal);
+    color: var(--dark);
     text-decoration: underline;
 
     &:hover {
@@ -67,7 +81,7 @@ const GlobalStyles = createGlobalStyle`
 
     &:hover,
     &:visited {
-      color: var(--charcoal);
+      color: var(--dark);
     }
   }
 
@@ -86,7 +100,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media (min-width: 1200px) {
-      max-width: 860px;
+      max-width: 720px;
     }
   }
 
@@ -101,11 +115,11 @@ const GlobalStyles = createGlobalStyle`
       position: relative;
       -webkit-transition: var(--transMed);
       transition: var(--transMed);
-      color: var(--black);
+      color: var(--dark);
       line-height: 1.75rem;
 
       &:hover {
-        color: var(--primaryColor);
+        color: var(--primary);
 
         &::after {
           width: 0;
@@ -116,7 +130,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .btn {
-    color: var(--black);
+    color: var(--dark);
     text-decoration: none;
     border: none;
     background: none;
@@ -134,7 +148,7 @@ const GlobalStyles = createGlobalStyle`
       padding: 0;
       display: flex;
       font-family: var(--serif);
-      color: var(--charcoal);
+      color: var(--primary);
       text-decoration: none;
       position: relative;
 
@@ -144,7 +158,7 @@ const GlobalStyles = createGlobalStyle`
         position: absolute;
         height: 0.1rem;
         width: 100%;
-        background-color: var(--charcoal);
+        background-color: var(--primary);
         left: 0;
         bottom: -0.25rem;
         opacity: 1;

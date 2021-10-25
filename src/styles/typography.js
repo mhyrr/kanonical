@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/lato"
 import "@fontsource/roboto"
+import "@fontsource/poppins"
+import "@fontsource/lobster-two"
 
 const Typography = createGlobalStyle`
 h1 {
@@ -43,7 +45,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--charcoal);
+  color: var(--dark);
 }
 
 h5,
@@ -80,12 +82,14 @@ h6 {
 
 blockquote {
   padding: calc(var(--spacing) * 2) var(--spacing);
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(var(--secondaryRGB), var(--alpha));
   width: 100%;
-  font-family: var(--serif);
+  font-family: var(--lobster-two);
   font-style: italic;
-  color: var(--charcoal);
+  color: var(--dark);
+  text-shadow: 1px 1px 0 var(--primary);
   box-sizing: border-box;
+  border-radius: 8px 8px;
 
   p {
     font-size: var(--h3);
@@ -155,7 +159,7 @@ table {
   }
 
   tbody {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(var(--secondaryRGB), var(--alpha));
   }
 
   @media (min-width: 768px) {

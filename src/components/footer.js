@@ -129,11 +129,12 @@ Footer.propTypes = {
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
-  background-color: #f9f9f9;
+  background-color: rgba(var(--primaryRGB), 0.8);
   font-family: var(--serif);
   font-weight: 300;
   font-style: normal;
-  color: var(--charcoal);
+  color: var(--secondary);
+  box-shadow: inset 0px 16px 16px -16px rgba(var(--secondaryRGB), 0.4);
 
   .flex {
     width: 100%;
@@ -173,7 +174,8 @@ const FooterStyles = styled.footer`
 
   a {
     text-decoration: none;
-    color: var(--charcoal);
+    color: var(--secondary);
+    text-shadow: 1px 1px 0 rgba(var(--darkRGB), 0.1);
     transition: var(--transMed);
 
     &:hover {

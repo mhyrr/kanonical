@@ -6,7 +6,7 @@ const Progress = styled.div`
   position: sticky;
   height: 5px;
   top: 0;
-  background-color: #8800ff;
+  background-color: var(--primary);
 
 `;
 
