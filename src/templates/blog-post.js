@@ -9,9 +9,10 @@ import Share from "../components/ShareContainer"
 
 const BlogPostStyles = styled.div`
   .meta {
-    h2 {
+    h2, h3 {
       font-size: var(--h4);
-      color: var(--primaryColor);
+      color: var(--dark);
+      text-shadow: 1px 1px 0 var(--primary);
       margin: calc(var(--spacing) / 2) 0;
     }
   }
@@ -25,12 +26,24 @@ const BlogPostStyles = styled.div`
   }
 
   img {
-    max-width: 860px;
+    max-width: 720;
   }
 
   font-weight: 400;
   font-size: var(--h4);
-  color: var(--primaryColor);
+  color: var(--dark);
+
+  h1 {
+    color: var(--dark);
+    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+  }
+
+  h2, h3 {
+    font-size: var(--h4);
+    color: var(--dark);
+    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+    margin: calc(var(--spacing) / 2) 0;
+  }
 
   a {
     text-decoration: none;
