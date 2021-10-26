@@ -7,8 +7,10 @@ const Progress = styled.div`
   height: 5px;
   top: 0;
   background-color: var(--primary);
+  opacity: 0.6;
+  background: repeating-linear-gradient( 45deg, var(--primary), var(--primary) 12px, var(--secondary) 5px, var(--secondary) 25px );
 
-`;
+  `;
 
 const ReadingProgress = ({ target }) => {
   const [readingProgress, setReadingProgress] = useState(0);

@@ -375,8 +375,7 @@ class Tumble extends React.Component {
     });
 
     return (
-        <div className="tumble" width="90%">
-
+        <>
           <header id="header">
             <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
               <Link
@@ -413,8 +412,7 @@ class Tumble extends React.Component {
             >
              {this.state.cards}
           </Grid>
-
-        </div>
+        </>
     )
   }
 }

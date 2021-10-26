@@ -26,7 +26,7 @@ const BlogPostStyles = styled.div`
   }
 
   img {
-    max-width: 720;
+    max-width: 720px;
   }
 
   font-weight: 400;
@@ -47,18 +47,18 @@ const BlogPostStyles = styled.div`
 
   a {
     text-decoration: none;
-    margin-right: calc(var(--spacing) / 2);
+    margin-right: 0;
     position: relative;
 
     &:after {
       content: "";
-      display: block;
+      display: inline-block;
       position: absolute;
-      height: 0.1rem;
+      height: 0.05rem;
       width: 100%;
-      background-color: var(--charcoal);
+      background-color: var(--dark);
       left: 0;
-      bottom: -0.25rem;
+      bottom: 0.1rem;
       opacity: 1;
       transition: opacity var(--transSlow);
     }
@@ -68,7 +68,7 @@ const BlogPostStyles = styled.div`
       cursor: pointer;
 
       &:after {
-        opacity: 0.15;
+        opacity: 1.0;
       }
     }
 
@@ -76,6 +76,19 @@ const BlogPostStyles = styled.div`
       margin-right: 0;
     }
   }
+
+  .blog-post-nav {
+
+    li {
+      padding-left: 0;
+    }
+
+    ul > *:last-child {
+      margin-top: 0;
+    }
+
+  }
+
 `
 
 const BlogPostTemplate = ({ data, location }) => {
