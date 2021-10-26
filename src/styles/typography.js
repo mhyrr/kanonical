@@ -82,7 +82,7 @@ h6 {
 
 blockquote {
   padding: calc(var(--spacing) * 2) var(--spacing);
-  background-color: rgba(var(--secondaryRGB), var(--alpha));
+  background-color: rgba(var(--secondaryRGB), 0.1);
   width: 100%;
   font-family: var(--lobster-two);
   font-style: italic;

@@ -5,7 +5,7 @@ import { mainMenuItems } from "./menu-items"
 import { NavigationStyles } from "../styles/navstyles"
 import MenuContext from "./menucontext"
 
-const NavTitle = styled.h4`
+const NavTitle = styled.p`
   font-size: var(--fontSize-7);
   font-family: var(--sansSerif);
   margin: 0;
