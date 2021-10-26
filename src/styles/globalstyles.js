@@ -79,9 +79,8 @@ const GlobalStyles = createGlobalStyle`
       text-decoration: none;
     }
 
-    &:hover,
-    &:visited {
-      color: var(--dark);
+    &:hover {
+      color: var(--primary);
     }
   }
 
@@ -120,6 +119,7 @@ const GlobalStyles = createGlobalStyle`
 
       &:hover {
         color: var(--primary);
+        text-shadow: 0.4px 0.4px 0 var(--dark);
 
         &::after {
           width: 0;

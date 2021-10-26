@@ -8,124 +8,6 @@ import {
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-const Footer = ({ Logo }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            author {
-              name
-            }
-            siteUrl
-          }
-        }
-      }
-    `
-  )
-
-  const footerData = data.site.siteMetadata
-
-  return (
-    <FooterStyles>
-      <div className="flex">
-        {Logo ? (
-          <div className="brand-cont">
-            {/* If there is a logo, render this */}
-            {Logo && (
-              <Link to="/">
-                <img src={Logo} alt={footerData.title} />
-              </Link>
-            )}
-            <address>
-              85 Simone Weil Avenue
-              <br />
-              Watton-at-Stone
-              <br />
-              SG14 8BL
-            </address>
-            <a className="telephone" href="tel:+004407076009211">
-              07076 009 211
-            </a>
-          </div>
-        ) : null}
-
-        {mainMenuItems || socialMenuItems || footerMenuItems ? (
-          <div className="menus-cont">
-            {/* If main menu items are being imported, render this */}
-            {mainMenuItems && (
-              <ul className="footer-menu">
-                {/* First we want to filter out the Home menu item, then display the rest of them */}
-                {mainMenuItems
-                  .filter(item => {
-                    return item.title !== "home"
-                  })
-                  .map((item, index) => (
-                    <li key={`menuItem${index}`}>
-                      <Link to={item.path}>{item.title}</Link>
-                    </li>
-                  ))}
-              </ul>
-            )}
-
-            {/* If social menu items are being imported, render this */}
-            {socialMenuItems && (
-              <ul className="footer-menu">
-                {socialMenuItems.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
-
-            {/* If footer menu items are being imported, render this */}
-            {footerMenuItems && (
-              <ul className="footer-menu">
-                {footerMenuItems.map((item, index) => (
-                  <li key={`footerMenuItem${index}`}>
-                    <Link to={item.path}>{item.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ) : null}
-
-        <div className="copy-cont">
-          <ul className="copy">
-            <li>&copy; {new Date().getFullYear()}</li>
-
-            {/* if there is an author stated in the config, render this */}
-            {footerData.author.name && (
-              <li>
-                <a
-                  href={footerData.siteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {footerData.author.name}
-                </a>
-              </li>
-            )}
-          </ul>
-        </div>
-      </div>
-    </FooterStyles>
-  )
-}
-
-Footer.propTypes = {
-  Logo: PropTypes.string,
-}
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
@@ -134,7 +16,7 @@ const FooterStyles = styled.footer`
   font-weight: 300;
   font-style: normal;
   color: var(--secondary);
-  box-shadow: inset 0px 16px 16px -16px rgba(var(--secondaryRGB), 0.4);
+  box-shadow: inset 0px 8px 8px -8px rgba(var(--secondaryRGB), 0.4);
 
   .flex {
     width: 100%;
@@ -174,8 +56,8 @@ const FooterStyles = styled.footer`
 
   a {
     text-decoration: none;
-    color: var(--secondary);
-    text-shadow: 1px 1px 0 rgba(var(--darkRGB), 0.1);
+    color: var(--dark);
+    text-shadow: 0.6px 0.6px 0 rgba(var(--secondaryRGB), 0.6);
     transition: var(--transMed);
 
     &:hover {
@@ -284,5 +166,123 @@ const FooterStyles = styled.footer`
     }
   }
 `
+
+const Footer = ({ Logo }) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author {
+              name
+            }
+            siteUrl
+          }
+        }
+      }
+    `
+  )
+
+  const footerData = data.site.siteMetadata
+
+  return (
+    <FooterStyles>
+      <div className="flex">
+        {Logo ? (
+          <div className="brand-cont">
+            {/* If there is a logo, render this */}
+            {Logo && (
+              <Link to="/">
+                <img src={Logo} alt={footerData.title} />
+              </Link>
+            )}
+            <address>
+              85 Simone Weil Avenue
+              <br />
+              Watton-at-Stone
+              <br />
+              SG14 8BL
+            </address>
+            <a className="telephone" href="tel:+004407076009211">
+              07076 009 211
+            </a>
+          </div>
+        ) : null}
+
+        {mainMenuItems || socialMenuItems || footerMenuItems ? (
+          <div className="menus-cont">
+            {/* If main menu items are being imported, render this */}
+            {mainMenuItems && (
+              <ul className="footer-menu">
+                {/* First we want to filter out the Home menu item, then display the rest of them */}
+                {mainMenuItems
+                  .filter(item => {
+                    return item.title !== "home"
+                  })
+                  .map((item, index) => (
+                    <li key={`menuItem${index}`}>
+                      <Link to={item.path}>{item.title}</Link>
+                    </li>
+                  ))}
+              </ul>
+            )}
+
+            {/* If social menu items are being imported, render this */}
+            {socialMenuItems && (
+              <ul className="footer-menu">
+                {socialMenuItems.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+
+            {/* If footer menu items are being imported, render this */}
+            {footerMenuItems && (
+              <ul className="footer-menu">
+                {footerMenuItems.map((item, index) => (
+                  <li key={`footerMenuItem${index}`}>
+                    <Link to={item.path}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : null}
+
+        <div className="copy-cont">
+          <ul className="copy">
+            {/* if there is an author stated in the config, render this */}
+            {footerData.author.name && (
+              <li>
+                <a
+                  href={footerData.siteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  &copy; {new Date().getFullYear()} {footerData.author.name}
+                </a>
+              </li>
+            )}
+          </ul>
+        </div>
+      </div>
+    </FooterStyles>
+  )
+}
+
+Footer.propTypes = {
+  Logo: PropTypes.string,
+}
+
 
 export default Footer
