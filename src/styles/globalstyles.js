@@ -73,14 +73,14 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     color: var(--dark);
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;
     }
 
     &:hover {
-      color: var(--primary);
+      color: var(--dark);
     }
   }
 
@@ -119,7 +119,6 @@ const GlobalStyles = createGlobalStyle`
 
       &:hover {
         color: var(--primary);
-        text-shadow: 0.4px 0.4px 0 var(--dark);
 
         &::after {
           width: 0;
