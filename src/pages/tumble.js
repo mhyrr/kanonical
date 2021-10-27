@@ -6,10 +6,14 @@ import { CSSGrid, layout, measureItems, makeResponsive } from "react-stonecutter
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-
+import styled from 'styled-components'
 import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
 import Bio from '../components/bio'
 import Layout from "../components/layout"
+import Typography from "../styles/typography"
+import GlobalStyles from "../styles/globalstyles"
+import Header from "../components/header"
+
 
 class Tumble extends React.Component {
 
@@ -17,8 +21,8 @@ class Tumble extends React.Component {
     super(props);
     this.state = {
       cards: [],
-      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges'),
-      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges'),
+      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges').slice(0,20),
+      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges').slice(0,20),
       showLinks: true,
       showQuotes: true,
       showWords: true,
@@ -374,45 +378,45 @@ class Tumble extends React.Component {
       minPadding: 100
     });
 
+
+    const target = React.createRef();
+
     return (
-        <>
-          <header id="header">
-            <h1 id="hdr" style={{display: 'flex', color: 'rgba(250, 250, 248, 0.9)'}}>
-              <Link
-                style={{ float: 'left', marginLeft: '3rem', paddingBottom: '8px', marginBottom: '-16px', textDecoration: 'none !important' }}
-                to='/'>
-                Kanonical
-              </Link>
-            </h1>
-            <h2>A list of things I've read or thought about,</h2><h2 style={{marginTop: '-1rem'}}>collated over ten plus years..</h2>
+        <div className="tumble">
+          <GlobalStyles/>
+          <Typography />
+          <TumbleStyles>
+            <Header id="tumbleHeader" target={target} ></Header>
+            <div id="tumbleOptions">
+              <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
+              <nav className="navAnim">
+                  <ul>
+                      <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
+                      <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
+                      <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
+                      <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
+                      <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
+                      <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
+                  </ul>
+              </nav>
+            </div>
 
-            <nav className="navAnim">
-                <ul>
-                    <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
-                    <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
-                    <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
-                    <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
-                    <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
-                    <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
-                </ul>
-            </nav>
-          </header>
-
-          <Grid
-            ref={elem => this.grid = elem}
-            className="tumbleGrid"
-            component="ul"
-            columns={3}
-            columnWidth={350}
-            gutterWidth={6}
-            gutterHeight={12}
-            layout={layout.pinterest}
-            duration={800}
-            easing="ease-out"
-            >
-             {this.state.cards}
-          </Grid>
-        </>
+            <Grid
+              ref={elem => this.grid = elem}
+              className="tumbleGrid"
+              component="ul"
+              columns={3}
+              columnWidth={350}
+              gutterWidth={6}
+              gutterHeight={12}
+              layout={layout.pinterest}
+              duration={800}
+              easing="ease-out"
+              >
+               {this.state.cards}
+            </Grid>
+          </TumbleStyles>
+        </div>
     )
   }
 }
@@ -425,6 +429,138 @@ Object.defineProperty(Array.prototype, 'flat', {
   }
 });
 
+
+const TumbleStyles = styled.div`
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: var(--transMed);
+    transition: var(--transMed);
+    color: var(--dark);
+    line-height: 1.75rem;
+
+    &:hover {
+      color: var(--primary);
+
+      &::after {
+        width: 0;
+        left: 100%;
+      }
+    }
+  }
+
+  #tumbleHeader {
+    top: 0;
+  }
+
+  #tumbleOptions {
+    padding-top: calc(var(--spacing) * 6);
+    padding-bottom: calc(var(--spacing) * 2);
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .navAnim {
+
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+
+    ul {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      text-transform: capitalize;
+      li {
+        padding-left: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.15rem;
+        font-weight: 300;
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      -webkit-transition: var(--transMed);
+      transition: var(--transMed);
+      color: var(--dark);
+      line-height: 1.75rem;
+
+      &:hover {
+        color: var(--primary);
+
+        &::after {
+          width: 0;
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  .post-img {
+    margin: calc(var(--spacing) * 2) 0;
+
+    @media (min-width: 1200px) {
+      margin: calc(var(--spacing) * 4) 0;
+    }
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  img {
+    max-width: 720px;
+  }
+
+  font-weight: 400;
+  font-size: var(--h4);
+  color: var(--dark);
+
+  h1 {
+    color: var(--dark);
+    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+  }
+
+  h2, h3 {
+    font-size: var(--h4);
+    color: var(--dark);
+    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+    margin: calc(var(--spacing) / 2) 0;
+  }
+
+  a {
+    text-decoration: none;
+    margin-right: 0;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &:after {
+        opacity: 1.0;
+      }
+    }
+
+    &::last-child {
+      margin-right: 0;
+    }
+  }
+
+
+
+`
 
 export default Tumble
 

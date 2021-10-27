@@ -207,6 +207,13 @@ const GlobalStyles = createGlobalStyle`
     width: auto !important;
     white-space: normal !important;
   }
+
+  .tumble {
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
 `
 
 export default GlobalStyles

@@ -17,6 +17,7 @@ const Container = styled.div`
 `;
 
 const Header = (target) => {
+
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -45,7 +46,7 @@ const Header = (target) => {
 
   return (
 
-    <HeaderContainer className={scroll ? "scrolled" : null}>
+    <HeaderContainer id={target.id || null} className={scroll ? "scrolled" : null} >
       <HeaderStyles>
         <Bio />
         <Burger />
