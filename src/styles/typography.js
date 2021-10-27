@@ -7,7 +7,7 @@ import "@fontsource/lobster-two"
 const Typography = createGlobalStyle`
 h1 {
   font-size: var(--h1);
-  margin: calc(var(--spacing) * 3) 0;
+  margin: calc(var(--spacing) * 2) 0;
 }
 
 p {
@@ -55,11 +55,11 @@ h6 {
 }
 
 h2 {
-  margin: calc(var(--spacing) * 1.5) 0;
+  margin: calc(var(--spacing) ) 0;
   font-size: var(--h2);
 
   @media (min-width: 768px) {
-    margin: calc(var(--spacing) * 2) 0;
+    margin: calc(var(--spacing) ) 0;
   }
 }
 
@@ -78,6 +78,10 @@ h5 {
 
 h6 {
   font-size: var(--h6);
+}
+
+small {
+  font-style: italic;
 }
 
 blockquote {

@@ -17,6 +17,7 @@ const ReadingProgress = ({ target }) => {
   const scrollListener = () => {
 
     // Only do blog posts - this feels like a kludge
+    if (target.target.current == null) { return; }
     if (target.target.current.firstChild.id != "reading") {
       return;
     }

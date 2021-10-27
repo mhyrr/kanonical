@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import GlobalStyles from '../styles/globalstyles'
+
 export const Card = styled.div`
-  background: linear-gradient(to bottom, ${props => props.type == 'link' ? 'rgba(218, 176, 161, .9)' : (props.type == 'word' ? 'rgba(245,214,116, .9)' : (props.type == 'quote' ? 'rgba(116, 164, 195,  .9)' : 'rgba(255, 156, 122, .9)'))} 0%,rgba(255,255,255,.4) 100%);
+  background: linear-gradient(to bottom, ${props => props.type == 'link' ? 'rgba(var(--primaryRGB), var(--alpha))' : (props.type == 'word' ? 'rgba(var(--primaryRGB), var(--alpha))' : (props.type == 'quote' ? 'rgba(var(--primaryRGB), var(--alpha))' : 'rgba(var(--primaryRGB), var(--alpha))'))} 0%,rgba(255,255,255,.4) 100%);
   box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
   transition:all 0.2s; */
   transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, .6);
-  border-radius: 5px; /* 5px rounded corners */
+  border-radius: 20px; /* 5px rounded corners */
   padding: 10px;
   /* top: 20%; */
   /* right: 0; */
