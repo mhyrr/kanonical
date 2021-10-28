@@ -4,7 +4,8 @@ import styled from "styled-components"
 
 
 const ShareLink = styled(Link)`
-  color: #ff0000;
+  color: var(--secondary);
+  padding: 8px;
 
   link {
     background-color: transparent;
