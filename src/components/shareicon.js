@@ -9,6 +9,17 @@ const ShareLink = styled(Link)`
 
   link {
     background-color: transparent;
+
+    a {
+      text-decoration: none;
+      margin-right: 0;
+      position: relative;
+
+      &:after {
+        content: none;
+        height: 0;
+      }
+    }
   }
 
   svg {
