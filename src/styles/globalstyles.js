@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: #DB6443;
     --secondaryRGB: 219, 100, 67;
     --yellowHighlight: F4D7A4;
+    --yellowRGB: 242, 205, 145;
     --alpha: 0.2;
 
 
@@ -54,6 +55,11 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     font-family: var(--sansSerif);
     background-color: var(--light);
@@ -85,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-body {
-    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2)
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
       calc(var(--spacing) * 4) calc(var(--spacing) * 2);
     max-width: 450px;
     margin-left: auto;
@@ -101,6 +107,20 @@ const GlobalStyles = createGlobalStyle`
     @media (min-width: 1200px) {
       max-width: 720px;
     }
+  }
+
+  img {
+
+    max-width: 320px;
+
+    @media (min-width: 768px) {
+      max-width: 600px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 720px;
+    }
+
   }
 
   .nav-link {
@@ -155,11 +175,11 @@ const GlobalStyles = createGlobalStyle`
         content: "";
         display: block;
         position: absolute;
-        height: 0.1rem;
+        height: 0.05rem;
         width: 100%;
         background-color: var(--primary);
         left: 0;
-        bottom: -0.25rem;
+        bottom: 0.1rem;
         opacity: 1;
         transition: opacity var(--transSlow);
       }

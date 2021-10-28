@@ -13,6 +13,7 @@ import Layout from "../components/layout"
 import Typography from "../styles/typography"
 import GlobalStyles from "../styles/globalstyles"
 import Header from "../components/header"
+import { motion } from 'framer-motion'
 
 
 class Tumble extends React.Component {
@@ -21,8 +22,8 @@ class Tumble extends React.Component {
     super(props);
     this.state = {
       cards: [],
-      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges').slice(0,20),
-      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges').slice(0,20),
+      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges'),
+      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges'),
       showLinks: true,
       showQuotes: true,
       showWords: true,
@@ -194,7 +195,7 @@ class Tumble extends React.Component {
               element = (
                 <div>
                   <h5>{link.node.title}</h5>
-                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
               );
             }
@@ -384,38 +385,45 @@ class Tumble extends React.Component {
     return (
         <div className="tumble">
           <GlobalStyles/>
-          <Typography />
-          <TumbleStyles>
-            <Header id="tumbleHeader" target={target} ></Header>
-            <div id="tumbleOptions">
-              <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
-              <nav className="navAnim">
-                  <ul>
-                      <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
-                      <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
-                      <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
-                      <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
-                      <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
-                      <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
-                  </ul>
-              </nav>
-            </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
+          >
+            <Typography />
+            <TumbleStyles>
+              <Header id="tumbleHeader" target={target} ></Header>
+              <div id="tumbleOptions">
+                <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
+                <nav className="navAnim">
+                    <ul>
+                        <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
+                        <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
+                        <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
+                        <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
+                        <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
+                        <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
+                    </ul>
+                </nav>
+              </div>
 
-            <Grid
-              ref={elem => this.grid = elem}
-              className="tumbleGrid"
-              component="ul"
-              columns={3}
-              columnWidth={350}
-              gutterWidth={6}
-              gutterHeight={12}
-              layout={layout.pinterest}
-              duration={800}
-              easing="ease-out"
-              >
-               {this.state.cards}
-            </Grid>
-          </TumbleStyles>
+              <Grid
+                ref={elem => this.grid = elem}
+                className="tumbleGrid"
+                component="ul"
+                columns={3}
+                columnWidth={350}
+                gutterWidth={6}
+                gutterHeight={12}
+                layout={layout.pinterest}
+                duration={800}
+                easing="ease-out"
+                >
+                 {this.state.cards}
+              </Grid>
+            </TumbleStyles>
+          </motion.div>
         </div>
     )
   }
@@ -442,7 +450,7 @@ const TumbleStyles = styled.div`
     line-height: 1.75rem;
 
     &:hover {
-      color: var(--primary);
+      color: var(--dark);
 
       &::after {
         width: 0;
@@ -471,7 +479,8 @@ const TumbleStyles = styled.div`
 
     ul {
       height: 100%;
-      margin: 0;
+      margin-left: -40px;
+      margin-bottom: 20px;
       padding: 0;
       display: flex;
       text-transform: capitalize;

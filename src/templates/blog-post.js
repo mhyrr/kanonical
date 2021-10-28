@@ -25,9 +25,7 @@ const BlogPostStyles = styled.div`
     }
   }
 
-  img {
-    max-width: 720px;
-  }
+  
 
   font-weight: 400;
   font-size: var(--h4);

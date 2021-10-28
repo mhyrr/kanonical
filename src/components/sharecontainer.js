@@ -7,6 +7,10 @@ const ShareArea = styled.div`
 
   display: inline-flex;
 
+  h5 {
+    color: var(--primary) !important;
+  }
+
   svg {
     width: 24px;
     height: 24px;
@@ -14,14 +18,12 @@ const ShareArea = styled.div`
   }
 
   a {
-
-    &:after {
-      background-color: #ffffff;
-    }
-
     text-decoration: none;
+    margin-right: 0;
+    position: relative;
+
     &:after {
-      display: none;
+      content: none;
     }
   }
 `
