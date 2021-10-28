@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Share from "../components/ShareContainer"
+import Share from "../components/sharecontainer"
 
 
 const BlogPostStyles = styled.div`
