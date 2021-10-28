@@ -25,7 +25,12 @@ const BlogPostStyles = styled.div`
     }
   }
 
-  
+  header {
+    p {
+      font-style: italic;
+    }
+  }
+
 
   font-weight: 400;
   font-size: var(--h4);
