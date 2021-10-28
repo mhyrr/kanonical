@@ -7,7 +7,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
+import {Card, CardAttr, CardLink, CardDate} from '../components/card'
 import Bio from '../components/bio'
 import Layout from "../components/layout"
 
@@ -51,7 +51,7 @@ const Tumbler = ({data}) => {
 
         else {
             return url;
-        }   
+        }
 
     }
 
@@ -65,11 +65,11 @@ const Tumbler = ({data}) => {
     const isPic = (link) => {
         return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
     }
-    
+
     const isVid = (link) => {
         return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
     }
-    
+
     const isLink = (link) => {
         return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
     }
@@ -78,7 +78,7 @@ const Tumbler = ({data}) => {
         var key = 0;
 
         var cards = [];
-    
+
         cards.push(items.filter(item => {
             if (item.node.content == undefined && item.node.definition == undefined) {
                 return false;
@@ -95,10 +95,10 @@ const Tumbler = ({data}) => {
                     var isoDate = item.node.date;//.slice(0, 4) + "-" + item.node.date.slice(4, 6) + "-" + item.node.date.slice(6,8)
                     // console.log(isoDate);
                     var formattedDate = Date.parse(isoDate);
-          
+
                     var element
                     var type = "item"
-          
+
                     if (item.node.content != undefined) {
                       item.node.content = item.node.content.replace("“", "\"").replace("”", "\"")
                       if (isPic(item)) {
@@ -113,7 +113,7 @@ const Tumbler = ({data}) => {
                       }
                       else if ( isVid(item) ) {
                         type = "vid";
-          
+
                         element = (
                           <div>
                             <h5>{item.node.title}</h5>
@@ -122,11 +122,11 @@ const Tumbler = ({data}) => {
                         );
                       }
                       else if ( isLink(item) ) {
-          
+
                         element = (
                           <a href={item.node.content} target="_blank">{item.node.title}</a>
                         );
-          
+
                       }
                       else if (
                         (item.node.content.trim().startsWith("\"") && item.node.content.trim().endsWith("\"")) ||
@@ -139,7 +139,7 @@ const Tumbler = ({data}) => {
                         element = (
                           <div className="quote" style={{marginTop: '5px'}}>{item.node.content}</div>
                         );
-          
+
                       }
                       else {
                         element = (<p dangerouslySetInnerHTML={{ __html: item.node.content }} />);
@@ -148,21 +148,21 @@ const Tumbler = ({data}) => {
                     else {
                       element = (<p dangerouslySetInnerHTML={{ __html: item.node.content }} />);
                     }
-          
+
                     let card = <li className={type} key={key} style={{ width:350}}>
                         <Card type={type}>
-          
+
                           <CardLink>{element}</CardLink>
-          
+
                           <CardAttr type={type}>
                             <span>{courtesyOf(item.node.content, item.node.title, type)}</span>
                           </CardAttr>
-          
+
                           <CardDate title={moment(formattedDate).fromNow()}>{moment(formattedDate).fromNow()}</CardDate>
                         </Card>
-          
+
                       </li>
-          
+
                     return (
                       {date: item.node.date, card: card}
                     )
@@ -171,7 +171,7 @@ const Tumbler = ({data}) => {
             }
             else {
                 key++;
-    
+
                 var element = (
                   <div className="word" style={{marginTop: '5px'}}>{item.node.definition}</div>
                 );
@@ -179,20 +179,20 @@ const Tumbler = ({data}) => {
                 var isoDate = item.node.date;//.slice(0, 4) + "-" + item.node.date.slice(4, 6) + "-" + item.node.date.slice(6,8)
                 // console.log(isoDate);
                 var formattedDate = Date.parse(isoDate);
-        
-        
+
+
                 let card = <li className={type} key={key} style={{ width:350}}>
                     <Card type={type}>
-        
+
                       <CardLink><a href={item.node.word.replace(/^/, 'https://www.merriam-webster.com/dictionary/')} target="_blank">{item.node.word}</a></CardLink>
-        
+
                       <CardLink>{element}</CardLink>
-        
+
                       <CardDate title={moment(formattedDate).fromNow()}>{moment(formattedDate).fromNow()}</CardDate>
                     </Card>
-        
+
                   </li>
-        
+
                 return (
                   {date: item.node.date, card: card}
                 )
@@ -202,9 +202,9 @@ const Tumbler = ({data}) => {
 
         }))
 
-    
+
         return cards.flat();
-    
+
       }
 
     let Grid = makeResponsive(measureItems(CSSGrid), {
@@ -214,7 +214,7 @@ const Tumbler = ({data}) => {
 
 
     return (
-        
+
         <div className="tumble" width="90%">
 
         <header id="header">
@@ -254,7 +254,7 @@ const Tumbler = ({data}) => {
            {buildCards(all, siteTitle).map(a => a.card)}
         </Grid>
       </div>
-        
+
     )
 
 
