@@ -7,7 +7,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {Card, CardAttr, CardLink, CardDate} from '../components/Card'
+import {Card, CardAttr, CardLink, CardDate} from '../components/card'
 import Bio from '../components/bio'
 import Layout from "../components/layout"
 import Typography from "../styles/typography"

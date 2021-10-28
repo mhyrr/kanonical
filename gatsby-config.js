@@ -23,7 +23,7 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
-        maxWidth: 630,
+        maxWidth: 720,
       },
     },
     {
