@@ -303,7 +303,7 @@ class Tumble extends React.Component {
     this.state.showQuotes = false;
     this.state.showVids = false;
     this.state.showWords = false;
-    console.log(this.state.showLinks)
+    // console.log(this.state.showLinks)
     this.setState({cards: this.buildCards()})
   }
 
@@ -314,7 +314,7 @@ class Tumble extends React.Component {
     this.state.showQuotes = false;
     this.state.showVids = false;
     this.state.showWords = false;
-    console.log(this.state.showPics)
+    // console.log(this.state.showPics)
     this.setState({cards: this.buildCards()})
   }
 
@@ -325,7 +325,7 @@ class Tumble extends React.Component {
     this.state.showVids = false;
     this.state.showPics = false;
     this.state.showWords = false;
-    console.log(this.state.showQuotes)
+    // console.log(this.state.showQuotes)
     this.setState({cards: this.buildCards()})
   }
 
@@ -336,7 +336,7 @@ class Tumble extends React.Component {
     this.state.showLinks = false;
     this.state.showVids = false;
     this.state.showPics = false;
-    console.log(this.state.showQuotes)
+    // console.log(this.state.showQuotes)
     this.setState({cards: this.buildCards()})
   }
 
@@ -347,7 +347,7 @@ class Tumble extends React.Component {
     this.state.showQuotes = false;
     this.state.showLinks = false;
     this.state.showWords = false;
-    console.log(this.state.showVids)
+    // console.log(this.state.showVids)
     this.setState({cards: this.buildCards()})
   }
 
