@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --dark: #313349;
     --darkRGB: 49, 51, 73;
     --light: #fffdfa;
+    --lightRGB: 255, 253, 250;
     --primary: #81B29A;
     --primaryRGB: 129, 178, 154;
     --secondary: #DB6443;
@@ -33,6 +34,15 @@ const GlobalStyles = createGlobalStyle`
     --footerMenuItem: 0.85rem;
     --para: 1rem;
     --spacing: 1rem;
+
+    scroll-behavior: smooth;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.33rem;
+    --size-600: 1.77rem;
+    --size-700: 2.36rem;
+    --size-800: 3.15rem;
+    --size-900: 4.2rem;
 
     @media (min-width: 768px) {
       --h1: 2.2rem;
@@ -106,6 +116,25 @@ const GlobalStyles = createGlobalStyle`
 
     @media (min-width: 1200px) {
       max-width: 720px;
+    }
+  }
+
+  .main-index {
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
+      calc(var(--spacing) * 4) calc(var(--spacing) * 2);
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
+        calc(var(--spacing) * 6) calc(var(--spacing) * 2);
+
+      max-width: 600px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 840px;
     }
   }
 
@@ -234,7 +263,7 @@ const GlobalStyles = createGlobalStyle`
     margin-left: auto;
   }
 
-  
+
     /* ############################# Content Cycle ####################### */
 
     @-moz-keyframes cycle {

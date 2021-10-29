@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostList from "../components/post-list"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,7 +15,9 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <h2>Some recent scribblings..</h2>
 
-      <ol style={{ listStyle: `none` }}>
+      <PostList posts={posts} />
+
+      {/*<ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -46,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol>
+      </ol>*/}
 
 
       <header><h2><Link to="/blog">More..</Link></h2></header>
@@ -63,7 +65,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 5, sort: {fields: frontmatter___date, order: DESC}) {
+    allMarkdownRemark(limit: 6, sort: {fields: frontmatter___date, order: DESC}) {
       nodes {
         excerpt(pruneLength: 200)
         fields {

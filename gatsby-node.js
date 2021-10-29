@@ -78,11 +78,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       content:
         "The cookies we track are technical and anonymous statistical cookies through Google Analytics, so that you can have a better experience on our site.  You can choose to turn cookies off in the \"help\" section of your browser toolbar or to receive a notification when you are receiving a new cookie.",
     },
-    {
-      name: "404",
-      title:
-        "Oops!  You sure about that??",
-    },
   ]
   pageData.forEach(page => {
     createPage({

@@ -6,7 +6,6 @@ const MenuContext = React.createContext()
 export function MenuProvider({ children }) {
   // Access this state around the app
   const [isOpen, setNav] = useState([])
-  console.log(isOpen + " " + setNav)
 
   return (
     <MenuContext.Provider value={[!isOpen, setNav]}>

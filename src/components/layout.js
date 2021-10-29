@@ -10,7 +10,8 @@ import CookieConsent from "react-cookie-consent"
 const Layout = ({ location, title, children }) => {
 
   const target = React.createRef();
-
+  console.log(location.pathname)
+  console.log(location.pathname === '/' ? "main-index" : "")
   return (
     <div>
       <GlobalStyles />
@@ -23,7 +24,7 @@ const Layout = ({ location, title, children }) => {
         <Typography />
         <Header target={target}></Header>
         <div className="global-wrapper" >
-          <main className="main-body" ref={target}>{children}</main>
+          <main className={`main-body ${location.pathname === '/' ? "main-index" : ""}`} ref={target}>{children}</main>
 
         </div>
         <Footer></Footer>
