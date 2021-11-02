@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import PostList from "../components/post-list"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -67,7 +69,11 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <h2>All of the blog things..</h2>
-      <ol style={{ listStyle: `none` }}>
+
+
+      <PostList posts={list} />
+
+      {/*<ol style={{ listStyle: `none` }}>
         {list.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -80,7 +86,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={post.frontmatter.path} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
@@ -98,7 +104,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol>
+      </ol>*/}
       <div ref={loadRef}>
         {hasMore ? <p>Loading...</p> : <p></p>}
       </div>
@@ -125,6 +131,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          path
         }
       }
     }
