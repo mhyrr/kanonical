@@ -4,12 +4,13 @@ import { Link } from 'gatsby';
 
 const PostList = ({ posts }) => {
   const PostList = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
-    const { title, date, description } = frontmatter;
+    const { path, title, date, description } = frontmatter;
     const { slug } = fields;
 
     return (
       <PostListItem
-        key={slug}
+        key={path}
+        path={path}
         title={title}
         date={date}
         slug={slug}
@@ -26,6 +27,7 @@ export default PostList;
 
 const PostListItem = ({
   title,
+  path,
   date,
   excerpt,
   description,
@@ -36,7 +38,7 @@ const PostListItem = ({
       {/*}<Tags tags={tags} />*/}
 
       <PostListTitle>
-        <Link to={slug}>{title}</Link>
+        <Link to={path}>{title}</Link>
       </PostListTitle>
       <PostListExcerpt
         dangerouslySetInnerHTML={{
