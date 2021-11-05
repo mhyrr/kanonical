@@ -58,7 +58,7 @@ const BlogPostStyles = styled.div`
       position: absolute;
       height: 0.05rem;
       width: 100%;
-      background-color: var(--dark);
+      background-color: var(--secondary);
       left: 0;
       bottom: 0.1rem;
       opacity: 1;
