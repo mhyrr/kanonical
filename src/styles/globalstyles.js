@@ -63,6 +63,15 @@ const GlobalStyles = createGlobalStyle`
       --h5: 1.1rem;
       --para: 1rem;
     }
+
+    @media (min-width: 1800px) {
+      --h1: 2.8rem;
+      --h2: 2rem;
+      --h3: 1.8rem;
+      --h4: 1.6rem;
+      --h5: 1.4rem;
+      --para: 1.3rem;
+    }
   }
 
   * {

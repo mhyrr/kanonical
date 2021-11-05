@@ -16,13 +16,13 @@ export const Card = styled.div`
   /* overflow: hidden; */
 
   img {
-    max-width: 320px !important;
+    max-width: 280px !important;
   }
 
   a {
     color: var(--dark);
     text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.3);
-    text-decoration: none
+    text-decoration: underline
   }
 
   &:hover {
@@ -32,21 +32,40 @@ export const Card = styled.div`
   }
 
   a:hover {
-    text-decoration: underline;
     color: var(--dark);
+    text-decoration:underline;
   }
 
+  &:hover {
+    position: relative;
+    transform: scale(1.125);
+    z-index: 1000;
+    box-shadow: 0px 3px 6px -2px rgba(var(--primaryRGB), 0.4);
+    background: linear-gradient(to bottom, ${props => props.type == 'link' ? 'rgba(var(--primaryRGB), .9)' : (props.type == 'word' ? 'rgba(var(--secondaryRGB), .9)' : (props.type == 'quote' ? 'rgba(var(--yellowRGB), .9)' : 'rgba(var(--primaryRGB), .9)'))} 0%,rgba(255,255,255,.4) 100%);
 
+    span:last-of-type {
+      color: var(--dark);
+      padding: 8px;
+    }
+  }
 `;
 
 export const CardLink = styled.div`
   text-align: center;
   margin: 16px 0 0 0;
+  font-size: 1rem;
+
   /* z-index: 20; */
   /* width: 100%; */
   /* top: 0; */
   /* left: 0; */
   transition:all 0.6s
+
+  .word {
+    font-size: .75rem !important;
+  }
+
+
 `;
 
 export const CardAttr = styled.div`
@@ -56,6 +75,7 @@ export const CardAttr = styled.div`
   /* width: 100%; */
   /* top: 0; */
   /* left: 0; */
+  font-size: .75rem;
   transition:all 0.6s
   display: inline-block;
 `;
@@ -71,7 +91,7 @@ export const CardDate = styled.span`
   padding: 10px 10px 4px 10px;
   width: 100%;
   /* display: inline-block; */
-  font-size: .8em;
+  font-size: .75rem;
 `;
 
 CardAttr.defaultProps = {

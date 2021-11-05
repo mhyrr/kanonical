@@ -7,8 +7,8 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Masonry } from 'masonic'
 import {Card, CardAttr, CardLink, CardDate} from '../components/card'
-import Bio from '../components/bio'
 import Layout from "../components/layout"
 import Typography from "../styles/typography"
 import GlobalStyles from "../styles/globalstyles"
@@ -16,374 +16,283 @@ import Header from "../components/header"
 import { motion } from 'framer-motion'
 
 
-class Tumble extends React.Component {
+const Tumbler = ({data}) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      cards: [],
-      links: get(this, 'props.data.allGoogleSpreadsheetLinksLinks.edges'),
-      words: get(this, 'props.data.allGoogleSpreadsheetWordsWords.edges'),
-      showLinks: true,
-      showQuotes: true,
-      showWords: true,
-      showPics: true,
-      showVids: true,
-    };
-    // console.log(this.props.match.path)
-  }
+    const links =  data.allGoogleSpreadsheetLinksLinks.edges
+    const words =  data.allGoogleSpreadsheetWordsWords.edges
+    const siteTitle = data.site.siteMetadata.title
 
-  componentDidMount() {
-    this.setState({cards: this.buildCards()})
-  }
-
-  quoteEnd(str) {
-    var p = new RegExp("(”|\")\\s+\-+\\s*.*$");
-    return p.test(str);
-  }
-
-  formatDate(date) {
-    var date = new Date(date);
-    var monthNames = [
-      "Jan", "Feb", "Mar",
-      "Apr", "May", "June", "July",
-      "Aug", "Sep", "Oct",
-      "Nov", "Dec"
-    ];
-
-    var day = date.getDate();
-    var monthIndex = date.getMonth();
-    var year = date.getFullYear();
-
-    return day + ' ' + monthNames[monthIndex] + ' ' + year;
-  }
-
-  timeSince(date) {
-
-    // console.log("Date: " + date);
-
-    var seconds = Math.floor((new Date() - date) / 1000);
-
-    var interval = Math.floor(seconds / 31536000);
-
-    if (interval > 1) {
-      return interval + " years";
-    }
-    interval = Math.floor(seconds / 2592000);
-    if (interval > 1) {
-      return interval + " months";
-    }
-    interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
-      return interval + " days";
-    }
-    interval = Math.floor(seconds / 3600);
-    if (interval > 1) {
-      return interval + " hours";
-    }
-    interval = Math.floor(seconds / 60);
-    if (interval > 1) {
-      return interval + " minutes";
-    }
-    return Math.floor(seconds) + " seconds";
-  }
-
-  courtesyOf(url, title, type) {
-
-    if (url != undefined) {
-
-      if (type == "link") {
-
-        if (url.indexOf("http") != -1) {
-          return "Courtesy of " + url.trim().replace(/.*https?\:\/\//, '').split('/')[0];
+    const all = links.concat(words).sort( (a, b) => { return (b.node.date).localeCompare(a.node.date) }).filter(item => {
+      // if (link.node.content != undefined) {
+      //   // console.log(this.state.showPics)
+      //   // console.log(this.state.showVids)
+      //   // console.log(this.state.showLinks)
+      //   // console.log(this.state.showQuotes)
+      //
+      //   if (isPic(link) ) {
+      //     return this.state.showPics;
+      //   }
+      //   else if (this.isVid(link) ) {
+      //     return this.state.showVids;
+      //   }
+      //   else if (this.isLink(link) ) {
+      //     return this.state.showLinks;
+      //   }
+      //   else {
+      //     return this.state.showQuotes;
+      //   }
+      // }
+      // return false;
+      // }
+        if (item.node.content != undefined || item.node.word != undefined) {
+          return true;
         }
+
+        return false;
+      }
+    )
+
+    var key = 0
+
+    // State for the list
+    const [list, setList] = useState([...all.slice(0, 30)])
+
+    // State to trigger load more
+    const [loadMore, setLoadMore] = useState(false)
+
+    // State of whether there is more to load
+    const [hasMore, setHasMore] = useState(all.length > 10)
+
+    //Set a ref for the loading div
+    const loadRef = useRef()
+
+    // Handle intersection with load more div
+    const handleObserver = (entities) => {
+        const target = entities[0]
+        if (target.isIntersecting) {
+        setLoadMore(true)
+        }
+    }
+
+
+    const courtesyOf = (url, title, type) => {
+
+        if (url != undefined) {
+
+            if (type == "link") {
+
+              if (url.indexOf("http") != -1) {
+                  let tld = url.trim().replace(/.*https?\:\/\//, '').split('/')[0]
+                  return <span>Courtesy of <a href={"https://" + tld}>{tld}</a></span>
+              }
+              else {
+                  return <span>The internet is searchable, so if this quote is unattributed, you should still be able to find it!</span>
+              }
+            }
+            else if (type == "quote") {
+              // console.log(url.substring(0,12));
+              // console.log(title.substring(0,12));
+              if (url.substring(1,12) === title.substring(1,12)) {
+                  return <span>The internet is searchable, so if this quote is unattributed, you should still be able to find it!</span>
+              } else {
+                  return <span>{title}</span>
+              }
+            }
+            else if (type == "img") {
+              return <span>{title}</span>
+            }
+
+        }
+
         else {
-          return "The internet is searchable, so if this quote is unattributed, you should still be able to find it!";
+            return <span>{url}</span>;
         }
-      }
-      else if (type == "quote") {
-        // console.log(url.substring(0,12));
-        // console.log(title.substring(0,12));
-        if (url.substring(1,12) === title.substring(1,12)) {
-          return "The internet is searchable, so if this quote is unattributed, you should still be able to find it!";
-        } else {
-          return title;
-        }
-      }
-      else if (type == "img") {
-        return title;
-      }
 
     }
 
-    else {
-      return url;
+
+    const formatDate = (date) => {
+      var date = new Date(date);
+      var monthNames = [
+        "Jan", "Feb", "Mar",
+        "Apr", "May", "June", "July",
+        "Aug", "Sep", "Oct",
+        "Nov", "Dec"
+      ];
+
+      var day = date.getDate();
+      var monthIndex = date.getMonth();
+      var year = date.getFullYear();
+
+      return day + ' ' + monthNames[monthIndex] + ' ' + year;
     }
 
-  }
+    const timeSince = (date) => {
 
-  isPic(link) {
-    return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
-  }
+      // console.log("Date: " + date);
 
-  isVid(link) {
-    return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
-  }
+      var seconds = Math.floor((new Date() - date) / 1000);
 
-  isLink(link) {
-    return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
-  }
+      var interval = Math.floor(seconds / 31536000);
 
-  buildCards() {
-    var key = 0;
-
-    // console.log("buidling cards..");
-
-    var cards = [];
-
-    cards.push(this.state.links.filter(link => {
-      if (link.node.content != undefined) {
-        // console.log(this.state.showPics)
-        // console.log(this.state.showVids)
-        // console.log(this.state.showLinks)
-        // console.log(this.state.showQuotes)
-
-        if (this.isPic(link) ) {
-          return this.state.showPics;
-        }
-        else if (this.isVid(link) ) {
-          return this.state.showVids;
-        }
-        else if (this.isLink(link) ) {
-          return this.state.showLinks;
-        }
-        else {
-          return this.state.showQuotes;
-        }
+      if (interval > 1) {
+        return interval + " years";
       }
-      return false;
-      }).map(link => {
+      interval = Math.floor(seconds / 2592000);
+      if (interval > 1) {
+        return interval + " months";
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval > 1) {
+        return interval + " days";
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval > 1) {
+        return interval + " hours";
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval > 1) {
+        return interval + " minutes";
+      }
+      return Math.floor(seconds) + " seconds";
+    }
 
-        if (link.node.path !== '/404/') {
-          const title = get(link, 'node.title') || link.node.path
+    const quoteEnd = (str) => {
+        var p = new RegExp("(”|\")\\s+\-+\\s*.*$");
+        return p.test(str);
+    }
+
+
+    const isPic = (link) => {
+        return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
+    }
+
+    const isVid = (link) => {
+        return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
+    }
+
+    const isLink = (link) => {
+        return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
+    }
+
+    const FinalCard = ({index, data, width}) => {
+
+      if (data.node.content != undefined) {
+        if (data.node.path !== '/404/') {
+          const title = get(data, 'node.title') || data.node.path
           key++;
-          link.node.date = link.node.date || "19700101";
+          data.node.date = data.node.date || "19700101";
           // Do some date function
-          // console.log(link.node.date);
-          var isoDate = link.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
+          // console.log(data.node.date);
+          var isoDate = data.node.date;//.slice(0, 4) + "-" + data.node.date.slice(4, 6) + "-" + data.node.date.slice(6,8)
           // console.log(isoDate);
           var formattedDate = Date.parse(isoDate);
 
           var element
           var type = "link"
 
-          if (link.node.content != undefined) {
-            link.node.content = link.node.content.replace("“", "\"").replace("”", "\"")
-            if (this.isPic(link)) {
+          if (data.node.content != undefined) {
+            data.node.content = data.node.content.replace("“", "\"").replace("”", "\"")
+            if (isPic(data)) {
               element = (
-                <a href={link.node.content} target="_blank">
-                  <img src={link.node.content} style={{
+                <a href={data.node.content} target="_blank">
+                  <img src={data.node.content} style={{
                     float: 'left',
                   }} />
                 </a>
               );
               type = "img";
             }
-            else if ( this.isVid(link) ) {
+            else if ( isVid(data) ) {
               type = "vid";
 
               element = (
                 <div>
-                  <h5>{link.node.title}</h5>
-                  <iframe width="322" height="180" src={link.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <h5>{data.node.title}</h5>
+                  <iframe width="260" height="120" src={data.node.content.replace("youtube.com/watch?v=", "youtube.com/embed/").replace("youtu.be", "youtube.com/embed")} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
               );
             }
-            else if ( this.isLink(link) ) {
+            else if ( isLink(data) ) {
 
               element = (
-                <a href={link.node.content} target="_blank">{link.node.title}</a>
+                <a href={data.node.content} target="_blank" style={{textDecoration: 'underline'}}>{data.node.title}</a>
               );
 
             }
             else if (
-              (link.node.content.trim().startsWith("\"") && link.node.content.trim().endsWith("\"")) ||
-              (link.node.content.trim().startsWith("*") && link.node.content.trim().endsWith("*")) ||
-              (link.node.content.trim().startsWith("“") && link.node.content.trim().endsWith("”")) ||
-              (link.node.content.trim().startsWith("“") && this.quoteEnd(link.node.content.trim())) ||
-              (link.node.content.trim().startsWith("\"") && this.quoteEnd(link.node.content.trim()))
+              (data.node.content.trim().startsWith("\"") && data.node.content.trim().endsWith("\"")) ||
+              (data.node.content.trim().startsWith("*") && data.node.content.trim().endsWith("*")) ||
+              (data.node.content.trim().startsWith("“") && data.node.content.trim().endsWith("”")) ||
+              (data.node.content.trim().startsWith("“") && quoteEnd(data.node.content.trim())) ||
+              (data.node.content.trim().startsWith("\"") && quoteEnd(data.node.content.trim()))
               ) {
               type = "quote";
               element = (
-                <div className="quote" style={{marginTop: '5px'}}>{link.node.content}</div>
+                <div className="quote" style={{marginTop: '5px'}}>{data.node.content}</div>
               );
 
             }
             else {
-              element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
+              element = (<p dangerouslySetInnerHTML={{ __html: data.node.content }} />);
             }
           }
           else {
-            element = (<p dangerouslySetInnerHTML={{ __html: link.node.content }} />);
+            element = (<p dangerouslySetInnerHTML={{ __html: data.node.content }} />);
           }
 
-          let card = <li className={type} key={key} style={{ width:350}}>
-              <Card type={type}>
+          let card =
+              <Card type={type} className={type} key={key} style={{ width:270}}>
 
                 <CardLink>{element}</CardLink>
 
                 <CardAttr type={type}>
-                  <span>{this.courtesyOf(link.node.content, link.node.title, type)}</span>
+                  {courtesyOf(data.node.content, data.node.title, type)}
                 </CardAttr>
 
-                <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
+                <CardDate title={formatDate(formattedDate)}>{timeSince(formattedDate)} ago</CardDate>
               </Card>
 
-            </li>
 
           return (
-            {date: link.node.date, card: card}
+            card
           )
         }
-    }))
 
-    cards.push(this.state.words.filter(word => {
-        if (word.node.definition != undefined) {
-          // console.log(this.state.showPics)
-          // console.log(this.state.showVids)
-          // console.log(this.state.showLinks)
-          // console.log(this.state.showQuotes)
-          return this.state.showWords;
-        }
-        return false;
-      }).map(word => {
-        key++;
+      }
+      else {
+          key++;
 
-        var element = (
-          <div className="word" style={{marginTop: '5px'}}>{word.node.definition}</div>
-        );
-        var type = "word";
-        var isoDate = word.node.date;//.slice(0, 4) + "-" + link.node.date.slice(4, 6) + "-" + link.node.date.slice(6,8)
-        // console.log(isoDate);
-        var formattedDate = Date.parse(isoDate);
+          var element = (
+            <div className="word" style={{marginTop: '5px', fontSize: '.75rem'}}>{data.node.definition}</div>
+          );
+          var type = "word";
+          var isoDate = data.node.date;//.slice(0, 4) + "-" + data.node.date.slice(4, 6) + "-" + data.node.date.slice(6,8)
+          // console.log(isoDate);
+          var formattedDate = Date.parse(isoDate);
 
 
-        let card = <li className={type} key={key} style={{ width:350}}>
-            <Card type={type}>
+          let card =
+              <Card type={type} className={type} key={key} style={{ width:270}}>
 
-              <CardLink><a href={word.node.word.replace(/^/, 'https://www.merriam-webster.com/dictionary/')} target="_blank">{word.node.word}</a></CardLink>
+                <CardLink><a href={data.node.word.replace(/^/, 'https://www.merriam-webster.com/dictionary/')} target="_blank">{data.node.word}</a></CardLink>
 
-              <CardLink>{element}</CardLink>
+                <CardLink>{element}</CardLink>
 
-              <CardDate title={this.formatDate(formattedDate)}>{this.timeSince(formattedDate)} ago</CardDate>
-            </Card>
+                <CardDate title={formatDate(formattedDate)}>{timeSince(formattedDate)} ago</CardDate>
+              </Card>
 
-          </li>
-
-        return (
-          {date: word.node.date, card: card}
-        )
-      })
-    )
-
-    // console.log(cards);
-
-    return cards.flat().sort(function(a, b) {
-      a = new Date(a.date);
-      b = new Date(b.date);
-      return a>b ? -1 : a<b ? 1 : 0;
-    });
-
-  }
-
-  toggleLinks() {
-
-    this.state.showLinks = true;
-    this.state.showPics = false;
-    this.state.showQuotes = false;
-    this.state.showVids = false;
-    this.state.showWords = false;
-    // console.log(this.state.showLinks)
-    this.setState({cards: this.buildCards()})
-  }
-
-  togglePics() {
-
-    this.state.showPics = true;
-    this.state.showLinks = false;
-    this.state.showQuotes = false;
-    this.state.showVids = false;
-    this.state.showWords = false;
-    // console.log(this.state.showPics)
-    this.setState({cards: this.buildCards()})
-  }
-
-  toggleQuotes() {
-
-    this.state.showQuotes = true;
-    this.state.showLinks = false;
-    this.state.showVids = false;
-    this.state.showPics = false;
-    this.state.showWords = false;
-    // console.log(this.state.showQuotes)
-    this.setState({cards: this.buildCards()})
-  }
-
-  toggleWords() {
-
-    this.state.showWords = true;
-    this.state.showQuotes = false;
-    this.state.showLinks = false;
-    this.state.showVids = false;
-    this.state.showPics = false;
-    // console.log(this.state.showQuotes)
-    this.setState({cards: this.buildCards()})
-  }
-
-  toggleVids() {
-
-    this.state.showVids = true;
-    this.state.showPics = false;
-    this.state.showQuotes = false;
-    this.state.showLinks = false;
-    this.state.showWords = false;
-    // console.log(this.state.showVids)
-    this.setState({cards: this.buildCards()})
-  }
-
-  setAll() {
-    this.state.showPics = true;
-    this.state.showQuotes = true;
-    this.state.showLinks = true;
-    this.state.showVids = true;
-    this.state.showWords = true;
-    this.setState({cards: this.buildCards()})
-  }
-
-
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-
-    this.state.cards = this.buildCards().map(a => a.card);
-    // if (Object.keys(this.state.cards).length === 0 && this.state.cards.constructor === Object) {
-    //   this.state.cards: this.buildCards()})
-    // }
-
-    // console.log("Links: " + this.state.links)
-    // console.log("Cards: " + this.state.cards);
-
-
-
-    let Grid = makeResponsive(measureItems(CSSGrid), {
-      maxWidth: 1920,
-      minPadding: 100
-    });
-
+          return (
+            card
+          )
+      }
+    }
 
     const target = React.createRef();
 
     return (
-        <div className="tumble">
+
+        <div className="tumble" width="90%">
           <GlobalStyles/>
           <motion.div
             initial={{ opacity: 0 }}
@@ -396,7 +305,7 @@ class Tumble extends React.Component {
               <Header id="tumbleHeader" target={target} ></Header>
               <div id="tumbleOptions">
                 <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
-                <nav className="navAnim">
+                {/*<nav className="navAnim">
                     <ul>
                         <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
                         <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
@@ -405,37 +314,21 @@ class Tumble extends React.Component {
                         <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
                         <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
                     </ul>
-                </nav>
+                </nav>*/}
               </div>
 
-              <Grid
-                ref={elem => this.grid = elem}
-                className="tumbleGrid"
-                component="ul"
-                columns={3}
-                columnWidth={350}
-                gutterWidth={6}
-                gutterHeight={12}
-                layout={layout.pinterest}
-                duration={800}
-                easing="ease-out"
-                >
-                 {this.state.cards}
-              </Grid>
+              <Masonry className="tumbleGrid" columnWidth={280} rowGutter={8} overscanBy={8} items={all} render={FinalCard} />
             </TumbleStyles>
           </motion.div>
-        </div>
+
+      </div>
+
     )
-  }
+
+
 }
 
-Object.defineProperty(Array.prototype, 'flat', {
-  value: function(depth = 1) {
-    return this.reduce(function (flat, toFlatten) {
-      return flat.concat((Array.isArray(toFlatten) && (depth>1)) ? toFlatten.flat(depth-1) : toFlatten);
-    }, []);
-  }
-});
+export default Tumbler
 
 
 const TumbleStyles = styled.div`
@@ -525,7 +418,7 @@ const TumbleStyles = styled.div`
   ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none !important;
   }
 
   img {
@@ -571,10 +464,8 @@ const TumbleStyles = styled.div`
 
 `
 
-export default Tumble
-
 export const pageQuery = graphql`
-  query TumbleQuery {
+  query TumblerInfiniteQuery {
     site {
       siteMetadata {
         title
