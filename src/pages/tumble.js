@@ -16,36 +16,54 @@ import Header from "../components/header"
 import { motion } from 'framer-motion'
 
 
+const isPic = (link) => {
+  return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
+}
+
+const isVid = (link) => {
+  return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
+}
+
+const isLink = (link) => {
+  return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
+}
+
+const isWord = (word) => {
+  return word.node.word != undefined
+}
+
+
 const Tumbler = ({data}) => {
 
     const links =  data.allGoogleSpreadsheetLinksLinks.edges
     const words =  data.allGoogleSpreadsheetWordsWords.edges
     const siteTitle = data.site.siteMetadata.title
 
+    const [showLinks, setShowLinks] = useState(true);
+    const [showPics, setShowPics] = useState(true);
+    const [showVids, setShowVids] = useState(true);
+    const [showQuotes, setShowQuotes] = useState(true);
+    const [showWords, setShowWords] = useState(true);
+
     const all = links.concat(words).sort( (a, b) => { return (b.node.date).localeCompare(a.node.date) }).filter(item => {
-      // if (link.node.content != undefined) {
-      //   // console.log(this.state.showPics)
-      //   // console.log(this.state.showVids)
-      //   // console.log(this.state.showLinks)
-      //   // console.log(this.state.showQuotes)
-      //
-      //   if (isPic(link) ) {
-      //     return this.state.showPics;
-      //   }
-      //   else if (this.isVid(link) ) {
-      //     return this.state.showVids;
-      //   }
-      //   else if (this.isLink(link) ) {
-      //     return this.state.showLinks;
-      //   }
-      //   else {
-      //     return this.state.showQuotes;
-      //   }
-      // }
-      // return false;
-      // }
+
         if (item.node.content != undefined || item.node.word != undefined) {
-          return true;
+
+          if (isWord(item) ) {
+            return showWords
+          }
+          else if (isPic(item) ) {
+            return showPics
+          }
+          else if (isVid(item) ) {
+            return showVids
+          }
+          else if (isLink(item) ) {
+            return showLinks
+          }
+          else {
+            return showQuotes
+          }
         }
 
         return false;
@@ -53,27 +71,6 @@ const Tumbler = ({data}) => {
     )
 
     var key = 0
-
-    // State for the list
-    const [list, setList] = useState([...all.slice(0, 30)])
-
-    // State to trigger load more
-    const [loadMore, setLoadMore] = useState(false)
-
-    // State of whether there is more to load
-    const [hasMore, setHasMore] = useState(all.length > 10)
-
-    //Set a ref for the loading div
-    const loadRef = useRef()
-
-    // Handle intersection with load more div
-    const handleObserver = (entities) => {
-        const target = entities[0]
-        if (target.isIntersecting) {
-        setLoadMore(true)
-        }
-    }
-
 
     const courtesyOf = (url, title, type) => {
 
@@ -162,18 +159,62 @@ const Tumbler = ({data}) => {
         return p.test(str);
     }
 
+    const toggleLinks = () => {
 
-    const isPic = (link) => {
-        return link.node.content.endsWith(".png") || link.node.content.endsWith(".jpg") || link.node.content.endsWith(".gif");
+      setShowLinks(true)
+      setShowPics(false)
+      setShowWords(false)
+      setShowVids(false)
+      setShowQuotes(false)
     }
 
-    const isVid = (link) => {
-        return link.node.content.includes("youtube") || link.node.content.includes("youtu.be");
+    const togglePics = () => {
+
+      setShowPics(true)
+      setShowWords(false)
+      setShowVids(false)
+      setShowQuotes(false)
+      setShowLinks(false)
+      // this.setState({cards: this.buildCards()})
     }
 
-    const isLink = (link) => {
-        return link.node.content.trim().startsWith("http://") || link.node.content.trim().startsWith("https://");
+    const toggleQuotes = () => {
+
+      setShowQuotes(true)
+      setShowWords(false)
+      setShowPics(false)
+      setShowVids(false)
+      setShowLinks(false)
     }
+
+    const toggleWords = () => {
+
+      setShowWords(true)
+      setShowPics(false)
+      setShowVids(false)
+      setShowLinks(false)
+      setShowQuotes(false)
+      // this.setState({cards: this.buildCards()})
+    }
+
+    const toggleVids = () => {
+
+      setShowVids(true)
+      setShowWords(false)
+      setShowPics(false)
+      setShowLinks(false)
+      setShowQuotes(false)
+
+    }
+
+    const setAll = () => {
+      setShowWords(true)
+      setShowPics(true)
+      setShowVids(true)
+      setShowLinks(true)
+      setShowQuotes(true)
+    }
+
 
     const FinalCard = ({index, data, width}) => {
 
@@ -305,16 +346,16 @@ const Tumbler = ({data}) => {
               <Header id="tumbleHeader" target={target} ></Header>
               <div id="tumbleOptions">
                 <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
-                {/*<nav className="navAnim">
+                <nav className="navAnim">
                     <ul>
-                        <li className="navanim2"><a href="#links" onClick={() => {this.toggleLinks()}}>Links</a></li>
-                        <li className="navanim3"><a href="#quotes" onClick={() => {this.toggleQuotes()}}>Quotes</a></li>
-                        <li className="navanim3"><a href="#words" onClick={() => {this.toggleWords()}}>Words</a></li>
-                        <li className="navanim4"><a href="#pics" onClick={() => {this.togglePics()}}>Pics</a></li>
-                        <li className="navanim5"><a href="#vids" onClick={() => {this.toggleVids()}}>Vids</a></li>
-                        <li className="navanim5"><a href="#all" onClick={() => {this.setAll()}}>All</a></li>
+                        <li className="navanim2"><a href="#links" onClick={() => {toggleLinks()}}>Links</a></li>
+                        <li className="navanim3"><a href="#quotes" onClick={() => {toggleQuotes()}}>Quotes</a></li>
+                        <li className="navanim3"><a href="#words" onClick={() => {toggleWords()}}>Words</a></li>
+                        {/*<li className="navanim4"><a href="#pics" onClick={() => {togglePics()}}>Pics</a></li>
+                        <li className="navanim5"><a href="#vids" onClick={() => {toggleVids()}}>Vids</a></li>*/}
+                        <li className="navanim5"><a href="#all" onClick={() => {setAll()}}>All</a></li>
                     </ul>
-                </nav>*/}
+                </nav>
               </div>
 
               <Masonry className="tumbleGrid" columnWidth={280} rowGutter={8} overscanBy={8} items={all} render={FinalCard} />
