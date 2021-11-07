@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { mainMenuItems } from "./menu-items"
 import { NavigationStyles } from "../styles/navstyles"
 import MenuContext from "./menucontext"
+import DarkToggle from "./darktoggle"
 
 const NavTitle = styled.p`
   font-size: var(--fontSize-7);
@@ -28,7 +29,9 @@ const Navigation = () => {
             </Link>
           </li>
         ))}
+        <li className="nav-link"><DarkToggle/></li>
       </ul>
+
     </NavigationStyles>
   )
 }

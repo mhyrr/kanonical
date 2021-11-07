@@ -35,6 +35,7 @@ const isWord = (word) => {
 
 const Tumbler = ({data}) => {
 
+
     const links =  data.allGoogleSpreadsheetLinksLinks.edges
     const words =  data.allGoogleSpreadsheetWordsWords.edges
     const siteTitle = data.site.siteMetadata.title
