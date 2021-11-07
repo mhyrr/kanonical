@@ -3,10 +3,16 @@ import styled from 'styled-components'
 import Toggle from 'react-toggle';
 
 const getTheme = () => {
+  if (typeof window === 'undefined') {
+    return;
+  }
   return window.__theme;
 }
 
 const setPreferredTheme = (theme)  => {
+  if (typeof window === 'undefined') {
+    return;
+  }
   window.__setPreferredTheme(theme);
 }
 
