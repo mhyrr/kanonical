@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+
   :root {
     --heavyWeight: 900;
     --transMed: 0.1s;
@@ -72,6 +73,21 @@ const GlobalStyles = createGlobalStyle`
       --h5: 1.4rem;
       --para: 1.3rem;
     }
+  }
+
+  :root.dark {
+    --dark: #fffdfa;
+    --darkRGB: 255, 253, 250;
+    --light: #313349;
+    --lightRGB: 49, 51, 73;
+    --primary: #DB6443;
+    --primaryRGB: 219, 100, 67;
+    --secondary: #81B29A;
+    --secondaryRGB: 129, 178, 154;
+    --yellowHighlight: F4D7A4;
+    --yellowRGB: 242, 205, 145;
+    --alpha: 0.2;
+
   }
 
   * {
