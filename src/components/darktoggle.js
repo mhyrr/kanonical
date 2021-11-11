@@ -168,7 +168,7 @@ const ToggleStyles = styled.div`
     left: 1px;
     width: 22px;
     height: 22px;
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--primary);
     border-radius: 50%;
     background-color: var(--light);
 
@@ -180,9 +180,9 @@ const ToggleStyles = styled.div`
     -moz-transition: all 0.25s ease;
     transition: all 0.25s ease;
 
-    -webkit-box-shadow: 0px 0px 3px 2px var(--secondary);
-    -moz-box-shadow: 0px 0px 3px 2px var(--secondary);
-    box-shadow: 0px 0px 2px 3px var(--secondary);
+    -webkit-box-shadow: 0px 0px 3px 2px var(--primary);
+    -moz-box-shadow: 0px 0px 3px 2px var(--primary);
+    box-shadow: 0px 0px 2px 3px var(--primary);
   }
 
   .react-toggle--checked .react-toggle-thumb {
