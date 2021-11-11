@@ -35,6 +35,16 @@ const BlogPostStyles = styled.div`
   font-size: var(--h4);
   color: var(--dark);
 
+
+  @media (min-width: 1800px) {
+    --h1: 2.8rem;
+    --h2: 2rem;
+    --h3: 1.8rem;
+    --h4: 1.6rem;
+    --h5: 1.4rem;
+    --para: 1.3rem;
+  }
+
   h1 {
     color: var(--dark);
     text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));

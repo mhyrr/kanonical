@@ -65,14 +65,6 @@ const GlobalStyles = createGlobalStyle`
       --para: 1rem;
     }
 
-    @media (min-width: 1800px) {
-      --h1: 2.8rem;
-      --h2: 2rem;
-      --h3: 1.8rem;
-      --h4: 1.6rem;
-      --h5: 1.4rem;
-      --para: 1.3rem;
-    }
   }
 
   :root.dark {
@@ -160,6 +152,10 @@ const GlobalStyles = createGlobalStyle`
 
     @media (min-width: 1200px) {
       max-width: 840px;
+    }
+
+    @media (min-width: 1800px) {
+      max-width: 1240px;
     }
   }
 
