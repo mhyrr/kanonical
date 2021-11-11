@@ -42,7 +42,7 @@ const BlogPostStyles = styled.div`
     --h3: 1.8rem;
     --h4: 1.6rem;
     --h5: 1.4rem;
-    --para: 1.3rem;
+    --para: 1.1rem;
   }
 
   h1 {
@@ -167,14 +167,14 @@ const BlogPostTemplate = ({ data, location }) => {
             >
               <li>
                 {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
+                  <Link to={previous.frontmatter.path} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={next.fields.slug} rel="next">
+                  <Link to={next.frontmatter.path} rel="next">
                     {next.frontmatter.title} →
                   </Link>
                 )}
@@ -211,19 +211,17 @@ export const pageQuery = graphql`
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
+      
       frontmatter {
         title
+        path
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
+      
       frontmatter {
         title
+        path
       }
     }
   }
