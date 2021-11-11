@@ -279,7 +279,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .tumble {
-    max-width: 90%;
+    max-width: 76%;
     margin-right: auto;
     margin-left: auto;
   }
