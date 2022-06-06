@@ -24,8 +24,8 @@ const GlobalStyles = createGlobalStyle`
     --charcoal: #3e3e3e;
     --primaryColor: #939393;
     --lobster-two: "Lobster Two";
-    --serif: Poppins, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
-    --sansSerif: Poppins, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    --serif: "avenir next", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    --sansSerif: "Sans Serif Workhorse", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     --h1: 1.8rem;
     --h2: 1.5rem;
     --h3: 1.3rem;
