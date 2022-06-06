@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --primary: #81B29A;
     --primaryRGB: 129, 178, 154;
     --secondary: #DB6443;
-    --secondaryRGB: 219, 100, 67;
+    --secondaryRGB: 247, 125, 49;
     --yellowHighlight: F4D7A4;
     --yellowRGB: 242, 205, 145;
     --alpha: 0.2;
@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --black: #2d2828;
     --charcoal: #3e3e3e;
     --primaryColor: #939393;
+    --noto: "Noto Serif";
     --lobster-two: "Lobster Two";
     --serif: "avenir next", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     --sansSerif: "Sans Serif Workhorse", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
@@ -161,6 +162,10 @@ const GlobalStyles = createGlobalStyle`
 
   .blog-post {
 
+    .anchorLink {
+      top: -100px;
+    }
+
     blockquote {
       padding: calc(var(--spacing) * 1.5);
       margin: calc(var(--spacing));
@@ -172,14 +177,15 @@ const GlobalStyles = createGlobalStyle`
 
     ul, ol {
       margin: 0;
-    } 
-    
+    }
+
     li {
       margin: 0;
+      padding: 0.1rem;
     }
 
     strong {
-      font-weight: bolder;
+      font-weight: bold;
     }
 
   }
