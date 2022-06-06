@@ -58,10 +58,10 @@ const GlobalStyles = createGlobalStyle`
 
     @media (min-width: 1200px) {
       --h1: 2.2rem;
-      --h2: 1.6rem;
-      --h3: 1.4rem;
-      --h4: 1.2rem;
-      --h5: 1.1rem;
+      --h2: 1.8rem;
+      --h3: 1.6rem;
+      --h4: 1.4rem;
+      --h5: 1.2rem;
       --para: 1rem;
     }
 
@@ -157,6 +157,31 @@ const GlobalStyles = createGlobalStyle`
     @media (min-width: 1800px) {
       max-width: 1240px;
     }
+  }
+
+  .blog-post {
+
+    blockquote {
+      padding: calc(var(--spacing) * 1.5);
+      margin: calc(var(--spacing));
+    }
+
+    hr {
+      margin: calc(var(--spacing) * 2);
+    }
+
+    ul, ol {
+      margin: 0;
+    } 
+    
+    li {
+      margin: 0;
+    }
+
+    strong {
+      font-weight: bolder;
+    }
+
   }
 
   img {
