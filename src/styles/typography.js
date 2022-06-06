@@ -87,16 +87,15 @@ small {
 blockquote {
   padding: calc(var(--spacing) * 2) var(--spacing);
   background-color: rgba(var(--secondaryRGB), 0.1);
-  width: 100%;
-  font-family: var(--lobster-two);
-  font-style: italic;
+  font-family: var(--noto);
   color: var(--dark);
-  text-shadow: 1px 1px 0 var(--primary);
+  text-shadow: .5px .5px 0 var(--primary);
   box-sizing: border-box;
+  width: 92%;
   border-radius: 8px 8px;
 
   p {
-    font-size: var(--h3);
+    font-size: var(--h4);
     margin: 0;
   }
 
