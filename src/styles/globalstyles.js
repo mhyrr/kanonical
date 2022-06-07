@@ -177,6 +177,7 @@ const GlobalStyles = createGlobalStyle`
 
     ul, ol {
       margin: 0;
+      line-height: 1.25;
     }
 
     li {
