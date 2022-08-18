@@ -140,7 +140,7 @@ const GlobalStyles = createGlobalStyle`
   .main-index {
     padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
       calc(var(--spacing) * 4) calc(var(--spacing) * 2);
-    max-width: 450px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
@@ -148,7 +148,7 @@ const GlobalStyles = createGlobalStyle`
       padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
         calc(var(--spacing) * 6) calc(var(--spacing) * 2);
 
-      max-width: 600px;
+      max-width: 768px;
     }
 
     @media (min-width: 1200px) {
@@ -193,7 +193,7 @@ const GlobalStyles = createGlobalStyle`
 
   img {
 
-    max-width: 320px;
+    max-width: 384px;
 
     @media (min-width: 768px) {
       max-width: 600px;

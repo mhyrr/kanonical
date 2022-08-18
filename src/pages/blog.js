@@ -4,8 +4,41 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import styled from "styled-components"
 
 import PostList from "../components/post-list"
+
+const DateField = styled.div`
+  position: relative;
+  small{
+    font-style: italic;
+    font-size: var(--h6);
+    color: var(--secondary);
+    margin: calc(var(--spacing) / 2) 0;
+    padding-right: 1em;
+  }
+`
+
+const TitleField = styled.h4`
+  color: var(--dark);
+  text-shadow: 0px 0px 1px rgba(var(--secondary), 0.3);
+  margin: 0;
+`
+
+const WordsField = styled.div`
+  font-style: italic;
+  font-size: var(--h6);
+  color: var(--primary);
+  margin: calc(var(--spacing) / 4) 0;
+  font-size: .7rem;
+`
+
+const SimpleItem = styled.li`
+  list-style: none;
+  position: relative;
+  display: flex;
+  padding: 1em;
+`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -13,13 +46,13 @@ const BlogIndex = ({ data, location }) => {
 
 
   // State for the list
-  const [list, setList] = useState([...posts.slice(0, 10)])
+  const [list, setList] = useState([...posts.slice(0, 50)])
 
   // State to trigger load more
   const [loadMore, setLoadMore] = useState(false)
 
   // State of whether there is more to load
-  const [hasMore, setHasMore] = useState(posts.length > 10)
+  const [hasMore, setHasMore] = useState(posts.length > 50)
 
   //Set a ref for the loading div
   const loadRef = useRef()
@@ -68,10 +101,26 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <h2>All of the blog things..</h2>
+      <h4>Hey, you asked for it.</h4>
 
+      {list.map(post => {
+        const title = post.frontmatter.title || post.fields.slug
 
-      <PostList posts={list} />
+        return (
+          <SimpleItem key={post.fields.slug}>
+              <DateField>
+                <small>{post.frontmatter.date}</small>
+                <WordsField>({post.wordCount.words.toLocaleString("en-US")} words)</WordsField>
+              </DateField>
+              <TitleField>
+                <Link to={post.frontmatter.path} itemProp="url">
+                  <span itemProp="headline">{title}</span>
+                </Link>
+              </TitleField>
+
+          </SimpleItem>
+        )
+      })}
 
       {/*<ol style={{ listStyle: `none` }}>
         {list.map(post => {
@@ -128,10 +177,13 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "MM/DD/YYYY")
           title
           description
           path
+        }
+        wordCount {
+          words
         }
       }
     }
