@@ -26,7 +26,7 @@ const Layout = ({ location, title, children }) => {
         <Typography />
         <Header target={target}></Header>
         <div className="global-wrapper" >
-          <main className={`main-body ${(path === '/' || path === '/blog') ? "main-index" : ""}`} ref={target}>{children}</main>
+          <main className={`${(path === '/blog/' || path === '/blog') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
 
         </div>
         <Footer></Footer>
