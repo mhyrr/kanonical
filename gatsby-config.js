@@ -189,15 +189,6 @@ module.exports = {
       }
     },
     {
-  		resolve: `gatsby-source-notion-api`,
-  		options: {
-  			token: process.env.NOTION_TOKEN,
-  			databaseId: process.env.NOTION_BOOKS_ID,
-  			propsToFrontmatter: false,
-  			lowerTitleLevel: true,
-  		}
-  	},
-    {
       resolve: "gatsby-source-google-spreadsheet",
       options: {
         // The `spreadsheetId` is required, it is found in the url of your document:
