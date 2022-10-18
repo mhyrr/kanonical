@@ -19,7 +19,7 @@ const DateField = styled.div`
   }
 `
 
-const TitleField = styled.h4`
+const TitleField = styled.h6`
   color: var(--dark);
   text-shadow: 0px 0px 1px rgba(var(--secondary), 0.3);
   margin: 0;
@@ -29,8 +29,6 @@ const WordsField = styled.div`
   font-style: italic;
   font-size: var(--h6);
   color: var(--primary);
-  margin: calc(var(--spacing) / 4) 0;
-  font-size: .7rem;
 `
 
 const SimpleItem = styled.li`
@@ -39,6 +37,71 @@ const SimpleItem = styled.li`
   display: flex;
   padding: 0em;
 `
+
+
+const BookList = styled.ul`
+
+  padding: 0;
+  list-style: none;
+  display: grid;
+  justify-items: center;
+  grid-gap: var(--size-300);
+  grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+  @media screen and (max-width: 500px) {
+    & {
+      display: block;
+    }
+  }
+
+`;
+
+const Book = styled.li`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--primaryRGB), 0.5);
+  background: linear-gradient(135deg, rgba(var(--secondaryRGB), 0.4) 0%,rgba(255,255,255,.6) 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+
+  margin: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media screen and (max-width: 500px) {
+    & {
+      margin-top: var(--size-600);
+    }
+  }
+`;
+
+const BookTitle = styled.h6`
+  line-height: 1.28
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: var(--size-400);
+  font-weight: 700;
+  color: var(--dark);
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  & a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+`;
 
 const BlogIndex = ({ data, location }) => {
 
@@ -52,50 +115,82 @@ const BlogIndex = ({ data, location }) => {
 
   let today = new Date().getFullYear();
   const booksThisYear = books.filter(book => {
-    let bookYear = new Date(book.node.date) || new Date("01-01-1900")
-    return (bookYear.getFullYear() === today && book.node.done === "done")
+    var done = book.node.done || "null"
+    var bookYear = new Date(book.node.date) || new Date("01-01-1900")
+    return (bookYear.getFullYear() === today && done.toLowerCase() === "done")
   })
 
   let yearBefore = today - 1
   const booksLastYear = books.filter(book=> {
-    let bookYear = new Date(book.node.date) || new Date("01-01-1900")
-    return (bookYear.getFullYear() === yearBefore && book.node.done === "done")
+    var done = book.node.done || "null"
+    var bookYear = new Date(book.node.date) || new Date("01-01-1900")
+    return (bookYear.getFullYear() === yearBefore && done.toLowerCase() === "done")
   })
 
-  console.log(booksLastYear)
+  const otherBooks = books.filter(book => {
+    var done = book.node.done || "null"
+    return (!rightNow.includes(book) && !booksThisYear.includes(book) && !booksLastYear.includes(book) && done.toLowerCase() === "done")
+  })
+
+  
+  var library = books.filter(item => {
+    var done = item.node.done || "null"
+    return done.toLowerCase() === "done"
+  }).map(item => {
+    var book = {}
+    book.title = item.node.title
+    book.id = null
+    book.author = item.node.author
+    book.image = null
+    book.date_finished = item.node.date
+    book.link = item.node.link
+    book.notes = null
+    return book
+  })
+  library.name =  "AJ Troy's Library"
+  library.url =  "https://www.ajtroy.com/"
+  library.bio = "My Running List of Books Read"
+
+
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
+
       <h4>Things I'm Currently Reading</h4>
 
-      {rightNow.map(book => {
-        return (
-          <SimpleItem key={book.node.title}>
-              <TitleField>
-                <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title}</span>
-                </Link>
-              </TitleField>
-          </SimpleItem>
-        )
+      <BookList>
+        {rightNow.map(book => {
+          return (
+            <Book key={book.node.title}>
+                <BookTitle>
+                  <Link to={book.node.link} itemProp="url">
+                    <span itemProp="headline">{book.node.title}</span>
+                  </Link>
+                </BookTitle>
+                <WordsField>- {book.node.author}</WordsField>
+            </Book>
+          )
 
-      })}
+        })}
+      </BookList>
 
       <h4>Things I've Read This Year</h4>
 
+      <BookList>
       {booksThisYear.map(book => {
         return (
-          <SimpleItem key={book.node.title}>
-              <TitleField>
+          <Book key={book.node.title}>
+              <BookTitle>
                 <Link to={book.node.link} itemProp="url">
                   <span itemProp="headline">{book.node.title}</span>
                 </Link>
-              </TitleField>
-          </SimpleItem>
+              </BookTitle>
+          </Book>
         )
 
       })}
+      </BookList>
 
       <h4>Things I Read Last Year</h4>
 
@@ -112,27 +207,24 @@ const BlogIndex = ({ data, location }) => {
 
       })}
 
-      {/*{list.map(post => {
-        const title = post.frontmatter.title || post.fields.slug
+      <h4>Everything before that..</h4>
 
+      {otherBooks.map(book => {
         return (
-          <SimpleItem key={post.fields.slug}>
-              <DateField>
-                <small>{post.frontmatter.date}</small>
-                <WordsField>({post.wordCount.words.toLocaleString("en-US")} words)</WordsField>
-              </DateField>
+          <SimpleItem key={book.node.title}>
               <TitleField>
-                <Link to={post.frontmatter.path} itemProp="url">
-                  <span itemProp="headline">{title}</span>
+                <Link to={book.node.link} itemProp="url">
+                  <span itemProp="headline">{book.node.title}</span>
                 </Link>
               </TitleField>
-
           </SimpleItem>
         )
+
       })}
-      <div ref={loadRef}>
-        {hasMore ? <p>Loading...</p> : <p></p>}
-      </div>*/}
+
+
+    <h4><a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(library))}`} download="library.json">Library?</a>Hmm..Library.json</h4>
+
 
     </Layout>
   )
