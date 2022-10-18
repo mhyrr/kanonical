@@ -37,73 +37,82 @@ const SimpleItem = styled.li`
   list-style: none;
   position: relative;
   display: flex;
-  padding: 1em;
+  padding: 0em;
 `
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
 
+  const siteTitle = data.site?.title || `Title`
 
-  // State for the list
-  const [list, setList] = useState([...posts.slice(0, 50)])
+  const books = data.allGoogleSpreadsheetBooksBooks.edges
 
-  // State to trigger load more
-  const [loadMore, setLoadMore] = useState(false)
+  const rightNow = books.filter(book => {
+    return book.node.current == "y"
+  })
 
-  // State of whether there is more to load
-  const [hasMore, setHasMore] = useState(posts.length > 50)
+  let today = new Date().getFullYear();
+  const booksThisYear = books.filter(book => {
+    let bookYear = new Date(book.node.date) || new Date("01-01-1900")
+    return (bookYear.getFullYear() === today && book.node.done === "done")
+  })
 
-  //Set a ref for the loading div
-  const loadRef = useRef()
+  let yearBefore = today - 1
+  const booksLastYear = books.filter(book=> {
+    let bookYear = new Date(book.node.date) || new Date("01-01-1900")
+    return (bookYear.getFullYear() === yearBefore && book.node.done === "done")
+  })
 
-  // Handle intersection with load more div
-  const handleObserver = (entities) => {
-    const target = entities[0]
-    if (target.isIntersecting) {
-      setLoadMore(true)
-    }
-  }
-
-  //Initialize the intersection observer API
-  useEffect(() => {
-    var options = {
-      root: null,
-      rootMargin: "20px",
-      threshold: 1.0,
-    }
-    const observer = new IntersectionObserver(handleObserver, options)
-    if (loadRef.current) {
-      observer.observe(loadRef.current)
-    }
-  }, [])
-
-  // Handle loading more articles
-  useEffect(() => {
-    if (loadMore && hasMore) {
-      const currentLength = list.length
-      const isMore = currentLength < posts.length
-      const nextResults = isMore
-        ? posts.slice(currentLength, currentLength + 10)
-        : []
-      setList([...list, ...nextResults])
-      setLoadMore(false)
-    }
-  }, [loadMore, hasMore]) //eslint-disable-line
-
-  //Check if there is more
-  useEffect(() => {
-    const isMore = list.length < posts.length
-    setHasMore(isMore)
-  }, [list]) //eslint-disable-line
-
+  console.log(booksLastYear)
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <h4>Hey, you asked for it.</h4>
+      <h4>Things I'm Currently Reading</h4>
 
-      {list.map(post => {
+      {rightNow.map(book => {
+        return (
+          <SimpleItem key={book.node.title}>
+              <TitleField>
+                <Link to={book.node.link} itemProp="url">
+                  <span itemProp="headline">{book.node.title}</span>
+                </Link>
+              </TitleField>
+          </SimpleItem>
+        )
+
+      })}
+
+      <h4>Things I've Read This Year</h4>
+
+      {booksThisYear.map(book => {
+        return (
+          <SimpleItem key={book.node.title}>
+              <TitleField>
+                <Link to={book.node.link} itemProp="url">
+                  <span itemProp="headline">{book.node.title}</span>
+                </Link>
+              </TitleField>
+          </SimpleItem>
+        )
+
+      })}
+
+      <h4>Things I Read Last Year</h4>
+
+      {booksLastYear.map(book => {
+        return (
+          <SimpleItem key={book.node.title}>
+              <TitleField>
+                <Link to={book.node.link} itemProp="url">
+                  <span itemProp="headline">{book.node.title}</span>
+                </Link>
+              </TitleField>
+          </SimpleItem>
+        )
+
+      })}
+
+      {/*{list.map(post => {
         const title = post.frontmatter.title || post.fields.slug
 
         return (
@@ -121,71 +130,29 @@ const BlogIndex = ({ data, location }) => {
           </SimpleItem>
         )
       })}
-
-      {/*<ol style={{ listStyle: `none` }}>
-        {list.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.frontmatter.path} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>*/}
       <div ref={loadRef}>
         {hasMore ? <p>Loading...</p> : <p></p>}
-      </div>
+      </div>*/}
+
     </Layout>
   )
 }
 
 export default BlogIndex
 
-export const pageQuery = graphql`
+export const allBooks = graphql`
   query {
-    site {
-      siteMetadata {
+    allGoogleSpreadsheetBooksBooks(sort: {fields: date, order: DESC}) {
+    edges {
+      node {
+        date
+        current
+        author
+        done
+        link
         title
       }
     }
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
-      nodes {
-        excerpt(pruneLength: 320)
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MM/DD/YYYY")
-          title
-          description
-          path
-        }
-        wordCount {
-          words
-        }
-      }
-    }
+  }
   }
 `
