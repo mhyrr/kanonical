@@ -19,13 +19,17 @@ const DateField = styled.div`
   }
 `
 
+const YearsTitle = styled.h4`
+  margin: calc(var(--spacing) / 2) 0;
+`;
+
 const TitleField = styled.h6`
   color: var(--dark);
   text-shadow: 0px 0px 1px rgba(var(--secondary), 0.3);
   margin: 0;
 `
 
-const WordsField = styled.div`
+const AuthorField = styled.span`
   font-style: italic;
   font-size: var(--h6);
   color: var(--primary);
@@ -35,16 +39,17 @@ const SimpleItem = styled.li`
   list-style: none;
   position: relative;
   display: flex;
-  padding: 0em;
+  padding: .1em;
 `
 
 
 const BookList = styled.ul`
 
   padding: 0;
+  margin: calc(var(--spacing) * 2) 0;
   list-style: none;
   display: grid;
-  justify-items: center;
+  justify-items: baseline;
   grid-gap: var(--size-300);
   grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
 
@@ -60,11 +65,11 @@ const Book = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  border: 1px solid rgba(var(--primaryRGB), 0.5);
-  background: linear-gradient(135deg, rgba(var(--secondaryRGB), 0.4) 0%,rgba(255,255,255,.6) 100%);
-  backdrop-filter: blur(20px);
-  border-radius: 8px;
+  padding: 0.5rem;
+  // border: 3px solid rgba(var(--darkRGB), 0.4);
+  // background: linear-gradient(135deg, rgba(var(--secondaryRGB), 0.4) 0%,rgba(255,255,255,.6) 100%);
+  // backdrop-filter: blur(20px);
+   border-radius: 8px;
 
   margin: 0;
 
@@ -74,15 +79,15 @@ const Book = styled.li`
 
   @media screen and (max-width: 500px) {
     & {
-      margin-top: var(--size-600);
+      margin-top: var(--size-200);
     }
   }
 `;
 
-const BookTitle = styled.h6`
+const BookTitle = styled.span`
   line-height: 1.28
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0;
   text-transform: capitalize;
   font-size: var(--size-400);
   font-weight: 700;
@@ -132,7 +137,7 @@ const BlogIndex = ({ data, location }) => {
     return (!rightNow.includes(book) && !booksThisYear.includes(book) && !booksLastYear.includes(book) && done.toLowerCase() === "done")
   })
 
-  
+
   var library = books.filter(item => {
     var done = item.node.done || "null"
     return done.toLowerCase() === "done"
@@ -157,7 +162,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
 
-      <h4>Things I'm Currently Reading</h4>
+      <YearsTitle>Things I'm Currently Reading</YearsTitle>
 
       <BookList>
         {rightNow.map(book => {
@@ -168,14 +173,13 @@ const BlogIndex = ({ data, location }) => {
                     <span itemProp="headline">{book.node.title}</span>
                   </Link>
                 </BookTitle>
-                <WordsField>- {book.node.author}</WordsField>
+                <AuthorField>- {book.node.author}</AuthorField>
             </Book>
           )
-
         })}
       </BookList>
 
-      <h4>Things I've Read This Year</h4>
+      <h4>Things I've Read So Far In {today}</h4>
 
       <BookList>
       {booksThisYear.map(book => {
@@ -186,26 +190,28 @@ const BlogIndex = ({ data, location }) => {
                   <span itemProp="headline">{book.node.title}</span>
                 </Link>
               </BookTitle>
+              <AuthorField>- {book.node.author}</AuthorField>
           </Book>
         )
-
       })}
       </BookList>
 
-      <h4>Things I Read Last Year</h4>
+      <h4>Things I Read In {yearBefore}</h4>
 
+      <BookList>
       {booksLastYear.map(book => {
         return (
-          <SimpleItem key={book.node.title}>
-              <TitleField>
+          <Book key={book.node.title}>
+              <BookTitle>
                 <Link to={book.node.link} itemProp="url">
                   <span itemProp="headline">{book.node.title}</span>
                 </Link>
-              </TitleField>
-          </SimpleItem>
+              </BookTitle>
+              <AuthorField>- {book.node.author}</AuthorField>
+          </Book>
         )
-
       })}
+      </BookList>
 
       <h4>Everything before that..</h4>
 
@@ -214,7 +220,7 @@ const BlogIndex = ({ data, location }) => {
           <SimpleItem key={book.node.title}>
               <TitleField>
                 <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title}</span>
+                  <span itemProp="headline">{book.node.title} by <AuthorField>{book.node.author}</AuthorField></span>
                 </Link>
               </TitleField>
           </SimpleItem>
