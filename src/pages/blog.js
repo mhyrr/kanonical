@@ -25,7 +25,7 @@ const TitleField = styled.h4`
   margin: 0;
 `
 
-const WordsField = styled.div`
+const AuthorField = styled.div`
   font-style: italic;
   font-size: var(--h6);
   color: var(--primary);
@@ -110,7 +110,7 @@ const BlogIndex = ({ data, location }) => {
           <SimpleItem key={post.fields.slug}>
               <DateField>
                 <small>{post.frontmatter.date}</small>
-                <WordsField>({post.wordCount.words.toLocaleString("en-US")} words)</WordsField>
+                <AuthorField>({post.wordCount.words.toLocaleString("en-US")} words)</AuthorField>
               </DateField>
               <TitleField>
                 <Link to={post.frontmatter.path} itemProp="url">
