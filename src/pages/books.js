@@ -87,14 +87,15 @@ const Book = styled.li`
 const BookTitle = styled.span`
   line-height: 1.28
   margin-top: 0.5rem !important;
-  margin-bottom: 0;
+  margin-bottom: 0.2rem;
   text-transform: capitalize;
   font-size: var(--size-400);
-  font-weight: 700;
-  color: var(--dark);
+  font-weight: 600;
+  color: var(--secondary);
+  text-shadow: .2px .2px 0 var(--darkRGB 0.5);
 
   & a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
   }
 
@@ -106,6 +107,53 @@ const BookTitle = styled.span`
     left: 0;
     right: 0;
   }
+`;
+
+const Preface = styled.h6`
+  margin: calc(var(--spacing) * 2) 0;
+  font-size: var(--size-400);
+  font-weight: 400;
+  color: var(--dark);
+
+  & a {
+    text-decoration: underline;
+    color: var(--secondary);
+    text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+    font-weight: 600;
+  }
+
+  & ul {
+      padding: 0;
+      margin: calc(var(--spacing) / 2) 0;
+      list-style: none;
+      display: grid;
+      justify-items: baseline;
+      grid-gap: var(--size-300);
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+      @media screen and (max-width: 500px) {
+        & {
+          display: block;
+        }
+      }
+  }
+
+  & li {
+    padding: 0;
+    margin: calc(var(--spacing) / 2) 0;
+    list-style: none;
+    display: grid;
+    justify-items: baseline;
+    grid-gap: var(--size-300);
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+    @media screen and (max-width: 500px) {
+      & {
+        display: block;
+      }
+    }
+  }
+
 `;
 
 const BlogIndex = ({ data, location }) => {
@@ -161,6 +209,21 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
+
+      <Preface>
+        Books are my thing.
+        After too many years, I've started maintaining a list of everything I've read over the years.
+        I'm missing a bunch in the distant past, but I've been keeping this list consistently since about 2018, so the recent stuff is accurate.
+        <br/><br/>
+        I'm a big fan of <a href="https://tomcritchlow.com/">Tom Critchlow's</a> <a href="https://tomcritchlow.com/2020/04/15/library-json/">Library.json idea</a> too.
+          Here's <a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(library))}`} download="library.json">my Library.json</a> index.
+        <ul>
+          <li><Link to={'/books-2021/'} itemProp="url">Best of 2021</Link></li>
+          <li><Link to={'/books-2020/'} itemProp="url">Best of 2021</Link></li>
+          <li><Link to={'/books-2019/'} itemProp="url">Best of 2021</Link></li>
+        </ul>
+
+      </Preface>
 
       <YearsTitle>Things I'm Currently Reading</YearsTitle>
 
@@ -229,7 +292,7 @@ const BlogIndex = ({ data, location }) => {
       })}
 
 
-    <h4><a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(library))}`} download="library.json">Library?</a>Hmm..Library.json</h4>
+    <h4>Hmm..Library.json</h4>
 
 
     </Layout>
