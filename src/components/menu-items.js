@@ -11,6 +11,10 @@ export const mainMenuItems = [
     path: "/tumble",
     title: "tumble",
   },
+  { 
+    path: "/books",
+    title: "Books",
+  },
   {
     path: "https://www.12inchesbehind.com",
     title: "Photos",

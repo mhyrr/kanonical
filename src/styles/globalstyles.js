@@ -119,8 +119,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-body {
-    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
-      calc(var(--spacing) * 4) calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 1)
+      calc(var(--spacing) * 4) calc(var(--spacing) * 1);
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -161,6 +161,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .blog-post {
+
+    header, footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1, h2, h3 {
+        margin-top: calc(var(--spacing) * 2);
+        margin-bottom: 0;
+        text-shadow: .2px .2px 0 var(--secondary) !important;
+      }
+    }
 
     .anchorLink {
       top: -100px;

@@ -292,7 +292,6 @@ const BlogIndex = ({ data, location }) => {
       })}
 
 
-    <h4>Hmm..Library.json</h4>
 
 
     </Layout>
