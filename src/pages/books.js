@@ -180,9 +180,16 @@ const BlogIndex = ({ data, location }) => {
     return (bookYear.getFullYear() === yearBefore && done.toLowerCase() === "done")
   })
 
+  let twoYearsBefore = today - 2
+  const booksTwoYearsAgo = books.filter(book=> {
+    var done = book.node.done || "null"
+    var bookYear = new Date(book.node.date) || new Date("01-01-1900")
+    return (bookYear.getFullYear() === twoYearsBefore && done.toLowerCase() === "done")
+  })
+
   const otherBooks = books.filter(book => {
     var done = book.node.done || "null"
-    return (!rightNow.includes(book) && !booksThisYear.includes(book) && !booksLastYear.includes(book) && done.toLowerCase() === "done")
+    return (!rightNow.includes(book) && !booksThisYear.includes(book) && !booksLastYear.includes(book) && !booksTwoYearsAgo.includes(book) && done.toLowerCase() === "done")
   })
 
 
@@ -263,6 +270,24 @@ const BlogIndex = ({ data, location }) => {
 
       <BookList>
       {booksLastYear.map(book => {
+        return (
+          <Book key={book.node.title}>
+              <BookTitle>
+                <Link to={book.node.link} itemProp="url">
+                  <span itemProp="headline">{book.node.title}</span>
+                </Link>
+              </BookTitle>
+              <AuthorField>- {book.node.author}</AuthorField>
+          </Book>
+        )
+      })}
+      </BookList>
+
+
+      <h4>Things I Read In {twoYearsBefore}</h4>
+
+      <BookList>
+      {booksTwoYearsAgo.map(book => {
         return (
           <Book key={book.node.title}>
               <BookTitle>
