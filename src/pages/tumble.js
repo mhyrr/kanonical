@@ -418,6 +418,8 @@ const TumbleStyles = styled.div`
       margin-bottom: 20px;
       padding: 0;
       display: flex;
+      flex-directon: column;
+      justify-content: center;
       text-transform: capitalize;
       li {
         padding-left: 2rem;
