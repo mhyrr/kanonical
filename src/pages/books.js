@@ -219,8 +219,8 @@ const BlogIndex = ({ data, location }) => {
           Here's <a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(library))}`} download="library.json">my Library.json</a> index.
         <ul>
           <li><Link to={'/books-2021/'} itemProp="url">Best of 2021</Link></li>
-          <li><Link to={'/books-2020/'} itemProp="url">Best of 2021</Link></li>
-          <li><Link to={'/books-2019/'} itemProp="url">Best of 2021</Link></li>
+          <li><Link to={'/books-2020/'} itemProp="url">Best of 2020</Link></li>
+          <li><Link to={'/books-2019/'} itemProp="url">Best of 2019</Link></li>
         </ul>
 
       </Preface>

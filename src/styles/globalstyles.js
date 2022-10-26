@@ -189,6 +189,35 @@ const GlobalStyles = createGlobalStyle`
       font-weight: bold;
     }
 
+    a {
+      display: inline-block;
+      text-decoration: underline;
+      background-color: inherit !important;
+      position: relative;
+      -webkit-transition: var(--transSlow);
+      transition: var(--transSlow);
+      font-size: var(--size-400);
+      font-weight: 600;
+      color: var(--secondary);
+      text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+      line-height: 1.75rem;
+      
+      &::after {
+        width: 0;
+        left: 100%;
+      }
+      
+      &:visited {
+        text-decoration: underline;
+      }
+      
+      &:hover {
+        color: var(--primary);
+
+        
+      }
+    }
+
   }
 
   img {
