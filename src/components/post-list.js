@@ -58,9 +58,10 @@ const StyledPostList = styled.ul`
 
   list-style: none;
   display: grid;
+  padding: 0;
   justify-items: center;
   grid-gap: var(--size-600);
-  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(23ch, 1fr));
 
   @media screen and (max-width: 500px) {
     & {
@@ -74,9 +75,9 @@ const StyledPostListItem = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid rgba(var(--primaryRGB), 0.5);
-  background: linear-gradient(135deg, rgba(var(--secondaryRGB), 0.4) 0%,rgba(255,255,255,.6) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,.6) 0%, rgba(var(--secondaryRGB), 0.4) 200%);
   backdrop-filter: blur(20px);
   border-radius: 8px;
 

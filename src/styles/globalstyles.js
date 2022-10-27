@@ -119,7 +119,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-body {
-    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 1)
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 1)
       calc(var(--spacing) * 4) calc(var(--spacing) * 1);
     max-width: 450px;
     margin-left: auto;
@@ -138,15 +138,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-index {
-    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
-      calc(var(--spacing) * 4) calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 1)
+      calc(var(--spacing) * 4) calc(var(--spacing) * 1);
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
     @media (min-width: 768px) {
-      padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2)
-        calc(var(--spacing) * 6) calc(var(--spacing) * 2);
+      padding: calc(var(--spacing) * 6) calc(var(--spacing) * 4)
+        calc(var(--spacing) * 6) calc(var(--spacing) * 4);
 
       max-width: 768px;
     }
@@ -214,20 +214,20 @@ const GlobalStyles = createGlobalStyle`
       color: var(--secondary);
       text-shadow: .2px .2px 0 var(--darkRGB 0.5);
       line-height: 1.75rem;
-      
+
       &::after {
         width: 0;
         left: 100%;
       }
-      
+
       &:visited {
         text-decoration: underline;
       }
-      
+
       &:hover {
         color: var(--primary);
 
-        
+
       }
     }
 
