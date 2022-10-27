@@ -218,12 +218,15 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
 
       <Preface>
-        Books are my thing.
-        After too many years, I've started maintaining a list of everything I've read over the years.
-        I'm missing a bunch in the distant past, but I've been keeping this list consistently since about 2018, so the recent stuff is accurate.
+        Books are my thing.  Well, one of them.
+        I've built up a list of everything I've read over the years.
+        I'm missing a bunch in the distant past, but I've been keeping this list consistently since around 2018.
         <br/><br/>
         I'm a big fan of <a href="https://tomcritchlow.com/">Tom Critchlow's</a> <a href="https://tomcritchlow.com/2020/04/15/library-json/">Library.json idea</a> too.
           Here's <a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(library))}`} download="library.json">my Library.json</a> index.
+
+          <YearsTitle>Favorites Of The Last Few Years</YearsTitle>
+
         <ul>
           <li><Link to={'/books-2021/'} itemProp="url">Best of 2021</Link></li>
           <li><Link to={'/books-2020/'} itemProp="url">Best of 2020</Link></li>
@@ -249,7 +252,7 @@ const BlogIndex = ({ data, location }) => {
         })}
       </BookList>
 
-      <h4>Things I've Read So Far In {today}</h4>
+      <YearsTitle>Things I've Read So Far In {today}</YearsTitle>
 
       <BookList>
       {booksThisYear.map(book => {
@@ -266,7 +269,7 @@ const BlogIndex = ({ data, location }) => {
       })}
       </BookList>
 
-      <h4>Things I Read In {yearBefore}</h4>
+      <YearsTitle>Things I Read In {yearBefore}</YearsTitle>
 
       <BookList>
       {booksLastYear.map(book => {
@@ -284,7 +287,7 @@ const BlogIndex = ({ data, location }) => {
       </BookList>
 
 
-      <h4>Things I Read In {twoYearsBefore}</h4>
+      <YearsTitle>Things I Read In {twoYearsBefore}</YearsTitle>
 
       <BookList>
       {booksTwoYearsAgo.map(book => {
@@ -301,14 +304,14 @@ const BlogIndex = ({ data, location }) => {
       })}
       </BookList>
 
-      <h4>Everything before that..</h4>
+      <YearsTitle>Everything before that..</YearsTitle>
 
       {otherBooks.map(book => {
         return (
           <SimpleItem key={book.node.title}>
               <TitleField>
                 <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title} by <AuthorField>{book.node.author}</AuthorField></span>
+                  <span itemProp="headline">{book.node.title} <AuthorField>by {book.node.author}</AuthorField></span>
                 </Link>
               </TitleField>
           </SimpleItem>
