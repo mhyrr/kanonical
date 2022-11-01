@@ -47,7 +47,7 @@ const BlogIndex = ({ data, location }) => {
 
       <header><IndexSubtitle><Link to="/blog">There's plenty more to read too</Link></IndexSubtitle></header>
 
-      <IndexTitle>Currently Reading</IndexTitle>
+      <IndexTitle>Things I'm Reading</IndexTitle>
 
       <BookList style={{margin: "1rem"}}>
         {rightNow.map(book => {
@@ -65,7 +65,7 @@ const BlogIndex = ({ data, location }) => {
 
       <SmallGrid>
         <li>
-          <IndexTitle>Recent Workouts</IndexTitle>
+          <IndexTitle>Workouts I've Killed</IndexTitle>
           {workouts.map(run => {
             return (
               <Book key={run.distance}>
@@ -78,7 +78,7 @@ const BlogIndex = ({ data, location }) => {
           })}
         </li>
         <li>
-          <IndexTitle>Current Questions</IndexTitle>
+          <IndexTitle>Things I'm Wondering</IndexTitle>
             <Questions>
               <li>How are phones and technology changing the way we grow up?</li>
               <li>What do people actually need out of college?</li>
@@ -119,7 +119,7 @@ const Questions = styled.ul`
 
   li {
     line-height: 1.28;
-    margin: calc(var(--spacing) * 1) 0 ;
+    margin: calc(var(--spacing) * 1) calc(var(--spacing) * 1.5)  ;
     font-size: var(--size-400);
     font-weight: 300;
     color: var(--dark);
