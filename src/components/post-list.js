@@ -62,7 +62,7 @@ const StyledPostList = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(23ch, 1fr));
-
+  margin: calc(var(--spacing) * 1) 0;
   @media screen and (max-width: 500px) {
     & {
       display: block;

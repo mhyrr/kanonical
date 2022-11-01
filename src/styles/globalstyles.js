@@ -138,7 +138,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-index {
-    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 1)
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 1)
       calc(var(--spacing) * 4) calc(var(--spacing) * 1);
     max-width: 480px;
     margin-left: auto;

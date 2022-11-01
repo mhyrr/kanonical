@@ -12,7 +12,6 @@ const Layout = ({ location, title, children }) => {
   const target = React.createRef();
 
   const path = typeof location === 'undefined' ? "" : location.pathname
-  console.log(path)
 
   return (
     <div>
@@ -26,7 +25,7 @@ const Layout = ({ location, title, children }) => {
         <Typography />
         <Header target={target}></Header>
         <div className="global-wrapper" >
-          <main className={`${(path === '/blog/' || path === '/blog') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
+          <main className={`${(path === '/' || path === '') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
 
         </div>
         <Footer></Footer>
