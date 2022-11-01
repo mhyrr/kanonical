@@ -153,12 +153,11 @@ const Preface = styled.h6`
       }
     }
   }
-
 `;
 
-const BlogIndex = ({ data, location }) => {
+const BookIndex = ({ data, location }) => {
 
-  const siteTitle = data.site?.title || `Title`
+  const siteTitle = `All the Books`
 
   const books = data.allGoogleSpreadsheetBooksBooks.edges
 
@@ -218,7 +217,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
 
       <Preface>
-        Books are my thing.  Well, one of them.
+        I really like books.  Like, a lot.
         I've built up a list of everything I've read over the years.
         I'm missing a bunch in the distant past, but I've been keeping this list consistently since around 2018.
         <br/><br/>
@@ -242,9 +241,7 @@ const BlogIndex = ({ data, location }) => {
           return (
             <Book key={book.node.title}>
                 <BookTitle>
-                  <Link to={book.node.link} itemProp="url">
-                    <span itemProp="headline">{book.node.title}</span>
-                  </Link>
+                  <span itemProp="headline"><a href="{book.node.link}">{book.node.title}</a></span>
                 </BookTitle>
                 <AuthorField>- {book.node.author}</AuthorField>
             </Book>
@@ -259,9 +256,7 @@ const BlogIndex = ({ data, location }) => {
         return (
           <Book key={book.node.title}>
               <BookTitle>
-                <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title}</span>
-                </Link>
+                <span itemProp="headline"><a href="{book.node.link}">{book.node.title}</a></span>
               </BookTitle>
               <AuthorField>- {book.node.author}</AuthorField>
           </Book>
@@ -276,9 +271,7 @@ const BlogIndex = ({ data, location }) => {
         return (
           <Book key={book.node.title}>
               <BookTitle>
-                <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title}</span>
-                </Link>
+                <span itemProp="headline"><a href="{book.node.link}">{book.node.title}</a></span>
               </BookTitle>
               <AuthorField>- {book.node.author}</AuthorField>
           </Book>
@@ -294,9 +287,7 @@ const BlogIndex = ({ data, location }) => {
         return (
           <Book key={book.node.title}>
               <BookTitle>
-                <Link to={book.node.link} itemProp="url">
-                  <span itemProp="headline">{book.node.title}</span>
-                </Link>
+                <span itemProp="headline"><a href="{book.node.link}">{book.node.title}</a></span>
               </BookTitle>
               <AuthorField>- {book.node.author}</AuthorField>
           </Book>
@@ -326,7 +317,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export {BookIndex, BookList, BookTitle, Book, AuthorField}
 
 export const allBooks = graphql`
   query {
