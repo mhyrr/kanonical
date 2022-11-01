@@ -29,7 +29,7 @@ const TitleField = styled.h6`
   margin: 0;
 `
 
-const AuthorField = styled.span`
+export const AuthorField = styled.span`
   font-style: italic;
   font-size: var(--h6);
   color: var(--primary);
@@ -43,7 +43,7 @@ const SimpleItem = styled.li`
 `
 
 
-const BookList = styled.ul`
+export const BookList = styled.ul`
 
   padding: 0;
   margin: calc(var(--spacing) * 2) 0;
@@ -61,7 +61,7 @@ const BookList = styled.ul`
 
 `;
 
-const Book = styled.li`
+export const Book = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@ const Book = styled.li`
   }
 `;
 
-const BookTitle = styled.span`
+export const BookTitle = styled.span`
   line-height: 1.28
   margin-top: 0.5rem !important;
   margin-bottom: 0.2rem;
@@ -317,7 +317,7 @@ const BookIndex = ({ data, location }) => {
   )
 }
 
-export {BookIndex, BookList, BookTitle, Book, AuthorField}
+export default BookIndex
 
 export const allBooks = graphql`
   query {
