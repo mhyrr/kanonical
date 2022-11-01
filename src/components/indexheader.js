@@ -62,28 +62,28 @@ const IndexHeader = () => {
 
       <BioPara>
       I'm a guy on the internet with too many interests.
-      Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.  That covers too much.
+      Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.  
       </BioPara>
       <BioPara>
       Credentials are sooo boring. I like this list better.
       <ul>
         <li>3 amazing kids and 1 amazing wife</li>
 
-        <li>Bought our 2nd house 5 years ago and paid it off</li>
-
         <li>Still go to church</li>
-
-        <li>Bought a pontoon boat to hang out, fish, and drink beer</li>
 
         <li>Split time between Maryland and Delaware</li>
 
+        <li>Bought a pontoon boat to hang out, fish, and drink beer</li>
+
         <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
-        <li>Run a lot</li>
-
-        <li>Would choose books first over food and clothes</li>
-
         <li>42 and still feel like a wide-eyed little kid</li>
+
+        <li>Bought our 2nd house at the beach 5 years ago and paid it off</li>
+
+        <li>Runs a lot</li>
+
+        <li>Like <a href="https://www.goodreads.com/quotes/1896-when-i-have-a-little-money-i-buy-books-and">Erasmus</a>, would choose books first over food and clothes</li>
 
         <li>Raced cars and taught other people how to race cars</li>
 

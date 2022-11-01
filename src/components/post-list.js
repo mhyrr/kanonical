@@ -95,12 +95,12 @@ const StyledPostListItem = styled.li`
 `;
 
 const PostListTitle = styled.h2`
-  line-height: 1.28
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  line-height: 1.28;
+  margin-top: 0rem;
+  margin-bottom: .5rem;
   text-transform: capitalize;
   font-size: var(--size-600);
-  font-weight: 700;
+  font-weight: 600;
 
   & a {
     text-decoration: none;
@@ -118,12 +118,12 @@ const PostListTitle = styled.h2`
 `;
 
 const PostListExcerpt = styled.p`
-  margin-top: auto;
-  font-size: var(--size-400);
+  // margin-top: auto;
+  font-size: var(--size-350);
 `;
 
 const PostListMeta = styled.div`
-  margin-top: 2rem;
+  margin-top: auto;
   font-style: italic;
   font-size: var(--size-300);
   display: flex;
