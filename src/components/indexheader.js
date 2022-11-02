@@ -44,7 +44,7 @@ const IndexHeader = () => {
               className="bio-avatar"
               layout="constrained"
               formats={["auto", "webp", "avif"]}
-              src="../images/profile2.jpeg"
+              src="../images/profile2.png"
               width={128}
               height={128}
               quality={95}
@@ -88,7 +88,7 @@ const IndexHeader = () => {
 
         <li>Raced cars and taught other people how to race cars</li>
 
-        <li>Helped build a company from 2 to 200+</li>
+        <li>Helped build a company from 2 to 200+ </li>
 
         <li>Love building things out of (wood | words | code | ideas)</li>
       </ul>
@@ -115,10 +115,7 @@ const BioPara = styled.p`
 `;
 
 const RoundContainer = styled.div`
-  border-radius: 64px;
-  -webkit-border-radius: 64px;
-  -moz-border-radius: 64px;
-  overflow: hidden;
+
 `;
 
 const BioHeader = styled.div`

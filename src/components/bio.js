@@ -42,7 +42,7 @@ const Bio = () => {
           className="bio-avatar"
           layout="constrained"
           formats={["auto", "webp", "avif"]}
-          src="../images/profile.png"
+          src="../images/profile2.png"
           width={64}
           height={64}
           quality={95}
@@ -51,29 +51,30 @@ const Bio = () => {
         />
       </Link>
       {author?.name && (
-        <BioTitle>
-          Hi I'm <strong>{author.name}</strong>.
-          Occasionally I do things.
+          <BioTitle>
+            Hi I'm <strong>{author.name}</strong>.
+            Occasionally I do things.
 
-          {/*
-          <div className="mask">
-            <ul>
-              <li className="anim1"><span>do</span></li>
+            {/*
+            <div className="mask">
+              <ul>
+                <li className="anim1"><span>do</span></li>
 
-              <li className="anim2"><p><i>write</i></p></li>
-              <li className="anim3"><p><i>think</i></p></li>
-              <li className="anim4"><p><i>photograph</i></p></li>
-            </ul>
-          </div>
-          things.*/}
+                <li className="anim2"><p><i>write</i></p></li>
+                <li className="anim3"><p><i>think</i></p></li>
+                <li className="anim4"><p><i>photograph</i></p></li>
+              </ul>
+            </div>
+            things.*/}
 
 
 
-          {/*<a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>*/}
-        </BioTitle>
+            {/*<a href={`https://twitter.com/${social?.twitter || ``}`}>
+              You should follow them on Twitter
+            </a>*/}
+          </BioTitle>
       )}
+       
     </BioHeader>
 
   )
@@ -89,7 +90,7 @@ const BioHeader = styled.div`
 const BioTitle = styled.div`
   margin-top: 1.3rem;
   padding-left: 1rem;
-
+  font-size: var(--para);
 
   ul, ol {
     padding: 0;
