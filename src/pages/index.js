@@ -83,7 +83,7 @@ const BlogIndex = ({ data, location }) => {
               <li>How are phones and technology changing the way we grow up?</li>
               <li>What do people actually need out of college?</li>
               <li>How can more people enjoy two houses?</li>
-              <li>How to build small projects to drive family revenue</li>
+              <li>How can work on small projects drive family revenue?</li>
               <li>What does it take to write a spy novel?</li>
             </Questions>
         </li>

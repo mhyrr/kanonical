@@ -7,42 +7,31 @@ import {
 } from "./menu-items"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa"
+import ShareIcon from "./shareicon"
 
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
-  background-color: rgba(var(--primaryRGB), 0.8);
+  background-color: rgba(var(--lightRGB));
   font-family: var(--serif);
   font-weight: 300;
   font-style: normal;
   color: var(--secondary);
-  box-shadow: inset 0px 8px 8px -8px rgba(var(--secondaryRGB), 0.4);
+  //box-shadow: inset 0px 16px 16px -8px rgba(var(--primaryRGB), 0.8);
 
   .flex {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 
-    @media (min-width: 768px) {
       flex-direction: row;
-      justify-content: flex-end;
-    }
-  }
-
-  .telephone,
-  address,
-  li {
-    font-size: var(--footerMenuItem);
-  }
-
-  address {
-    font-style: normal;
-    margin-bottom: var(--spacing);
+      justify-content: center;
+    
   }
 
   li {
-    text-transform: capitalize;
     list-style: none;
     padding-left: 0;
     margin-top: 5px;
@@ -56,12 +45,12 @@ const FooterStyles = styled.footer`
 
   a {
     text-decoration: none;
-    color: var(--dark);
-    text-shadow: 0.6px 0.6px 0 rgba(var(--secondaryRGB), 0.6);
+    color: var(--primary);
+    //text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.6);
     transition: var(--transMed);
 
     &:hover {
-      color: var(--primaryColor);
+      color: var(--secondary);
     }
   }
 
@@ -125,7 +114,7 @@ const FooterStyles = styled.footer`
   .menus-cont,
   .copy-cont {
     width: 100%;
-    font-size: 0.85rem;
+    font-size: 2rem;
   }
 
   .brand-cont {
@@ -140,32 +129,44 @@ const FooterStyles = styled.footer`
   }
 
   .menus-cont {
+
+    margin: calc(var(--spacing) * 2)  0;
+
     @media (min-width: 375px) {
       display: flex;
     }
 
-    @media (min-width: 600px) {
-      display: flex;
-      justify-content: flex-end;
-      width: calc(100% - 200px);
-    }
+      justify-content: center;
   }
 
   .copy {
     margin: 0;
     padding: 0;
+    text-align: center;
     margin-top: calc(var(--spacing) * 2);
 
+    text-decoration: none;
+    color: var(--primary);
+    //text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.6);
+    transition: var(--transMed);
+
+    
     @media (min-width: 600px) {
       margin-top: 0;
     }
 
     li {
-      display: inline;
       margin-right: var(--spacing);
     }
   }
 `
+
+const Ruler = styled.div`
+  margin: 0 auto;
+  width: 60%;
+  border-bottom: 1px var(--primary) solid;
+  text-align: center;
+`;
 
 const Footer = ({ Logo }) => {
   const data = useStaticQuery(
@@ -188,93 +189,81 @@ const Footer = ({ Logo }) => {
   return (
     <FooterStyles>
       <div className="flex">
-        {Logo ? (
-          <div className="brand-cont">
-            {/* If there is a logo, render this */}
-            {Logo && (
-              <Link to="/">
-                <img src={Logo} alt={footerData.title} />
-              </Link>
-            )}
-            <address>
-              85 Simone Weil Avenue
-              <br />
-              Watton-at-Stone
-              <br />
-              SG14 8BL
-            </address>
-            <a className="telephone" href="tel:+004407076009211">
-              07076 009 211
-            </a>
-          </div>
-        ) : null}
+        
+        <Ruler/>
+        
+        <div className="menus-cont">
 
+          <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
+            <FaTwitter />
+          </ShareIcon>
+          <ShareIcon shareUrl={`https://instagram.com/mhyrr`}>
+            <FaInstagram />
+          </ShareIcon>
+          <ShareIcon shareUrl={`https://github.com/mhyrr`}>
+            <FaGithub />
+          </ShareIcon>
+          
+  {/*
         {mainMenuItems || socialMenuItems || footerMenuItems ? (
-          <div className="menus-cont">
-            {/* If main menu items are being imported, render this */}
-            {mainMenuItems && (
-              <ul className="footer-menu">
-                {/* First we want to filter out the Home menu item, then display the rest of them */}
-                {mainMenuItems
-                  .filter(item => {
-                    return item.title !== "home"
-                  })
-                  .map((item, index) => (
-                    <li key={`menuItem${index}`}>
-                      <Link to={item.path}>{item.title}</Link>
-                    </li>
-                  ))}
-              </ul>
-            )}
-
-            {/* If social menu items are being imported, render this */}
-            {socialMenuItems && (
-              <ul className="footer-menu">
-                {socialMenuItems.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
-
-            {/* If footer menu items are being imported, render this */}
-            {footerMenuItems && (
-              <ul className="footer-menu">
-                {footerMenuItems.map((item, index) => (
-                  <li key={`footerMenuItem${index}`}>
-                    <Link to={item.path}>{item.title}</Link>
+          
+          {socialMenuItems && (
+            <ul className="footer-menu">
+              {socialMenuItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.name}
+                    </a>
                   </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ) : null}
+                )
+              })}
+            </ul>
+          )}
 
-        <div className="copy-cont">
-          <ul className="copy">
-            {/* if there is an author stated in the config, render this */}
-            {footerData.author.name && (
-              <li>
-                <a
-                  href={footerData.siteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  &copy; {new Date().getFullYear()} {footerData.author.name}
-                </a>
-              </li>
-            )}
-          </ul>
+          
+          {footerMenuItems && (
+            <ul className="footer-menu">
+              {footerMenuItems.map((item, index) => (
+                <li key={`footerMenuItem${index}`}>
+                  <Link to={item.path}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          )}) : null}
+  */}
+
+
         </div>
+        
+        <ul className="copy">
+          {/* if there is an author stated in the config, render this */}
+          <li>
+            Crafted in Maryland or Delaware.
+          </li>
+          <li>
+            <Link to="/about">Colophon and other details.</Link>
+          </li>
+
+
+          {footerData.author.name && (
+            <li>
+              <a
+                href={footerData.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &copy; {new Date().getFullYear()} {footerData.author.name}
+              </a>
+            </li>
+
+          )}
+        </ul>
+
       </div>
     </FooterStyles>
   )
