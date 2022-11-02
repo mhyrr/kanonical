@@ -63,6 +63,7 @@ const IndexHeader = () => {
       <BioPara>
       I'm a guy on the internet with too many interests.
       Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.  
+      This is the place I come to try to string words and ideas together.
       </BioPara>
       <BioPara>
       Credentials are sooo boring. I like this list better.
@@ -75,9 +76,9 @@ const IndexHeader = () => {
 
         <li>Bought a pontoon boat to hang out, fish, and drink beer</li>
 
-        <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
-
         <li>42 and still feel like a wide-eyed little kid</li>
+
+        <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
         <li>Bought our 2nd house at the beach 5 years ago and paid it off</li>
 
@@ -115,6 +116,8 @@ const BioPara = styled.p`
 
 const RoundContainer = styled.div`
   border-radius: 64px;
+  -webkit-border-radius: 64px;
+  -moz-border-radius: 64px;
   overflow: hidden;
 `;
 
