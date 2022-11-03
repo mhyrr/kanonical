@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     --primaryColor: #81B29A;
     --noto: "Noto Serif";
     --lobster-two: "Lobster Two";
+    --libre-baskerville: "Libre Baskerville";
     --serif: "avenir next", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     --sansSerif: "Sans Serif Workhorse", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     --h1: 1.8rem;
@@ -180,8 +181,16 @@ const GlobalStyles = createGlobalStyle`
     }
 
     blockquote {
-      padding: calc(var(--spacing) * 1.5);
-      margin: calc(var(--spacing));
+      padding: calc(var(--spacing) * .8);
+      margin: calc(var(--spacing) * 0);
+      width: 96%;
+
+      @media (min-width: 768px) {
+        padding: calc(var(--spacing) * 1.5);
+        margin: calc(var(--spacing) * 1);
+        width: 92%;
+      }
+
     }
 
     hr {

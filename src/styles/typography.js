@@ -96,7 +96,7 @@ blockquote {
   border-radius: 8px 8px;
 
   p {
-    font-size: var(--h4);
+    font-size: var(--size-400);
     margin: 0;
   }
 
