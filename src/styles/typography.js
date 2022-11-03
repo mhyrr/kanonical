@@ -3,6 +3,7 @@ import "@fontsource/lato"
 import "@fontsource/roboto"
 import "@fontsource/poppins"
 import "@fontsource/lobster-two"
+import "@fontsource/libre-baskerville"
 
 const Typography = createGlobalStyle`
 h1 {
@@ -86,10 +87,10 @@ small {
 
 blockquote {
   padding: calc(var(--spacing) * 2) var(--spacing);
-  background-color: rgba(var(--secondaryRGB), 0.1);
-  font-family: var(--noto);
+  background-color: rgba(var(--primaryRGB), 0.2);
+  font-family: var(--libre-baskerville);
   color: var(--dark);
-  text-shadow: .5px .5px 0 var(--primary);
+  text-shadow: .2px .2px 0 var(--secondary);
   box-sizing: border-box;
   width: 92%;
   border-radius: 8px 8px;
