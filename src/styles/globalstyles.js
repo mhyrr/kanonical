@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 
     --black: #2d2828;
     --charcoal: #3e3e3e;
-    --primaryColor: #939393;
+    --primaryColor: #81B29A;
     --noto: "Noto Serif";
     --lobster-two: "Lobster Two";
     --serif: "avenir next", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, "segoe ui", arial, sans-serif;

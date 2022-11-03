@@ -8,10 +8,14 @@ export const mainMenuItems = [
     title: "Blog",
   },
   {
+    path: "/essays",
+    title: "Essays",
+  },
+  {
     path: "/tumble",
     title: "tumble",
   },
-  { 
+  {
     path: "/books",
     title: "Books",
   },

@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
 
-import PostList from "../components/post-list"
 
 const DateField = styled.div`
   position: relative;
@@ -214,7 +212,7 @@ const BookIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Books are like old friends" />
 
       <Preface>
         I really like books.  Like, a lot.

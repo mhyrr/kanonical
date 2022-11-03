@@ -16,13 +16,15 @@ const ReadingProgress = ({ target }) => {
   const [readingProgress, setReadingProgress] = useState(0);
   const scrollListener = () => {
 
+    // console.log(JSON.stringify(target))
+
     // Only do blog posts - this feels like a kludge
-    if (target.target.current == null) { return; }
-    if (target.target.current.firstChild.id != "reading") {
+    if (target.current == null) { return; }
+    if (target.current.firstChild.id != "reading") {
       return;
     }
 
-    const element         = target.target.current;
+    const element         = target.current;
     const totalHeight     = element.clientHeight - element.offsetTop - (window.innerHeight);
     const windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 

@@ -10,7 +10,6 @@ import CookieConsent from "react-cookie-consent"
 const Layout = ({ location, title, children }) => {
 
   const target = React.createRef();
-
   const path = typeof location === 'undefined' ? "" : location.pathname
 
   return (
@@ -23,10 +22,9 @@ const Layout = ({ location, title, children }) => {
         transition={{ duration: 0.2, delay: 0.1 }}
       >
         <Typography />
-        <Header target={target}></Header>
+        <Header target={target} path={path}></Header>
         <div className="global-wrapper" >
           <main className={`${(path === '/' || path === '') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
-
         </div>
         <Footer></Footer>
       </motion.div>

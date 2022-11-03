@@ -50,7 +50,7 @@ h4 {
 
 h5,
 h6 {
-  color: var(--primaryColor);
+  color: var(--dark);
   margin: var(--spacing) 0;
 }
 
