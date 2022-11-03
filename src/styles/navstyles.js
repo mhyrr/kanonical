@@ -94,7 +94,7 @@ export const NavigationStyles = styled.nav`
     text-transform: capitalize;
 
     li {
-      padding-left: 2rem;
+      padding-left: 1.5rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 1.15rem;

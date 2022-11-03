@@ -2,6 +2,7 @@
 title: The Options
 date: 2020-08-27T11:00:00.000Z
 path: /the-options/
+type: essay
 ---
 
 

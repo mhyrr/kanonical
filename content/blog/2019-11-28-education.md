@@ -2,6 +2,15 @@
 title: Education - Working Backwards
 date: 2019-11-28T07:22:00.000Z
 path: /education-backwards/
+type: essay
+description: "
+This started out as a simple idea: to work backwards from the adults we hope our children will be and use this to think about how we raise our kids now.  9,000 words later it turns out there was a lot to say: 
+<ul>
+<li>It’s never too early to think about high school, college, or even what kind of adults we want our kids to be.</li>
+<li>Everyone focuses on thinking about education because it works as a sort of proxy for thinking about the kinds of people we want our kids to be.  We want them to be smart which translates into good grades.  We want them to be successful which translates into focus on a career; in college, that’s a major.  We want them to have a family and a good life which translates into stability and a set of credentials so they can always make enough money.</li>
+<li>Most people think about the outcomes they want but not the processes that will get them what they want.  So we just take things one day at a time.</li>
+<li>“You do not rise to the level of your goals. You fall to the level of your systems.” - James Clear</li>
+<li>We imagine our children’s futures as a straight line from here to there because we think backwards about our own lives this way.  In hindsight, it’s easy to diminish all the complexity and imagine it was a straight path too, but it wasn’t.  All of our paths have meandered and wound around time in interesting ways, and serendipity has played her role too.</li></ul>"
 ---
 
 

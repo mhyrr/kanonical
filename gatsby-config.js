@@ -119,11 +119,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Kanonical Blog`,
+        short_name: `Kanonical`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#fffdfa`,
+        theme_color: `#81B29A`,
         display: `minimal-ui`,
         icon: `src/images/profile.png`, // This path is relative to the root of the site.
       },

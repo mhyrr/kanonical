@@ -14,7 +14,7 @@ import styled from "styled-components"
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-const Bio = () => {
+const Bio = (path) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -35,21 +35,30 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
+  let img
+  if (path.path === '/' || path.path === '') {
+    img = <div style={{marginLeft: "-16px"}}/>
+  }
+  else {
+    img = <Link to="/">
+      <StaticImage
+        className="bio-avatar"
+        layout="constrained"
+        formats={["auto", "webp", "avif"]}
+        src="../images/profile2.png"
+        width={64}
+        height={64}
+        quality={95}
+        style={{minWidth: "64px"}}
+        alt="Me and my better half"
+      />
+    </Link>
+  }
+
+
   return (
     <BioHeader className="bio" >
-      <Link to="/">
-        <StaticImage
-          className="bio-avatar"
-          layout="constrained"
-          formats={["auto", "webp", "avif"]}
-          src="../images/profile2.png"
-          width={64}
-          height={64}
-          quality={95}
-          style={{minWidth: "64px"}}
-          alt="Me and my better half"
-        />
-      </Link>
+      {img}
       {author?.name && (
           <BioTitle>
             Hi I'm <strong>{author.name}</strong>.
@@ -74,7 +83,7 @@ const Bio = () => {
             </a>*/}
           </BioTitle>
       )}
-       
+
     </BioHeader>
 
   )

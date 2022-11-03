@@ -16,7 +16,7 @@ const Container = styled.div`
   margin: 0;
 `;
 
-const Header = (target) => {
+const Header = ({target, path}) => {
 
   const data = useStaticQuery(graphql`
     query HeaderQuery {
@@ -35,7 +35,6 @@ const Header = (target) => {
     }
   `)
   const title = data.site.siteMetadata?.title || `Title`
-
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
@@ -48,7 +47,7 @@ const Header = (target) => {
 
     <HeaderContainer id={target.id || null} className={scroll ? "scrolled" : null} >
       <HeaderStyles>
-        <Bio />
+        <Bio path={path}/>
         <Burger />
         <Navigation />
       </HeaderStyles>

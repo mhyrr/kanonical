@@ -8,7 +8,7 @@ import BookIndex from "./books"
 import IndexHeader from "../components/indexheader"
 import { BookList, Book, BookTitle, AuthorField } from "./books"
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   const workoutData = data.allGoogleSpreadsheetStravaSheet1.nodes
@@ -66,6 +66,7 @@ const BlogIndex = ({ data, location }) => {
       <SmallGrid>
         <li>
           <IndexTitle>Workouts I've Killed</IndexTitle>
+          <Workouts>
           {workouts.map(run => {
             return (
               <Book key={run.distance}>
@@ -76,6 +77,7 @@ const BlogIndex = ({ data, location }) => {
               </Book>
             )
           })}
+          </Workouts>
         </li>
         <li>
           <IndexTitle>Things I'm Wondering</IndexTitle>
@@ -93,7 +95,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Index
 
 const SmallGrid = styled.ul`
   list-style: none;
@@ -108,6 +110,15 @@ const SmallGrid = styled.ul`
     margin: 0;
     padding: 0;
   }
+`;
+
+const Workouts = styled.ul`
+  list-style: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  justify-items: left;
+
 `;
 
 const Questions = styled.ul`

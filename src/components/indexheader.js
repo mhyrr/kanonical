@@ -62,7 +62,7 @@ const IndexHeader = () => {
 
       <BioPara>
       I'm a guy on the internet with too many interests.
-      Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.  
+      Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.
       This is the place I come to try to string words and ideas together.
       </BioPara>
       <BioPara>
@@ -98,8 +98,9 @@ const IndexHeader = () => {
   )
 }
 
-const BioPara = styled.p`
-  margin-top: auto;
+const BioPara = styled.div`
+  margin-top: 1rem;
+  line-height: 1.5;
   font-size: var(--size-400);
 
   ul {
