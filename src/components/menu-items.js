@@ -12,16 +12,16 @@ export const mainMenuItems = [
     title: "Essays",
   },
   {
+    path: "/goals",
+    title: "Goals",
+  },
+  {
     path: "/tumble",
     title: "tumble",
   },
   {
     path: "/books",
     title: "Books",
-  },
-  {
-    path: "https://www.12inchesbehind.com",
-    title: "Photos",
   },
   {
     path: "https://www.justadream.co",

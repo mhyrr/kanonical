@@ -24,7 +24,7 @@ const Layout = ({ location, title, children }) => {
         <Typography />
         <Header target={target} path={path}></Header>
         <div className="global-wrapper" >
-          <main className={`${(path === '/' || path === '') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
+          <main className={`${(path === '/' || path === '' || path === 'goals' || path === '/goals' || path === '/goals/') ? "main-index" : "main-body"}`} ref={target}>{children}</main>
         </div>
         <Footer></Footer>
       </motion.div>
