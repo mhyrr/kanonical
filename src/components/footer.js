@@ -206,7 +206,7 @@ const Footer = ({ Logo }) => {
         <div className="menus-cont">
           <IconContainer>
             <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
-              <FaTwitter style={{paddingTop: "8px", paddingRight: "4px", paddingLeft: "4px"}}/>
+              <FaTwitter style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
             </ShareIcon>
           </IconContainer>
           <IconContainer>
