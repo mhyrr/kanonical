@@ -23,6 +23,7 @@ const TitleField = styled.h4`
   font-weight: 400;
   text-shadow: .2px .2px 1px rgba(var(--primaryRGB), 0.5);
   margin: 0;
+  margin-bottom: calc(var(--spacing) * .2);
 
   & a {
     text-decoration: none !important;
@@ -156,18 +157,18 @@ const Goals = ({ data, location }) => {
   const reviews = list.filter(node => {
     return (node.frontmatter.type === "review")
   })
-  var date = "12/31/" + new Date().getFullYear();
+  var endOfYear = "12/31/" + new Date().getFullYear();
   reviews.unshift({
     excerpt: "<br/><br/>Hey, this year ain't over yet!  Can't wait to see how it turns out!<br/>",
     fields: {slug: "/"},
     frontmatter: {
-      date: date,
+      date: endOfYear,
       title: "Work In Progress",
       path: "/",
       type: "review"
     }
   })
-console.log(JSON.stringify(reviews))
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Goals and Yearly Reviews" />
@@ -175,7 +176,7 @@ console.log(JSON.stringify(reviews))
         <strong>Every year I set goals.</strong> <br/><br/>
 
         I used to think this was dumb.
-        Only the milquetoast underachiever set Resolutions said I.
+        "Only the milquetoast underachievers set Resolutions," said I.
         Then I tried it. And learned I was foolish.  Writing down goals helped me stay focused on what mattered for the whole year.
 
         I don't hit them all.  If I did, they probably wouldn't be very good goals.  But it still helped a lot.
@@ -212,7 +213,7 @@ console.log(JSON.stringify(reviews))
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                   />
-                  <Link to={post.frontmatter.path} itemProp="url">
+                <Link to={post.frontmatter.path} itemProp="url">
                     <span>Read more..</span>
                   </Link>
                 </GoalBox>
@@ -224,7 +225,16 @@ console.log(JSON.stringify(reviews))
           <GridHeading>Reviews</GridHeading>
           {reviews.map(post => {
             const title = post.frontmatter.title || post.fields.slug
-
+            let readMore
+            if (post.frontmatter.date != endOfYear) {
+              readMore =
+                <Link to={post.frontmatter.path} itemProp="url">
+                  <span>Read more..</span>
+                </Link>
+            }
+            else {
+              readMore = <span><br/></span>
+            }
             return (
               <Goal key={post.fields.slug}>
                 <MetaHeader>
@@ -240,9 +250,7 @@ console.log(JSON.stringify(reviews))
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                   />
-                  <Link to={post.frontmatter.path} itemProp="url">
-                    <span>Read more..</span>
-                  </Link>
+                  {readMore}
                 </ReviewBox>
               </Goal>
             )

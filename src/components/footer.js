@@ -28,7 +28,7 @@ const FooterStyles = styled.footer`
 
       flex-direction: row;
       justify-content: center;
-    
+
   }
 
   li {
@@ -131,7 +131,7 @@ const FooterStyles = styled.footer`
   .menus-cont {
 
     margin: calc(var(--spacing) * 2)  0;
-
+    text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.9);
     @media (min-width: 375px) {
       display: flex;
     }
@@ -147,10 +147,10 @@ const FooterStyles = styled.footer`
 
     text-decoration: none;
     color: var(--primary);
-    //text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.6);
+    text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.9);
     transition: var(--transMed);
 
-    
+
     @media (min-width: 600px) {
       margin-top: 0;
     }
@@ -167,6 +167,17 @@ const Ruler = styled.div`
   border-bottom: 1px var(--primary) solid;
   text-align: center;
 `;
+
+const IconContainer = styled.div`
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  margin: 0 .5rem;
+
+  &:hover {
+    border: 3px solid var(--secondary);
+  }
+  //align-vertical: middle;
+`
 
 const Footer = ({ Logo }) => {
   const data = useStaticQuery(
@@ -189,57 +200,27 @@ const Footer = ({ Logo }) => {
   return (
     <FooterStyles>
       <div className="flex">
-        
+
         <Ruler/>
-        
+
         <div className="menus-cont">
-
-          <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
-            <FaTwitter />
-          </ShareIcon>
-          <ShareIcon shareUrl={`https://instagram.com/mhyrr`}>
-            <FaInstagram />
-          </ShareIcon>
-          <ShareIcon shareUrl={`https://github.com/mhyrr`}>
-            <FaGithub />
-          </ShareIcon>
-          
-  {/*
-        {mainMenuItems || socialMenuItems || footerMenuItems ? (
-          
-          {socialMenuItems && (
-            <ul className="footer-menu">
-              {socialMenuItems.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
-          )}
-
-          
-          {footerMenuItems && (
-            <ul className="footer-menu">
-              {footerMenuItems.map((item, index) => (
-                <li key={`footerMenuItem${index}`}>
-                  <Link to={item.path}>{item.title}</Link>
-                </li>
-              ))}
-            </ul>
-          )}) : null}
-  */}
-
-
+          <IconContainer>
+            <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
+              <FaTwitter style={{paddingTop: "8px", paddingRight: "4px", paddingLeft: "4px"}}/>
+            </ShareIcon>
+          </IconContainer>
+          <IconContainer>
+            <ShareIcon shareUrl={`https://instagram.com/mhyrr`}>
+              <FaInstagram style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
+            </ShareIcon>
+          </IconContainer>
+          <IconContainer>
+            <ShareIcon shareUrl={`https://github.com/mhyrr`}>
+              <FaGithub style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
+            </ShareIcon>
+          </IconContainer>
         </div>
-        
+
         <ul className="copy">
           {/* if there is an author stated in the config, render this */}
           <li>

@@ -126,7 +126,7 @@ const Essays = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Essays" />
       <h4>The Essays.  </h4>
       <h5>
         <strong>Hey, you asked for it.</strong> Every once in awhile I start writing about an idea and it ends up taking on a life of it's own.

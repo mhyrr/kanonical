@@ -40,6 +40,52 @@ const SimpleItem = styled.li`
   padding: 1em;
 `
 
+const Preface = styled.h5`
+  margin: calc(var(--spacing) * 2) 0;
+  font-size: var(--size-400);
+  font-weight: 400;
+  color: var(--dark);
+
+  & a {
+    text-decoration: underline;
+    color: var(--secondary);
+    text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+    font-weight: 600;
+  }
+
+  & ul {
+      padding: 0;
+      margin: calc(var(--spacing) / 2) 0;
+      list-style: none;
+      display: grid;
+      justify-items: baseline;
+      grid-gap: var(--size-300);
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+      @media screen and (max-width: 500px) {
+        & {
+          display: block;
+        }
+      }
+  }
+
+  & li {
+    padding: 0;
+    margin: calc(var(--spacing) / 2) 0;
+    list-style: none;
+    display: grid;
+    justify-items: baseline;
+    grid-gap: var(--size-300);
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+    @media screen and (max-width: 500px) {
+      & {
+        display: block;
+      }
+    }
+  }
+`;
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -100,8 +146,20 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <h4>Hey, you asked for it.</h4>
+      <Seo title="Everything written, for quite awhile" />
+      <h4>Everything I've Written.</h4>
+
+      <Preface>
+        I've been writing for awhile.  At some point, the thoughts in my head were getting unruly and I was never
+        able to make them clear.  I started writing them down just to figure out what I was trying to say only to find out
+        that what I was trying to say wasn't very clear.
+        <br/><br/>
+        <strong>Writing is clarified thinking.</strong>  If you're not able to write down what you think, it's probably
+        not as clear as you'd like to believe.
+
+        I've <Link to="/legacy-writing">written about this</Link> before.  (I'm sure you're surprised.)  
+
+      </Preface>
 
       {list.map(post => {
         const title = post.frontmatter.title || post.fields.slug
