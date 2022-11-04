@@ -156,8 +156,8 @@ const BlogIndex = ({ data, location }) => {
         <br/><br/>
         <strong>Writing is clarified thinking.</strong>  If you're not able to write down what you think, it's probably
         not as clear as you'd like to believe.
-
-        I've <Link to="/legacy-writing">written about this</Link> before.  (I'm sure you're surprised.)  
+        Writing helps you <Link to="/whywrite">ask the right questions</Link>.
+        And it helps capture your life and legacy.  I've <Link to="/legacy-writing">written about this</Link> before.  (I'm sure you're surprised.)  
 
       </Preface>
 
