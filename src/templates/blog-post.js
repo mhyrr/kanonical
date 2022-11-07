@@ -134,22 +134,17 @@ const BlogPostTemplate = ({ data, location }) => {
             />
             <hr />
             <footer>
-              {/* If there are tags for the post, render this section */}
-              {post.frontmatter.tags && (
+              {/* If there are tags for the post, render this section
+              {post.frontmatter.type && (
                 <>
-                  <hr />
                   <h4>
-                    Posted under /{" "}
-                    {post.frontmatter.tags.map((tagName, index) => {
-                      return (
-                        <Link to={`/tags/${tagName}`} key={index}>
-                          {tagName}
+                    Posted under /{post.frontmatter.type}
+                        <Link to={`/blog`} key={post.frontmatter.type}>
+                          {post.frontmatter.type}
                         </Link>
-                      )
-                    })}
                   </h4>
                 </>
-              )}
+              )}*/}
               <Share twitter  href={location.href} />
             </footer>
           </article>
@@ -208,17 +203,18 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        type
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
-      
+
       frontmatter {
         title
         path
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
-      
+
       frontmatter {
         title
         path

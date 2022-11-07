@@ -2,6 +2,7 @@
 title: Three Girls
 date: 2017-07-21T20:32:46.000Z
 path: /three-girls/
+type: life
 ---
 
 Some people seem to think I do a lot of different things and that I push pretty hard when I do them.  I’m not very gradual; once I’m into something, I’m *really* into it.  My wife likes to laugh at my T-shirt drawer because she says you can trace the evolution of my hobbies over time based on T-shirts.  The older shirts are all about car racing.  These days the newer shirts are all about [powerlifting](https://apemanstrong.com).

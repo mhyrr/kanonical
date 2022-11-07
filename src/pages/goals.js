@@ -255,6 +255,10 @@ const Goals = ({ data, location }) => {
               </Goal>
             )
           })}
+          {/* This is such a crappy hack right now */}
+          <Goal><span><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span></Goal>
+          <Goal><span><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span></Goal>
+
         </GoalList>
       </GoalGrid>
     </Layout>

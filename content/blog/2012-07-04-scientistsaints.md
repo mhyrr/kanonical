@@ -2,6 +2,7 @@
 title: We Need More Scientist Saints
 date: 2012-07-04T03:00:00.000Z
 path: /scientistsaints/
+type: the world
 ---
 
 ### A Simple Life

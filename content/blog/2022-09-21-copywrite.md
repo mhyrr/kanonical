@@ -2,6 +2,7 @@
 title: The Educational Value of Copywriting
 date: 2022-09-21T13:58:00.000Z
 path: /copywriting/
+type: education
 ---
 
 

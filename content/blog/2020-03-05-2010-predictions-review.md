@@ -2,6 +2,7 @@
 title: 2010 Predictions Review
 date: 2020-03-05T08:41:00.000Z
 path: /2010-predictions-review/
+type: predictions
 ---
 
 Ten years ago, I made [some predictions](https://www.kanonical.io/some_predictions/).  It was bound to fail, unless I turned out to be some kind of [Superforecaster](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718).  It did and I’m not.  Ten years later some of these things sound like the silliest and unlikeliest things that you could imagine.

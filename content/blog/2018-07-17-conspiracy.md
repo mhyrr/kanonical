@@ -2,6 +2,7 @@
 title: Book Review - Conspiracy
 date: 2018-07-17T07:14:14.000Z
 path: /conspiracy/
+type: books
 ---
 
 A couple of weeks ago, I finished up *[Conspiracy: Peter Thiel, Hulk Hogan, Gawker, and the Anatomy of Intrigue](https://www.amazon.com/Conspiracy-Peter-Gawker-Anatomy-Intrigue/dp/0735217645)*.  I've been thinking about it since; it's the kind of book that leaves a mark.

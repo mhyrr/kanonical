@@ -2,9 +2,10 @@
 title: Aran Islands
 date: 2008-05-03T03:00:00.000Z
 path: /aran_islands/
+type: travel
 ---
 
-We had a full day for exploring Galway before embarking for Inishmor.  It was spent leisurely - walking about, peeking into little shops, eating.  We trekked up to Salthill, a slightly ritzier area just west of the town center.  Apparently there's a wall around that has the magical ability to add seven years to your life should you kick it.  Our expected time to burial remains unchanged however, as it's a hidden wonder, especially from foolish stateside travels that happen to hear of it. 
+We had a full day for exploring Galway before embarking for Inishmor.  It was spent leisurely - walking about, peeking into little shops, eating.  We trekked up to Salthill, a slightly ritzier area just west of the town center.  Apparently there's a wall around that has the magical ability to add seven years to your life should you kick it.  Our expected time to burial remains unchanged however, as it's a hidden wonder, especially from foolish stateside travels that happen to hear of it.
 
 After dinner at Busker Brown, Libby took us to the Quays, one of the more famous pubs situated along Shop Street.  Culturally, this was the highlight of Galway.  I'm not much of a pubfarer, but they do things right in Ireland.  Pubs seem filled with all walks of life.  The Quays is situated on at least 4 levels with a different bar in every direction.  Picture something Jack Sparrow would walk into and your mental image won't be far from target.  Here, it's all rich woods, soft lights, and detritus from a long and varied history.  When we arrived, Liverpool fans were focused intently on the match against Chelsea, which turned into quite a spectacle.  After everyone's disappointment (except for a poor, lone Chelsea fan), much hilarity, drinking, and good times ensued amidst the sounds of a Johnny Cash style trio.
 

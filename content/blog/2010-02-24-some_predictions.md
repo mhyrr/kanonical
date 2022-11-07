@@ -2,6 +2,7 @@
 title: Some Predictions
 date: 2010-02-24T05:00:00.000Z
 path: /some_predictions/
+type: predictions
 ---
 
 [All](http://en.wikipedia.org/wiki/Nostradamus) [sorts](http://baetzler.de/humor/predictions.html) [of](http://en.wikipedia.org/wiki/Clarke%27s_three_laws) [people](http://en.wikipedia.org/wiki/Predictions_made_by_Raymond_Kurzweil) [do](http://steve.yegge.googlepages.com/ten-predictions) [predictions](http://www.longbets.org/).  I've never tried to think ahead so concretely, so it seemed worth a try.  These are in no particular order.

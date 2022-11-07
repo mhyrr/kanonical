@@ -2,6 +2,7 @@
 title: Keyboards vs. Long Form
 date: 2019-10-21T07:58:15.000Z
 path: /keyboards-vs-notebooks/
+type: writing
 ---
 
 I’ve been writing a decent amount this year, including some longer-for-me stuff that I’m reasonably content with.  I do all of my writing on my laptop, with a keyboard, and I’ve wondered for awhile if that’s a hindrance at all to actual writing.  The problem is that my laptop has multiple purposes that all fight for top billing in my headspace.  There’s work, there’s coding, there’s the endless, boundless distraction of the internet, and there’s even the distraction of all the other writing ideas and projects I have sitting in my folder tantalizing me.

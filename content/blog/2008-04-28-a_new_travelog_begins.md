@@ -2,6 +2,7 @@
 title: A New Travelog Begins!
 date: 2008-04-28T03:00:00.000Z
 path: /a_new_travelog_begins/
+type: travel
 ---
 
 In about 8 hours time, I'll be moving down a runway at 150+ mph in an Airbus A340 ready to take off for Dublin, Ireland.  I figured since I have a blog, it would be a lot easier than sending out mass emails, forgetting people, etc.  So that's what I'll be doing.  I hope to update this as we traipse across the countryside, or, at the very least, record things and post them later.  Plus, since I only have a 2 GB SD card for my camera right now, I'll probably be uploading as I go.

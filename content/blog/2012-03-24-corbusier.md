@@ -2,6 +2,7 @@
 title: Corbusier Fucked It All Up
 date: 2012-03-24T04:00:00.000Z
 path: /corbusier/
+type: the world
 ---
 
 Forgive me for being a bit brash, but if I were to make the title more palatable it wouldn't convey the same meaning.  Le Corbusier really did fuck it all up.

@@ -73,7 +73,7 @@ const Index = ({ data, location }) => {
                 <Workout>
                   <span itemProp="headline">{run.distance} Mile {run.type}, {run.startDateLocal}</span>
                 </Workout>
-                <Pace>{run.movingTime} at {run.aveSpeed} pace</Pace>
+                <Pace>{run.movingTime} {(run.aveSpeed == "Infinity:NaN") ? " minutes" : "at " + run.aveSpeed + " pace" }</Pace>
               </Book>
             )
           })}

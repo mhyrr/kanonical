@@ -86,22 +86,76 @@ const Preface = styled.h5`
   }
 `;
 
+const Tags = styled.div`
+  margin: calc(var(--spacing) * 2) 0;
+  font-size: var(--size-200);
+  font-weight: 200;
+  color: var(--dark);
+  display: flex;
+  justify-content: center;
+
+  ul {
+    height: 100%;
+    width: 420px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: capitalize;
+    list-style-type: none;
+
+    li {
+      border: 1px solid rgba(var(--primaryRGB), 0.5);
+      background: linear-gradient(135deg, rgba(255,255,255,.6) 0%, rgba(var(--secondaryRGB), 0.4) 200%);
+      backdrop-filter: blur(20px);
+      border-radius: 8px;
+
+      padding: .5rem;
+      margin: .25rem;
+      font-size: 1.15rem;
+      font-family: "Roboto";
+      font-weight: 300;
+
+      & a {
+        text-decoration: none;
+        color: var(--secondary);
+        font-weight: 200;
+      }
+    }
+
+    @media (min-width: 768px) {
+      ul {
+        align-items: center;
+        li {
+          padding-left: 2rem;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+`;
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const types = data.allMarkdownRemark.distinct
+
 
 
   // State for the list
-  const [list, setList] = useState([...posts.slice(0, 50)])
+  const [list, setList] = useState([...posts.slice(0, 200)])
 
   // State to trigger load more
   const [loadMore, setLoadMore] = useState(false)
 
   // State of whether there is more to load
-  const [hasMore, setHasMore] = useState(posts.length > 50)
+  const [hasMore, setHasMore] = useState(posts.length > 200)
 
   //Set a ref for the loading div
   const loadRef = useRef()
+
+  const [typeFilter, setTypeFilter] = useState("none")
 
   // Handle intersection with load more div
   const handleObserver = (entities) => {
@@ -109,6 +163,11 @@ const BlogIndex = ({ data, location }) => {
     if (target.isIntersecting) {
       setLoadMore(true)
     }
+  }
+
+
+  const setFilter = (type) => {
+    console.log(type)
   }
 
   //Initialize the intersection observer API
@@ -147,7 +206,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Everything written, for quite awhile" />
-      <h4>Everything I've Written.</h4>
+      <h4>(Almost) Everything I've Written.</h4>
 
       <Preface>
         I've been writing for awhile.  At some point, the thoughts in my head were getting unruly and I was never
@@ -157,31 +216,51 @@ const BlogIndex = ({ data, location }) => {
         <strong>Writing is clarified thinking.</strong>  If you're not able to write down what you think, it's probably
         not as clear as you'd like to believe.
         Writing helps you <Link to="/whywrite">ask the right questions</Link>.
-        And it helps capture your life and legacy.  I've <Link to="/legacy-writing">written about this</Link> before.  (I'm sure you're surprised.)  
+        And it helps capture your life and legacy.  I've <Link to="/legacy-writing">written about this</Link> before.  (I'm sure you're surprised.)
 
       </Preface>
 
-      {list.map(post => {
-        const title = post.frontmatter.title || post.fields.slug
+      <Tags>
+        <ul>
+          <li><a href="#all" onClick={() => {setTypeFilter("none")}}>All of it</a></li>
+          {types.map(type => {
+            return (
+              <li><a href="#{type}" onClick={() => {setTypeFilter(type)}}>{type}</a></li>
+            )
+          })}
+        </ul>
+      </Tags>
 
-        return (
-          <SimpleItem key={post.fields.slug}>
-              <DateField>
-                <small>{post.frontmatter.date}</small>
-                <AuthorField>({post.wordCount.words.toLocaleString("en-US")} words)</AuthorField>
-              </DateField>
-              <TitleField>
-                <Link to={post.frontmatter.path} itemProp="url">
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </TitleField>
 
-          </SimpleItem>
-        )
-      })}
+      {list.filter(post => {
+          if (typeFilter == "none") {
+            return true
+          } else {
+            return post.frontmatter.type == typeFilter
+          }
+        })
+        .map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+
+          return (
+            <SimpleItem key={post.fields.slug}>
+                <DateField>
+                  <small>{post.frontmatter.date}</small>
+                  <AuthorField>({post.wordCount.words.toLocaleString("en-US")} words)</AuthorField>
+                </DateField>
+                <TitleField>
+                  <Link to={post.frontmatter.path} itemProp="url">
+                    <span itemProp="headline">{title}</span>
+                  </Link>
+                </TitleField>
+
+            </SimpleItem>
+          )
+        })
+      }
 
       <div ref={loadRef}>
-        {hasMore ? <p>Loading...</p> : <p></p>}
+        {hasMore ? <p> </p> : <p></p>}
       </div>
     </Layout>
   )
@@ -207,11 +286,13 @@ export const pageQuery = graphql`
           title
           description
           path
+          type
         }
         wordCount {
           words
         }
       }
+      distinct(field: frontmatter___type)
     }
   }
 `

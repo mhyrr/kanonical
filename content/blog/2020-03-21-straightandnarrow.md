@@ -2,9 +2,10 @@
 title: Story - Straight and Narrow
 date: 2020-03-21T13:33:00.000Z
 path: /straight_and_narrow/
+type: creative
 ---
 
-*Caveat Lector:* I wrote this over the winter but haven't gotten around to editing and finishing it until now.  But suddenly, I have loads of time on my hands.  Here's to using it well! 
+*Caveat Lector:* I wrote this over the winter but haven't gotten around to editing and finishing it until now.  But suddenly, I have loads of time on my hands.  Here's to using it well!
 
 I read _On Writing_ last year, by Stephen King.  It's the best book on writing out there and was a watershed for me, I learned so much.  For instance, King says:
 
@@ -78,7 +79,7 @@ Another knock came at the door and the nurse entered.  “Hello Miss Boswell.  I
 
 “Just press that button if you need to call me- or anyone.”  And she left, staring after John and closing the big room door silently.
 
-“You never yell in front of anyone else.”  Annie said, shocked.  She waited a minute but John said nothing.  “Can we try this again Dad?  I had a baby.  It’s a boy, and he’s beautiful.  He’s in the NICU right now - he’s small and he’s had some apnea, so the nurses are checking on him while I recover.  But in another day or two he should be fine to sleep on his own.” 
+“You never yell in front of anyone else.”  Annie said, shocked.  She waited a minute but John said nothing.  “Can we try this again Dad?  I had a baby.  It’s a boy, and he’s beautiful.  He’s in the NICU right now - he’s small and he’s had some apnea, so the nurses are checking on him while I recover.  But in another day or two he should be fine to sleep on his own.”
 
 She paused for a second.  “His name is Robert John.  Do you want to meet your grandson?”
 
@@ -128,7 +129,7 @@ John went still, then moved to the door.  “Robert’s probably on the 7th hole
 
 "I need to start sorting this all out,” John said, cutting her off and walking out.
 
-Annie sobbed for awhile after her father left, trying to get herself together.  She looked around at herself again and the state she was in.  It was hard not to cry just because of that, nevermind all the confirmation her Dad had just given her.  Yes, he was a filthy hypocrite.  Yes, the rules didn’t apply to him.  Yes, he barely loved her, if ever at all, and thought of her as a useful tool in his career.  As she got older, she had realized more and more of that was true, but it’s still different hearing it said out loud.  She had always had a mixture of pride, fear, and apprehension about her father and his goals.  But that concoction had been replaced over time with a straight shot of fear, and this made it a double. 
+Annie sobbed for awhile after her father left, trying to get herself together.  She looked around at herself again and the state she was in.  It was hard not to cry just because of that, nevermind all the confirmation her Dad had just given her.  Yes, he was a filthy hypocrite.  Yes, the rules didn’t apply to him.  Yes, he barely loved her, if ever at all, and thought of her as a useful tool in his career.  As she got older, she had realized more and more of that was true, but it’s still different hearing it said out loud.  She had always had a mixture of pride, fear, and apprehension about her father and his goals.  But that concoction had been replaced over time with a straight shot of fear, and this made it a double.
 
 And then there  were the new details she had learned.  She tried to imagine the idea of growing up with brothers or sisters.  Now that she’d had a baby, it was hard to think about them any other way than as real people.  She had to talk to her Mom, find out more.
 
@@ -344,7 +345,7 @@ John chuckled.  “I know.  I’m sorry.  Do you forgive me for lying?  How else
 
 David stopped thrashing again at the sight of the knife.  John let his Mask smile the spotlight smile and leaned against the garage workbench.  “It’s amazing what the combination of a politician’s lies and a big knife will convince someone to do.  Thank you for helping reaffirm that truth for me.  I’ve learned a lot about myself tonight.  I learned that I was good at something else.  I didn’t just kill your baby, I enjoyed it too.”
 
-“It wasn’t that hard really.  The planning or the killing.  I got there near the end of shift and scoped out a route to make sure there weren’t many cameras around.  I went up and visited with them a bit.  My prints and hairs and whatever else they’d look for are all over the place.  Even if they did think something was wrong - and now I know they don’t - who would suspect a state senator for Chrissakes? 
+“It wasn’t that hard really.  The planning or the killing.  I got there near the end of shift and scoped out a route to make sure there weren’t many cameras around.  I went up and visited with them a bit.  My prints and hairs and whatever else they’d look for are all over the place.  Even if they did think something was wrong - and now I know they don’t - who would suspect a state senator for Chrissakes?
 
 “But still, I did it cautiously.  Did it so they’d just think he stopped breathing.  Annie said she needed a shower and the brat was asleep.  So I hid in another bathroom until the next shift started.  New people.  I changed in the bathroom too.  Civilian clothes instead of my classic suit.  That got folded up and went in a backpack along with my briefcase.  Just a nice little swap.  And I added a hat in case my route out past the cameras wasn’t perfect.  But it was perfect.”
 
@@ -360,7 +361,7 @@ John leaned down and put his hands gently on the tops of David’s shoes.  Then 
 
 “So let’s see, a suicide would kick the chair out to the side, don’t you think?  Let’s try that.”  John pushed down and to the side on David’s shoes, angling the chair to one side.  David tried to resist, but then John swung his feet back the other way to kick the chair out completely.  David fell tight against the noose, eyes bulging, body shaking and flopping like a fish hooked on a line and desperate to get away.
 
-John watched and waited, still.  Soon David stopped wriggling and started to hang limp, swaying in the garage.  John waited a minute, smiled, and gently started undoing the belt from around his hands so they hung free.  Then he gently cut the handkerchief away as well. 
+John watched and waited, still.  Soon David stopped wriggling and started to hang limp, swaying in the garage.  John waited a minute, smiled, and gently started undoing the belt from around his hands so they hung free.  Then he gently cut the handkerchief away as well.
 
 “Good talk, David.  That was fun.  And thank you.  It was, in fact, just as intoxicating the second time.  Now if you’ll excuse me, I need to go console my poor daughter.”  And he turned towards the backdoor and the alley from which he had come.
 
@@ -497,4 +498,3 @@ Robert paused, spreading out his arms towards the crowd and the cameras.  “All
 The audience cheered and applauded again, they were eating this up.  His political instincts told him this would play well across the entire state with Democrats and Republicans alike.  Robert allowed one of his gregarious smiles from times past.  The smile was genuine as he thought about how well he had capitalized on what circumstance had given him.  He was now that rarest of Republicans, a compassionate man with a strong social agenda and unassailable motive.  He could leverage that for years, right through a Governorship and all the way to Washington.
 
 He smiled again as he stepped back from the podium and got ready to meet and shake hands with the crowd.
-
