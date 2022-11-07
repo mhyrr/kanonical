@@ -2,6 +2,7 @@
 title: Remarks from a Newlywed
 date: 2010-12-13T05:00:00.000Z
 path: /newlyweds/
+type: travel
 ---
 
 About a month ago, I got married.  It was the best day of my life.
@@ -77,5 +78,3 @@ That's the rub.  There was a certain unadaptability in many of the couples we sa
 Like the perfect wedding that so many people seem to want, the perfect person, the perfect spouse, the soulmate, all of these ideas aren't real.  It won't turn out like you expect-- and if you expect the perfect spouse, the other person can never live up to your expectations.  But the truth is better than that.
 
 Love is a decision, and that's how you live happily-ever-after.
-
- 

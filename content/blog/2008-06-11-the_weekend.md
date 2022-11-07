@@ -2,6 +2,7 @@
 title: The Weekend
 date: 2008-06-11T03:00:00.000Z
 path: /the_weekend/
+type: travel
 ---
 
 Friday was my recovery day.  The last week and a half had been a whirlwind, so it was time to relax.  I slept in Friday, and participated in a meeting at PTG Gateway's corporate restaurant (a small deli in the park).  A bunch of photo processing, writing, and reading filled my afternoon, followed by my first serious game of badminton ever, which I really enjoyed.  Nigel (Neil's friend and business partner) took it easy on me, but Neil felt inclined to kill a rookie.  That's fine - he needs something to let him keep the illusion of not being old (gee, are you reading this?).  I can't wait to play racquetball next time he comes here.  After another barbeque and some time in front of the fire pit, it was time for bed.

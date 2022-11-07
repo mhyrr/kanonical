@@ -2,6 +2,7 @@
 title: Judgement
 date: 2022-10-06T10:26:00.000Z
 path: /no-judgement/
+type: life
 ---
 
 It is so easy to cast judgement.  

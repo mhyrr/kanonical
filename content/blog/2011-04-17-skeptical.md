@@ -2,6 +2,7 @@
 title: A Review of the Skeptical Environmentalist
 date: 2011-04-17T03:00:00.000Z
 path: /skeptical/
+type: books
 ---
 
 For a change, I thought I'd do a book review just like my [dear friend Lib](http://libonlit.blogspot.com/).  And I've just finished a book worthy of review.

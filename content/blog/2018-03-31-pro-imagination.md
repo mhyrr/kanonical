@@ -2,6 +2,7 @@
 title: Pro-Imagination not Anti-Technology
 date: 2018-03-31T21:34:31.000Z
 path: /pro-imagination/
+type: education
 ---
 
 I had a cigar recently with one of my best friends, who is a teacher at a local private boys school.  We live in a fairly affluent area near DC, so the schools are pretty ritzy and all want the best and fanciest technology.  He was lamenting the funding drive at his daughter's school, where they're pushing for iPads for all students in the classroom.  He wanted to know why and what they'd be used for.  I do too.

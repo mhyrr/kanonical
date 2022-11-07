@@ -2,6 +2,7 @@
 title: The Year's Goals
 date: 2015-01-05T21:59:21.000Z
 path: /the-years-goals/
+type: goals
 ---
 
 We're a week into 2015 and I need to write down my goals for the year.   I'm hoping this will be a tradition every year, since writing things down makes them more real.  So without further ado..

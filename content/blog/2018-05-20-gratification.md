@@ -2,6 +2,7 @@
 title: The Most Important Skill You'll Ever Teach Your Kids
 date: 2018-05-20T10:47:31.000Z
 path: /most-important-skill/
+type: education
 ---
 
 My kids right now are 6, 3, and 1.  They are completely amazing and I adore them.  I can't wait to see where things go from here.

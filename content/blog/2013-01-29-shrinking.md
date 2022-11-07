@@ -2,6 +2,7 @@
 title: The Incredible Shrinking Man
 date: 2013-01-29T05:00:00.000Z
 path: /shrinking/
+type: health
 ---
 
 I had planned this to be a two week checkpoint.. I think at this point I'm just over three weeks.
@@ -37,4 +38,3 @@ The most surprising thing has been that I don't usually miss most of the crap I 
 #### Onward
 
 I'll do another check-in sometime soon.  I wish I had taken pictures for before and after, but I honestly didn't want to.  I may start doing pictures in the next week or two.  In the meantime, keep going!
-

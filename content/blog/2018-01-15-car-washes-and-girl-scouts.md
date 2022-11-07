@@ -2,6 +2,7 @@
 title: Car Washes and Girl Scout Cookies
 date: 2018-01-15T9:18:19.000Z
 path: /car-washes-and-girl-scouts/
+type: education
 ---
 
 I'm going to talk about some traditions we have with our kids in a rather stern way, so if you're easily offended, feel free to leave now.

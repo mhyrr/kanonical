@@ -2,6 +2,7 @@
 title: Wanna look good?  Focus on Surface Area
 date: 2018-02-12T07:15:46.000Z
 path: /surface-area/
+type: health
 ---
 
 The last 15 months or so have been a winding path towards a healthier and better lifestyle.  It's a longterm process, and nowhere near done, but already I'm way lighter, stronger, faster, and feel better.

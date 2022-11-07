@@ -2,6 +2,7 @@
 title: Constraints For Kids
 date: 2022-01-09T14:25:00.000Z
 path: /constraints-for-kids/
+type: education
 ---
 
 
@@ -23,11 +24,7 @@ We’re all keen to give our kids as much as they need.  In our age of abundance
 Today, these resources seem like they are the wrong focus.  A lack of dance classes is not the limiting bound for an abundance of beautiful dancers just as internet access and a computer is not the limiting bound for a larger abundance of engineers and wonderful programmers.  And a lack of 8-10 scheduled activities per week is certainly not what’s preventing us from raising broadly interesting and wise children.  What kids lack is time, imagination, and effort.  When kids have an abundance of time they experience boredom, and are forced to exercise their imagination.  They go to a field and play soccer for hours on end because there’s no set schedule that says practice ends after an hour.  When kids don’t have the internet they’re forced to work out answers themselves, or make them up, and they have the opportunity to enter a deep work mentality without context switching to the next topic every 10 seconds.
 
 Nassim Taleb describes _antifragile_ as follows:  
-  
-> Some things benefit from shocks; they thrive and grow when exposed to volatility, randomness, disorder, and stressors and love adventure , risk, and uncertainty. Yet, in spite of the ubiquity of the phenomenon, there is no word for the exact opposite of fragile. Let us call it antifragile. Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same; the antifragile gets better. 
+
+> Some things benefit from shocks; they thrive and grow when exposed to volatility, randomness, disorder, and stressors and love adventure , risk, and uncertainty. Yet, in spite of the ubiquity of the phenomenon, there is no word for the exact opposite of fragile. Let us call it antifragile. Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same; the antifragile gets better.
 
 We think of kids as resilient, but they are actually antifragile.  By giving them all of the resources we think they need, we often prevent them from having the challenges and constraints needed to grow.  This isn’t to say that resource limits can’t be a bad thing.  If our kids don’t get enough calories to eat for proper development that is clearly a Bad Thing.  Once we get the basics of [Maslow’s hierarchy](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs) out of the way, what kids need is surprisingly simple.  They  need love, support, time, agency, imagination, effort, and the space to explore what they could possibly become.
-
-
-
-

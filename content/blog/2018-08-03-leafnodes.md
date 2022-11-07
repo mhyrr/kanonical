@@ -2,6 +2,7 @@
 title: Leaf Nodes
 date: 2018-08-04T9:56:31.000Z
 path: /leaf-nodes/
+type: the world
 ---
 
 When most people think of organizational structures, they usually think about trees.  Workers who work all day generally sit at the "bottom", and managers and other people that kinda do work and that you "report to" sit somewhere in the middle.  Meanwhile, there's a top tier where seemingly no work gets done.

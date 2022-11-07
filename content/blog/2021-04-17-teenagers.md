@@ -2,6 +2,7 @@
 title: Unusual Books For Teenagers
 date: 2021-04-17T08:32:00.000Z
 path: /unusual-books-for-kids/
+type: education
 ---
 
 I’m in the middle of re-reading Doyle Brunson’s classic poker book: Super System.  It popped into my mind again recently because of some Twitter conversation or other, and I realized my copy was torn in two and borrowed out from my library to someone and won’t ever be seen again.  So I bought another copy and have been shredding through it.

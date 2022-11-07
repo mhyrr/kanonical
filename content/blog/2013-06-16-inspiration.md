@@ -2,6 +2,7 @@
 title: An Inspiration
 date: 2013-06-16T03:00:00.000Z
 path: /inspiration/
+type: writing
 ---
 
 It's a sunny Sunday afternoon and I am sitting in one of my favorite spots.  It's a small side table in the sunroom of a small red house a block from the beach.  This is one of the places I can really think, with very few interruptions and very few distractions.

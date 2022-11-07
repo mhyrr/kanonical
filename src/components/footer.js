@@ -224,7 +224,7 @@ const Footer = ({ Logo }) => {
         <ul className="copy">
           {/* if there is an author stated in the config, render this */}
           <li>
-            Crafted in Maryland or Delaware.
+            Crafted in Maryland or Delaware with 💦 and garish CSS.
           </li>
           <li>
             <Link to="/about">Colophon and other details.</Link>

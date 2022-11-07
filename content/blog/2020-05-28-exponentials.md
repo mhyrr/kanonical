@@ -2,6 +2,7 @@
 title: Exponentials and Revolution
 date: 2020-05-28T05:00:00.000Z
 path: /exponentials/
+type: the world
 ---
 
 ## Exponentials

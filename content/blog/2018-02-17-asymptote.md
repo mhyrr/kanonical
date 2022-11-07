@@ -2,6 +2,7 @@
 title: Asymptote Towards Truth
 date: 2018-02-17T10:33:45.000Z
 path: /change-to-truth/
+type: life
 ---
 
 Awhile back, a friend pointed out an apparent conundrum in his world view.  His opinions, he said, aligned to what ended up being provably correct with surprising frequency.  And yet, his opinions are also always changing, sometimes quite a bit over time.  How can both these things be true?
@@ -13,10 +14,17 @@ The quality of being able to change your opinions and views over time is the rea
 Inability to change and adapt blocks us from the truth.  Changing and adapting over time is the way.
 
 > The road to wisdom? Well it's plain
-and simple to express:
-To err..
-and err..
-and err again..
-But less..
-and less..
-and less.  
+>
+> and simple to express:
+>
+> To err..
+>
+> and err..
+>
+> and err again..
+>
+> But less..
+>
+> and less..
+>
+> and less.  

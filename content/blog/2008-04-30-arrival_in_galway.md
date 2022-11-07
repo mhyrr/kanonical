@@ -2,6 +2,7 @@
 title: Arrival in Galway
 date: 2008-04-30T03:00:00.000Z
 path: /arrival_in_galway/
+type: travel
 ---
 
 We've arrived!  I'm sitting in our room at the SleepZone hostel in Galway.  The plane from Dulles was.. interesting.  There was quite a bit of turbulence ascending out of Dulles, and then again about midway through.  It was enough to make my stomach turn a bit, and I don't think I did much more than doze off for about thirty minutes.  Katie and I grabbed a bagel when we landed, found our bus, and were off across the countryside by 8:20 AM.

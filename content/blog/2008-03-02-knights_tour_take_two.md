@@ -8,6 +8,4 @@ Well, after last night's post I did a little bit of reading on better ways to do
 
 Anyway, I implemented the improvement this morning, and it's pretty trick. Most boards get computed in linear time. Most boards get completed in less than 100 ms. There's apparently a neural net solution that is pretty neat that I may implement at some point. I'd like to do some custom painting to show the path better too.
 
-Here's the link again: <a href="http://www.infiniteabyss.org/code/tours/tours.jnlp">Knight's Tour</a>
-
 ** Quick Edit.. the custom painting is in now too, but only for the Warnsdorff solution, I didn't feel like tracking my backtracking.

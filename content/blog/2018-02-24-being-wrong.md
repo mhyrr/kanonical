@@ -2,6 +2,7 @@
 title: Being Wrong for Leaders
 date: 2018-02-24T08:52:31.000Z
 path: /being-wrong-for-leaders/
+type: life
 ---
 
 I love being wrong.  It's one of the best things to be.  Being wrong generally means that you're learning, assuming you accept your wrongness and are working to get out from under it.  

@@ -2,6 +2,7 @@
 title: Curation and The Middle Path of Contrarianism
 date: 2020-12-28T09:11:00.000Z
 path: /curation-contrarian/
+type: the world
 ---
 
 Earlier this year, I wrote about [Stripe Press](https://www.kanonical.io/stripe-press/) and the value of curation.  I haven’t been able to stop thinking about it though, and I continue to think that it’s one of the most important concepts to center around as we walk blindfolded into 2021.
