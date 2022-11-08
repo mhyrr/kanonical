@@ -206,11 +206,13 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Everything written, for quite awhile" />
+
       <h4>(Almost) Everything I've Written.</h4>
 
       <Preface>
-        I've been writing for awhile.  At some point, the thoughts in my head were getting unruly and I was never
-        able to make them clear.  I started writing them down just to figure out what I was trying to say only to find out
+        I've been writing since I cleared out of school and was able to see that it was really useful.
+        The thoughts in my head were unruly and unordered and I was never
+        able to make them clear.  I started writing them down just to figure out what I was trying to say.. only to find out
         that what I was trying to say wasn't very clear.
         <br/><br/>
         <strong>Writing is clarified thinking.</strong>  If you're not able to write down what you think, it's probably
@@ -275,7 +277,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {type: {ne: "about"}}}) {
       nodes {
         excerpt(pruneLength: 320)
         fields {

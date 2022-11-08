@@ -63,7 +63,7 @@ const IndexHeader = () => {
       <BioPara>
       I'm a guy on the internet with too many interests.
       Most of them orbit around <strong>learning</strong> and <strong>writing</strong> and <strong>software</strong> and <strong>kids</strong> and <strong>books</strong> and <strong>business</strong>.
-      This is the place I come to try to string words and ideas together.
+      This is the place I come to try to string words and ideas together and hold myself accountable.
       </BioPara>
       <BioPara>
       Credentials are sooo boring. I like this list better.

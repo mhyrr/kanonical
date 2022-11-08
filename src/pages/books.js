@@ -18,6 +18,7 @@ const DateField = styled.div`
 `
 
 const YearsTitle = styled.h4`
+  padding-top: 1rem;
   margin: calc(var(--spacing) / 2) 0;
 `;
 
@@ -216,7 +217,7 @@ const BookIndex = ({ data, location }) => {
 
       <Preface>
         I really like books.  Like, a lot.
-        I've built up a list of everything I've read over the years.
+        I've kept a list of everything I've read over the years.
         I'm missing a bunch in the distant past, but I've been keeping this list consistently since around 2018.
         <br/><br/>
         I'm a big fan of <a href="https://tomcritchlow.com/">Tom Critchlow's</a> <a href="https://tomcritchlow.com/2020/04/15/library-json/">Library.json idea</a> too.

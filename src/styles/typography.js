@@ -142,6 +142,8 @@ ol {
 
 code {
   /* font-family: $mono; */
+  line-height: 1rem !important;
+  font-size: 1rem !important;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   /* background-color: $lightGrey; */
