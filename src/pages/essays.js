@@ -132,7 +132,7 @@ const Essays = ({ data, location }) => {
         <strong>Hey, you asked for it.</strong> Every once in awhile I start writing about an idea and it ends up taking on a life of it's own.
         The words divide and grow, and the digressions expand, and I just try to keep up.
         Eventually I end up with something bigger and longer than I imagined.
-        It feels reasonable to call it an essay.
+        It feels reasonable to call this an essay.
       </h5>
 
       <EssayList>

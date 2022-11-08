@@ -3,6 +3,13 @@ title: Math for Theologians
 date: 2018-04-17T07:50:31.000Z
 path: /theology-and-math/
 type: essay
+description: "Think for a second about the most beautiful ideas you've ever run across.  Beauty is not the usual characteristic you use to group ideas.  I know I hadn't done it before, until I ran across this delightful little blog entry.
+<br/><br/>
+Take a quick breeze through that list.  It's an incredible - and beautiful - list of ideas, and a good number of them would be on my list too.  The ones that aren't on my list are my own fault; I haven't delved into them as much as I should.  But some of them - like the different types of infinity, and Decidability - when I learned them, they moved me on a fundamental and spiritual level.
+<br/><br/>
+Which is a striking thing to say.  Notions of decidability and infinity are mathematical.  And yet the entire world and all it's beauty is built on mathematical models.  Our bodies and senses are so attuned to how the universe uses math, that we hardly ever think about it consciously.  We simply enjoy the sunrise or we admire the swirling flight of a bird.
+<br/><br/>
+Theology is the study of the divine, and to some extent, the concept of belief itself."
 ---
 
 *Caveat lector*:

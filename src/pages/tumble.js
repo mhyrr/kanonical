@@ -376,8 +376,9 @@ const Tumbler = ({data}) => {
                     </ul>
                 </nav>
               </div>
-
-              <Masonry className="tumbleGrid" columnWidth={280} rowGutter={8} overscanBy={8} items={all} render={FinalCard} />
+              <div className="tumbleContainer">
+                <Masonry className="tumbleGrid" columnWidth={280} rowGutter={8} overscanBy={8} items={all} render={FinalCard} />
+              </div>
             </TumbleStyles>
           </motion.div>
 
@@ -418,7 +419,7 @@ const TumbleStyles = styled.div`
 
   #tumbleOptions {
 
-    max-width: 90%;
+    max-width: 96%;
     padding-top: calc(var(--spacing) * 6);
     padding-bottom: calc(var(--spacing) * 2);
     padding-left: calc(var(--spacing) * 0);
