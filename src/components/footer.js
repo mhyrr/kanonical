@@ -147,7 +147,7 @@ const FooterStyles = styled.footer`
 
     text-decoration: none;
     color: var(--primary);
-    text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.9);
+    //text-shadow: 0.2px 0.2px 0 rgba(var(--darkRGB), 0.9);
     transition: var(--transMed);
 
 
@@ -229,7 +229,9 @@ const Footer = ({ Logo }) => {
           <li>
             <Link to="/about">Colophon and other details.</Link>
           </li>
-
+          <li>
+            <a href="mailto:hey@kanonical.io">Hit me up!</a>
+          </li>
 
           {footerData.author.name && (
             <li>

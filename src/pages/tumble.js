@@ -9,7 +9,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Masonry } from 'masonic'
 import {Card, CardAttr, CardLink, CardDate} from '../components/card'
+
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import Typography from "../styles/typography"
 import GlobalStyles from "../styles/globalstyles"
 import Header from "../components/header"
@@ -335,6 +337,7 @@ const Tumbler = ({data}) => {
     return (
 
         <div className="tumble" width="90%">
+          <Seo title="Tumble - a list of things read and researched" />
           <GlobalStyles/>
           <motion.div
             initial={{ opacity: 0 }}
@@ -345,8 +348,23 @@ const Tumbler = ({data}) => {
             <Typography />
             <TumbleStyles>
               <Header id="tumbleHeader" target={target} ></Header>
+
               <div id="tumbleOptions">
-                <h4>A list of things I've read or thought about, collated over ten plus years..</h4>
+                <h4>What's a Tumble?</h4>
+                <h5>
+                  <strong>It's a list of lots of things I've bookmarked.</strong> I've been keeping this for almost 15 years now.
+
+                  Over the years, I've used different services as an easy way to track interesting things I've found on the internet.
+                  It started with Digg and del.icio.us (if you remember that) but as systems died I found it useful to own the data.
+                  For awhile I used Tumblr and that name stuck.
+                  Today it's fed by a Google spreadsheet and updated via email.  Here's <Link to="/tumbld">some more detail</Link>, if you're interested.
+                  <br/><br/>
+                  One of the things I really like about this is that I can go back over time and see a history of the things I was reading or thinking about.
+                  It's easy to go back and quickly lookup things from a week or a month ago that would otherwise be lost to me.
+                  A Tumble a simple thing, but it's gotten a lot of use.
+
+                </h5>
+
                 <nav className="navAnim">
                     <ul>
                         <li className="navanim2"><a href="#links" onClick={() => {toggleLinks()}}>Links</a></li>
@@ -399,11 +417,34 @@ const TumbleStyles = styled.div`
   }
 
   #tumbleOptions {
+
+    max-width: 90%;
     padding-top: calc(var(--spacing) * 6);
     padding-bottom: calc(var(--spacing) * 2);
-    max-width: 60%;
+    padding-left: calc(var(--spacing) * 0);
+    padding-right: calc(var(--spacing) * 0);
     margin-right: auto;
     margin-left: auto;
+
+    @media (min-width: 768px) {
+      max-width: 80%;
+      padding-top: calc(var(--spacing) * 6);
+      padding-bottom: calc(var(--spacing) * 2);
+    }
+
+    h5 {
+      font-size: var(--size-400);
+      font-weight: 400;
+      color: var(--dark);
+      margin: calc(var(--spacing) * 2) 0;
+
+      & a {
+        text-decoration: underline;
+        color: var(--secondary);
+        text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+        font-weight: 600;
+      }
+    }
   }
 
   .navAnim {
