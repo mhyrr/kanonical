@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
 
-import PostList from "../components/post-list"
 
 const DateField = styled.div`
   position: relative;
@@ -142,7 +140,6 @@ const BlogIndex = ({ data, location }) => {
   const types = data.allMarkdownRemark.distinct
 
 
-
   // State for the list
   const [list, setList] = useState([...posts.slice(0, 200)])
 
@@ -165,10 +162,6 @@ const BlogIndex = ({ data, location }) => {
     }
   }
 
-
-  const setFilter = (type) => {
-    console.log(type)
-  }
 
   //Initialize the intersection observer API
   useEffect(() => {

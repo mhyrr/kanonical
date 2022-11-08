@@ -362,7 +362,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .tumble {
-    max-width: 76%;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .tumbleContainer {
+    max-width: 90%;
     margin-right: auto;
     margin-left: auto;
   }
