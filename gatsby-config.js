@@ -11,6 +11,7 @@ module.exports = {
     },
     description: `Everything you never wanted to know about what I think and how I do.`,
     siteUrl: `https://www.kanonical.io/`,
+    image: `/profile2.png`,
     social: {
       twitter: `mhyrr`,
       github: `https://github.com/mhyrr`
