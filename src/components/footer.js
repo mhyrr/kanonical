@@ -200,9 +200,7 @@ const Footer = ({ Logo }) => {
   return (
     <FooterStyles>
       <div className="flex">
-
         <Ruler/>
-
         <div className="menus-cont">
           <IconContainer>
             <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
