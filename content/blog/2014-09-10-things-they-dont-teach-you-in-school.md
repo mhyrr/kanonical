@@ -10,7 +10,7 @@ path: /things-they-dont-teach-you-in-school/
 
 Hi everyone.
 
-My name is Greg  and I'm Vice President and Software Engineer at a small company.  I went to University of Maryland with Mark [Edelen] and got my degree in Computer Engineering in 2002, so I've been out of school for about 12 years.
+I'm Vice President and Software Engineer at a small company.  I went to University of Maryland and got my degree in Computer Engineering in 2002, so I've been out of school for about 12 years.
 
 Instead of talking about any specific experiences in my engineering life, I wanted to talk instead about some of the things that I've found to be not just important after school, but surprisingly important.  In other words, I want to talk about a few things that Engineering School doesn't always teach you.
 
@@ -57,13 +57,13 @@ For all of these tools, mastery takes years.  There's an article out there calle
 
 ### English
 
-As a software engineer, I know 3 or 4 programming languages very well, and I could get by in maybe half a dozen others.  That's true for most software folks.  So my next subject that you don't always learn in school, but especially in engineering school, is English. 
+As a software engineer, I know 3 or 4 programming languages very well, and I could get by in maybe half a dozen others.  That's true for most software folks.  So my next subject that you don't always learn in school, but especially in engineering school, is English.
 
 By far, the most important language I know as a software engineer is English.  I think the most important skill of any engineer anywhere is the ability to communicate clearly.  I specify English because it has evolved to become essentially a universal language across cultures.
 
 Communication should generally be bi-directional, so there are two parts to why this is so important in engineering.  The first is to be able to listen to your customers.  This is a lot harder than it might sound, because your customers will very typically be wrong about what they want.  That's definitely different than school.  I think if you tell you professor that their project definition is wrong.. you won't get very far.
 
-There's an apocryphal Henry Ford quote about this you might have heard - he supposedly said "If I had asked people what they wanted, they would have said faster horses." 
+There's an apocryphal Henry Ford quote about this you might have heard - he supposedly said "If I had asked people what they wanted, they would have said faster horses."
 
 The start of communicating well is being able to listen, to ask questions, and to extract what you hear so that you can build a useful and objective mental model of the problem.  
 
@@ -129,7 +129,7 @@ The first few times will suck quite honestly, but practice will make you better,
 
 You should pick something fun and interesting to you.  It doesn't matter if it's soccer, guitars or recipes.  You should also let other people read it.  Letting other people read it means that there's some lower boundary for quality you're holding yourself too.
 
-If this sounds like a blog, that's because it is.  **You should write a blog.**  Writing a blog is the best non-technical thing you can do for your career while in school. 
+If this sounds like a blog, that's because it is.  **You should write a blog.**  Writing a blog is the best non-technical thing you can do for your career while in school.
 
 #### Questions and Wrongness
 
@@ -141,5 +141,3 @@ I'll leave you with one of my favorite Freeman Dyson quotes, one that I think en
 
 >You can't possibly get a good technology going without an enormous number of failures. It's a universal rule. If you look at bicycles, there were thousands of weird models built and tried before they found the one that really worked. You could never design a bicycle theoretically. Even now, after we've been building them for 100 years, it's very difficult to understand just why a bicycle works – it's even difficult to formulate it as a mathematical problem. But just by trial and error, we found out how to do it, and the error was essential.
 - Freeman Dyson
-
-

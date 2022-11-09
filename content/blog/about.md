@@ -7,8 +7,7 @@ type: about
 
 ### Reach Out!
 
-I'd love to talk!  [Hit me up](mailto:hey@kanonical.io).
-
+I'd love to talk!  [Hit me up](mailto:troy@ajtroy.com).
 
 ### Colophon
 

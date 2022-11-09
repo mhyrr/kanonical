@@ -62,7 +62,6 @@ const Bio = (path) => {
       {author?.name && (
           <BioTitle>
             Hi I'm <strong>{author.name}</strong>.
-            Occasionally I do things.
 
             {/*
             <div className="mask">

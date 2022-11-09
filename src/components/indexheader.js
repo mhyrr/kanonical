@@ -56,7 +56,7 @@ const IndexHeader = () => {
       </Link>
       {author?.name && (
         <BioTitle>
-          Hey 👋🏼 I'm <strong>{author.name}</strong>.
+          Hey 👋🏼 Call me Troy.
         </BioTitle>
       )}
 

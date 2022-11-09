@@ -35,7 +35,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Hey I'm Greg.  Occasionally I do things." />
+      <Seo title="Hey I'm AJ Troy." />
 
       <IndexHeader/>
 

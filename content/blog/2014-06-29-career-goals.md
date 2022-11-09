@@ -38,7 +38,7 @@ Before I list the qualities of this goal that I find satisfying, I should provid
 
 I'm married with two kids so far.  My wife's family has been going to Bethany Beach, DE since way before I was born, and my wife grew up spending her summers down there.  Her Mom was a teacher and would take her three kids down to the beach the day after school ended.  Her Dad would come down every Friday night for the weekend.  As a kid growing up, I don't think she could imagine having better summers.
 
-Since my wife and I started dating, I've been spending more and more time at the beach.  I've [fallen in love](http://www.kanonical.io/inspiration/) with it.  The more time I spend there, the happier I am.  More importantly, my family finds peace, unity, and happiness from the time we spend together there.
+Since my wife and I started dating, I've been spending more and more time at the beach.  I've [fallen in love](http://www.ajtroy.com/inspiration/) with it.  The more time I spend there, the happier I am.  More importantly, my family finds peace, unity, and happiness from the time we spend together there.
 
 At first glance, these ideas don't seem to have much to do with a career, or work at all.  But they do.
 

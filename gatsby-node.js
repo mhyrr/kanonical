@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       title:
         "Privacy",
       content:
-        "Thanks for coming to Kanonical! This site is simply a small corner of the world to share things that I'm thinking about.  As part of that, the site policy is to respect your privacy regarding any information we may collect from you.  We don’t share any private infromation publicly or with third-parties, except when required to by law.  The personal data that may be collected, by itself or through third parties, includes: Cookies, usage data, and email addresses. The cookies we track are technical and anonymous statistical cookies through Google Analytics, so that you can have a better experience on our site.",
+        "Thanks for visiting! This site is simply a small corner of the world to share things that I'm thinking about.  As part of that, the site policy is to respect your privacy regarding any information we may collect from you.  We don’t share any private infromation publicly or with third-parties, except when required to by law.  The personal data that may be collected, by itself or through third parties, includes: Cookies, usage data, and email addresses. The cookies we track are technical and anonymous statistical cookies through Google Analytics, so that you can have a better experience on our site.",
     },
     {
       name: "cookies",

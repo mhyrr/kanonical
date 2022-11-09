@@ -4,17 +4,17 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Kanonical`,
+    title: `AJ Troy`,
     author: {
-      name: `Greg`,
+      name: `AJ Troy`,
       summary: `Occasionally, I do things.`,
     },
     description: `Everything you never wanted to know about what I think and how I do.`,
-    siteUrl: `https://www.kanonical.io/`,
+    siteUrl: `https://www.ajtroy.com/`,
     image: `/profile2.png`,
     social: {
-      twitter: `mhyrr`,
-      github: `https://github.com/mhyrr`
+      twitter: `ajamestroy`,
+      github: ``
     },
   },
   plugins: [
@@ -120,13 +120,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Kanonical Blog`,
-        short_name: `Kanonical`,
+        name: `AJ Troy`,
+        short_name: `AJTroy`,
         start_url: `/`,
         background_color: `#fffdfa`,
         theme_color: `#81B29A`,
         display: `minimal-ui`,
-        icon: `src/images/profile.png`, // This path is relative to the root of the site.
+        icon: `src/images/profile2.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

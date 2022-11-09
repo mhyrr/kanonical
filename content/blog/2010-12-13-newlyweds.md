@@ -61,7 +61,7 @@ All those BRIDE shirts and fake manicures had bored faces above them, because th
 
 Every day after the wedding day is more important than the wedding day itself.  A marriage is a lifetime and it is wonderful.  We should all be lucky enough to prepare for it through a wedding.
 
-I don't mean by this that people shouldn't do it up on their wedding day.  They should.  We certainly did.  One of the things I was so pleased about was how authentic our wedding felt.  Perhaps I'm biased, but there were no pretensions-- it felt like "us".. like Maureen and Greg.  Weddings are about celebrating, not about appearing beautiful, rich or better than anyone else.
+I don't mean by this that people shouldn't do it up on their wedding day.  They should.  We certainly did.  One of the things I was so pleased about was how authentic our wedding felt.  Perhaps I'm biased, but there were no pretensions-- it felt like "us".  Weddings are about celebrating, not about appearing beautiful, rich or better than anyone else.
 
 That last point is important, and one we saw echoed on the honeymoon.  The top two reasons for divorce in our country are infidelity and financial problems.  So **live within your means, and start that on your wedding day.**
 

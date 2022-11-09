@@ -6,7 +6,7 @@ path: /per-formative/
 
 This past weekend we tuned into a streaming broadcast of Mass amidst the outbreak.
 
-I couldn’t stand it.  This has been a long running problem that I wrote about almost ten years ago too.  I thought then that it was just [the dreadful music](https://www.kanonical.io/churchmusic/).  Now I’m wondering if that's just a symptom of how we treat Mass.
+I couldn’t stand it.  This has been a long running problem that I wrote about almost ten years ago too.  I thought then that it was just [the dreadful music](/churchmusic/).  Now I’m wondering if that's just a symptom of how we treat Mass.
 
 Many of our institutions that used to be _formative_ are now _performative_.  They’re not about shaping, they’re about seeing and - even more so - being seen.
 

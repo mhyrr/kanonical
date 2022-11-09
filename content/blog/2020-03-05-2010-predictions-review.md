@@ -5,7 +5,7 @@ path: /2010-predictions-review/
 type: predictions
 ---
 
-Ten years ago, I made [some predictions](https://www.kanonical.io/some_predictions/).  It was bound to fail, unless I turned out to be some kind of [Superforecaster](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718).  It did and I’m not.  Ten years later some of these things sound like the silliest and unlikeliest things that you could imagine.
+Ten years ago, I made [some predictions](/some_predictions/).  It was bound to fail, unless I turned out to be some kind of [Superforecaster](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718).  It did and I’m not.  Ten years later some of these things sound like the silliest and unlikeliest things that you could imagine.
 
 And that’s really the fun of it.
 

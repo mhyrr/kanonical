@@ -49,7 +49,7 @@ Good Will Hunting has a scene that actually sums this up really well.
 
 [![You owe it to me](https://img.youtube.com/vi/3i8eIzSeC8w/0.jpg)](https://youtu.be/3i8eIzSeC8w)
 
-That’s what I think when I’m looking for motivation.  It’s not a negative thing.  I’m not down on myself.  I'm not angry.  It’s just very honest and very real when I say to myself, “Fuck you Greg.  You owe it to Kristen.”
+That’s what I think when I’m looking for motivation.  It’s not a negative thing.  I’m not down on myself.  I'm not angry.  It’s just very honest and very real when I say to myself, “Fuck you Troy.  You owe it to Kristen.”
 
 ### The What
 

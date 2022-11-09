@@ -5,7 +5,7 @@ path: /curation-contrarian/
 type: the world
 ---
 
-Earlier this year, I wrote about [Stripe Press](https://www.kanonical.io/stripe-press/) and the value of curation.  I haven’t been able to stop thinking about it though, and I continue to think that it’s one of the most important concepts to center around as we walk blindfolded into 2021.
+Earlier this year, I wrote about [Stripe Press](/stripe-press/) and the value of curation.  I haven’t been able to stop thinking about it though, and I continue to think that it’s one of the most important concepts to center around as we walk blindfolded into 2021.
 
 We’re in the middle of the age of the algorithm, and our writings and photographs and music have all been reduced to “content”, as [Andrew Sullivan](https://nymag.com/intelligencer/2016/09/andrew-sullivan-my-distraction-sickness-and-yours.html) has said.  Many of us have gained the entire world of knowledge at our fingertips by losing the ability to seek and follow wisdom.  Curation is not about consuming content that is served _to_ you, but about finding and exploring things that you don’t fully understand.
 

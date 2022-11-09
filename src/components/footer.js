@@ -205,11 +205,11 @@ const Footer = ({ Logo }) => {
 
         <div className="menus-cont">
           <IconContainer>
-            <ShareIcon shareUrl={`https://twitter.com/mhyrr`}>
+            <ShareIcon shareUrl={`https://twitter.com/ajamestroy`}>
               <FaTwitter style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
             </ShareIcon>
           </IconContainer>
-          <IconContainer>
+          {/*<IconContainer>
             <ShareIcon shareUrl={`https://instagram.com/mhyrr`}>
               <FaInstagram style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
             </ShareIcon>
@@ -218,7 +218,7 @@ const Footer = ({ Logo }) => {
             <ShareIcon shareUrl={`https://github.com/mhyrr`}>
               <FaGithub style={{paddingTop: "12px", paddingRight: "4px", paddingLeft: "4px"}}/>
             </ShareIcon>
-          </IconContainer>
+          </IconContainer>*/}
         </div>
 
         <ul className="copy">
@@ -230,7 +230,7 @@ const Footer = ({ Logo }) => {
             <Link to="/about">Colophon and other details.</Link>
           </li>
           <li>
-            <a href="mailto:hey@kanonical.io">Hit me up!</a>
+            <a href="mailto:troy@ajtroy.com">Hit me up!</a>
           </li>
 
           {footerData.author.name && (

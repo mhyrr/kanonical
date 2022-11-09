@@ -22,10 +22,7 @@ type: creative
 > the incarnadine sky increases
 >
 > with the same dreams and drive
-> 
+>
 > that I hope my sons will have.
 
 Based on thoughts from Italy.  Written afterwards.
-
-
-<iframe src="https://www.instagram.com/p/Bd2oV4VAEgk/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
