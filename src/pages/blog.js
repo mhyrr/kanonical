@@ -220,7 +220,7 @@ const BlogIndex = ({ data, location }) => {
           <li><a href="#all" onClick={() => {setTypeFilter("none")}}>All of it</a></li>
           {types.map(type => {
             return (
-              <li><a href="#{type}" onClick={() => {setTypeFilter(type)}}>{type}</a></li>
+              <li><a href={"#" + type} onClick={() => {setTypeFilter(type)}}>{type}</a></li>
             )
           })}
         </ul>
