@@ -212,7 +212,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
-      display: inline-block;
+
       text-decoration: underline;
       background-color: inherit !important;
       position: relative;
@@ -222,7 +222,7 @@ const GlobalStyles = createGlobalStyle`
       font-weight: 600;
       color: var(--secondary);
       text-shadow: .2px .2px 0 var(--darkRGB 0.5);
-      line-height: 1.75rem;
+      
 
       &::after {
         width: 0;
