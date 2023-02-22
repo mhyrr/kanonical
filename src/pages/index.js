@@ -54,7 +54,7 @@ const Index = ({ data, location }) => {
           return (
             <Book key={book.node.title}>
                 <BookTitle>
-                  <span itemProp="headline"><a href="{book.node.link}">{book.node.title}</a></span>
+                  <span itemProp="headline"><a href={book.node.link}>{book.node.title}</a></span>
                 </BookTitle>
                 <AuthorField>- {book.node.author}</AuthorField>
             </Book>
