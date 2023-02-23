@@ -4,10 +4,6 @@ date: 2023-02-22T14:14:00.000Z
 path: /trappings/
 ---
 
-# Done
-
-# All The Trappings
-
 When I first started woodworking, I was hyperfocused on what my work area looked like.  I started out in the garage under our house with just a circular saw and no real idea what I was doing.  Once I figured out how to make “square” cuts with a track saw, my wife bought me a magazine all about workshops.  It was filled with gorgeous pictures of impeccably setup shops.  Every tool was in it’s place, with lines of chisels or handplanes or blades or custom-designed cabinets lining the walls.  I’m a big fan of Philip Morley and his shop is clearly well-stocked:
 
 ![](https://thewoodwhispererguild.com/wp-content/uploads/2021/01/01-Intro-Templates-scaled.jpg)
