@@ -200,6 +200,10 @@ const GlobalStyles = createGlobalStyle`
     ul, ol {
       margin: 0;
       line-height: 1.25;
+
+      @media (min-width: 768px) {
+        line-height: 1.5;
+      }
     }
 
     li {
@@ -222,7 +226,7 @@ const GlobalStyles = createGlobalStyle`
       font-weight: 600;
       color: var(--secondary);
       text-shadow: .2px .2px 0 var(--darkRGB 0.5);
-      
+
 
       &::after {
         width: 0;
