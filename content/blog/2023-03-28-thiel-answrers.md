@@ -14,7 +14,7 @@ One of the interesting bits about the question is that it can be audience-depend
 
 I’ve thought a lot about this question and my answers and I decided to write a bunch of them down.  Chances are you won’t agree with most of them.
 
-**Truth: Fossil Fuels Are Not Only From Fossils**
+### Truth: Fossil Fuels Are Not Only From Fossils
 
 **Explanation:** Almost everyone thinks of oil, coal, natural gas, etc. as Fossil Fuels.  The idea is that the hydrocarbons from dead plant and animal material has condensed and formed the substances we use today.  There's a largely disregarded theory called [Abiogenic Petroleum Theory](https://en.wikipedia.org/wiki/Abiogenic_petroleum_origin) that challenges the conventional thinking. Hydrocarbons like methane are present on every large rocky body in our solar systems.  Multiple experiments have been done demonstrating that fossil fuels can be produced in temperature/pressure conditions similar to the mantle.  And there are more in-depth analyses that explain particulars like it’s relationship with hydrogen and it’s location in non-sedimentary rock.  
 
@@ -22,7 +22,7 @@ There’s a ton of science behind the conventional theories of oil too, but this
 
 Tommy Gold has a fantastic book on this called [The Deep Hot Biosphere](https://www.amazon.com/Deep-Hot-Biosphere-Fossil-Fuels/dp/0387985468).  It’s a great read.  I don’t think fossil fuels - the bastions of non-renewable energy - will ever run out.  
 
-**Truth: Non-Zero Probability That A Warming Climate Will Be Good.**
+### Truth: Non-Zero Probability That A Warming Climate Will Be Good.
 
 **Explanation:**  Climate change has been presented to us as a sort of slow-motion catastrophe over the next 10 to 100 years (depending on the journalist or politician).  When they get extra unctuous and need to make it more about TODAYRIGHTNOW they’ll cite increasing storm intensity or heat waves or blizzards, skipping the science-y parts where the IPCC discusses these things as either lacking evidence or “low confidence”.
 
@@ -41,7 +41,7 @@ What a lot of the climate debate really comes down to is a philosophical differe
 
 I’m definitely in the humanist camp.  I think most people are wildly deluded by what a natural world actually looks like.  They focus too much on charismatic megafauna and too little on understanding the natural catastrophes and changes that happened before the 19th century.  I believe strongly that humans will continue to flourish in the 21st and 22nd century, that we will continue to get better at adapting to our environment, that our technology will let us get better at impacting the rest of nature less, and that a warmer world could be good for both us and nature.
 
-**Truth: Diversity Is Overrated.**
+### Truth: Diversity Is Overrated.
 
 **Explanation:** “Misunderstood” is a better word than “overrated”, but hey this is a contrarian blog post and I reserve the right to overhype my dramatic titles.
 
@@ -55,7 +55,7 @@ People clump.  People like to be together surrounded by those that think, believ
 
 Ironically, a better form of diversity is thinking about groups of groups.  Today’s identity politics is such a problem because media and political forces incentivize only groups at country-level scale rather than allowing and focusing on the natural clumping of humanity.  And once these groups are formed, it’s too easy to see the mob on the other side as a faceless “Other” and lose respect.  Most of the identity politicians want to push their viewpoint as the federally-approved and country-wide Way and force everyone to agree.  Identity politics leads to the dissolution of anything but the Individual and the State.  We need more institutions with smaller, local memberships and they need to exist across a wide swath of political ideology, culture, and tradition.
 
-**Truth: The Catholic Creed**
+### Truth: The Catholic Creed
 
 **Explanation:** This one certainly depends on audience.  I converted to Catholicism at 24.  I’ve had my own doubts, problems and sallow depressions with religion, but I still believe it.  
 
@@ -69,7 +69,7 @@ That’s a lot to chew on and it’s very countercultural today.  What I find mo
 
 > “The Christian ideal has not been tried and found wanting. It has been found difficult; and left untried.”
 
-**Truth: Healthcare Should Be MORE Capitalist**
+### Truth: Healthcare Should Be MORE Capitalist
 
 **Explanation:** I remember first listening to [this episode](https://www.econtalk.org/keith-smith-on-free-market-health-care/) of Econtalk with Keith Smith. Keith talks about his experience opening the Surgery Center of Oklahoma and trying to provide upfront pricing on procedures.  He basically had to guess on all material costs because there nobody actually knew prices on anything right down to gloves and sutures.  He also talks about what gives hospitals tax-exempt status as nonprofits and what incentive structures this produces.  The main idea here is that any hospital that accepts Medicare (most of them) must provide emergency and medical care regardless of the patient’s ability to pay.  This is a great thing and it was defined under [EMTALA](https://en.wikipedia.org/wiki/Emergency_Medical_Treatment_and_Active_Labor_Act).  But it also helped create incentives for insurance companies and hospitals to maximize the “community benefit” they are providing.  This is why you get $100,000 bills that get reduced down to $10,000 and $50 deductibles through insurance magic.  
 
@@ -83,7 +83,7 @@ On the other hand, look at some of the healthcare procedures that are outside th
 
 We need EMTALA and we need a wide medical and social safety net for anyone without insurance.  But we’d have a better system if we separated those costs from the rest of the system and learned what the heck most medical care _actually_ costs.  Because nobody really knows today.
 
-**Truth: Activism is Not a Force For Good, It’s a Force For Accumulating Power**
+### Truth: Activism is Not a Force For Good, It’s a Force For Accumulating Power
 
 **Explanation:**  My favorite person in the whole world is Greta Thunberg.  Do you believe me??
 
@@ -99,7 +99,7 @@ I wrote awhile back about using [Cincinnatus](/cincinnatus/) as a model of behav
 
 Activism today exploits emotion.  It declares moral superiority to the loudest, reinforces the idea of an elite class, and promotes a lack of self-determination except for shouting.  It has become a force for accumulating power while feeling justified.  
 
-**Truth: Falsifiability**
+### Truth: Falsifiability
 
 **Explanation:**. Everyone looooooooves science.  But not many people really know what science is.  
 
@@ -109,7 +109,7 @@ In my mind, [falsifiability](https://en.wikipedia.org/wiki/Falsifiability) is th
 
 Karl Popper introduced the concept of falsifiability and it should be better understood by more people as the single most key idea of science.  A close runner-up are the [Four Mertonian Norms](https://en.wikipedia.org/wiki/Mertonian_norms)
 
-**Truth: Policy Prescriptions Should Be Defined by False Negatives and False Positives.**
+### Truth: Policy Prescriptions Should Be Defined by False Negatives and False Positives.
 
 **Explanation:** One of the most powerful models I’ve come to rely on is the idea of [false negatives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives).  It’s a great model for thinking about outcomes, probabilities and expectations.  I’ve started to apply it much more to policy positions.  Because here’s the thing: nobody actually wants poverty, or homelessness, or bad schools, or any number of other things.  Both sides like to portray the other guys as evil but that’s just not how human nature works.  What is true is that we tend to focus on different outliers.
 
@@ -120,7 +120,7 @@ Some examples:
 
 Policy decisions are often about which outliers we focus on.  This makes it easy to be critical of the other side.  It’s kind of amazing how broad this lens can be.  This is the tension between capitalism and socialism.  The difference between baseball and golf.  The reason why some people love or hate Elon.
 
-**Truth: The Most Important Trait For Success Is Not Caring What Other People Think.**
+### Truth: The Most Important Trait For Success Is Not Caring What Other People Think.
 
 **Explanation:** I realized this while writing and thinking about Mimetic Theory.  Once you see mimesis it’s everywhere and can’t be unseen. The thing about mimesis is that we’re all susceptible.  We want to want what others want.  We model our desire.
 
@@ -132,7 +132,8 @@ Successful people have found ways to turn this off.  They blaze trails without w
 
 If you want to be successful - in anything - just stop caring what other people think and do your thing.
 
-**Truth: Dashing Optimism!**
+### Truth: Dashing Optimism!
+
 **Explanation:** The world is awesome.  Amazing.  Incredible.  And it’s getting better.
 
 I don’t think I can be more optimistic than that.  The problem is that so many people today are depressed and pessimistic to an almost psychotic level.  We live in the best world for humans in all history BY FAR and yet we’re all sad.  
@@ -153,7 +154,7 @@ We still have lots of problems.  We need to do better for ourselves and the worl
 
 > “This is my long-run forecast in brief:  The material conditions of life will continue to get better for most people, in most countries, most of the time, indefinitely. Within a century or two, all nations and most of humanity will be at or above today's Western living standards.  I also speculate, however, that many people will continue to think and say that the conditions of life are getting worse.” -Julian Simon
 
-**Truth: High Screen Usage Will Be A Sign of Low Class In The Future.**
+### Truth: High Screen Usage Will Be A Sign of Low Class In The Future.
 
 **Explanation:** This is really a prediction but I do think we’re going to see a big change over the next few decades.  We’ve reached market saturation for smartphones: everyone from 8-80 that wants one, has one.  And teenagers still think it’s cool.  But class signals are starting to slowly change.  Someone pointed out that the best way to tell if you’re wealthy today is whether you have a phone case.  Only wealthy people don’t use one.
 
@@ -162,7 +163,7 @@ The same is true for phones and screens in general.  All of these tools are stil
 That trend will continue.  Twenty years from now, the ultra wealthy will live in the real world, drive “classic” analog cars from the 1990s, write in their paper notebooks, and ask their assistants (whether AI or human) to manage their email and online presence.  We’re seeing some of this already.
 
 
-**Last Truth: Contrarianism Is Important In Theory But Not In Practice.**
+### Last Truth: Contrarianism Is Important In Theory But Not In Practice.
 
 **Explanation:** I enjoy practicing contrarianism.  It’s a way to force yourself to think independently.  
 
