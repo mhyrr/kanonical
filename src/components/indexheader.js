@@ -70,13 +70,11 @@ const IndexHeader = () => {
       <ul>
         <li>3 amazing kids and 1 amazing wife</li>
 
-        <li>Still go to church</li>
+        <li>Still goes to church</li>
 
-        <li>Split time between Maryland and Delaware</li>
+        <li>Splits time between Maryland and Delaware</li>
 
-        <li>Bought a pontoon boat to hang out, fish, and drink beer</li>
-
-        <li>42 and still feel like a wide-eyed little kid</li>
+        <li>42 and feels like a wide-eyed little kid</li>
 
         <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
@@ -84,13 +82,17 @@ const IndexHeader = () => {
 
         <li>Runs a lot</li>
 
+        <li>Will choose a beer and cigar with friends over nearly any other activity</li>
+
         <li>Like <a href="https://www.goodreads.com/quotes/1896-when-i-have-a-little-money-i-buy-books-and">Erasmus</a>, would choose books first over food and clothes</li>
 
         <li>Raced cars and taught other people how to race cars</li>
 
+        <li>Has 3 half-written messes that look like novels if you squint.. at some point a <i>finished</i> novel will be on this list!</li>
+
         <li>Helped build a company from 2 to 200+ </li>
 
-        <li>Love building things out of (wood | words | code | ideas)</li>
+        <li>Loves building things out of (wood | words | code | ideas)</li>
       </ul>
       </BioPara>
     </BioHeader>
@@ -127,6 +129,10 @@ const BioHeader = styled.div`
   padding-bottom: .5rem;
   strong {
       display:contents !important;
+  }
+
+  a {
+    color: var(--secondary);
   }
 `;
 
