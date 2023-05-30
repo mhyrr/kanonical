@@ -11,8 +11,8 @@ const GlobalStyles = createGlobalStyle`
     --darkRGB: 49, 51, 73;
     --light: #fffdfa;
     --lightRGB: 255, 253, 250;
-    --primary: #81B29A;
-    --primaryRGB: 129, 178, 154;
+    --primary: #39D085;
+    --primaryRGB: 57, 208, 133;
     --secondary: #DB6443;
     --secondaryRGB: 247, 125, 49;
     --yellowHighlight: F4D7A4;
@@ -76,8 +76,8 @@ const GlobalStyles = createGlobalStyle`
     --lightRGB: 49, 51, 73;
     --primary: #DB6443;
     --primaryRGB: 219, 100, 67;
-    --secondary: #81B29A;
-    --secondaryRGB: 129, 178, 154;
+    --secondary: #39D085;
+    --secondaryRGB: 57, 208, 133;
     --yellowHighlight: F4D7A4;
     --yellowRGB: 242, 205, 145;
     --alpha: 0.2;
