@@ -139,7 +139,6 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const types = data.allMarkdownRemark.distinct
 
-
   // State for the list
   const [list, setList] = useState([...posts.slice(0, 200)])
 
@@ -161,6 +160,15 @@ const BlogIndex = ({ data, location }) => {
       setLoadMore(true)
     }
   }
+
+  useEffect(() => {
+    const loadedType = location.hash;
+    if (loadedType.startsWith('#')) {
+
+      console.log(loadedType.slice(1));
+      setTypeFilter(loadedType);
+    }
+  }, [])
 
 
   //Initialize the intersection observer API
