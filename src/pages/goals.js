@@ -177,7 +177,7 @@ const Goals = ({ data, location }) => {
 
         I used to think this was dumb.
         "Only the milquetoast underachievers set Resolutions," said I.
-        Then I tried it. And learned I was foolish.  Writing down goals helped me stay focused on what mattered for the whole year.
+        Then my wife did it one year.  So I tried it. And learned I was foolish.  Writing down goals helped me stay focused on what mattered for the whole year.
 
         I don't hit them all.  If I did, they probably wouldn't be very good goals.  But it still helped a lot.
         <br/><br/>
