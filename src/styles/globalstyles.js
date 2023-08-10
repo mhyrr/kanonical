@@ -180,6 +180,11 @@ const GlobalStyles = createGlobalStyle`
       top: -100px;
     }
 
+
+    .orange {
+      background-color: rgba(var(--secondaryRGB), 0.2);
+    }
+
     blockquote {
       padding: calc(var(--spacing) * .8);
       margin: calc(var(--spacing) * 0);
@@ -190,6 +195,7 @@ const GlobalStyles = createGlobalStyle`
         margin: calc(var(--spacing) * 1);
         width: 92%;
       }
+
 
     }
 
