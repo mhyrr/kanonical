@@ -22,7 +22,7 @@ Which is why it’s so great to realize that someone like Ed Witten came from th
 
 Ramanujan was _starved_ for mathematical peers.  He wrote to people in England because he couldn’t find anyone he could do math with where he lived - he outstripped the local college students and their textbooks as a little kid.  What Ramanujan was looking for was _peers_.  He wanted to find people with the same capabilities and interests as him.
 
-Perhaps the most powerful attribute of the internet is the ability to connect people with similar interests and capabilities.  This single world-encompassing network has completely obviated the problem of Ramanujan.  If he were born today in another poor, rural village in southern India, he’d be gobbling up Wikipedia articles and Math Olympiad problems from a cheap cell phone.  The world has gotten smart enough to find the Ramanujan’s, the Terry Tao’s, the Ed Wittens, the Elon Musks.
+Perhaps the most powerful attribute of the internet is the ability to connect people with similar interests and capabilities.  This single world-encompassing network has completely obviated the problem of Ramanujan.  If he were born today in another poor, rural village in southern India, he’d be gobbling up Wikipedia articles and Math Olympiad problems from a cheap cell phone.  The world has gotten smart enough to find the Ramanujans, the Terry Taos, the Ed Wittens, the Elon Musks.
 
 The problem today is a bit different.  Today it’s all out there, but it’s too easy to be consumed by everything else.  There’s three scenarios Ramanujan in 2023 might find himself in:
 
@@ -36,4 +36,4 @@ We’re not just talking about mathematicians and physicists either.  Pick your 
 
 Content creation is the thing-to-do in 2023.  I used to be dismissive of this idea - it’s just the new cool thing all the kids want to do.  But I’ve changed my tune a bit.  Content is king, not because of our consumption, rather as action that allows genius to be discoverable.  Maybe all of our conspicuous digital consumption - all the likes and hearts - are just the social transaction costs of making all of the skills and talents discoverable via this weird global network called the Internet.  
 
-But I’ll tell you this, the key is being relentlessly interested in something.  And producing not consuming.
+But I’ll tell you this, the key for building up rare talent or genius is in producing and not consuming.  And being relentlessly interested.
