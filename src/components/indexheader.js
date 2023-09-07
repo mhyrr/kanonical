@@ -74,11 +74,13 @@ const IndexHeader = () => {
 
         <li>Splits time between Maryland and Delaware</li>
 
-        <li>42 and feels like a wide-eyed little kid</li>
+        <li>43 and feels like a wide-eyed little kid</li>
 
         <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
         <li>Bought our 2nd house at the beach 5 years ago and paid it off</li>
+
+        <li>Drove from Maryland to California and back with the family to see the country and have a blast in a rented RV</li>
 
         <li>Runs a lot</li>
 

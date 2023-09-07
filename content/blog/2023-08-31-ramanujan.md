@@ -4,13 +4,13 @@ date: 2023-08-31T13:38:00.000Z
 path: /ramanujan/
 ---
 
-Recently I did some reading about [Ed Witten](https://en.wikipedia.org/wiki/Edward_Witten).  Witten is notorious for being the very smartest person in rooms filled with very, very smart people: namely physicists and mathematicians.  Despite being a quantum physicist, he also won the Fields Medal in mathematics.  He is the progenitor of M-theory, used to unify all of different variations of string theory.  By any measure, he’s a creative intellect with the same kind of raw power as an Einstein or a Schrodinger.
+Recently I did some reading about [Ed Witten](https://en.wikipedia.org/wiki/Edward_Witten).  Witten is notorious for being the very smartest person in rooms filled with very, very smart people: namely physicists and mathematicians.  Despite being a quantum physicist, he also won the Fields Medal in mathematics; the only physicist to do so..  He is the progenitor of M-theory, used to unify all of the different variations of string theory.  By any measure, he’s a creative intellect with the same kind of raw power as an Einstein or a Schrodinger.
 
 What was really interesting about him to me will only be interesting to a much smaller set of people.  I read his biography and said, “Wow, he’s from Baltimore.”
 
 That’s where I’m from.  
 
-In fact, he went to the Park School which is not far from my childhood home.  I had friends that went there.  If you’re like almost anyone else I know you have a default thought in your head that goes something like this:  “Nothing interesting ever happens where I’m from.  Nobody interesting comes from where I’m from.  That’s what people from [Oliver Anthony](https://www.youtube.com/watch?v=sqSA-SY5Hro&pp=ygUgb2xpdmVyIGFudGhvbnkgbm9ydGggb2YgcmljaG1vbmQ%3D)’s small town in Virginia were saying too.
+In fact, he went to the Park School which is not far from my childhood home.  I had friends that went there.  If you’re like almost anyone else I know you have a default thought in your head that goes something like this:  “Nothing interesting ever happens where I’m from.  Nobody interesting comes from where I’m from." That’s what people from [Oliver Anthony](https://www.youtube.com/watch?v=sqSA-SY5Hro&pp=ygUgb2xpdmVyIGFudGhvbnkgbm9ydGggb2YgcmljaG1vbmQ%3D)’s small town in Virginia were saying too.
 
 A little over a hundred years ago, GH Hardy got a letter from a kid in India with complicated mathematical formulas that “seemed scarcely possible to believe.”  That kid was [Srinivasa Ramanujan](https://en.wikipedia.org/wiki/Srinivasa_Ramanujan) and you should go take a look at some of his infinite series - they are TOTALLY opaque.  He came to England and worked directly with Hardy, died early at just 32, and is known today as one of the most incredible pure, intuitive mathematicians the world has ever seen.  The story of Good Will Hunting was partly inspired by Ramanujan’s life.
 
