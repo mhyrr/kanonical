@@ -80,7 +80,7 @@ const IndexHeader = () => {
 
         <li>Bought our 2nd house at the beach 5 years ago and paid it off</li>
 
-        <li>Drove from Maryland to California and back with the family to see the country and have a blast in a rented RV</li>
+        <li>Drove from Maryland to California and back with the family to see the country and have a blast in a <a href="https://www.kanonical.io/rving"rented RV</a></li>
 
         <li>Runs a lot</li>
 
