@@ -9,15 +9,48 @@ const RVSection = styled.section`
   ul {
     padding: 0;
     margin: 0;
+    list-style-type: none;
   }
 
-  li {
-    line-height: 1.5;
-  }
 
   .gatsby-resp-image-wrapper {
     margin: 0.5rem;
   }
+
+
+    header {
+      p {
+        font-style: italic;
+      }
+    }
+
+
+    font-weight: 400;
+    font-size: var(--h4);
+    color: var(--dark);
+
+
+    @media (min-width: 1800px) {
+      --h1: 2.8rem;
+      --h2: 2rem;
+      --h3: 1.8rem;
+      --h4: 1.6rem;
+      --h5: 1.4rem;
+      --para: 1.1rem;
+    }
+
+    h1 {
+      color: var(--dark);
+      text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+    }
+
+    h2, h3 {
+      font-size: var(--h4);
+      color: var(--dark);
+      text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+      margin: calc(var(--spacing) * 1.5 ) 0;
+    }
+
 
   & a {
     text-decoration: underline;
