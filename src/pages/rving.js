@@ -54,7 +54,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(frontmatter: {path: {eq: "/rving"}}) {
+    markdownRemark(frontmatter: {path: {eq: "/rving/"}}) {
       id
       html
       frontmatter {
