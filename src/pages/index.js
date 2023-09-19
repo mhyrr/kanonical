@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostList from "../components/post-list"
-import BookIndex from "./books"
+
 import IndexHeader from "../components/indexheader"
 import { BookList, Book, BookTitle, AuthorField } from "./books"
 
@@ -13,10 +13,14 @@ const Index = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const workoutData = data.allGoogleSpreadsheetStravaSheet1.nodes
   const books = data.allGoogleSpreadsheetBooksBooks.edges
+  const quotes = data.allGoogleSpreadsheetLinksLinks.edges
 
   const rightNow = books.filter(book => {
     return book.node.current == "y"
   })
+
+  
+
 
   let today = new Date().getFullYear();
   const booksThisYear = books.filter(book => {
@@ -65,6 +69,26 @@ const Index = ({ data, location }) => {
 
       <SmallGrid>
         <li>
+          <IndexTitle>Projects</IndexTitle>
+            <Questions>
+              <li><a href="https://www.collegevalue.dev/">CollegeValue</a> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
+              <li><b>Technology For Parents</b> - Charting a course for parents to navigate technology for their children - coming soon!</li>
+              <li><b>Slower Lower Charcuterie</b> - coming soon!</li>
+            </Questions>
+        </li>
+        <li>
+          <IndexTitle>Things I'm Wondering</IndexTitle>
+            <Questions>
+              <li>How are phones and technology changing the way we grow up?</li>
+              <li>What do people actually need out of college?</li>
+              <li>How can more people enjoy two houses?</li>
+              <li>How can work on small projects drive family revenue?</li>
+              <li>What does it take to write a spy novel?</li>
+            </Questions>
+        </li>
+      </SmallGrid>
+      <SmallGrid>
+        <li>
           <IndexTitle>Workouts I've Killed</IndexTitle>
           <Workouts>
           {workouts.map(run => {
@@ -80,14 +104,16 @@ const Index = ({ data, location }) => {
           </Workouts>
         </li>
         <li>
-          <IndexTitle>Things I'm Wondering</IndexTitle>
-            <Questions>
-              <li>How are phones and technology changing the way we grow up?</li>
-              <li>What do people actually need out of college?</li>
-              <li>How can more people enjoy two houses?</li>
-              <li>How can work on small projects drive family revenue?</li>
-              <li>What does it take to write a spy novel?</li>
-            </Questions>
+          <IndexTitle>Quotes Newly Discovered</IndexTitle>
+          <Questions>
+            {quotes.map(q => {
+              return (
+                <li>{q.node.content}<br/><QuoteAuthor>-{q.node.title}</QuoteAuthor></li>
+              )
+
+            })}
+
+          </Questions>
         </li>
       </SmallGrid>
 
@@ -104,7 +130,7 @@ const SmallGrid = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit,minmax(23ch,1fr));
-  margin: calc(var(--spacing) * 2) 0;
+  margin: calc(var(--spacing) * 1.5) 0;
 
   li {
     margin: 0;
@@ -118,7 +144,11 @@ const Workouts = styled.ul`
   padding: 0;
   margin: 0;
   justify-items: left;
+  padding: .5rem;
 
+  li {
+    padding-bottom: .5rem;
+  }
 `;
 
 const Questions = styled.ul`
@@ -135,6 +165,19 @@ const Questions = styled.ul`
     font-weight: 300;
     color: var(--dark);
     text-shadow: .2px .2px 0 var(--primaryRGB 0.5);
+
+    & a {
+      text-decoration: underline;
+      color: var(--secondary);
+      text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+      font-weight: 400;
+    }
+
+    & b {
+      color: var(--secondary);
+      text-shadow: .2px .2px 0 var(--darkRGB 0.5);
+      font-weight: 400;
+    }
   }
 `;
 
@@ -153,6 +196,16 @@ const Pace = styled.span`
   font-size: var(--h6);
   color: var(--primary);
   font-weight: 300;
+  
+`;
+
+const QuoteAuthor = styled.span`
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--h6);
+  color: var(--primary);
+  font-weight: 300;
+  float: right;
 `;
 
 const IndexTitle = styled.h2`
@@ -168,12 +221,13 @@ const IndexTitle = styled.h2`
 
 const IndexSubtitle = styled.h4`
   margin: .5rem;
+  padding: 1rem;
   text-align: center;
     & a {
       text-decoration: underline;
       color: var(--secondary);
       text-shadow: .2px .2px 0 var(--darkRGB 0.5);
-      font-weight: 600;
+      font-weight: 400;
     }
 `
 
@@ -215,6 +269,14 @@ export const pageQuery = graphql`
           author
           done
           link
+          title
+        }
+      }
+    }
+    allGoogleSpreadsheetLinksLinks(limit: 4, filter: {content: {regex: "/^(?!https:\/\/)/"}}) {
+      edges {
+        node {
+          content
           title
         }
       }

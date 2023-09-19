@@ -5,11 +5,13 @@ path: "/about-page/"
 type: about
 ---
 
-### Reach Out!
+## Reach Out!
 
 I'd love to talk!  [Hit me up](mailto:hey@kanonical.io).
 
-### Colophon
+
+
+#### Colophon
 
 I've gone through all sorts of different frameworks and tools for building websites including Wordpress, Ghost, wikis, and any number of static site generators.  A lot of people prefer a tool they can just setup and start writing.  Because that's the focus: writing.  I'm just not wired like that.  I'll use all sorts of templated or no-code tools to move projects along faster.  But this right here is my home on the internet, and it will always need to be handcrafted dammit!  Don't know why, but that's how it is.  
 
