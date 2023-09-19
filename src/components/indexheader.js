@@ -68,7 +68,7 @@ const IndexHeader = () => {
       <BioPara>
       Credentials are sooo boring. I like this list better.
       <ul>
-        <li>3 amazing kids and 1 amazing wife</li>
+        <li>3 amazing kids and 1 amazing <a href="https://www.justadream.co">wife</a></li>
 
         <li>Still goes to church</li>
 
