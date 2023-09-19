@@ -24,12 +24,8 @@ export const mainMenuItems = [
     title: "Books",
   },
   {
-    path: "https://www.justadream.co",
-    title: "Beach",
-  },
-  {
     path: "/about",
-    title: "about",
+    title: "Contact",
   },
 ]
 
