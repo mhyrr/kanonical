@@ -92,7 +92,7 @@ const IndexHeader = () => {
 
         <li>Has 3 half-written messes that look like novels if you squint.. at some point a <i>finished</i> novel will be on this list!</li>
 
-        <li>Helped build a company from 2 to 200+ </li>
+        <li>Helped build a company from 2 to 250+ </li>
 
         <li>Loves building things out of (wood | words | code | ideas)</li>
       </ul>
