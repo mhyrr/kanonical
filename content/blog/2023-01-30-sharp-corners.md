@@ -5,7 +5,7 @@ path: /sharp-edges/
 ---
 
 
-This little treatise called [Caviar Cope]([https://www.otherlife.co/signs91/]) was making the rounds in the last week or two.  It properly decries and laments the declining state of media today, as any philosopher of the age worth their salt should.  And it resonated too.  I live some of this, not as an elite, but as a declasse and faux-elite PMC as much as I’m loathe to admit it.  I love the All-In podcast. I felt sucked in to White Lotus (although I did stop after a couple episodes).  But the final point is far more striking:
+This little treatise called [Caviar Cope](https://www.otherlife.co/signs91/) was making the rounds in the last week or two.  It properly decries and laments the declining state of media today, as any philosopher of the age worth their salt should.  And it resonated too.  I live some of this, not as an elite, but as a declasse and faux-elite PMC as much as I’m loathe to admit it.  I love the All-In podcast. I felt sucked in to White Lotus (although I did stop after a couple episodes).  But the final point is far more striking:
 
 > ..These shows are not trying to say anything pointed. They're trying to arrive at whatever pastiche of scenery and signifiers would be maximally rewarded by the megamachine. And right now, the optimized formula is: Grandiose scenery + absurd wealthy people hilariously affirming and negating everything at once + no clear plot or value system that could offend or stress anyone.
 
