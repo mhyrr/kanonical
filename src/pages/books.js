@@ -226,6 +226,7 @@ const BookIndex = ({ data, location }) => {
           <YearsTitle>Favorites Of The Last Few Years</YearsTitle>
 
         <ul>
+          <li><Link to={'/books-2023/'} itemProp="url">Best of 2023</Link></li>
           <li><Link to={'/books-2022/'} itemProp="url">Best of 2022</Link></li>
           <li><Link to={'/books-2021/'} itemProp="url">Best of 2021</Link></li>
           <li><Link to={'/books-2020/'} itemProp="url">Best of 2020</Link></li>
