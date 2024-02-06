@@ -68,7 +68,7 @@ const IndexHeader = () => {
       <BioPara>
       Credentials are sooo boring. I like this list better.
       <ul>
-        <li>3 amazing kids and 1 amazing <a href="https://www.justadream.co">wife</a></li>
+        <li>3 amazing kids and 1  <a href="https://www.justadream.co">amazing wife</a></li>
 
         <li>Still goes to church</li>
 
@@ -80,7 +80,7 @@ const IndexHeader = () => {
 
         <li>Bought our 2nd house at the beach 5 years ago and paid it off</li>
 
-        <li>Drove from Maryland to California and back with the family to see the country and have a blast in a <a href="https://www.kanonical.io/rving">rented RV</a></li>
+        <li><a href="https://www.kanonical.io/rving">Drove from Maryland to California and back</a> with the family to see the country and have a blast in a rented RV</li>
 
         <li>Runs a lot</li>
 
