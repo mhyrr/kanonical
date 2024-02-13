@@ -100,6 +100,10 @@ blockquote {
     margin: 0;
   }
 
+  p:nth-child(2) {
+    margin-top: 1em;
+  }
+
   @media (min-width: 768px) {
     padding: calc(var(--spacing) * 3) calc(var(--spacing) * 2);
   }
