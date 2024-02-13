@@ -8,7 +8,7 @@ I want to talk about two really big numbers. I know, math. Bear with me though b
 
 ### Power Towers and Knuth
 
-My first number is called `Super K`, and it is described by the inestimable Donald Knuth in his book [_Things a Computer Scientist Rarely Talks About_](https://www.amazon.com/Things-Computer-Scientist-Rarely-Lecture/dp/157586326X). The book is compiled from a series of lectures he gave and someone finally YouTube'd them. So if you'd like the [better, original version from Donald Knuth himself](https://www.youtube.com/watch?v=VoKye2hFcb0), I highly encourage a listen.
+My first number is called `Super K`, and it is described by the inestimable Donald Knuth in his book [_Things a Computer Scientist Rarely Talks About_](https://www.amazon.com/Things-Computer-Scientist-Rarely-Lecture/dp/157586326X). The book is compiled from a series of lectures he gave and someone finally YouTube'd them. So if you'd like the [better, original version from Donald Knuth himself](https://www.youtube.com/watch?v=VoKye2hFcb0), I highly encourage a listen.  I've also [talked about this number](/tuesday-at-4/) pretty recently, because I love what it tells us about what I call 'adverb infinitudes'.  Anyway..
 
 Knuth invented the up-arrow notation in the 1970s as a shorthand way to express something fancy called [hyperoperators](https://en.wikipedia.org/wiki/Hyperoperation). Don't be worried about the fancy words! It's quite simple, so let's start with addition.
 
