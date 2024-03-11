@@ -34,11 +34,11 @@ ul,
   margin: calc(var(--spacing) * 2) 0;
 
   @media (min-width: 768px) {
-    margin: calc(var(--spacing) * 3) 0;
+    margin: calc(var(--spacing) * 2) 0;
   }
 
   @media (min-width: 1200px) {
-    margin: calc(var(--spacing) * 4) 0;
+    margin: calc(var(--spacing) * 2) 0;
   }
 }
 
