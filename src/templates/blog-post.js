@@ -47,13 +47,13 @@ const BlogPostStyles = styled.div`
 
   h1 {
     color: var(--dark);
-    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+    text-shadow: 2px 2px 0 rgba(var(--secondaryRGB), var(--alpha));
   }
 
   h2, h3 {
     font-size: var(--h4);
     color: var(--dark);
-    text-shadow: 2px 2px 0 rgba(var(--primaryRGB), var(--alpha));
+    text-shadow: 2px 2px 0 rgba(var(--secondaryRGB), var(--alpha));
     margin: calc(var(--spacing) / 2) 0;
   }
 
