@@ -24,7 +24,7 @@ Donald Knuth famously said that "premature optimization is the root of all evil"
 >
 > 1. Don't do it
 >
-> 2 (For experts only) Don't do it yet.
+> 2. (For experts only) Don't do it yet.
 
 The point is that when we evaluate problems, we rarely do it with perfect efficiency the first time. Optimization is _fun._ It's exciting. But it's also rare that optimization is really the thing you need. There's usually a pile of hard or annoying or frustrating or tedious things you have to do first. Maybe the tedious things could be automated, but that's also an expert's call.. so you should do a bunch of the tedious things first! Become an expert.
 
@@ -33,11 +33,11 @@ Responsible and capable people usually worry excessively and over-plan. This is 
 Because here's the thing about priorities: they are revealed by our actions. You can state whatever you want, that doesn't make it a priority. [Merlin Mann got this exactly right](https://www.43folders.com/2009/04/28/priorities):
 
 > "A priority is _observed_, not manufactured or assigned. Otherwise, it's necessarily _not_ a priority."
->
+>  
 > When most people say, "prioritize," I think they really mean to say, "force-rank" -- to assign _n_ items one and only one position between "1" and "_n_." Right? So, yes, there's one "#1" and one "#7," et cetera. But that's not "priority," and that's why you probably have at least one task on your version of a to-do list that has been "**HIGH PRIORITY!!!**" for more than a month.
->
+>  
 > Got news for you, Jack: if it moves, it's not a priority. It's just a thing you haven't done yet.
->
+>  
 > Making something a **BIG RED TOP TOP BIG HIGHEST #1 PRIORITY** changes nothing but text styling. If it were really important, it'd already be done. Period. Think about it.
 
 If you really need to do something, you'd handle it today. Right now. This minute.
@@ -50,4 +50,6 @@ Which is the main point. The phrase "If you wait until the last minute, it only 
 
 If you schedule a meeting for an hour, it's going to take an hour. A 30 minute phone call will take 30 minutes. Three days set aside for a key slideshow presentation will take all 3 days.
 
-Remember this when you're so eager to atomize and fill your schedule.
+But this isn't just about _time_: LOTS of things expand to fill whatever space is available whether that's your attention, your brain space, or your physical capacity.
+
+Remember this when you're so eager to atomize your life and fill your schedule.
