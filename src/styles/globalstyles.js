@@ -163,6 +163,7 @@ const GlobalStyles = createGlobalStyle`
 
   .blog-post {
 
+
     header, footer {
       display: flex;
       flex-direction: column;
@@ -250,6 +251,16 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
+    pre {
+      .language-text {
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;   
+      }
+    }
+
   }
 
   img {
@@ -265,6 +276,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
   }
+
+
 
   .nav-link {
     font-weight: var(--heavyWeight);
