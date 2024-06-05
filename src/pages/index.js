@@ -71,17 +71,16 @@ const Index = ({ data, location }) => {
         <li>
           <IndexTitle>Projects</IndexTitle>
             <Questions>
-              <li><a href="https://www.collegevalue.dev/">CollegeValue</a> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
-              <li><b>Technology For Parents</b> - Charting a course for parents to navigate technology for their children - coming soon!</li>
-              <li><b>Slower Lower Charcuterie</b> - coming soon!</li>
+              <li><a href="https://github.com/mhyrr/collegevalue">CollegeValue</a> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
+              <li><b>Brains Are Plastic</b> - A Both/And view of understanding technologyh for parents - coming soon!</li>
             </Questions>
         </li>
         <li>
           <IndexTitle>Things I'm Wondering</IndexTitle>
             <Questions>
               <li>How are phones and technology changing the way we grow up?</li>
-              <li>What do people actually need out of college?</li>
-              <li>How can more people enjoy two houses?</li>
+              <li>Can restaurants use spreadsheets as menus?</li>
+              <li>How do you get better at speaking?</li>
               <li>How can work on small projects drive family revenue?</li>
               <li>What does it take to write a spy novel?</li>
             </Questions>
