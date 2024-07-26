@@ -71,8 +71,9 @@ const Index = ({ data, location }) => {
         <li>
           <IndexTitle>Projects</IndexTitle>
             <Questions>
+              <li><b><a href="https://brainsareplastic.substack.com/">Brains Are Plastic</a></b> - A Both/And view of understanding technology for parents - coming soon!</li>
               <li><a href="https://github.com/mhyrr/collegevalue">CollegeValue</a> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
-              <li><b>Brains Are Plastic</b> - A Both/And view of understanding technology for parents - coming soon!</li>
+              
             </Questions>
         </li>
         <li>
