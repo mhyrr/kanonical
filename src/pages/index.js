@@ -43,7 +43,11 @@ const Index = ({ data, location }) => {
 
       <IndexHeader/>
 
+      <IndexTitle>I'm Trying Something New Here...</IndexTitle>
 
+      I've started a Substack! If you've made it this far, you should sign up!
+
+      <iframe src="https://brainsareplastic.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
       <IndexTitle>Things I've Written</IndexTitle>
 
