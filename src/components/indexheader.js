@@ -77,7 +77,7 @@ const IndexHeader = () => {
         <li>Will choose a beer and cigar with friends over nearly any other activity</li>
 
 
-        <li>43 and feels like a wide-eyed little kid</li>
+        <li>44 and feels like a wide-eyed little kid</li>
 
         <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
