@@ -74,20 +74,19 @@ const IndexHeader = () => {
 
         <li>Splits time between Maryland and Delaware</li>
         
-        <li>Will choose a beer and cigar with friends over nearly any other activity</li>
+        <li>Will choose a cigar and whiskey with friends over nearly any other activity</li>
 
         <li>44 and feels like a wide-eyed little kid</li>
 
+        <li>Like <a href="https://www.goodreads.com/quotes/1896-when-i-have-a-little-money-i-buy-books-and">Erasmus</a>, would choose books first over food and clothes</li>
+
         <li>Wrote software or led software teams for a living for 20 years, including some fun machine learning and model training stuff</li>
 
-        <li><a href="https://www.kanonical.io/rving">Drove from Maryland to California and back</a> with the family to see the country and have a blast in a rented RV</li>
-
-
-        <li>Like <a href="https://www.goodreads.com/quotes/1896-when-i-have-a-little-money-i-buy-books-and">Erasmus</a>, would choose books first over food and clothes</li>
+        <li><a href="https://www.kanonical.io/rving">Drove across the country</a> with the family to have a blast and see the country in a rented RV. <a href="https://www.kanonical.io/rv-trip-2/">Twice!</a></li>
 
         <li>Runs a lot</li>
 
-        
+      
 
         <li>Raced cars and taught other people how to race cars</li>
 

@@ -74,18 +74,19 @@ const Index = ({ data, location }) => {
         <li>
           <IndexTitle>Projects</IndexTitle>
             <Questions>
-              <li><b><a href="https://brainsareplastic.substack.com/">Brains Are Plastic</a></b> - A Both/And view of understanding technology for parents - coming soon!</li>
-              <li><a href="https://github.com/mhyrr/collegevalue">CollegeValue</a> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
+              <li><b><a href="https://www.thefuriousopposites.com/">The Furious Opposites</a></b> - A Both/And view of understanding technology. Go subscribe!</li>
+              <li><b><a href="https://faradash.com/">Faradash</a></b> - A dashboard of foreign spending based on Foreign Agent Registration data. Vibecoded on a Tuesday.</li>
+              <li><b><a href="https://github.com/mhyrr/collegevalue">CollegeValue</a></b> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.  Based on open-source data from the Department of Education. </li>
               
             </Questions>
         </li>
         <li>
           <IndexTitle>Things I'm Wondering</IndexTitle>
             <Questions>
-              <li>How are phones and technology changing the way we grow up?</li>
+              <li>How are phones and AI are changing the way we grow up?</li>
+              <li>How can work on small projects drive family revenue?</li>
               <li>Can restaurants use spreadsheets as menus?</li>
               <li>How do you get better at speaking?</li>
-              <li>How can work on small projects drive family revenue?</li>
               <li>What does it take to write a spy novel?</li>
             </Questions>
         </li>
