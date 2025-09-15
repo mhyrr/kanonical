@@ -2,7 +2,6 @@
 title: The New Rules of Building Wealth
 date: 2025-07-23T21:04:00.000Z
 path: /2025-wealth-rules/
-type: goals
 ---
 
 ## An Investing Guide for Young People Who Want to Win
