@@ -484,4 +484,607 @@ The migration is complete when:
 
 ---
 
+## Appendix D: Hugo Migration Roadmap
+
+**Framework Decision: Hugo**
+
+After evaluation, Hugo is the recommended framework for this migration based on:
+- Single binary (zero runtime dependencies)
+- 13+ years of stability
+- Sub-second builds
+- Native data file support for Google Sheets integration
+- Proven 10+ year longevity track record
+
+### D.1 Target Architecture
+
+```
+kanonical-hugo/
+├── content/
+│   ├── blog/                    # Migrated from /content/blog/
+│   │   └── 2024-01-15-post.md
+│   ├── about.md                 # Static pages as content
+│   ├── essays/                  # Filtered collection
+│   └── goals/                   # Filtered collection
+├── data/
+│   ├── books.json               # ← Fetched from Google Sheets
+│   ├── workouts.json            # ← Fetched from Google Sheets
+│   ├── links.json               # ← Fetched from Google Sheets
+│   └── words.json               # ← Fetched from Google Sheets
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html          # Base template
+│   │   ├── list.html            # List pages (blog index, etc.)
+│   │   └── single.html          # Single post template
+│   ├── partials/
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   ├── head.html            # Meta, CSS, theme script
+│   │   └── post-card.html
+│   ├── blog/
+│   │   ├── list.html            # Blog listing with infinite scroll
+│   │   └── single.html          # Blog post template
+│   ├── tumble/
+│   │   └── list.html            # Tumble page with masonry
+│   └── index.html               # Homepage
+├── static/
+│   ├── js/
+│   │   └── main.js              # Transitions, progress bar, dark mode
+│   ├── css/
+│   │   └── style.css            # Or use Hugo Pipes for SCSS
+│   └── images/
+├── assets/                      # For Hugo Pipes (SCSS, JS bundling)
+├── scripts/
+│   └── fetch-sheets.py          # Google Sheets → JSON
+├── hugo.toml                    # Site configuration
+├── netlify.toml                 # Deployment configuration
+└── README.md
+```
+
+### D.2 Phase 1: Foundation (The Proof)
+
+**Goal:** One blog post renders correctly with working local dev.
+
+**Steps:**
+
+1. **Install Hugo**
+   ```bash
+   # macOS
+   brew install hugo
+
+   # Verify
+   hugo version
+   ```
+
+2. **Scaffold new site**
+   ```bash
+   hugo new site kanonical-hugo
+   cd kanonical-hugo
+   ```
+
+3. **Create minimal theme structure**
+   ```bash
+   mkdir -p layouts/_default layouts/partials
+   ```
+
+4. **Create base template** (`layouts/_default/baseof.html`)
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>{{ .Title }} | Kanonical</title>
+     <link rel="stylesheet" href="/css/style.css">
+   </head>
+   <body>
+     {{ partial "header.html" . }}
+     <main>
+       {{ block "main" . }}{{ end }}
+     </main>
+     {{ partial "footer.html" . }}
+   </body>
+   </html>
+   ```
+
+5. **Copy one blog post** from `/content/blog/` to test
+   - Verify frontmatter compatibility
+   - Hugo uses `url:` instead of `path:` for custom URLs
+
+6. **Run local server**
+   ```bash
+   hugo server -D
+   # Site at http://localhost:1313
+   ```
+
+**Success Criteria:** Blog post renders at correct URL, hot reload works.
+
+### D.3 Phase 2: Content Migration
+
+**Goal:** All 50+ blog posts rendering with correct URLs.
+
+**Steps:**
+
+1. **Frontmatter adaptation**
+
+   Current Gatsby format:
+   ```yaml
+   ---
+   title: Post Title
+   date: 2026-01-01T22:39:00.000Z
+   path: /custom-slug/
+   type: goals
+   description: Optional excerpt
+   ---
+   ```
+
+   Hugo format:
+   ```yaml
+   ---
+   title: Post Title
+   date: 2026-01-01T22:39:00.000Z
+   url: /custom-slug/              # 'url' instead of 'path'
+   type: goals
+   description: Optional excerpt
+   tags: []                        # New: optional tags
+   ---
+   ```
+
+2. **Bulk migration script** (`scripts/migrate-frontmatter.py`)
+   ```python
+   # Simple find/replace: 'path:' → 'url:'
+   # Run once, verify, commit
+   ```
+
+3. **Copy content directory**
+   ```bash
+   cp -r ../kanonical/content/blog ./content/
+   ```
+
+4. **Verify URL preservation**
+   ```bash
+   hugo list all | grep -v "draft"
+   # Compare against current sitemap
+   ```
+
+5. **Test internal links**
+   - Hugo has built-in ref/relref for internal links
+   - Or keep as relative markdown links
+
+### D.4 Phase 3: Google Sheets Integration
+
+**Goal:** Books, workouts, links, and words data available in templates.
+
+**Steps:**
+
+1. **Create fetch script** (`scripts/fetch-sheets.py`)
+   ```python
+   #!/usr/bin/env python3
+   """
+   Fetches Google Sheets data and writes to /data/*.json
+
+   Usage: ./scripts/fetch-sheets.py
+
+   Requires: KANONICAL_SHEET_CRED environment variable
+   """
+
+   import os
+   import json
+   from google.oauth2 import service_account
+   from googleapiclient.discovery import build
+
+   SHEETS = {
+       'books': {
+           'id': '1D4K-8Tf-kJKMqqe1zGv6AXs5fQWTbTbxan_gDFmkErE',
+           'range': 'Books!A:F'
+       },
+       'workouts': {
+           'id': '1WKkLtwJujS-AL4WB_sLlxyFtbBgxl6zTcrAoUwnr9O0',
+           'range': 'Sheet1!A:E'
+       },
+       'links': {
+           'id': '1xyxBcVq5TehTu3mW1lL8N0lhTEr0eUUvnH9b16raj8w',
+           'range': 'Links!A:D'
+       },
+       'words': {
+           'id': '1pam_ovDuYjkp5Zm52Y_TgCCTFSbEFjVHWzc_uwNjSQA',
+           'range': 'Words!A:C'
+       }
+   }
+
+   def fetch_sheet(service, sheet_id, range_name):
+       result = service.spreadsheets().values().get(
+           spreadsheetId=sheet_id,
+           range=range_name
+       ).execute()
+       values = result.get('values', [])
+       if not values:
+           return []
+       headers = values[0]
+       return [dict(zip(headers, row)) for row in values[1:]]
+
+   def main():
+       creds_json = os.environ.get('KANONICAL_SHEET_CRED')
+       creds = service_account.Credentials.from_service_account_info(
+           json.loads(creds_json),
+           scopes=['https://www.googleapis.com/auth/spreadsheets.readonly']
+       )
+       service = build('sheets', 'v4', credentials=creds)
+
+       os.makedirs('data', exist_ok=True)
+
+       for name, config in SHEETS.items():
+           data = fetch_sheet(service, config['id'], config['range'])
+           with open(f'data/{name}.json', 'w') as f:
+               json.dump(data, f, indent=2)
+           print(f"Wrote {len(data)} rows to data/{name}.json")
+
+   if __name__ == '__main__':
+       main()
+   ```
+
+2. **Use data in templates**
+   ```html
+   <!-- layouts/index.html -->
+   {{ range first 5 (where site.Data.books "current" "y") }}
+     <li>{{ .title }} by {{ .author }}</li>
+   {{ end }}
+
+   {{ range first 5 site.Data.workouts }}
+     <li>{{ .type }}: {{ .distance }}</li>
+   {{ end }}
+   ```
+
+3. **Local development workflow**
+   ```bash
+   # Fetch once, then iterate on templates
+   python scripts/fetch-sheets.py
+   hugo server
+   ```
+
+4. **Cache data in git** (optional)
+   - Commit `/data/*.json` for faster local dev
+   - Or .gitignore and always fetch
+
+### D.5 Phase 4: Templates & Pages
+
+**Goal:** All pages rendering with correct structure.
+
+**Page Implementation Order:**
+
+| Priority | Page | Template | Data Source |
+|----------|------|----------|-------------|
+| 1 | Blog post | `layouts/blog/single.html` | Markdown |
+| 2 | Blog listing | `layouts/blog/list.html` | Markdown |
+| 3 | Homepage | `layouts/index.html` | Mixed |
+| 4 | Books | `layouts/books/list.html` | data/books.json |
+| 5 | Tumble | `layouts/tumble/list.html` | data/links.json + data/words.json |
+| 6 | Goals | `layouts/goals/list.html` | Filtered markdown |
+| 7 | Essays | `layouts/essays/list.html` | Filtered markdown |
+| 8 | About | `layouts/_default/single.html` | Markdown |
+| 9 | Specialty | As needed | TBD |
+
+**Filtering by type (for /goals, /essays):**
+```html
+{{ range where site.RegularPages "Params.type" "goals" }}
+  <!-- render goal post -->
+{{ end }}
+```
+
+### D.6 Phase 5: Client-Side Interactivity
+
+**Goal:** Page transitions, reading progress, dark mode working.
+
+**Single file approach** (`static/js/main.js`, ~200 lines):
+
+```javascript
+// =====================
+// Dark Mode
+// =====================
+(function() {
+  const STORAGE_KEY = 'theme';
+  const DARK = 'dark';
+  const LIGHT = 'light';
+
+  function getPreferred() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT;
+  }
+
+  function setTheme(theme) {
+    document.documentElement.classList.toggle(DARK, theme === DARK);
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  // Set immediately to prevent flash
+  setTheme(getPreferred());
+
+  // Toggle handler
+  window.toggleTheme = function() {
+    setTheme(document.documentElement.classList.contains(DARK) ? LIGHT : DARK);
+  };
+})();
+
+// =====================
+// Reading Progress
+// =====================
+(function() {
+  const progress = document.getElementById('reading-progress');
+  if (!progress) return;
+
+  function updateProgress() {
+    const scrolled = window.scrollY;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = height > 0 ? (scrolled / height) * 100 : 0;
+    progress.style.width = percent + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
+
+// =====================
+// Page Transitions
+// =====================
+(function() {
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  // Fade in on load
+  main.style.opacity = '0';
+  main.style.transition = 'opacity 0.2s ease';
+  requestAnimationFrame(() => {
+    main.style.opacity = '1';
+  });
+
+  // Fade out on navigate
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link || link.host !== window.location.host) return;
+
+    e.preventDefault();
+    main.style.opacity = '0';
+    setTimeout(() => {
+      window.location = link.href;
+    }, 200);
+  });
+})();
+
+// =====================
+// Infinite Scroll (Blog)
+// =====================
+(function() {
+  const container = document.getElementById('post-list');
+  const sentinel = document.getElementById('scroll-sentinel');
+  if (!container || !sentinel) return;
+
+  let page = 1;
+  const postsPerPage = 10;
+  const allPosts = JSON.parse(document.getElementById('all-posts-data')?.textContent || '[]');
+
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) return;
+
+    const start = page * postsPerPage;
+    const next = allPosts.slice(start, start + postsPerPage);
+
+    if (next.length === 0) {
+      observer.disconnect();
+      return;
+    }
+
+    next.forEach(post => {
+      container.insertAdjacentHTML('beforeend', renderPost(post));
+    });
+
+    page++;
+  }, { rootMargin: '200px' });
+
+  observer.observe(sentinel);
+
+  function renderPost(post) {
+    return `<article class="post-card">...</article>`;
+  }
+})();
+```
+
+**CSS for dark mode** (`static/css/style.css`):
+```css
+:root {
+  --bg: #fffdfa;
+  --text: #313349;
+  --primary: #39D085;
+  --secondary: #DB6443;
+}
+
+:root.dark {
+  --bg: #1a1a2e;
+  --text: #e0e0e0;
+  --primary: #DB6443;
+  --secondary: #39D085;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+```
+
+### D.7 Phase 6: Tumble Page
+
+**Goal:** Masonry layout with filtering, all data rendering.
+
+**Approach:**
+- Use CSS Grid or vanilla JS masonry (no library needed)
+- Filter via JS (show/hide based on type)
+- Data from `site.Data.links` + `site.Data.words`
+
+```html
+<!-- layouts/tumble/list.html -->
+{{ define "main" }}
+<div class="tumble-filters">
+  <button onclick="filterTumble('all')">All</button>
+  <button onclick="filterTumble('link')">Links</button>
+  <button onclick="filterTumble('quote')">Quotes</button>
+  <button onclick="filterTumble('word')">Words</button>
+</div>
+
+<div id="tumble-grid" class="masonry">
+  {{ range site.Data.links }}
+    <div class="tumble-card" data-type="{{ .type }}">
+      {{ .content }}
+      <time>{{ .date }}</time>
+    </div>
+  {{ end }}
+  {{ range site.Data.words }}
+    <div class="tumble-card" data-type="word">
+      <strong>{{ .word }}</strong>
+      <p>{{ .definition }}</p>
+    </div>
+  {{ end }}
+</div>
+
+<script>
+function filterTumble(type) {
+  document.querySelectorAll('.tumble-card').forEach(card => {
+    card.hidden = type !== 'all' && card.dataset.type !== type;
+  });
+}
+</script>
+{{ end }}
+```
+
+### D.8 Phase 7: Polish & Validation
+
+**Checklist:**
+
+- [ ] All URLs match sitemap (run comparison script)
+- [ ] Dark mode: no flash, persists across pages
+- [ ] Page transitions: smooth fade in/out
+- [ ] Reading progress: accurate on all post lengths
+- [ ] Infinite scroll: loads correctly, no duplicates
+- [ ] Tumble: filters work, masonry layout correct
+- [ ] Mobile: responsive at all breakpoints
+- [ ] RSS feed: validates, matches current structure
+- [ ] Images: all render, correct paths
+- [ ] Code blocks: syntax highlighting works
+- [ ] YouTube embeds: responsive
+- [ ] Performance: Lighthouse score acceptable
+
+### D.9 Phase 8: Deployment
+
+**Netlify Configuration** (`netlify.toml`):
+```toml
+[build]
+  command = "python scripts/fetch-sheets.py && hugo --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.140.0"
+  PYTHON_VERSION = "3.9"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "python scripts/fetch-sheets.py && hugo --buildDrafts --buildFuture"
+
+[[redirects]]
+  from = "/feed/"
+  to = "/index.xml"
+  status = 301
+```
+
+**Environment Variables in Netlify:**
+- `KANONICAL_SHEET_CRED` - Google service account JSON
+
+**Build Trigger Options:**
+1. Git push (automatic)
+2. Build hook URL (for sheet updates)
+3. Scheduled builds via Netlify/GitHub Actions
+
+### D.10 Phase 9: Cutover
+
+1. **Final validation** on Netlify preview URL
+2. **Update DNS** to point to new Netlify site
+3. **Monitor** for 404s and broken links
+4. **Celebrate** 🎉
+5. **Archive** Gatsby repo (don't delete yet)
+
+---
+
+## Appendix E: Hugo Quick Reference
+
+### Useful Commands
+
+```bash
+# Development
+hugo server -D              # Serve with drafts
+hugo server --bind 0.0.0.0  # Accessible on network
+
+# Build
+hugo                        # Build to /public
+hugo --minify               # Minified production build
+hugo --gc --minify          # Clean + minify
+
+# Content
+hugo new blog/my-post.md    # New post from archetype
+hugo list all               # List all content
+hugo list drafts            # List drafts only
+
+# Debug
+hugo config                 # Show resolved config
+hugo env                    # Show Hugo environment
+```
+
+### Template Cheatsheet
+
+```html
+<!-- Variables -->
+{{ .Title }}
+{{ .Content }}
+{{ .Date.Format "Jan 2, 2006" }}
+{{ .Params.description }}
+{{ .WordCount }}
+{{ .ReadingTime }}
+
+<!-- Iteration -->
+{{ range .Pages }}...{{ end }}
+{{ range first 5 .Pages }}...{{ end }}
+{{ range where .Pages "Params.type" "goals" }}...{{ end }}
+
+<!-- Conditionals -->
+{{ if .Params.tags }}...{{ end }}
+{{ with .Params.description }}...{{ end }}
+
+<!-- Data Files -->
+{{ site.Data.books }}
+{{ range site.Data.workouts }}...{{ end }}
+
+<!-- Partials -->
+{{ partial "header.html" . }}
+{{ partial "post-card.html" . }}
+
+<!-- Assets (Hugo Pipes) -->
+{{ $css := resources.Get "css/style.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+```
+
+### Frontmatter Reference
+
+```yaml
+---
+title: "Post Title"                    # Required
+date: 2026-01-15T10:00:00-05:00       # Required
+url: /custom-slug/                     # Optional: custom URL
+description: "Brief excerpt"           # Optional: for SEO/cards
+type: goals                            # Optional: for filtering
+tags: ["programming", "life"]          # Optional: taxonomy
+draft: true                            # Optional: hide in production
+---
+```
+
+---
+
 *This specification was created through deep codebase analysis and comprehensive interview with the site owner.*
