@@ -1087,4 +1087,466 @@ draft: true                            # Optional: hide in production
 
 ---
 
+## Appendix F: Component Migration Guide
+
+### F.1 The Mental Model Shift
+
+**Gatsby/React:** Components are JavaScript functions that return JSX. They accept props, manage state, and compose into trees. Styling lives in JS (styled-components).
+
+**Hugo:** Partials are HTML templates with Go template syntax. They accept context (data), have no state, and compose via includes. Styling lives in CSS (Tailwind or vanilla).
+
+The visual output can be **identical**. The authoring model is different.
+
+### F.2 Component Mapping
+
+| Gatsby Component | Hugo Equivalent | Location |
+|------------------|-----------------|----------|
+| `card.js` | `card.html` | `layouts/partials/card.html` |
+| `post-list.js` | `post-list.html` | `layouts/partials/post-list.html` |
+| `header.js` | `header.html` | `layouts/partials/header.html` |
+| `footer.js` | `footer.html` | `layouts/partials/footer.html` |
+| `layout.js` | `baseof.html` | `layouts/_default/baseof.html` |
+| `bio.js` | `bio.html` | `layouts/partials/bio.html` |
+| `seo.js` | `head.html` | `layouts/partials/head.html` |
+| `share.js` | `share.html` | `layouts/partials/share.html` |
+| `darktoggle.js` | `main.js` | `static/js/main.js` (vanilla JS) |
+| `menu-items.js` | `nav.html` | `layouts/partials/nav.html` |
+
+### F.3 Standalone Pages
+
+**Gatsby approach:** Each page is a React component in `src/pages/`:
+```
+src/pages/
+├── index.js      # Homepage
+├── blog.js       # Blog listing
+├── books.js      # Books page
+├── tumble.js     # Tumblelog
+└── goals.js      # Goals page
+```
+
+**Hugo approach:** Pages are either content files or layout templates:
+
+```
+content/
+├── _index.md           # Homepage (uses layouts/index.html)
+├── blog/_index.md      # Blog section (uses layouts/blog/list.html)
+├── books/_index.md     # Books page (uses layouts/books/list.html)
+├── tumble/_index.md    # Tumble page (uses layouts/tumble/list.html)
+└── goals/_index.md     # Goals page (uses layouts/goals/list.html)
+
+layouts/
+├── index.html          # Homepage template
+├── blog/
+│   ├── list.html       # Blog listing
+│   └── single.html     # Individual post
+├── books/
+│   └── list.html       # Books page
+├── tumble/
+│   └── list.html       # Tumble page
+└── goals/
+    └── list.html       # Goals listing
+```
+
+**Key insight:** In Hugo, `_index.md` files create "section" pages. The template in `layouts/{section}/list.html` renders them. Content and presentation are separated.
+
+### F.4 Props → Context
+
+**Gatsby (props):**
+```jsx
+const Card = ({ title, url, date, excerpt }) => (
+  <article className="card">
+    <a href={url}>{title}</a>
+    <time>{date}</time>
+    <p>{excerpt}</p>
+  </article>
+)
+
+// Usage
+<Card title={post.title} url={post.url} date={post.date} excerpt={post.excerpt} />
+```
+
+**Hugo (context via dict):**
+```html
+<!-- layouts/partials/card.html -->
+<article class="card">
+  <a href="{{ .url }}">{{ .title }}</a>
+  <time>{{ .date | time.Format "Jan 2, 2006" }}</time>
+  <p>{{ .excerpt }}</p>
+</article>
+```
+
+```html
+<!-- Usage in a template -->
+{{ range .Pages }}
+  {{ partial "card.html" (dict
+    "url" .RelPermalink
+    "title" .Title
+    "date" .Date
+    "excerpt" .Summary
+  ) }}
+{{ end }}
+```
+
+**Simpler alternative** - pass the whole page object:
+```html
+{{ range .Pages }}
+  {{ partial "card.html" . }}
+{{ end }}
+
+<!-- In card.html, access via .Title, .RelPermalink, etc. -->
+```
+
+### F.5 Styled-Components → Tailwind
+
+**Current Gatsby pattern (`src/components/card.js`):**
+```jsx
+import styled from 'styled-components'
+
+export const Card = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,.6) 0%, rgba(var(--secondaryRGB), 0.4) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(var(--primaryRGB), 0.5);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`
+
+export const CardLink = styled.a`
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+
+  &:hover {
+    color: var(--primary);
+  }
+`
+
+export const CardDate = styled.time`
+  font-style: italic;
+  font-size: var(--h6);
+  color: var(--secondary);
+`
+```
+
+**Hugo + Tailwind equivalent (`layouts/partials/card.html`):**
+```html
+<article class="relative flex flex-col p-2 rounded-lg
+                bg-gradient-to-br from-white/60 to-secondary/40
+                backdrop-blur-xl border border-primary/50
+                hover:bg-white/50 transition-colors
+                max-sm:block">
+  <a href="{{ .url }}"
+     class="no-underline text-dark font-semibold hover:text-primary transition-colors">
+    {{ .title }}
+  </a>
+  <time class="italic text-sm text-secondary">
+    {{ .date | time.Format "Jan 2, 2006" }}
+  </time>
+</article>
+```
+
+**Tailwind equivalents for common patterns:**
+
+| Styled-Component | Tailwind |
+|------------------|----------|
+| `display: flex` | `flex` |
+| `flex-direction: column` | `flex-col` |
+| `padding: 0.5rem` | `p-2` |
+| `border-radius: 8px` | `rounded-lg` |
+| `font-weight: 600` | `font-semibold` |
+| `font-style: italic` | `italic` |
+| `backdrop-filter: blur(20px)` | `backdrop-blur-xl` |
+| `@media (max-width: 500px)` | `max-sm:` prefix |
+| `&:hover { ... }` | `hover:` prefix |
+| `transition: var(--transMed)` | `transition-colors` or `transition-all` |
+| `var(--primary)` | `text-primary` (with config) |
+
+### F.6 Tailwind Setup for Hugo
+
+**1. Initialize npm and install Tailwind:**
+```bash
+cd kanonical-hugo
+npm init -y
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+**2. Configure Tailwind (`tailwind.config.js`):**
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./layouts/**/*.html",
+    "./content/**/*.md",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        dark: '#313349',
+        light: '#fffdfa',
+        primary: '#39D085',
+        secondary: '#DB6443',
+        'yellow-highlight': '#F4D7A4',
+      },
+      fontFamily: {
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        serif: ['Libre Baskerville', 'Georgia', 'serif'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '72ch',
+          },
+        },
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}
+```
+
+**3. Create main CSS file (`assets/css/main.css`):**
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities if needed */
+@layer components {
+  .text-shadow-primary {
+    text-shadow: 2px 2px 0 rgba(57, 208, 133, 0.5);
+  }
+
+  .text-shadow-secondary {
+    text-shadow: 2px 2px 0 rgba(219, 100, 67, 0.5);
+  }
+}
+
+/* Dark mode color overrides */
+:root.dark {
+  --tw-bg-opacity: 1;
+}
+```
+
+**4. Include in base template (`layouts/_default/baseof.html`):**
+```html
+<!DOCTYPE html>
+<html lang="en" class="{{ if .Site.Params.defaultDark }}dark{{ end }}">
+<head>
+  {{ partial "head.html" . }}
+
+  {{/* Tailwind CSS via Hugo Pipes */}}
+  {{ with resources.Get "css/main.css" }}
+    {{ $css := . | css.TailwindCSS }}
+    {{ if hugo.IsProduction }}
+      {{ $css = $css | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $css.Data.Integrity }}"{{ end }}>
+  {{ end }}
+</head>
+<body class="bg-light dark:bg-dark text-dark dark:text-light transition-colors">
+  {{ partial "header.html" . }}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="/js/main.js"></script>
+</body>
+</html>
+```
+
+### F.7 Complex Component Example: Post List
+
+**Current Gatsby (`src/components/post-list.js`):**
+```jsx
+const PostList = styled.ul`
+  padding: 0;
+  margin: calc(var(--spacing) * 2) 0;
+  list-style: none;
+  display: grid;
+  grid-gap: var(--spacing);
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`
+
+export default ({ posts }) => (
+  <PostList>
+    {posts.map(post => (
+      <li key={post.id}>
+        <Card>
+          <Link to={post.path}>{post.title}</Link>
+          <time>{post.date}</time>
+          <p>{post.excerpt}</p>
+        </Card>
+      </li>
+    ))}
+  </PostList>
+)
+```
+
+**Hugo + Tailwind (`layouts/partials/post-list.html`):**
+```html
+<ul class="p-0 my-8 list-none
+           grid gap-4 grid-cols-[repeat(auto-fit,minmax(30ch,1fr))]
+           max-sm:block">
+  {{ range . }}
+    <li>
+      {{ partial "card.html" (dict
+        "url" .RelPermalink
+        "title" .Title
+        "date" .Date
+        "excerpt" .Summary
+        "wordcount" .WordCount
+      ) }}
+    </li>
+  {{ end }}
+</ul>
+```
+
+**Usage:**
+```html
+<!-- In layouts/blog/list.html -->
+{{ define "main" }}
+  <h1>Blog</h1>
+  {{ partial "post-list.html" .Pages }}
+{{ end }}
+```
+
+### F.8 Interactive Components
+
+Some Gatsby components have client-side interactivity. These need vanilla JS in Hugo.
+
+**Components requiring JS:**
+
+| Component | Interactivity | Hugo Solution |
+|-----------|---------------|---------------|
+| `darktoggle.js` | Theme switching | Vanilla JS (see Appendix D.6) |
+| `blog.js` | Infinite scroll | Intersection Observer (see Appendix D.6) |
+| `blog.js` | Type filtering | JS click handlers |
+| `tumble.js` | Masonry + filtering | CSS Grid + JS filtering |
+| `header.js` | Mobile menu toggle | Vanilla JS |
+| `header.js` | Scroll shadow | Scroll event listener |
+
+**Example: Mobile Menu Toggle**
+
+```html
+<!-- layouts/partials/header.html -->
+<header class="fixed top-0 w-full z-50 bg-light dark:bg-dark transition-shadow"
+        id="site-header">
+  <nav class="flex items-center justify-between p-4 max-w-4xl mx-auto">
+    <a href="/" class="font-bold text-xl">Kanonical</a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex gap-6">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+
+    <!-- Mobile burger -->
+    <button id="menu-toggle" class="md:hidden p-2" aria-label="Toggle menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden">
+    <ul class="flex flex-col p-4 gap-4">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</header>
+```
+
+```javascript
+// In static/js/main.js
+(function() {
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const header = document.getElementById('site-header');
+
+  // Mobile menu toggle
+  toggle?.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    toggle.classList.toggle('active');
+  });
+
+  // Header shadow on scroll
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow-lg', window.scrollY > 10);
+  }, { passive: true });
+})();
+```
+
+### F.9 What You Lose vs. Gain
+
+**What you lose:**
+- JSX syntax (Hugo uses `{{ }}` Go templates)
+- Component-level state (`useState`, `useEffect`)
+- React DevTools
+- Hot module replacement for JS (Hugo has hot reload for templates/content)
+- Import/export component system
+
+**What you gain:**
+- Zero JavaScript shipped for static UI
+- Faster iteration with Tailwind utilities
+- No hydration mismatches
+- No bundle size concerns
+- Simpler mental model (templates are just HTML)
+- CSS that works without JS runtime
+- Build times measured in milliseconds
+
+### F.10 Migration Strategy for Components
+
+**Phase 1: Structure**
+1. Create `layouts/partials/` directory
+2. Create empty `.html` files for each component
+3. Set up Tailwind
+
+**Phase 2: Static Components (no JS)**
+1. `header.html` - navigation, logo
+2. `footer.html` - copyright, links
+3. `card.html` - post cards
+4. `post-list.html` - grid of cards
+5. `bio.html` - author bio
+6. `head.html` - meta tags, SEO
+
+**Phase 3: Interactive Components**
+1. Dark mode toggle → vanilla JS
+2. Mobile menu → vanilla JS
+3. Reading progress → vanilla JS
+4. Infinite scroll → vanilla JS
+5. Tumble filtering → vanilla JS
+
+**Phase 4: Page Templates**
+1. `index.html` - homepage (compose partials)
+2. `blog/list.html` - blog listing
+3. `blog/single.html` - blog post
+4. `books/list.html` - books page
+5. `tumble/list.html` - tumblelog
+
+**Validation:** Each component should produce visually identical output to Gatsby version before moving on.
+
+---
+
 *This specification was created through deep codebase analysis and comprehensive interview with the site owner.*
