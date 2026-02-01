@@ -1,6 +1,7 @@
 ---
 title: The Educational Value of Copywriting
 date: 2022-09-21T13:58:00.000Z
+description: "Writing things down forces you to slow down and think. Going slow for a long time pushes your ability to go fast. A surprising amount of learning happens in the reps."
 url: /copywriting/
 type: education
 ---

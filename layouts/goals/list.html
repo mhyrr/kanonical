@@ -1,7 +1,7 @@
 {{ define "main" }}
-<header class="mb-8">
-  <h1 class="text-3xl md:text-4xl font-bold mb-4">Goals & Reviews</h1>
-  <div class="prose dark:prose-invert max-w-none">
+<header class="mb-12">
+  <h1 class="section-title text-3xl mb-6">Goals & Reviews</h1>
+  <div class="prose max-w-none">
     <p>
       <strong>Every year I set goals.</strong>
     </p>
@@ -27,22 +27,22 @@
 {{ $goals := where site.RegularPages "Params.type" "goals" }}
 {{ $reviews := where site.RegularPages "Params.type" "review" }}
 
-<div class="grid md:grid-cols-2 gap-8 mt-12">
+<div class="grid md:grid-cols-2 gap-8">
   {{/* Goals Column */}}
   <div>
-    <h2 class="text-2xl font-bold mb-6 text-primary">Goals</h2>
+    <h2 class="font-sans text-xl font-semibold mb-6 text-primary">Goals</h2>
     <ul class="space-y-4">
       {{ range $goals.ByDate.Reverse }}
-        <li class="p-4 rounded-lg bg-primary/10 border border-primary/20">
-          <a href="{{ .RelPermalink }}" class="block group">
-            <h3 class="font-semibold group-hover:text-primary transition-colors">
+        <li class="card group">
+          <a href="{{ .RelPermalink }}" class="block">
+            <h3 class="font-sans font-semibold group-hover:text-primary transition-colors">
               {{ .Title }}
             </h3>
-            <time class="text-sm text-dark/60 dark:text-light/60">
+            <time class="text-sm text-sub font-sans">
               {{ .Date.Format "2006" }}
             </time>
             {{ with .Description }}
-              <p class="mt-2 text-sm text-dark/80 dark:text-light/80 line-clamp-3">{{ . }}</p>
+              <p class="mt-2 text-sm text-sub line-clamp-3">{{ . }}</p>
             {{ end }}
           </a>
         </li>
@@ -52,7 +52,7 @@
 
   {{/* Reviews Column */}}
   <div>
-    <h2 class="text-2xl font-bold mb-6 text-secondary">Reviews</h2>
+    <h2 class="font-sans text-xl font-semibold mb-6 text-secondary">Reviews</h2>
     <ul class="space-y-4">
       {{/* Add "Work in Progress" for current year */}}
       {{ $currentYear := now.Format "2006" }}
@@ -64,26 +64,26 @@
       {{ end }}
 
       {{ if not $hasCurrentYearReview }}
-        <li class="p-4 rounded-lg bg-secondary/10 border border-secondary/20">
-          <h3 class="font-semibold">Work In Progress</h3>
-          <time class="text-sm text-dark/60 dark:text-light/60">{{ $currentYear }}</time>
-          <p class="mt-2 text-sm text-dark/80 dark:text-light/80">
+        <li class="card border-l-2 border-l-secondary">
+          <h3 class="font-sans font-semibold">Work In Progress</h3>
+          <time class="text-sm text-sub font-sans">{{ $currentYear }}</time>
+          <p class="mt-2 text-sm text-sub">
             Hey, this year ain't over yet! Can't wait to see how it turns out!
           </p>
         </li>
       {{ end }}
 
       {{ range $reviews.ByDate.Reverse }}
-        <li class="p-4 rounded-lg bg-secondary/10 border border-secondary/20">
-          <a href="{{ .RelPermalink }}" class="block group">
-            <h3 class="font-semibold group-hover:text-secondary transition-colors">
+        <li class="card group">
+          <a href="{{ .RelPermalink }}" class="block">
+            <h3 class="font-sans font-semibold group-hover:text-secondary transition-colors">
               {{ .Title }}
             </h3>
-            <time class="text-sm text-dark/60 dark:text-light/60">
+            <time class="text-sm text-sub font-sans">
               {{ .Date.Format "2006" }}
             </time>
             {{ with .Description }}
-              <p class="mt-2 text-sm text-dark/80 dark:text-light/80 line-clamp-3">{{ . }}</p>
+              <p class="mt-2 text-sm text-sub line-clamp-3">{{ . }}</p>
             {{ end }}
           </a>
         </li>

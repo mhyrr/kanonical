@@ -1,6 +1,7 @@
 ---
 title: Big Numbers and Natural Theology
 date: 2024-02-12T18:49:00.000Z
+description: "Super K is a number so large it dwarfs our universe. Cantor proved infinities come in sizes. What these extremes reveal about the mind of God."
 url: /big-numbers-theology/
 ---
 

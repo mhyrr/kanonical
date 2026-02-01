@@ -1,6 +1,7 @@
 ---
 title: Consumption Is Still Consumption
 date: 2022-11-16T10:51:00.000Z
+description: "Even high-quality sources are still consumption. You're still regurgitating what someone else learned. If you want to find out what you think, write it down."
 url: /consumption-not-the-goal/
 type: writing
 ---

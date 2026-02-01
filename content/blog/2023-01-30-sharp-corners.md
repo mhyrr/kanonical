@@ -1,6 +1,7 @@
 ---
 title: Sharp Edges
 date: 2023-01-30T12:38:00.000Z
+description: "ChatGPT outputs what humanity perceives as truth. In this Performative Age, the only real solution is to exit the systems that smooth away your edges."
 url: /sharp-edges/
 ---
 

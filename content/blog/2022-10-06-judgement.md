@@ -1,6 +1,7 @@
 ---
 title: Judgement
 date: 2022-10-06T10:26:00.000Z
+description: "If you constantly judge others, you'll constantly worry about being judged. Want to stop caring what people think? First stop caring what people do."
 url: /no-judgement/
 type: life
 ---

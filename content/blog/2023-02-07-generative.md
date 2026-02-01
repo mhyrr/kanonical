@@ -1,6 +1,7 @@
 ---
 title: Generative Conversations
 date: 2023-02-07T06:23:00.000Z
+description: "The best conversations happen when neither person cares about being right. Why letting your guard down and blurting out wrong ideas leads to the most generative thinking."
 url: /generative-conversations/
 ---
 

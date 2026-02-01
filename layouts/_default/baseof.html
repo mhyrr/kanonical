@@ -6,6 +6,9 @@
   <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
+  {{/* Favicon */}}
+  <link rel="icon" href="/favicon.ico">
+
   {{/* Inline critical theme script to prevent flash */}}
   <script>
     (function() {
@@ -17,17 +20,31 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body class="bg-light dark:bg-dark text-dark dark:text-light transition-colors min-h-screen">
-  {{ partial "header.html" . }}
+  {{/* Tailwind CSS via Hugo Pipes */}}
+  {{ with resources.Get "css/main.css" }}
+    {{ $css := . | css.TailwindCSS }}
+    {{ if hugo.IsProduction }}
+      {{ $css = $css | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $css.Data.Integrity }}"{{ end }}>
+  {{ end }}
 
+  {{/* RSS */}}
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+</head>
+<body class="bg-base text-base min-h-screen font-serif antialiased">
   {{/* Reading progress bar - only on blog posts */}}
   {{ if and .IsPage (eq .Section "blog") }}
     <div id="reading-progress" class="reading-progress"></div>
   {{ end }}
 
-  <main class="max-w-3xl mx-auto px-4 py-8">
+  {{ partial "header.html" . }}
+
+  {{/* Use wider layout for tumble and homepage */}}
+  {{ $wideLayout := or (eq .Section "tumble") .IsHome }}
+  <main class="{{ if $wideLayout }}max-w-7xl{{ else }}max-w-3xl{{ end }} mx-auto px-6 py-12 animate-fade-in">
     {{ block "main" . }}{{ end }}
   </main>
 

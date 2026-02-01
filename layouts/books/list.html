@@ -1,25 +1,21 @@
 {{ define "main" }}
-<h1 class="text-3xl font-bold mb-6">All the Books</h1>
+<h1 class="section-title text-3xl mb-8">All the Books</h1>
 
-<div class="prose dark:prose-invert mb-8 max-w-none">
+<div class="prose mb-10 max-w-none">
   <p>
     I really like books. Like, a lot.
     I've kept a list of everything I've read over the years.
     I'm missing a bunch in the distant past, but I've been keeping this list consistently since around 2018.
   </p>
-  <p>
-    I'm a big fan of <a href="https://tomcritchlow.com/">Tom Critchlow's</a>
-    <a href="https://tomcritchlow.com/2020/04/15/library-json/">Library.json idea</a> too.
-  </p>
 
-  <h4 class="mt-6 mb-2">Favorites Of The Last Few Years</h4>
+  <h4 class="font-sans font-semibold mt-6 mb-3">Favorites Of The Last Few Years</h4>
   <ul class="grid gap-2 grid-cols-2 md:grid-cols-3 list-none pl-0">
-    <li><a href="/books-2024/">Best of 2024</a></li>
-    <li><a href="/books-2023/">Best of 2023</a></li>
-    <li><a href="/books-2022/">Best of 2022</a></li>
-    <li><a href="/books-2021/">Best of 2021</a></li>
-    <li><a href="/books-2020/">Best of 2020</a></li>
-    <li><a href="/books-2019/">Best of 2019</a></li>
+    <li><a href="/books-2024/" class="link">Best of 2024</a></li>
+    <li><a href="/books-2023/" class="link">Best of 2023</a></li>
+    <li><a href="/books-2022/" class="link">Best of 2022</a></li>
+    <li><a href="/books-2021/" class="link">Best of 2021</a></li>
+    <li><a href="/books-2020/" class="link">Best of 2020</a></li>
+    <li><a href="/books-2019/" class="link">Best of 2019</a></li>
   </ul>
 </div>
 
@@ -31,17 +27,17 @@
 {{/* Currently Reading */}}
 {{ $current := where $books "current" "y" }}
 {{ with $current }}
-<section class="mb-10">
-  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+<section class="mb-12">
+  <h2 class="font-sans text-xl font-semibold mb-4 pt-6 border-t border-overlay">
     Things I'm Currently Reading
   </h2>
   <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {{ range . }}
-      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
-        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+      <li class="card">
+        {{ with .link }}<a href="{{ . }}" class="link font-semibold">{{ end }}
           {{ .title }}
         {{ with .link }}</a>{{ end }}
-        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+        <span class="block text-sm italic text-secondary mt-1">— {{ .author }}</span>
       </li>
     {{ end }}
   </ul>
@@ -64,17 +60,17 @@
 {{ end }}
 
 {{ with $booksThisYear }}
-<section class="mb-10">
-  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+<section class="mb-12">
+  <h2 class="font-sans text-xl font-semibold mb-4 pt-6 border-t border-overlay">
     Things I've Read So Far In {{ $thisYear }}
   </h2>
   <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {{ range . }}
-      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
-        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+      <li class="card">
+        {{ with .link }}<a href="{{ . }}" class="link font-semibold">{{ end }}
           {{ .title }}
         {{ with .link }}</a>{{ end }}
-        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+        <span class="block text-sm italic text-secondary mt-1">— {{ .author }}</span>
       </li>
     {{ end }}
   </ul>
@@ -96,17 +92,17 @@
 {{ end }}
 
 {{ with $booksLastYear }}
-<section class="mb-10">
-  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+<section class="mb-12">
+  <h2 class="font-sans text-xl font-semibold mb-4 pt-6 border-t border-overlay">
     Things I Read In {{ $lastYear }}
   </h2>
   <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {{ range . }}
-      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
-        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+      <li class="card">
+        {{ with .link }}<a href="{{ . }}" class="link font-semibold">{{ end }}
           {{ .title }}
         {{ with .link }}</a>{{ end }}
-        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+        <span class="block text-sm italic text-secondary mt-1">— {{ .author }}</span>
       </li>
     {{ end }}
   </ul>
@@ -128,17 +124,17 @@
 {{ end }}
 
 {{ with $booksTwoYearsAgo }}
-<section class="mb-10">
-  <h2 class="text-xl font-bold mb-4 pt-4 border-dark/10 dark:border-light/10">
+<section class="mb-12">
+  <h2 class="font-sans text-xl font-semibold mb-4 pt-6 border-t border-overlay">
     Things I Read In {{ $twoYearsAgo }}
   </h2>
   <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {{ range . }}
-      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
-        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+      <li class="card">
+        {{ with .link }}<a href="{{ . }}" class="link font-semibold">{{ end }}
           {{ .title }}
         {{ with .link }}</a>{{ end }}
-        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+        <span class="block text-sm italic text-secondary mt-1">— {{ .author }}</span>
       </li>
     {{ end }}
   </ul>
@@ -160,17 +156,17 @@
 {{ end }}
 
 {{ with $olderBooks }}
-<section class="mb-10">
-  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+<section class="mb-12">
+  <h2 class="font-sans text-xl font-semibold mb-4 pt-6 border-t border-overlay">
     Everything before that..
   </h2>
-  <ul class="space-y-1">
+  <ul class="space-y-2">
     {{ range . }}
       <li>
-        {{ with .link }}<a href="{{ . }}" class="hover:text-secondary">{{ end }}
+        {{ with .link }}<a href="{{ . }}" class="link">{{ end }}
           {{ .title }}
         {{ with .link }}</a>{{ end }}
-        <span class="text-sm italic text-primary">by {{ .author }}</span>
+        <span class="text-sm italic text-secondary">by {{ .author }}</span>
       </li>
     {{ end }}
   </ul>

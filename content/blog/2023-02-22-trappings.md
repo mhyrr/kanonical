@@ -1,6 +1,7 @@
 ---
 title: All The Trappings
 date: 2023-02-22T14:14:00.000Z
+description: "We get drawn to the trappings of whatever title we're interested in. But amazing spaces are born from necessity, not admiration. Stop being the Noun. Do the Verb."
 url: /trappings/
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Gentleman Farmers
 date: 2024-05-15T17:51:00.000Z
+description: "The professional-managerial class loves the farm but doesn't touch the dirt. What happens when AI makes us all gentleman farmers over our virtual acreage?"
 url: /gentleman-farmers/
 ---
 
