@@ -22,6 +22,11 @@
 <body class="bg-light dark:bg-dark text-dark dark:text-light transition-colors min-h-screen">
   {{ partial "header.html" . }}
 
+  {{/* Reading progress bar - only on blog posts */}}
+  {{ if and .IsPage (eq .Section "blog") }}
+    <div id="reading-progress" class="reading-progress"></div>
+  {{ end }}
+
   <main class="max-w-3xl mx-auto px-4 py-8">
     {{ block "main" . }}{{ end }}
   </main>

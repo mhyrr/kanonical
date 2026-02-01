@@ -1,0 +1,4 @@
+---
+title: Essays
+url: /essays/
+---

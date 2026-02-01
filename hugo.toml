@@ -26,14 +26,26 @@ title = "Kanonical"
     url = "/blog/"
     weight = 1
   [[menu.main]]
+    name = "Essays"
+    url = "/essays/"
+    weight = 2
+  [[menu.main]]
+    name = "Goals"
+    url = "/goals/"
+    weight = 3
+  [[menu.main]]
     name = "Books"
     url = "/books/"
-    weight = 2
+    weight = 4
+  [[menu.main]]
+    name = "RVing"
+    url = "/rving/"
+    weight = 5
   [[menu.main]]
     name = "Tumble"
     url = "/tumble/"
-    weight = 3
+    weight = 6
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 4
+    weight = 7
