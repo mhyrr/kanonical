@@ -1,0 +1,43 @@
+{{ define "main" }}
+<header class="mb-8">
+  <h1 class="text-3xl md:text-4xl font-bold mb-4">The Essays</h1>
+  <div class="prose dark:prose-invert max-w-none">
+    <p>
+      <strong>Hey, you asked for it.</strong> Every once in a while I start writing about an idea and it ends up taking on a life of its own.
+      The words divide and grow, and the digressions expand, and I just try to keep up.
+      Eventually I end up with something bigger and longer than I imagined.
+      It feels reasonable to call this an essay.
+    </p>
+  </div>
+</header>
+
+{{/* Get essays from all blog posts */}}
+{{ $essays := where site.RegularPages "Params.type" "essay" }}
+
+<ul class="grid gap-6 md:grid-cols-2 mt-8">
+  {{ range $essays.ByDate.Reverse }}
+    <li class="p-6 rounded-lg border border-dark/10 dark:border-light/10 bg-gradient-to-br from-white/60 to-primary/10 dark:from-dark/60 dark:to-primary/20">
+      <article class="group">
+        <a href="{{ .RelPermalink }}" class="block">
+          <h2 class="text-xl font-semibold group-hover:text-primary transition-colors mb-2">
+            {{ .Title }}
+          </h2>
+          <div class="text-sm text-dark/60 dark:text-light/60 flex items-center gap-3 mb-3">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "Jan 2, 2006" }}
+            </time>
+            <span>·</span>
+            <span class="text-primary font-medium">{{ .WordCount | lang.FormatNumber 0 }} words</span>
+          </div>
+          {{ with .Description }}
+            <p class="text-dark/80 dark:text-light/80 line-clamp-4">{{ . }}</p>
+          {{ else }}
+            <p class="text-dark/80 dark:text-light/80 line-clamp-4">{{ .Summary }}</p>
+          {{ end }}
+          <span class="inline-block mt-3 text-primary group-hover:underline">Read more →</span>
+        </a>
+      </article>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

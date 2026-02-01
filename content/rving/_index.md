@@ -1,8 +1,6 @@
 ---
 title: RVing
-date: 2023-07-31T13:38:00.000Z
 url: /rving/
-type: rv
 ---
 
 # Take Your Family RVing!

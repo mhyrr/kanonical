@@ -1,0 +1,94 @@
+{{ define "main" }}
+<header class="mb-8">
+  <h1 class="text-3xl md:text-4xl font-bold mb-4">Goals & Reviews</h1>
+  <div class="prose dark:prose-invert max-w-none">
+    <p>
+      <strong>Every year I set goals.</strong>
+    </p>
+    <p>
+      I used to think this was dumb.
+      "Only the milquetoast underachievers set Resolutions," said I.
+      Then my wife did it one year. So I tried it. And learned I was foolish. Writing down goals helped me stay focused on what mattered for the whole year.
+    </p>
+    <p>
+      I don't hit them all. If I did, they probably wouldn't be very good goals. But it still helped a lot.
+    </p>
+    <p>
+      Yearly retrospectives helped just as much. Not only was it a great way to understand just how the year
+      went, it helped clarify what the right steps would be for the next year.
+    </p>
+    <p>
+      You should try it too. But, <strong>it only works if you write them down.</strong>
+    </p>
+  </div>
+</header>
+
+{{/* Get goals and reviews from all blog posts */}}
+{{ $goals := where site.RegularPages "Params.type" "goals" }}
+{{ $reviews := where site.RegularPages "Params.type" "review" }}
+
+<div class="grid md:grid-cols-2 gap-8 mt-12">
+  {{/* Goals Column */}}
+  <div>
+    <h2 class="text-2xl font-bold mb-6 text-primary">Goals</h2>
+    <ul class="space-y-4">
+      {{ range $goals.ByDate.Reverse }}
+        <li class="p-4 rounded-lg bg-primary/10 border border-primary/20">
+          <a href="{{ .RelPermalink }}" class="block group">
+            <h3 class="font-semibold group-hover:text-primary transition-colors">
+              {{ .Title }}
+            </h3>
+            <time class="text-sm text-dark/60 dark:text-light/60">
+              {{ .Date.Format "2006" }}
+            </time>
+            {{ with .Description }}
+              <p class="mt-2 text-sm text-dark/80 dark:text-light/80 line-clamp-3">{{ . }}</p>
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{/* Reviews Column */}}
+  <div>
+    <h2 class="text-2xl font-bold mb-6 text-secondary">Reviews</h2>
+    <ul class="space-y-4">
+      {{/* Add "Work in Progress" for current year */}}
+      {{ $currentYear := now.Format "2006" }}
+      {{ $hasCurrentYearReview := false }}
+      {{ range $reviews }}
+        {{ if eq (.Date.Format "2006") $currentYear }}
+          {{ $hasCurrentYearReview = true }}
+        {{ end }}
+      {{ end }}
+
+      {{ if not $hasCurrentYearReview }}
+        <li class="p-4 rounded-lg bg-secondary/10 border border-secondary/20">
+          <h3 class="font-semibold">Work In Progress</h3>
+          <time class="text-sm text-dark/60 dark:text-light/60">{{ $currentYear }}</time>
+          <p class="mt-2 text-sm text-dark/80 dark:text-light/80">
+            Hey, this year ain't over yet! Can't wait to see how it turns out!
+          </p>
+        </li>
+      {{ end }}
+
+      {{ range $reviews.ByDate.Reverse }}
+        <li class="p-4 rounded-lg bg-secondary/10 border border-secondary/20">
+          <a href="{{ .RelPermalink }}" class="block group">
+            <h3 class="font-semibold group-hover:text-secondary transition-colors">
+              {{ .Title }}
+            </h3>
+            <time class="text-sm text-dark/60 dark:text-light/60">
+              {{ .Date.Format "2006" }}
+            </time>
+            {{ with .Description }}
+              <p class="mt-2 text-sm text-dark/80 dark:text-light/80 line-clamp-3">{{ . }}</p>
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

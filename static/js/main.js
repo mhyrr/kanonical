@@ -100,6 +100,14 @@
     });
   });
 
+  // Handle back/forward button (bfcache restoration)
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+      // Page was restored from bfcache, reset opacity
+      main.style.opacity = '1';
+    }
+  });
+
   // Fade out on navigate (internal links only)
   document.addEventListener('click', function(e) {
     const link = e.target.closest('a');
