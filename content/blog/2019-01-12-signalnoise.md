@@ -1,7 +1,7 @@
 ---
 title: Signal and Noise While Thinking
 date: 2019-01-12T11:04:31.000Z
-path: /signal-v-noise/
+url: /signal-v-noise/
 ---
 
 My favorite place to write is a small breakfast cafe in my neighborhood.  I head up there any chance I get, sit down with a Chai Tea and some eggs, and then (hopefully) kick some words out at a reasonable clip.  At the same time, I have a wonderful home office that I love and spent quite a bit of time on setting up for myself that I very rarely use for writing.

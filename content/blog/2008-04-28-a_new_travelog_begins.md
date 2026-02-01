@@ -1,7 +1,7 @@
 ---
 title: A New Travelog Begins!
 date: 2008-04-28T03:00:00.000Z
-path: /a_new_travelog_begins/
+url: /a_new_travelog_begins/
 type: travel
 ---
 

@@ -1,0 +1,12 @@
+<footer class="mt-16 py-8 border-t border-dark/10 dark:border-light/10">
+  <div class="max-w-3xl mx-auto px-4 text-center text-sm text-dark/60 dark:text-light/60">
+    <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+    <p class="mt-2">
+      <a href="{{ .Site.Params.github }}" class="hover:text-primary transition-colors">GitHub</a>
+      <span class="mx-2">·</span>
+      <a href="https://twitter.com/{{ .Site.Params.twitter }}" class="hover:text-primary transition-colors">Twitter</a>
+      <span class="mx-2">·</span>
+      <a href="/index.xml" class="hover:text-primary transition-colors">RSS</a>
+    </p>
+  </div>
+</footer>

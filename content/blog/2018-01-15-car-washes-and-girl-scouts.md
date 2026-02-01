@@ -1,7 +1,7 @@
 ---
 title: Car Washes and Girl Scout Cookies
 date: 2018-01-15T9:18:19.000Z
-path: /car-washes-and-girl-scouts/
+url: /car-washes-and-girl-scouts/
 type: education
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Thiel Answers
 date: 2023-03-28T22:42:00.000Z
-path: /thiel-answers/
+url: /thiel-answers/
 ---
 
 Peter Thiel is renowned and vilified in equal parts: he’s one of the most rebellious members of the public intellectual clique, and he wears his non-conformity on his sleeve.  Earlier this year he gave a [fantastic speech](https://www.youtube.com/watch?v=fQ4rc7npiXQ) to the Oxford Union and he starts it off by asking a rather contrarian question: what is the single antonym for diversity.

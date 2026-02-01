@@ -1,7 +1,7 @@
 ---
 title: Career Goals
 date: 2014-06-29T20:33:08.000Z
-path: /career-goals/
+url: /career-goals/
 type: goals
 ---
 

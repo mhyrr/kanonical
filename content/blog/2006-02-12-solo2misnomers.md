@@ -1,7 +1,7 @@
 ---
 title: Misnomers in Solo2
 date: 2006-02-12T05:00:00.000Z
-path: /misnomers-solo2/
+url: /misnomers-solo2/
 ---
 
 While I've been champing at the bit, I've been thinking lately about some very common concepts in autocross that many people adhere to 100% of the time, when they really aren't 100% concepts.  So with that in mind, I thought I'd start a discussion on these things and see what people thought.  Here's my thoughts on a couple of topics..

@@ -1,7 +1,7 @@
 ---
 title: One Night Of Vacation Was Enough
 date: 2018-12-02T10:16:46.000Z
-path: /one-night-vacation/
+url: /one-night-vacation/
 type: beach
 ---
 

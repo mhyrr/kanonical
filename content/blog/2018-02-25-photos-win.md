@@ -1,7 +1,7 @@
 ---
 title: Photos Are Better Than Video
 date: 2018-02-25T11:02:31.000Z
-path: /photos-win/
+url: /photos-win/
 ---
 
 At this point in our history, the technology and ability to take pictures and record video is completely ubiquitous.  We can - and do - record anywhere at any time.

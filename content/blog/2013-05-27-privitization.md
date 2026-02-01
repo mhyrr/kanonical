@@ -1,7 +1,7 @@
 ---
 title: The (Re-)Privatization of Big Dreams
 date: 2013-05-27T03:00:00.000Z
-path: /privitization/
+url: /privitization/
 ---
 
 The 20th Century had some really big ideas, not all good.  Genetics.  Nuclear Power.  Computers.  Nuclear Weapons.  Socialism.  Fascism.  Nazism.  Keynesian Economics.  The Internet.  Relativity.  Space Exploration.  Quantum Mechanics.  The Automobile.  Suburbia.  Widespread college education.  Many others.  That's a lot of ideas.

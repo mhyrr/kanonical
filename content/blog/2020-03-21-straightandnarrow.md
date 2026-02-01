@@ -1,7 +1,7 @@
 ---
 title: Story - Straight and Narrow
 date: 2020-03-21T13:33:00.000Z
-path: /straight_and_narrow/
+url: /straight_and_narrow/
 type: creative
 ---
 

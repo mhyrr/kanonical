@@ -1,7 +1,7 @@
 ---
 title: All My Big Purchases Are Done
 date: 2017-11-01T08:32:46.000Z
-path: /big-purchases/
+url: /big-purchases/
 type: beach
 ---
 

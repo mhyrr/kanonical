@@ -1,7 +1,7 @@
 ---
 title: Brief New Parent Advice
 date: 2024-06-05T10:07:00.000Z
-path: /new-parents/
+url: /new-parents/
 ---
 
 Someone I know just had their first child and randomly asked me "Any new dad tips?"  This is someone I only know virtually, which means we use text not voice.  So I took a minute to say more than a trite one-liner and give some ideas that could generate more exploration.  I'm rather partial to it, but more importantly he liked it more than all the other advice he's gotten too.

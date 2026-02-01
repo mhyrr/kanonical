@@ -1,7 +1,7 @@
 ---
 title: Exponentials and Revolution
 date: 2020-05-28T05:00:00.000Z
-path: /exponentials/
+url: /exponentials/
 type: the world
 ---
 
@@ -11,11 +11,11 @@ I’ve been thinking a lot about [exponential functions](https://en.wikipedia.or
 
 Which is true.  But there’s a second-order version of this too, which is that even among the mathematical literate (or semi-literate), there is a canned version of exponential growth packed tightly in our heads.  Which looks like this:
 
-![img/exponentialgrowth.png](img/exponentialgrowth.png)
+![img/exponentialgrowth.png](/img/exponentialgrowth.png)
 
 We’ve seen these curves before for all sorts of different things.  There’s two problems with being able to really comprehend them.  The first is that if you don’t have the complete timescale, the exponential nature of the curve becomes a lot harder to see.  Here’s an example that looks closer to a linear fit:
 
-![](img/slowexp.png "huh")
+![](/img/slowexp.png "huh")
 
 Doesn’t look like very speedy growth, but that thing is about to take off.
 
@@ -27,23 +27,23 @@ Which, in part, leads to amusing commentaries like George Will’s observation o
 
 That 50% difference in growth rate leads to huge differences over generational timescales.  It’s how we end up with all of our amazing exponential GDP graphs.  It’s why [Tyler Cowen argues that economic growth is actually a moral imperative](https://www.mercatus.org/bridge/essays/economic-growth-moral-imperative). For instance, here’s England:
 
-![](img/gdp_overtime.svg)
+![](/img/gdp_overtime.svg)
 
 And here’s the same thing for the entire world.  East Asia and Africa there are on the same curves as the rest of the world, just shifted to the right in time.
 
-![](img/worldgdp_overtime.svg)
+![](/img/worldgdp_overtime.svg)
 
 We see a lot of graphs like this.  For example, here’s coal use over time (seems like it could be scary):
 
-![](img/coal_overtime.png)
+![](/img/coal_overtime.png)
 
 And Facebook users:
 
-![](img/facebook_overtime.png)
+![](/img/facebook_overtime.png)
 
 And US Coronavirus cases:
 
-![](img/corona_us.jpeg)
+![](/img/corona_us.jpeg)
 
 ## Sigmoids
 

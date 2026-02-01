@@ -1,7 +1,7 @@
 ---
 title: Statelessness
 date: 2010-12-31T05:00:00.000Z
-path: /statelessness/
+url: /statelessness/
 type: life
 ---
 

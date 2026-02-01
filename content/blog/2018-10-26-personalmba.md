@@ -1,7 +1,7 @@
 ---
 title: The Personal MBA
 date: 2018-10-26T20:25:31.000Z
-path: /personalmba/
+url: /personalmba/
 ---
 
 > You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.

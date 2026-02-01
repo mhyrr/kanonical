@@ -1,7 +1,7 @@
 ---
 title: Generative Conversations
 date: 2023-02-07T06:23:00.000Z
-path: /generative-conversations/
+url: /generative-conversations/
 ---
 
 I just had lunch with a friend.  It was a couple hours long and we talked about everything from Tesla product positioning to the role of the Ten Commandments in society, from sex to the nature of Girardian terror and social media, from the idea of dematerialization to the effects increasing wealth has on consumer buying habits.  I learned a lot from him - I always do - but I learned even more from the combination of us both talking things out.

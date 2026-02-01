@@ -1,7 +1,7 @@
 ---
 title: Unusual Books For Teenagers
 date: 2021-04-17T08:32:00.000Z
-path: /unusual-books-for-kids/
+url: /unusual-books-for-kids/
 type: education
 ---
 

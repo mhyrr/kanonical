@@ -1,7 +1,7 @@
 ---
 title: Aran Islands
 date: 2008-05-03T03:00:00.000Z
-path: /aran_islands/
+url: /aran_islands/
 type: travel
 ---
 

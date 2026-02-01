@@ -1,7 +1,7 @@
 ---
 title: The Untranslatables
 date: 2020-12-19T07:57:00.000Z
-path: /untranslatable/
+url: /untranslatable/
 ---
 
 # Words in other languages

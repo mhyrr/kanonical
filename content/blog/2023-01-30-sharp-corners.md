@@ -1,7 +1,7 @@
 ---
 title: Sharp Edges
 date: 2023-01-30T12:38:00.000Z
-path: /sharp-edges/
+url: /sharp-edges/
 ---
 
 

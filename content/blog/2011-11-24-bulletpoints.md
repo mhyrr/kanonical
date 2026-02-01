@@ -1,7 +1,7 @@
 ---
 title: Money - Bullet Points
 date: 2011-11-24T05:00:00.000Z
-path: /bulletpoints/
+url: /bulletpoints/
 ---
 
 So that's a whirlwind tour of money and motivations.  I've covered most of my bases, but there's still some little tidbits and such that are either repetitive or new but wouldn't really fit anywhere.  So this is the PowerPoint part of my series.  I've talked a bit about how to think about wealth, happiness, work, and how to step out of the normal mode of a fixed-income day job.  I'd love to keep talking more about it with anyone and everyone; I know I've still got a lot to learn.

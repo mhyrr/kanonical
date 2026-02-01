@@ -1,14 +1,14 @@
 ---
 title: The Options
 date: 2020-08-27T11:00:00.000Z
-path: /the-options/
+url: /the-options/
 type: essay
 ---
 
 
 When I was a kid, this was my favorite poster.
 
-![](img/higher_ed_just.jpg)
+![](/img/higher_ed_just.jpg)
 
 I got it pretty early - early enough that I didn’t really understand the punchline.  But I LOVED the cars, and I knew I wanted a garage like that.  My parents thought it was hilarious, and they kept telling me that school was how you got there.
 
@@ -134,7 +134,7 @@ So those are the options.  What should you do?
 
 The Japanese have a word to describe this quandary: [ikigai](https://en.wikipedia.org/wiki/Ikigai).  It translates to “a reason for being”.  And some delightful diagrams have been built to break it down:
 
-![](img/ikigai.jpeg)
+![](/img/ikigai.jpeg)
 
 The answers to these questions and where you fall will vary over the seasons of life.  The point is not to hit the right spot - diagrams will make you do that -  but to ask the right questions; to have some intention about your life.  To think about your reason for being, your purpose, your place in the world.
 

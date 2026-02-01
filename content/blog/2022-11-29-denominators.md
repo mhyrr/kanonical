@@ -1,7 +1,7 @@
 ---
 title: Our Dumpster Fire Record
 date: 2022-11-29T17:26:00.000Z
-path: /dumpster-fires/
+url: /dumpster-fires/
 ---
 
 Twitter, the media, and your neighbor Deborah with the bad dye job all agree: the sky is falling and the world is ending.
@@ -12,7 +12,7 @@ This is all technology too, of course.  If a woman has 7 kids (rare these days!)
 
 Don’t get me wrong, there are still a lot of bad things.  But way, WAY less.  At the same time, there’s more technology.  So here’s a fun, made up chart:
 
-![fake graphs are the best](img/badthings.png)
+![fake graphs are the best](/img/badthings.png)
 
 Note that logarithmic Y axis.  The [world population](https://en.wikipedia.org/wiki/World_population) has _tripled_ since the 1950s.  It’s 10x’d since about 1800.  There’s far more human experience than ever before.  At the same time, bad things have exponentially _decreased_.   [Child mortality rates](https://ourworldindata.org/child-mortality#:~:text=The%20global%20average%20child%20mortality,on%20a%20much%20higher%20level.) were 43% in 1800.  Today, it’s just 3% worldwide (and \<1% in Western countries).  We still hear about it all the time, and that’s because of how much more of the world we can measure today.
 

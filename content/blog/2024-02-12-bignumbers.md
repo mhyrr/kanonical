@@ -1,7 +1,7 @@
 ---
 title: Big Numbers and Natural Theology
 date: 2024-02-12T18:49:00.000Z
-path: /big-numbers-theology/
+url: /big-numbers-theology/
 ---
 
 I want to talk about two really big numbers. I know, math. Bear with me though because these two numbers are pretty wild. And they give us a good lesson about reality and the revealed nature of God.

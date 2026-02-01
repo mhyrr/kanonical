@@ -1,7 +1,7 @@
 ---
 title: A Surprise (actually, two)
 date: 2008-05-23T03:00:00.000Z
-path: /a_surprise_actually_two/
+url: /a_surprise_actually_two/
 type: travel
 ---
 

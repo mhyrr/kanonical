@@ -1,7 +1,7 @@
 ---
 title: Intentions and Power
 date: 2022-11-18T14:24:00.000Z
-path: /intentions/
+url: /intentions/
 ---
 
 I had a few long drives in the last couple weeks, so I decided to actually get all the way through [Balaji’s epic 8 hour podcast interview](https://www.youtube.com/watch?v=VeH7qKZr0WI&t=217s) with Lex Fridman.  I’m glad I did - Balaji spins out ideas at an alarming rate.

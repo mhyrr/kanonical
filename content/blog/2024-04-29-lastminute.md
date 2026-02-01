@@ -1,7 +1,7 @@
 ---
 title: The Last Minute
 date: 2024-04-29T11:31:00.000Z
-path: /last-minute/
+url: /last-minute/
 ---
 
 > "If you wait until the last minute, it only takes one minute."

@@ -1,7 +1,7 @@
 ---
 title: Things They Don't Teach You In School
 date: 2014-09-10T01:31:28.000Z
-path: /things-they-dont-teach-you-in-school/
+url: /things-they-dont-teach-you-in-school/
 ---
 
 *This is the transcript of a talk I gave at Howard Community College to Intro to Engineering students, September 2014*

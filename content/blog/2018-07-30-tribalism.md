@@ -1,7 +1,7 @@
 ---
 title: The Tribalism Answer
 date: 2018-07-30T09:25:31.000Z
-path: /tribalism/
+url: /tribalism/
 ---
 
 Aside from everything else he does or says, Jordan Peterson has gotten just *one thing right*, and this one thing is enough to have irritated a lot of people.  A lot of people hide their dislike for Peterson behind claims of transphobia, racism,   misogyny, fascism (which is especially weird), and lots more.

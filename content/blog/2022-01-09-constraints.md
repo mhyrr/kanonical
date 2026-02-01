@@ -1,7 +1,7 @@
 ---
 title: Constraints For Kids
 date: 2022-01-09T14:25:00.000Z
-path: /constraints-for-kids/
+url: /constraints-for-kids/
 type: education
 ---
 

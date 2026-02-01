@@ -1,7 +1,7 @@
 ---
 title: A Contrarian View - Why Should I Vote?
 date: 2008-10-16T03:00:00.000Z
-path: /a_contrarian_view_why_should_i_vote/
+url: /a_contrarian_view_why_should_i_vote/
 ---
 
 #### Anticipation (typical unrelated opening paragraph)

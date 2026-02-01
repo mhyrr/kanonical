@@ -1,7 +1,7 @@
 ---
 title: Knight's Tour, Take Two
 date: 2008-03-02T05:00:00.000Z
-path: /knights_tour_take_two/
+url: /knights_tour_take_two/
 ---
 
 Well, after last night's post I did a little bit of reading on better ways to do this, aside from my horrible, ridiculously slow recursive implementation. Turns out that a guy named Warnsdorff discovered a clever little heuristic for the recurvsive implementation in the 19th century. All you do is take all the possible moves for each one of your possible moves and move to the next square with the least number of possible moves. This works for small boards ( less than 76x76). A bunch more is described on <a href="http://mathworld.wolfram.com/KnightsTour.html">Wolfram's MathWorld</a>.

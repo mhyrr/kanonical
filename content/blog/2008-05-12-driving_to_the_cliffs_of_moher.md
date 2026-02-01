@@ -1,7 +1,7 @@
 ---
 title: Driving to the Cliffs of Moher
 date: 2008-05-12T03:00:00.000Z
-path: /driving_to_the_cliffs_of_moher/
+url: /driving_to_the_cliffs_of_moher/
 type: travel
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Knight's Tour, Take One
 date: 2008-03-02T04:00:00.000Z
-path: /knights_tour_take_one/
+url: /knights_tour_take_one/
 ---
 
 There's been a lot of little stuff that I've been wanting to practice in the Java language that I haven't gotten the chance to look at in my day job.  So I decided to set myself a little task to try a couple of things.  I'd never really used Generics at all, and I'd never used Java Web Start.  On top of that, I wanted a little bit of extra algorithm practice (this seems to be a recurring theme, what with Project Euler, etc.. maybe I'm just masochistic in general).  I've always been fascinated with chess, even though I'm an abyssmal player.  Throughout history, a lot of very smart people have been fascinated with all of the combinations of moves and strategies.  Some of them became particularly fascinated with the idea of a [Knight's Tour](http://en.wikipedia.org/wiki/Knight%27s_tour) - that is the movement of a Knight about a chessboard so that it hits each square only once.  Well, with code it's possible to come up with lots of solutions on variously sized boards.  So that's what I decided to do.

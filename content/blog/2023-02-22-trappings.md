@@ -1,7 +1,7 @@
 ---
 title: All The Trappings
 date: 2023-02-22T14:14:00.000Z
-path: /trappings/
+url: /trappings/
 ---
 
 When I first started woodworking, I was hyperfocused on what my work area looked like.  I started out in the garage under our house with just a circular saw and no real idea what I was doing.  Once I figured out how to make “square” cuts with a track saw, my wife bought me a magazine all about workshops.  It was filled with gorgeous pictures of impeccably setup shops.  Every tool was in it’s place, with lines of chisels or handplanes or blades or custom-designed cabinets lining the walls.  I’m a big fan of Philip Morley and his shop is clearly well-stocked:
@@ -16,7 +16,7 @@ He may or may not be a gentleman.  But he’s not a farmer, he just plays at one
 
 This is how my shop looks now.
 
-![](img/2022workshop.jpeg)
+![](/img/2022workshop.jpeg)
 
 Well not quite, there’s a couple new big tools in the way.  But the point is, it’s a mess.  And that’s the point: it should be.  Because I’m still working at it and there are a thousand places where I have no idea what I’m doing.  When we see the amazing spaces of craftsmen, we miss the necessity that drove the space to become what it is.  Philip Morley’s shop has tools, wood, and jigs everywhere.  It didn’t get that way so others could admire it.  It got that way because, over thousands of hours of labor, he shaped the space he needed to build.
 

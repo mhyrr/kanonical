@@ -1,7 +1,7 @@
 ---
 title: Learning After College
 date: 2008-03-15T04:00:00.000Z
-path: /learning_after_college/
+url: /learning_after_college/
 draft: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: The Year's Goals
 date: 2015-01-05T21:59:21.000Z
-path: /the-years-goals/
+url: /the-years-goals/
 type: goals
 ---
 

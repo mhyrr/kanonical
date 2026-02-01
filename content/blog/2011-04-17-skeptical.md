@@ -1,7 +1,7 @@
 ---
 title: A Review of the Skeptical Environmentalist
 date: 2011-04-17T03:00:00.000Z
-path: /skeptical/
+url: /skeptical/
 type: books
 ---
 

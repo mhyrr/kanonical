@@ -1,0 +1,180 @@
+{{ define "main" }}
+<h1 class="text-3xl font-bold mb-6">All the Books</h1>
+
+<div class="prose dark:prose-invert mb-8 max-w-none">
+  <p>
+    I really like books. Like, a lot.
+    I've kept a list of everything I've read over the years.
+    I'm missing a bunch in the distant past, but I've been keeping this list consistently since around 2018.
+  </p>
+  <p>
+    I'm a big fan of <a href="https://tomcritchlow.com/">Tom Critchlow's</a>
+    <a href="https://tomcritchlow.com/2020/04/15/library-json/">Library.json idea</a> too.
+  </p>
+
+  <h4 class="mt-6 mb-2">Favorites Of The Last Few Years</h4>
+  <ul class="grid gap-2 grid-cols-2 md:grid-cols-3 list-none pl-0">
+    <li><a href="/books-2024/">Best of 2024</a></li>
+    <li><a href="/books-2023/">Best of 2023</a></li>
+    <li><a href="/books-2022/">Best of 2022</a></li>
+    <li><a href="/books-2021/">Best of 2021</a></li>
+    <li><a href="/books-2020/">Best of 2020</a></li>
+    <li><a href="/books-2019/">Best of 2019</a></li>
+  </ul>
+</div>
+
+{{ $books := .Site.Data.books }}
+{{ $thisYear := int (now.Format "2006") }}
+{{ $lastYear := sub $thisYear 1 }}
+{{ $twoYearsAgo := sub $thisYear 2 }}
+
+{{/* Currently Reading */}}
+{{ $current := where $books "current" "y" }}
+{{ with $current }}
+<section class="mb-10">
+  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+    Things I'm Currently Reading
+  </h2>
+  <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range . }}
+      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
+        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{/* Helper: extract 4-digit year from date string */}}
+{{/* Books This Year */}}
+{{ $booksThisYear := slice }}
+{{ range $books }}
+  {{ if and (eq (lower .done) "done") .date }}
+    {{ $yearMatch := findRE "\\d{4}" .date }}
+    {{ if $yearMatch }}
+      {{ $year := int (index $yearMatch 0) }}
+      {{ if eq $year $thisYear }}
+        {{ $booksThisYear = $booksThisYear | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $booksThisYear }}
+<section class="mb-10">
+  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+    Things I've Read So Far In {{ $thisYear }}
+  </h2>
+  <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range . }}
+      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
+        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{/* Books Last Year */}}
+{{ $booksLastYear := slice }}
+{{ range $books }}
+  {{ if and (eq (lower .done) "done") .date }}
+    {{ $yearMatch := findRE "\\d{4}" .date }}
+    {{ if $yearMatch }}
+      {{ $year := int (index $yearMatch 0) }}
+      {{ if eq $year $lastYear }}
+        {{ $booksLastYear = $booksLastYear | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $booksLastYear }}
+<section class="mb-10">
+  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+    Things I Read In {{ $lastYear }}
+  </h2>
+  <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range . }}
+      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
+        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{/* Books Two Years Ago */}}
+{{ $booksTwoYearsAgo := slice }}
+{{ range $books }}
+  {{ if and (eq (lower .done) "done") .date }}
+    {{ $yearMatch := findRE "\\d{4}" .date }}
+    {{ if $yearMatch }}
+      {{ $year := int (index $yearMatch 0) }}
+      {{ if eq $year $twoYearsAgo }}
+        {{ $booksTwoYearsAgo = $booksTwoYearsAgo | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $booksTwoYearsAgo }}
+<section class="mb-10">
+  <h2 class="text-xl font-bold mb-4 pt-4 border-dark/10 dark:border-light/10">
+    Things I Read In {{ $twoYearsAgo }}
+  </h2>
+  <ul class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range . }}
+      <li class="p-3 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors">
+        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="block text-sm italic text-primary">- {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{/* Everything Else */}}
+{{ $olderBooks := slice }}
+{{ range $books }}
+  {{ if and (eq (lower .done) "done") .date }}
+    {{ $yearMatch := findRE "\\d{4}" .date }}
+    {{ if $yearMatch }}
+      {{ $year := int (index $yearMatch 0) }}
+      {{ if lt $year $twoYearsAgo }}
+        {{ $olderBooks = $olderBooks | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $olderBooks }}
+<section class="mb-10">
+  <h2 class="text-xl font-bold mb-4 pt-4 border-t border-dark/10 dark:border-light/10">
+    Everything before that..
+  </h2>
+  <ul class="space-y-1">
+    {{ range . }}
+      <li>
+        {{ with .link }}<a href="{{ . }}" class="hover:text-secondary">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="text-sm italic text-primary">by {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ end }}

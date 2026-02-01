@@ -1,7 +1,7 @@
 ---
 title: A Sense of Place
 date: 2018-07-11T22:10:30.000Z
-path: /sense-of-place/
+url: /sense-of-place/
 type: beach
 ---
 

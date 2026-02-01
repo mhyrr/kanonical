@@ -1,7 +1,7 @@
 ---
 title: Principal Payments
 date: 2018-09-12T06:58:30.000Z
-path: /down-principal-down/
+url: /down-principal-down/
 type: beach
 ---
 

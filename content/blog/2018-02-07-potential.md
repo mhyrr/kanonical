@@ -1,7 +1,7 @@
 ---
 title: On the Dangers of Potential Energy
 date: 2018-02-07T21:31:46.000Z
-path: /potential-energy/
+url: /potential-energy/
 ---
 
 My last goal of 2018 was to [focus on doing](/2018-baller/), and to revive the joy of doing, without regard for the outcome.  I've been trying to understand for myself exactly what this means.  It's been a struggle to formulate the idea properly - it's kind of complex - but I think I have a metaphor for it that fits.

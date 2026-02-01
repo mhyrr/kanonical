@@ -1,7 +1,7 @@
 ---
 title: A Brief Introduction to Britain
 date: 2008-05-13T03:00:00.000Z
-path: /a_brief_introduction_to_britain/
+url: /a_brief_introduction_to_britain/
 type: travel
 ---
 

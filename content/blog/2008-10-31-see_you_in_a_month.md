@@ -1,7 +1,7 @@
 ---
 title: See you in a month!
 date: 2008-10-31T04:00:00.000Z
-path: /see_you_in_a_month/
+url: /see_you_in_a_month/
 ---
 
 It's half an hour until midnight, November 1st.  The excuses have been put aside.  My study is complete; I have a comfy chair, a beautiful large desk, and a delightful stereo with iPod dock.  I have a notebook with half-formed plot vehicles, character studies, names, themes, and other random thoughts.  It's time to try to make sense of them and produce some output.

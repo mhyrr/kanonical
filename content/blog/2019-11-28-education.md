@@ -1,7 +1,7 @@
 ---
 title: Education - Working Backwards
 date: 2019-11-28T07:22:00.000Z
-path: /education-backwards/
+url: /education-backwards/
 type: essay
 description: "
 This started out as a simple idea: to work backwards from the adults we hope our children will be and use this to think about how we raise our kids now.  9,000 words later it turns out there was a lot to say:
@@ -58,7 +58,7 @@ The format is also different.  Tweetstorms on Twitter have actually become a rea
 
 - We imagine our children’s futures as a straight line from here to there because we think backwards about our own lives this way.  In hindsight, it’s easy to diminish all the complexity and imagine it was a straight path too, but it wasn’t.  All of our paths have meandered and wound around time in interesting ways, and serendipity has played her role too.  I call this the Retrospective Path Dilemma: we remember things in one dimension as a line, but experience them in two or three.
 
-![Not Straight](img/path.jpg)
+![Not Straight](/img/path.jpg)
 
 - Somehow, a lot of people in our society end up wasting a lot of life focused on the wrong things.  We miss important things in high school, party and drink too much in college, accrue huge mountains of college debt, pick majors that don’t matter, and careers that we don’t like.
 
@@ -340,7 +340,7 @@ The format is also different.  Tweetstorms on Twitter have actually become a rea
 
 - On the other hand, for a chemical engineering major with immediate six-figure earning potential it isn’t unreasonable to invest a significant amount of money on a degree.  One big reason for this is that conceptual rigor also matters more in some majors than it does in others.  This can be seen by comparing the return on investment in more selective colleges on earnings across majors.  In more selective colleges, earnings can skyrocket for math, physics and computer science.  But in the same elite schools, the impact on earnings in the humanities is negligible.
 
-![Selectivity matters selectively](img/value_earnings.jpg)
+![Selectivity matters selectively](/img/value_earnings.jpg)
 
 
 - A lot of people really don’t like this statement, but it’s just true. The conceptual load required for some majors is higher.  Physics, math, engineering and others require a very significant amount of intellectual ability and knowledge to produce work in their fields.

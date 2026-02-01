@@ -1,7 +1,7 @@
 ---
 title: Sensible Hire Defaults
 date: 2009-07-01T03:00:00.000Z
-path: /sensible-hire-defaults/
+url: /sensible-hire-defaults/
 ---
 
 Recently, I've been close enough to hiring decisions to realize two things:

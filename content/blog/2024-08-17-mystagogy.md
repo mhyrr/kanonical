@@ -1,7 +1,7 @@
 ---
 title: Kids Need Mystagogy Not Pedagogy
 date: 2024-08-17T12:03:00.000Z
-path: /mystagogy/
+url: /mystagogy/
 ---
 
 _Greg here - I'm trying something new!  This was just published on my Substack: [Brains Are Plastic](https://brainsareplastic.substack.com/).  I'm working to get into a groove and a regular posting schedule there.  Please head over and subscribe!_

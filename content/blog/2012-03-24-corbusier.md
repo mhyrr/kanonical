@@ -1,7 +1,7 @@
 ---
 title: Corbusier Fucked It All Up
 date: 2012-03-24T04:00:00.000Z
-path: /corbusier/
+url: /corbusier/
 type: the world
 ---
 

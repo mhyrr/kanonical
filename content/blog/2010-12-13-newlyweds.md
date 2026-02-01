@@ -1,7 +1,7 @@
 ---
 title: Remarks from a Newlywed
 date: 2010-12-13T05:00:00.000Z
-path: /newlyweds/
+url: /newlyweds/
 type: travel
 ---
 

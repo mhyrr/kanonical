@@ -1,7 +1,7 @@
 ---
 title: Some Haiku
 date: 2016-10-15T21:15:37.000Z
-path: /some-haiku/
+url: /some-haiku/
 type: creative
 ---
 
