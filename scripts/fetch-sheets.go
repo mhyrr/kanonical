@@ -26,7 +26,7 @@ var sheetConfigs = map[string]SheetConfig{
 	},
 	"workouts": {
 		ID:    "1WKkLtwJujS-AL4WB_sLlxyFtbBgxl6zTcrAoUwnr9O0",
-		Range: "Sheet1!A:E",
+		Range: "Sheet1!A:I",
 	},
 	"links": {
 		ID:    "1xyxBcVq5TehTu3mW1lL8N0lhTEr0eUUvnH9b16raj8w",

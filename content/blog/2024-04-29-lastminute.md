@@ -1,6 +1,7 @@
 ---
 title: The Last Minute
 date: 2024-04-29T11:31:00.000Z
+description: "If you wait until the last minute, it only takes one minute. Why Parkinson's Law means you should question whether to plan at all."
 url: /last-minute/
 ---
 

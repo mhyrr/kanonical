@@ -1,6 +1,7 @@
 ---
 title: Intentions and Power
 date: 2022-11-18T14:24:00.000Z
+description: "You can do anything if your intentions are good. That's why the FDA gets a pass and charities grow forever. Intentions matter for judgement, but not for impact."
 url: /intentions/
 ---
 

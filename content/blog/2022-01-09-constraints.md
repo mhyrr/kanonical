@@ -1,6 +1,7 @@
 ---
 title: Constraints For Kids
 date: 2022-01-09T14:25:00.000Z
+description: "Patrick Collison had no internet until 16 and it probably helped. Kids are antifragile. What they need is time, imagination, and effort, not more resources."
 url: /constraints-for-kids/
 type: education
 ---

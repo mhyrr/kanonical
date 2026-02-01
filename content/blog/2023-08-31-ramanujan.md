@@ -1,6 +1,7 @@
 ---
 title: The Myth Of Ramanujan
 date: 2023-08-31T13:38:00.000Z
+description: "The internet solved the Ramanujan problem. Finding genius is easy now. The new challenge is building an environment where they can thrive instead of scrolling TikTok."
 url: /ramanujan/
 ---
 

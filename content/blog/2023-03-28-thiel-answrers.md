@@ -1,6 +1,7 @@
 ---
 title: Thiel Answers
 date: 2023-03-28T22:42:00.000Z
+description: "My answers to Peter Thiel's contrarian question: important truths very few people agree with. From fossil fuels to healthcare to why optimism is revolutionary."
 url: /thiel-answers/
 ---
 

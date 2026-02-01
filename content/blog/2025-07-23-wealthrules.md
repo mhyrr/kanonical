@@ -1,6 +1,7 @@
 ---
 title: The New Rules of Building Wealth
 date: 2025-07-23T21:04:00.000Z
+description: "An investing guide for young people who want to win. The old playbook is dead; here's how money actually works in 2025."
 url: /2025-wealth-rules/
 ---
 

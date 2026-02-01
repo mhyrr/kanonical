@@ -1,6 +1,7 @@
 ---
 title: Our Dumpster Fire Record
 date: 2022-11-29T17:26:00.000Z
+description: "Things look twice as bad now because we record everything. Child mortality was 43% in 1800, now it's 3%. Denominators matter."
 url: /dumpster-fires/
 ---
 

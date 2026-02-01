@@ -1,6 +1,7 @@
 ---
 title: Kids Need Mystagogy Not Pedagogy
 date: 2024-08-17T12:03:00.000Z
+description: "The best teachers don't just deliver facts. They lead children through mysteries and kindle wonder. If fathers built libraries instead of man caves, we'd transform the world."
 url: /mystagogy/
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Brief New Parent Advice
 date: 2024-06-05T10:07:00.000Z
+description: "The best parenting advice I have: 95% of the job is already done because you picked an amazing spouse. The rest is about not screwing them up."
 url: /new-parents/
 ---
 
