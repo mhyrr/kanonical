@@ -1,7 +1,7 @@
 ---
 title: The Weekend
 date: 2008-06-11T03:00:00.000Z
-path: /the_weekend/
+url: /the_weekend/
 type: travel
 ---
 

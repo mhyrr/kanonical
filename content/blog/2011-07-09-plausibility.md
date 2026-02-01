@@ -1,7 +1,7 @@
 ---
 title: Scarlet Tanagers
 date: 2011-07-09T03:00:00.000Z
-path: /plausibility/
+url: /plausibility/
 ---
 
 This morning I sat at my normal Saturday coffee shop next to a table with a mother and her teenage daughter.  Though it has become a common sight, the difference between them was startling.  The daughter was about what you expect from a teenage girl, relaxed and athletic, she paid attention to her hair, her clothes, and her phone, and she looked bored.  Actually, she looked desperate to get out of there, to go feel the sun on her face and enjoy the day.  The mother was also about what you expect.  Short bad hair, fat, colored nails holding onto bad fashion along with an ugly flowery shirt and purse.  She didn't look bored, she looked boring.  Middle-age had sucked the life right out of her.  The dichotomy was tremendous.  

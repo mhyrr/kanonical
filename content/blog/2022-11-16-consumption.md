@@ -1,7 +1,7 @@
 ---
 title: Consumption Is Still Consumption
 date: 2022-11-16T10:51:00.000Z
-path: /consumption-not-the-goal/
+url: /consumption-not-the-goal/
 type: writing
 ---
 

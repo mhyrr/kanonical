@@ -1,7 +1,7 @@
 ---
 title: Change Is The Master Key
 date: 2018-11-03T08:32:46.000Z
-path: /master-key/
+url: /master-key/
 type: beach
 ---
 

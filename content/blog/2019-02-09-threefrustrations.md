@@ -1,7 +1,7 @@
 ---
 title: Three Frustrations
 date: 2019-02-08T10:09:31.000Z
-path: /three-frustrations/
+url: /three-frustrations/
 type: life
 ---
 

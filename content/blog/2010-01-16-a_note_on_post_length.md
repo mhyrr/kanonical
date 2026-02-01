@@ -1,7 +1,7 @@
 ---
 title: A Note On Post Length
 date: 2010-01-16T05:00:00.000Z
-path: /a_note_on_post_length/
+url: /a_note_on_post_length/
 ---
 
 I originally started this whole shindig as an exercise to improve my writing process.  I was anxious, as a matter of course, to improve my ability enough to at least come out with a coherent thought or two and, if I was lucky, make it through a very long, arduous [National Novel Writing Month](http://www.nanowrimo.org).

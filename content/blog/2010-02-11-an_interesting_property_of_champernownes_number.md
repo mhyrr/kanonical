@@ -1,7 +1,7 @@
 ---
 title: An Interesting Property of Champernowne's Number
 date: 2010-02-11T05:00:00.000Z
-path: /an_interesting_property_of_champernownes_number/
+url: /an_interesting_property_of_champernownes_number/
 ---
 
 ### What is it?

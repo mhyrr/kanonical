@@ -1,7 +1,7 @@
 ---
 title: About This Site
 date: 2010-11-07T12:00:00.000Z
-path: "/about-page/"
+url: "/about-page/"
 type: about
 ---
 
@@ -26,9 +26,9 @@ Here's where I've ended up:
 - Big shoutout to the free and MIT-licensed themes over at [GatsbyTemplates](https://gatsbytemplates.io/free/) - tons of good ideas.
 - Gatsby lets you [import and format Markdown](https://www.gatsbyjs.com/docs/adding-a-list-of-markdown-blog-posts/) files for pages.  
 - I pull data regularly from several Google Sheets using another [source plugin](https://www.gatsbyjs.com/plugins/gatsby-source-google-sheets/)  None of the data for this place needs to be updated more than hourly, so this works great.  So I start with a spreadsheet that looks like this:
-  ![Books sheet](img/about-books.png)
+  ![Books sheet](/img/about-books.png)
   and end up with a GraphQL query that looks like this
-  ![Books GraphQL](img/about-gql-books.png)
+  ![Books GraphQL](/img/about-gql-books.png)
   and of course you can mix stuff from different sources
-  ![All the GraphQL](img/about-gql-index.png)
+  ![All the GraphQL](/img/about-gql-index.png)
 - Hosting by [Netlify](https://www.netlify.com/).  Free for small stuff and very developer friendly.  They let you fix software versions, import environment variables (secrets, etc.) and deploy via `git push`

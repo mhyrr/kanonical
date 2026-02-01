@@ -1,7 +1,7 @@
 ---
 title: The Incredible Shrinking Man
 date: 2013-01-29T05:00:00.000Z
-path: /shrinking/
+url: /shrinking/
 type: health
 ---
 

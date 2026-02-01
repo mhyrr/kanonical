@@ -1,7 +1,7 @@
 ---
 title: Keyboards vs. Long Form
 date: 2019-10-21T07:58:15.000Z
-path: /keyboards-vs-notebooks/
+url: /keyboards-vs-notebooks/
 type: writing
 ---
 

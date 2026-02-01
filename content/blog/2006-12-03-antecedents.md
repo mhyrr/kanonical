@@ -1,7 +1,7 @@
 ---
 title: Antecedents
 date: 2006-12-03T05:00:00.000Z
-path: /antecedents/
+url: /antecedents/
 type: creative
 ---
 

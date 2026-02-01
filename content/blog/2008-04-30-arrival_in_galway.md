@@ -1,7 +1,7 @@
 ---
 title: Arrival in Galway
 date: 2008-04-30T03:00:00.000Z
-path: /arrival_in_galway/
+url: /arrival_in_galway/
 type: travel
 ---
 

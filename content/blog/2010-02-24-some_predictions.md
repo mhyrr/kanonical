@@ -1,7 +1,7 @@
 ---
 title: Some Predictions
 date: 2010-02-24T05:00:00.000Z
-path: /some_predictions/
+url: /some_predictions/
 type: predictions
 ---
 

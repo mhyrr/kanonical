@@ -1,7 +1,7 @@
 ---
 title: First Day in London
 date: 2008-05-16T03:00:00.000Z
-path: /first_day_in_london/
+url: /first_day_in_london/
 type: travel
 ---
 

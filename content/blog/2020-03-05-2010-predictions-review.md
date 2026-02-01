@@ -1,7 +1,7 @@
 ---
 title: 2010 Predictions Review
 date: 2020-03-05T08:41:00.000Z
-path: /2010-predictions-review/
+url: /2010-predictions-review/
 type: predictions
 ---
 

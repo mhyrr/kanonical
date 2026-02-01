@@ -1,7 +1,7 @@
 ---
 title: Math for Theologians
 date: 2018-04-17T07:50:31.000Z
-path: /theology-and-math/
+url: /theology-and-math/
 type: essay
 description: "Think for a second about the most beautiful ideas you've ever run across.  Beauty is not the usual characteristic you use to group ideas.  I know I hadn't done it before, until I ran across this delightful little blog entry.
 <br/><br/>

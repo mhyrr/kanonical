@@ -1,0 +1,125 @@
+{{ define "main" }}
+<section class="text-center mb-12">
+  <h1 class="text-4xl font-bold mb-4">{{ .Site.Title }}</h1>
+  <p class="text-xl text-dark/80 dark:text-light/80">
+    {{ .Site.Params.description }}
+  </p>
+</section>
+
+{{/* Substack */}}
+<section class="text-center mb-12">
+  <h4 class="mb-4">I've started a Substack! If you've made it this far, you should sign up!</h4>
+  <iframe src="https://brainsareplastic.substack.com/embed" width="400" height="300" style="border:1px solid #EEE; background:white; margin: 0 auto; display: block;"></iframe>
+</section>
+
+{{/* Things I've Written */}}
+<section class="mb-12">
+  <h2 class="text-2xl font-bold mb-6 text-center">Things I've Written</h2>
+  <ul class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+      <li class="p-4 rounded-lg bg-dark/5 dark:bg-light/5 hover:bg-dark/10 dark:hover:bg-light/10 transition-colors">
+        <a href="{{ .RelPermalink }}" class="block">
+          <h3 class="font-semibold hover:text-primary transition-colors">{{ .Title }}</h3>
+          <time class="text-sm text-dark/60 dark:text-light/60">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+  <p class="text-center mt-4">
+    <a href="/blog/" class="text-secondary underline">There's plenty more to read too</a>
+  </p>
+</section>
+
+{{/* Things I'm Reading */}}
+{{ with .Site.Data.books }}
+<section class="mb-12">
+  <h2 class="text-2xl font-bold mb-6 text-center">Things I'm Reading</h2>
+  <ul class="space-y-2 max-w-xl mx-auto">
+    {{ range where . "current" "y" }}
+      <li>
+        {{ with .link }}<a href="{{ . }}" class="text-secondary font-semibold hover:underline">{{ end }}
+          {{ .title }}
+        {{ with .link }}</a>{{ end }}
+        <span class="text-dark/60 dark:text-light/60 italic"> - {{ .author }}</span>
+      </li>
+    {{ end }}
+  </ul>
+  {{ $thisYear := now.Format "2006" }}
+  {{ $booksThisYear := where . "done" "Done" }}
+  <p class="text-center mt-4">
+    <a href="/books/" class="text-secondary underline">That's {{ len $booksThisYear }} books so far this year.</a>
+  </p>
+</section>
+{{ end }}
+
+{{/* Projects & Wondering - 2 column grid */}}
+<section class="mb-12 grid gap-8 md:grid-cols-2">
+  <div>
+    <h2 class="text-2xl font-bold mb-4 text-center">Projects</h2>
+    <ul class="space-y-4">
+      <li>
+        <a href="https://www.thefuriousopposites.com/" class="text-secondary font-semibold underline">The Furious Opposites</a>
+        <span class="text-dark/80 dark:text-light/80"> - A Both/And view of understanding technology. Go subscribe!</span>
+      </li>
+      <li>
+        <a href="https://faradash.com/" class="text-secondary font-semibold underline">Faradash</a>
+        <span class="text-dark/80 dark:text-light/80"> - A dashboard of foreign spending based on Foreign Agent Registration data.</span>
+      </li>
+      <li>
+        <a href="https://github.com/mhyrr/collegevalue" class="text-secondary font-semibold underline">CollegeValue</a>
+        <span class="text-dark/80 dark:text-light/80"> - Compare colleges and majors based on how much money graduates make versus how much debt they accrue.</span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2 class="text-2xl font-bold mb-4 text-center">Things I'm Wondering</h2>
+    <ul class="space-y-3 text-dark/80 dark:text-light/80">
+      <li>How are phones and AI changing the way we grow up?</li>
+      <li>How can work on small projects drive family revenue?</li>
+      <li>Can restaurants use spreadsheets as menus?</li>
+      <li>How do you get better at speaking?</li>
+      <li>What does it take to write a spy novel?</li>
+    </ul>
+  </div>
+</section>
+
+{{/* Workouts & Quotes - 2 column grid */}}
+<section class="mb-12 grid gap-8 md:grid-cols-2">
+  {{/* Workouts */}}
+  {{ with .Site.Data.workouts }}
+  <div>
+    <h2 class="text-2xl font-bold mb-4 text-center">Workouts I've Killed</h2>
+    <ul class="space-y-3">
+      {{ range first 5 . }}
+        <li>
+          <div class="font-medium">{{ .distance }} Mile {{ .name }}</div>
+          <div class="text-sm italic text-primary">{{ .moving_time }}</div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{/* Quotes */}}
+  {{ with .Site.Data.links }}
+  <div>
+    <h2 class="text-2xl font-bold mb-4 text-center">Quotes Newly Discovered</h2>
+    <ul class="space-y-4">
+      {{ $count := 0 }}
+      {{ range . }}
+        {{ if and (not (hasPrefix .content "http")) (lt $count 4) }}
+          {{ $count = add $count 1 }}
+          <li class="text-dark/80 dark:text-light/80">
+            {{ .content }}
+            <span class="block text-right text-sm italic text-primary">- {{ .title }}</span>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+    <p class="text-center mt-4">
+      <a href="/tumble/" class="text-secondary underline">More in the Tumble →</a>
+    </p>
+  </div>
+  {{ end }}
+</section>
+{{ end }}

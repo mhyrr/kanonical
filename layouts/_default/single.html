@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="prose dark:prose-invert prose-lg max-w-none">
+  <header class="mb-8 not-prose">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">{{ .Title }}</h1>
+    <div class="text-dark/60 dark:text-light/60 flex items-center gap-4">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      <span>·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </header>
+
+  {{ .Content }}
+</article>
+
+<nav class="mt-16 pt-8 border-t border-dark/10 dark:border-light/10 flex justify-between">
+  {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="hover:text-primary transition-colors">
+      ← {{ .Title | truncate 40 }}
+    </a>
+  {{ else }}
+    <span></span>
+  {{ end }}
+  {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="hover:text-primary transition-colors">
+      {{ .Title | truncate 40 }} →
+    </a>
+  {{ end }}
+</nav>
+{{ end }}

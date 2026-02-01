@@ -1,7 +1,7 @@
 ---
 title: Eat Flaming Death.  Hehe.
 date: 2008-03-02T05:00:00.000Z
-path: /eat_flaming_death_hehe/
+url: /eat_flaming_death_hehe/
 ---
 
 <script src="http://gist.github.com/38240.js"> </script>

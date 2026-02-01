@@ -1,7 +1,7 @@
 ---
 title: Gentleman Farmers
 date: 2024-05-15T17:51:00.000Z
-path: /gentleman-farmers/
+url: /gentleman-farmers/
 ---
 
 I have this recurring idea of a gentleman farmer in my head. This farmer owns many acres, stretching across the hills. He loves the land. He nuzzles the horses down in the horse farm and feeds them from his hand. He pays attention to the crop rotation and is thrilled to watch the verdant growth as harvest approaches. He's proud of his equipment and ensures it's highly maintained despite it's frequent use.

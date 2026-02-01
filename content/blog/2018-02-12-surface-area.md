@@ -1,7 +1,7 @@
 ---
 title: Wanna look good?  Focus on Surface Area
 date: 2018-02-12T07:15:46.000Z
-path: /surface-area/
+url: /surface-area/
 type: health
 ---
 

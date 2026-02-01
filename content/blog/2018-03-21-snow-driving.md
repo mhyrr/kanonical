@@ -1,7 +1,7 @@
 ---
 title: Why It's Insane To Consider Snow When Buying A Car Below The Mason-Dixon Line
 date: 2018-03-21T15:25:31.000Z
-path: /driving-in-the-snow/
+url: /driving-in-the-snow/
 ---
 
 So here's the thing: I'm a car guy and I've bought about 25 cars in my life.  This means I talk to a lot of people about buying cars.  People often say they want my opinion about their choices.  I've noticed that often what they really want is to talk *at* someone they think knows a lot so they feel more secure about their decision.  This is fine; we all do it sometimes.  Talking to an "expert" makes people feel better about their decision.  It's just that they usually don't do much listening, which is the key thing to do when talking to an expert.  Something to keep in mind.

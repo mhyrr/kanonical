@@ -1,0 +1,361 @@
+{{ define "main" }}
+<div class="tumble-page">
+  <header class="tumble-header">
+    <h1 class="text-3xl font-bold mb-4">The Tumble</h1>
+    <div class="prose dark:prose-invert max-w-xl mx-auto mb-6">
+      <p>
+        <strong>A list of things I've read or thought about, collated over fifteen years.</strong>
+      </p>
+      <p class="text-sm">
+        It started with del.icio.us (remember that?), then Tumblr, now a Google spreadsheet fed by email.
+        I love that I can go back and see what I was thinking about weeks, months, or years ago.
+        Here's <a href="/tumbld/">some more detail</a>, if you're interested.
+      </p>
+    </div>
+
+    <nav class="tumble-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="link">Links</button>
+      <button class="filter-btn" data-filter="quote">Quotes</button>
+      <button class="filter-btn" data-filter="word">Words</button>
+    </nav>
+  </header>
+
+  {{/* Merge and sort all items by date */}}
+  {{ $links := .Site.Data.links }}
+  {{ $words := .Site.Data.words }}
+
+  {{/* Build unified items list */}}
+  {{ $items := slice }}
+
+  {{/* Process links - determine if quote or link */}}
+  {{ range $links }}
+    {{ $content := .content | default "" }}
+    {{ $cleanContent := $content }}
+    {{/* Strip the .Greg. signature cruft */}}
+    {{ if strings.Contains $content ".Greg." }}
+      {{ $parts := split $content ".Greg." }}
+      {{ $cleanContent = index $parts 0 }}
+    {{ end }}
+    {{/* Clean up whitespace and newlines */}}
+    {{ $cleanContent = $cleanContent | replaceRE `[\r\n]+$` "" | strings.TrimSpace }}
+
+    {{ $type := "quote" }}
+    {{ $trimmed := $cleanContent | strings.TrimSpace }}
+    {{ if or (hasPrefix $trimmed "http://") (hasPrefix $trimmed "https://") }}
+      {{ $type = "link" }}
+    {{ end }}
+
+    {{ $item := dict "type" $type "title" .title "content" $trimmed "date" .date "raw" . }}
+    {{ $items = $items | append $item }}
+  {{ end }}
+
+  {{/* Process words */}}
+  {{ range $words }}
+    {{ if and .word .definition }}
+      {{ $item := dict "type" "word" "title" .word "content" .definition "date" .date "raw" . }}
+      {{ $items = $items | append $item }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Sort by date descending */}}
+  {{ $items = sort $items "date" "desc" }}
+
+  <div class="tumble-grid">
+    {{ range $items }}
+      {{ $type := .type }}
+      {{ $title := .title }}
+      {{ $content := .content }}
+      {{ $date := .date }}
+
+      <article class="tumble-card tumble-{{ $type }}" data-type="{{ $type }}">
+        {{ if eq $type "link" }}
+          {{/* Extract domain from URL - clean any trailing whitespace */}}
+          {{ $url := $content | replaceRE `[\r\n\s]+` "" }}
+          {{ $domain := replaceRE `^https?://([^/]+).*` "$1" $url }}
+          <a href="{{ $url }}" target="_blank" rel="noopener" class="card-link">
+            <span class="card-title">{{ $title }}</span>
+          </a>
+          <div class="card-meta">
+            <span class="card-domain">{{ $domain }}</span>
+          </div>
+        {{ else if eq $type "quote" }}
+          <blockquote class="card-quote">
+            {{ $content | replaceRE `[\r\n]+` " " | strings.TrimSpace }}
+          </blockquote>
+          <div class="card-meta">
+            <cite class="card-author">— {{ $title }}</cite>
+          </div>
+        {{ else if eq $type "word" }}
+          <a href="https://www.merriam-webster.com/dictionary/{{ $title | urlize }}"
+             target="_blank" rel="noopener" class="card-word">
+            {{ $title }}
+          </a>
+          <p class="card-definition">{{ $content | replaceRE `[\r\n]+` " " | strings.TrimSpace }}</p>
+        {{ end }}
+
+        {{ with $date }}
+          {{ $parsed := time . }}
+          <time class="card-date" datetime="{{ $parsed.Format "2006-01-02" }}">
+            {{ $parsed.Format "Jan 2, 2006" }}
+          </time>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+/* Tumble-specific styles */
+.tumble-page {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.tumble-header {
+  text-align: center;
+  padding: 2rem 0;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.tumble-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  background: rgba(49, 51, 73, 0.05);
+  color: var(--text);
+}
+
+.dark .filter-btn {
+  background: rgba(232, 232, 232, 0.1);
+}
+
+.filter-btn:hover {
+  background: rgba(49, 51, 73, 0.1);
+}
+
+.dark .filter-btn:hover {
+  background: rgba(232, 232, 232, 0.15);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Masonry grid using CSS columns */
+.tumble-grid {
+  column-count: 1;
+  column-gap: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .tumble-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tumble-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tumble-grid {
+    column-count: 4;
+  }
+}
+
+/* Cards */
+.tumble-card {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(49, 51, 73, 0.03);
+  transition: all 0.2s;
+}
+
+.dark .tumble-card {
+  background: rgba(232, 232, 232, 0.05);
+}
+
+.tumble-card:hover {
+  background: rgba(49, 51, 73, 0.06);
+  transform: translateY(-2px);
+}
+
+.dark .tumble-card:hover {
+  background: rgba(232, 232, 232, 0.08);
+}
+
+/* Hidden state for filtering */
+.tumble-card.hidden {
+  display: none;
+}
+
+/* Link cards */
+.tumble-link .card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tumble-link .card-title {
+  font-weight: 600;
+  color: var(--secondary);
+  line-height: 1.4;
+  display: block;
+}
+
+.tumble-link .card-title:hover {
+  text-decoration: underline;
+}
+
+.tumble-link .card-domain {
+  font-size: 0.75rem;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+/* Quote cards */
+.tumble-quote {
+  border-left: 3px solid var(--primary);
+  background: rgba(57, 208, 133, 0.05);
+}
+
+.dark .tumble-quote {
+  background: rgba(57, 208, 133, 0.08);
+}
+
+.tumble-quote .card-quote {
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.tumble-quote .card-author {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Word cards */
+.tumble-word {
+  border-left: 3px solid var(--secondary);
+  background: rgba(219, 100, 67, 0.05);
+}
+
+.dark .tumble-word {
+  background: rgba(219, 100, 67, 0.08);
+}
+
+.tumble-word .card-word {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tumble-word .card-word:hover {
+  text-decoration: underline;
+}
+
+.tumble-word .card-definition {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Date */
+.card-date {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text);
+  opacity: 0.5;
+  margin-top: 0.75rem;
+}
+
+.card-meta {
+  margin-top: 0.5rem;
+}
+</style>
+
+<script>
+// Progressive enhancement: filtering with hash navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.tumble-card');
+
+  function applyFilter(filter) {
+    // Update active state
+    buttons.forEach(b => {
+      b.classList.toggle('active', b.dataset.filter === filter);
+    });
+
+    // Filter cards
+    cards.forEach(card => {
+      if (filter === 'all' || card.dataset.type === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  // Handle button clicks
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.dataset.filter;
+      applyFilter(filter);
+      // Update URL hash without scrolling
+      history.replaceState(null, '', filter === 'all' ? '#' : '#' + filter);
+    });
+  });
+
+  // Apply filter from hash on page load
+  function applyHashFilter() {
+    const hash = window.location.hash.slice(1).toLowerCase(); // Remove # and lowercase
+    if (!hash) return;
+
+    // Map both singular and plural forms
+    const filterMap = {
+      'link': 'link', 'links': 'link',
+      'quote': 'quote', 'quotes': 'quote',
+      'word': 'word', 'words': 'word',
+      'all': 'all'
+    };
+
+    const filter = filterMap[hash];
+    if (filter) {
+      applyFilter(filter);
+    }
+  }
+
+  applyHashFilter();
+
+  // Handle back/forward navigation
+  window.addEventListener('hashchange', applyHashFilter);
+});
+</script>
+{{ end }}

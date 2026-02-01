@@ -1,7 +1,7 @@
 ---
 title: Three Girls
 date: 2017-07-21T20:32:46.000Z
-path: /three-girls/
+url: /three-girls/
 type: life
 ---
 

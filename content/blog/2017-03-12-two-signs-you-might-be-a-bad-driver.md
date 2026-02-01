@@ -1,7 +1,7 @@
 ---
 title: Two Signs You Might Be A Bad Driver
 date: 2017-03-12T20:17:51.000Z
-path: /two-signs-you-might-be-a-bad-driver/
+url: /two-signs-you-might-be-a-bad-driver/
 ---
 
 There's a lot of bad drivers out there.  Most of them don't know it.  It's really hard to measure something like that.  Heck, there's a lot of obese people that somehow don't know it too, and that's easy to measure.  

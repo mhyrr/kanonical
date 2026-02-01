@@ -1,7 +1,7 @@
 ---
 title: Our Modern Lifestyle Makes Entrepreneurship Harder
 date: 2019-07-07T09:32:15.000Z
-path: /entrepreneurship-today/
+url: /entrepreneurship-today/
 ---
 
 > “The greatest threat to success is not failure but boredom." - James Clear

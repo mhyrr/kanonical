@@ -1,7 +1,7 @@
 ---
 title: Asymptote Towards Truth
 date: 2018-02-17T10:33:45.000Z
-path: /change-to-truth/
+url: /change-to-truth/
 type: life
 ---
 

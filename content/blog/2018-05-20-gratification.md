@@ -1,7 +1,7 @@
 ---
 title: The Most Important Skill You'll Ever Teach Your Kids
 date: 2018-05-20T10:47:31.000Z
-path: /most-important-skill/
+url: /most-important-skill/
 type: education
 ---
 

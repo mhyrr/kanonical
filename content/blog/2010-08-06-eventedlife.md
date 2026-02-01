@@ -1,7 +1,7 @@
 ---
 title: My Evented Life - Why Asynchronous I/O Does Not Work Everyday
 date: 2010-08-06T03:00:00.000Z
-path: /eventedlife/
+url: /eventedlife/
 ---
 
 Recently, I (re)read two articles that made clear to me the misappropriation of time in most people's lives.  The first was Paul Graham's ["Maker's Schedule, Manager's Schedule"](http://www.paulgraham.com/makersschedule.html).  The second was Alex Payne's rundown of his [life as a series of queues](http://al3x.net/2008/12/22/life-as-queues.html).

@@ -1,7 +1,7 @@
 ---
 title: Being Wrong for Leaders
 date: 2018-02-24T08:52:31.000Z
-path: /being-wrong-for-leaders/
+url: /being-wrong-for-leaders/
 type: life
 ---
 

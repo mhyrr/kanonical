@@ -1,7 +1,7 @@
 ---
 title: The Power of Cincinnatus
 date: 2020-09-22T08:28:00.000Z
-path: /cincinnatus/
+url: /cincinnatus/
 type: the world
 ---
 

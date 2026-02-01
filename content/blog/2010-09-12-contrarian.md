@@ -1,7 +1,7 @@
 ---
 title: Against the Grain
 date: 2010-09-12T03:00:00.000Z
-path: /contrarian/
+url: /contrarian/
 ---
 
 There is something fundamentally human about being contrary.  Lemmings.  Sheep.  The Roman Mob.  The "unwashed sea of humanity".  These aren't exactly inspiring phrases.  Instead, we look affectionately at the road less travelled, whether we take it or not.  There's some solid logic behind being contrarian.

@@ -1,7 +1,7 @@
 ---
 title: An Inspiration
 date: 2013-06-16T03:00:00.000Z
-path: /inspiration/
+url: /inspiration/
 type: writing
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: Bacon as a Health Food.
 date: 2017-06-15T01:39:14.000Z
-path: /bacon-as-a-health-food/
+url: /bacon-as-a-health-food/
 type: health
 ---
 
 So recently.. this happened:
 
-![Holy crap what a difference](img/2017me.png)
+![Holy crap what a difference](/img/2017me.png)
 
 And through this process, I've learned I have a lot to say.  And even more strangely, people sometimes listen<sup>[1](#friends)</sup>.  So I've decided to consolidate the advice that I've given in one semi-long diatribe about health, food, and our bodies.
 

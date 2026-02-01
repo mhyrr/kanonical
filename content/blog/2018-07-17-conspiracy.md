@@ -1,7 +1,7 @@
 ---
 title: Book Review - Conspiracy
 date: 2018-07-17T07:14:14.000Z
-path: /conspiracy/
+url: /conspiracy/
 type: books
 ---
 

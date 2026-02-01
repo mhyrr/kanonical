@@ -1,0 +1,39 @@
+baseURL = "https://www.kanonical.io/"
+languageCode = "en-us"
+title = "Kanonical"
+
+[params]
+  author = "Greg Olsen"
+  description = "Everything you never wanted to know about what I think and how I do."
+  github = "https://github.com/mhyrr"
+  twitter = "mhyrr"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    codeFences = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+  [[menu.main]]
+    name = "Books"
+    url = "/books/"
+    weight = 2
+  [[menu.main]]
+    name = "Tumble"
+    url = "/tumble/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4

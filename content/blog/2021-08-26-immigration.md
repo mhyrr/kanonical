@@ -1,7 +1,7 @@
 ---
 title: The Value of Immigration
 date: 2021-08-26T18:56:00.000Z
-path: /immigration/
+url: /immigration/
 type: the world
 ---
 

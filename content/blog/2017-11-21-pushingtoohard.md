@@ -1,7 +1,7 @@
 ---
 title: Pushing Too Hard
 date: 2017-11-21T16:12:46.000Z
-path: /pushing-too-hard/
+url: /pushing-too-hard/
 type: beach
 ---
 

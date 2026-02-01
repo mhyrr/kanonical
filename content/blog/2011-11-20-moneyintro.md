@@ -1,7 +1,7 @@
 ---
 title: Money - Intro
 date: 2011-11-20T05:00:00.000Z
-path: /moneyintro/
+url: /moneyintro/
 ---
 
 Money is a funny thing.  It can bring tremendous joy or pain.  It can set wild expectations, deliver an emotional punch, and make us feel better or worse about ourselves than we ought to.

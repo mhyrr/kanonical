@@ -1,7 +1,7 @@
 ---
 title: Curation and The Middle Path of Contrarianism
 date: 2020-12-28T09:11:00.000Z
-path: /curation-contrarian/
+url: /curation-contrarian/
 type: the world
 ---
 

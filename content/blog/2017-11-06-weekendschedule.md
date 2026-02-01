@@ -1,7 +1,7 @@
 ---
 title: Weekend Schedule
 date: 2017-11-06T08:32:46.000Z
-path: /weekend-schedule/
+url: /weekend-schedule/
 type: beach
 ---
 

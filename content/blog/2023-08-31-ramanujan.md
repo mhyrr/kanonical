@@ -1,7 +1,7 @@
 ---
 title: The Myth Of Ramanujan
 date: 2023-08-31T13:38:00.000Z
-path: /ramanujan/
+url: /ramanujan/
 ---
 
 Recently I did some reading about [Ed Witten](https://en.wikipedia.org/wiki/Edward_Witten).  Witten is notorious for being the very smartest person in rooms filled with very, very smart people: namely physicists and mathematicians.  Despite being a quantum physicist, he also won the Fields Medal in mathematics; the only physicist to do so..  He is the progenitor of M-theory, used to unify all of the different variations of string theory.  By any measure, he’s a creative intellect with the same kind of raw power as an Einstein or a Schrodinger.

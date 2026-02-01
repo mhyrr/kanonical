@@ -1,7 +1,7 @@
 ---
 title: Introverted Idea Thievery (Listening)
 date: 2018-06-02T10:03:31.000Z
-path: /idea-thievery/
+url: /idea-thievery/
 ---
 
 A friend calls me an idea thief.  Not that I'm literally stealing ideas, but that I tend to ingest more than I output, especially in real-time situations like conversations.  I pull all the information in and try to put it all together in my head before I ever share any output.

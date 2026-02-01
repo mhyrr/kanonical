@@ -1,7 +1,7 @@
 ---
 title: Pro-Imagination not Anti-Technology
 date: 2018-03-31T21:34:31.000Z
-path: /pro-imagination/
+url: /pro-imagination/
 type: education
 ---
 

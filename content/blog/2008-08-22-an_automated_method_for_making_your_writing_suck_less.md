@@ -1,7 +1,7 @@
 ---
 title: An Automated Method For Making Your Writing Suck Less
 date: 2008-08-22T03:00:00.000Z
-path: /an_automated_method_for_making_your_writing_suck_less/
+url: /an_automated_method_for_making_your_writing_suck_less/
 ---
 
 #### Inspiration

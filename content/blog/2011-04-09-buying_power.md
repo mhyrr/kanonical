@@ -1,7 +1,7 @@
 ---
 title: Buying Power
 date: 2011-04-09T03:00:00.000Z
-path: /buying_power/
+url: /buying_power/
 ---
 
 During the last election, I [wrote a little bit](http://www.infiniteabyss.org/2008/10/16/a_contrarian_view_why_should_i_vote.html) about why I didn't vote for a candidate.  Several people close to me were aghast at my decision.  I still stand by it.

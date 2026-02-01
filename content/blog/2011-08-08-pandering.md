@@ -1,7 +1,7 @@
 ---
 title: Pandering
 date: 2011-08-08T03:00:00.000Z
-path: /pandering/
+url: /pandering/
 ---
 
 Awhile back, I wrote about [some of my frustrations](http://www.infiniteabyss.org/2011/04/09/buying_power.html) with the way our political parties go back and forth across their perceived spectrums without actually saying much.  The conclusion - that very rich people can and do buy political power - could be construed as conspiracy-theoretic.  I think it's more of a sad sarcasm about the difference between most of the population and the people that play politics.

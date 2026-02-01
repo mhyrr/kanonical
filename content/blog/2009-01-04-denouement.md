@@ -1,7 +1,7 @@
 ---
 title: Denouement
 date: 2009-01-04T05:00:00.000Z
-path: /denouement/
+url: /denouement/
 ---
 
 Now it's New Year's.  It's been two months instead of one, and this little place has been empty of new content.  Even more drafts sit in situ waiting patiently for substance, but by and large this front has been quiet.  

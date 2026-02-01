@@ -1,7 +1,7 @@
 ---
 title: Evergreen News
 date: 2017-05-14T10:17:30.000Z
-path: /evergreen-news/
+url: /evergreen-news/
 ---
 
 I'm working right now to setup another blog, get a mailing list going, and build an audience.  I've never actually tried to build an audience before - this blog is for me and my thoughts and any additional reading by others is incidental - so being me, I've been putting in some research into how this actually works.

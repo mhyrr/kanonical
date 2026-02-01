@@ -1,7 +1,7 @@
 ---
 title: The Educational Value of Copywriting
 date: 2022-09-21T13:58:00.000Z
-path: /copywriting/
+url: /copywriting/
 type: education
 ---
 
@@ -14,7 +14,7 @@ It’s the writing-it-down part that has me fascinated.  I think it’s the most
 
 Earlier this year I took the excellent copywriting course [CopyThat](https://trycopythat.com/).  It was only ten days long and it was very simple.  Each day I copied - by hand and on paper - great pieces of copywriting and read through the analysis of why it was great.  This seemed lame at first, but I was a convert by day 3.  Writing it down forced me to slow down and think about what I was writing.  I thought a lot about word choice, sentence structure, overall theme and order.   It made me a better writer.
 
-![](img/copythat.jpg)
+![](/img/copythat.jpg)
 
 [Heart rate training](https://www.runnersworld.com/uk/training/beginners/a760176/heart-rate-training-the-basics/) is the same thing too.  Heart rate training focuses on lots of mileage in Zone 2, an easy and relaxed effort so that you can still hold a conversation and feel relatively comfortable.  Then every once in awhile you pound a high intensity day near your maximum -Zone 4.  The results are amazing.
 
