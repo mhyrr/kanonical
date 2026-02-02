@@ -1,8 +1,28 @@
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Node
 node_modules/
-public
-.gatsby-context.js
+
+# macOS
 .DS_Store
-.intermediate-representation/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+
+# Old Gatsby artifacts
 .cache/
-yarn.lock
-fetch-sheets
+.gatsby-context.js
+.intermediate-representation/
+
+# Local macOS binary (Linux binary IS tracked for Netlify)
+bin/fetch-sheets
