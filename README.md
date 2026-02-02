@@ -1,6 +1,6 @@
 # Kanonical
 
-Personal site of Greg Olsen. A life management interface built with Hugo.
+Personal site of Greg. A life management interface built with Hugo.
 
 ## Quick Start
 
