@@ -1,5 +1,5 @@
 [build]
-  command = "./bin/fetch-sheets-linux && hugo --minify"
+  command = "rm -rf public && ./bin/fetch-sheets-linux && hugo --minify"
   publish = "public"
 
 [build.environment]
@@ -9,10 +9,10 @@
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "./bin/fetch-sheets-linux && hugo --buildDrafts --buildFuture --minify"
+  command = "rm -rf public && ./bin/fetch-sheets-linux && hugo --buildDrafts --buildFuture --minify"
 
 [context.branch-deploy]
-  command = "./bin/fetch-sheets-linux && hugo --buildDrafts --buildFuture --minify"
+  command = "rm -rf public && ./bin/fetch-sheets-linux && hugo --buildDrafts --buildFuture --minify"
 
 [[redirects]]
   from = "/feed/"
