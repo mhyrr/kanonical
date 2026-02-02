@@ -14,14 +14,14 @@
         <h2 class="font-sans font-semibold text-xl group-hover:text-primary transition-colors">
           {{ .Title }}
         </h2>
-        <div class="text-sub text-sm mt-1 flex items-center gap-3 font-sans">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">
+        <div class="text-sm mt-1 flex items-center gap-3 font-sans">
+          <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-primary">
             {{ .Date.Format "Jan 2, 2006" }}
           </time>
-          <span class="text-primary">·</span>
-          <span>{{ .ReadingTime }} min</span>
+          <span class="text-sub">·</span>
+          <span class="text-secondary">{{ .ReadingTime }} min</span>
           {{ with .Params.type }}
-            <span class="text-primary">·</span>
+            <span class="text-sub">·</span>
             <span class="text-secondary capitalize">{{ . }}</span>
           {{ end }}
         </div>

@@ -3,6 +3,10 @@ title: About This Site
 url: /about/
 ---
 
+<figure class="float-right ml-6 mb-4 w-48 md:w-56">
+  <img src="/img/23-rvoff.jpg" alt="Greg and Kristin with the RV" class="rounded-lg shadow-md">
+</figure>
+
 ## Reach Out!
 
 I'd love to talk!  [Hit me up](mailto:hey@kanonical.io).
