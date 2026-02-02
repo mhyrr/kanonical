@@ -1,5 +1,5 @@
 [build]
-  command = "rm -rf public && ./bin/fetch-sheets-linux && hugo --minify && ls -la public/ && ls public/index.html || echo 'NO INDEX.HTML!'"
+  command = "rm -rf public && ./bin/fetch-sheets-linux && hugo --minify"
   publish = "public"
 
 [build.environment]
