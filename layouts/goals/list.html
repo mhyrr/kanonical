@@ -27,68 +27,110 @@
 {{ $goals := where site.RegularPages "Params.type" "goals" }}
 {{ $reviews := where site.RegularPages "Params.type" "review" }}
 
-<div class="grid md:grid-cols-2 gap-8">
-  {{/* Goals Column */}}
-  <div>
-    <h2 class="font-sans text-xl font-semibold mb-6 text-primary">Goals</h2>
-    <ul class="space-y-4">
-      {{ range $goals.ByDate.Reverse }}
-        <li class="card group">
-          <a href="{{ .RelPermalink }}" class="block">
-            <h3 class="font-sans font-semibold group-hover:text-primary transition-colors">
-              {{ .Title }}
-            </h3>
-            <time class="text-sm text-sub font-sans">
-              {{ .Date.Format "2006" }}
-            </time>
-            {{ with .Description }}
-              <p class="mt-2 text-sm text-sub line-clamp-3">{{ . }}</p>
-            {{ end }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
-  </div>
+{{/* Build a map of years to goals/reviews */}}
+{{ $years := slice }}
+{{ range $goals }}
+  {{ $year := .Date.Format "2006" }}
+  {{ if not (in $years $year) }}
+    {{ $years = $years | append $year }}
+  {{ end }}
+{{ end }}
+{{ range $reviews }}
+  {{/* Use year from title if available */}}
+  {{ $titleYear := findRE "^\\d{4}" .Title }}
+  {{ $year := .Date.Format "2006" }}
+  {{ if $titleYear }}
+    {{ $year = index $titleYear 0 }}
+  {{ end }}
+  {{ if not (in $years $year) }}
+    {{ $years = $years | append $year }}
+  {{ end }}
+{{ end }}
+{{/* Add current year if not present */}}
+{{ $currentYear := now.Format "2006" }}
+{{ if not (in $years $currentYear) }}
+  {{ $years = $years | append $currentYear }}
+{{ end }}
+{{ $years = sort $years "value" "desc" }}
 
-  {{/* Reviews Column */}}
-  <div>
-    <h2 class="font-sans text-xl font-semibold mb-6 text-secondary">Reviews</h2>
-    <ul class="space-y-4">
-      {{/* Add "Work in Progress" for current year */}}
-      {{ $currentYear := now.Format "2006" }}
-      {{ $hasCurrentYearReview := false }}
-      {{ range $reviews }}
-        {{ if eq (.Date.Format "2006") $currentYear }}
-          {{ $hasCurrentYearReview = true }}
+{{/* Column Headers */}}
+<div class="grid md:grid-cols-2 gap-8 mb-6">
+  <h2 class="font-sans text-xl font-semibold text-primary">Goals</h2>
+  <h2 class="font-sans text-xl font-semibold text-secondary">Reviews</h2>
+</div>
+
+{{/* Rows by year */}}
+<div class="space-y-4">
+  {{ range $year := $years }}
+    <div class="grid md:grid-cols-2 gap-8">
+      {{/* Goal for this year */}}
+      {{ $goalForYear := false }}
+      {{ range $goals }}
+        {{ if eq (.Date.Format "2006") $year }}
+          {{ $goalForYear = . }}
         {{ end }}
       {{ end }}
 
-      {{ if not $hasCurrentYearReview }}
-        <li class="card border-l-2 border-l-secondary">
-          <h3 class="font-sans font-semibold">Work In Progress</h3>
-          <time class="text-sm text-sub font-sans">{{ $currentYear }}</time>
-          <p class="mt-2 text-sm text-sub">
-            Hey, this year ain't over yet! Can't wait to see how it turns out!
-          </p>
-        </li>
-      {{ end }}
-
-      {{ range $reviews.ByDate.Reverse }}
-        <li class="card group">
-          <a href="{{ .RelPermalink }}" class="block">
-            <h3 class="font-sans font-semibold group-hover:text-secondary transition-colors">
-              {{ .Title }}
+      <div>
+        {{ if $goalForYear }}
+          <a href="{{ $goalForYear.RelPermalink }}" class="card group block h-full">
+            <h3 class="font-sans font-semibold group-hover:text-primary transition-colors">
+              {{ $goalForYear.Title }}
             </h3>
-            <time class="text-sm text-sub font-sans">
-              {{ .Date.Format "2006" }}
-            </time>
-            {{ with .Description }}
+            <time class="text-sm text-sub font-sans">{{ $goalForYear.Date.Format "2006" }}</time>
+            {{ with $goalForYear.Description }}
               <p class="mt-2 text-sm text-sub line-clamp-3">{{ . }}</p>
             {{ end }}
           </a>
-        </li>
+        {{ else }}
+          <div class="card h-full opacity-50">
+            <h3 class="font-sans font-semibold text-sub">—</h3>
+            <time class="text-sm text-sub font-sans">{{ $year }}</time>
+          </div>
+        {{ end }}
+      </div>
+
+      {{/* Review for this year - match by year in title since reviews are published in Jan of next year */}}
+      {{ $reviewForYear := false }}
+      {{ range $reviews }}
+        {{/* Extract year from title (e.g., "2024 Review" -> "2024") */}}
+        {{ $titleYear := findRE "^\\d{4}" .Title }}
+        {{ if $titleYear }}
+          {{ if eq (index $titleYear 0) $year }}
+            {{ $reviewForYear = . }}
+          {{ end }}
+        {{ else if eq (.Date.Format "2006") $year }}
+          {{ $reviewForYear = . }}
+        {{ end }}
       {{ end }}
-    </ul>
-  </div>
+
+      <div>
+        {{ if $reviewForYear }}
+          <a href="{{ $reviewForYear.RelPermalink }}" class="card card-secondary group block h-full">
+            <h3 class="font-sans font-semibold group-hover:text-secondary transition-colors">
+              {{ $reviewForYear.Title }}
+            </h3>
+            <time class="text-sm text-sub font-sans">{{ $reviewForYear.Date.Format "2006" }}</time>
+            {{ with $reviewForYear.Description }}
+              <p class="mt-2 text-sm text-sub line-clamp-3">{{ . }}</p>
+            {{ end }}
+          </a>
+        {{ else if eq $year $currentYear }}
+          <div class="card card-secondary h-full border-l-2 border-l-secondary">
+            <h3 class="font-sans font-semibold">Work In Progress</h3>
+            <time class="text-sm text-sub font-sans">{{ $year }}</time>
+            <p class="mt-2 text-sm text-sub">
+              Hey, this year ain't over yet! Can't wait to see how it turns out!
+            </p>
+          </div>
+        {{ else }}
+          <div class="card h-full opacity-50">
+            <h3 class="font-sans font-semibold text-sub">—</h3>
+            <time class="text-sm text-sub font-sans">{{ $year }}</time>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
 </div>
 {{ end }}
