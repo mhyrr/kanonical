@@ -296,7 +296,7 @@
      ============================ */
   .narrative-track {
     position: relative;
-    height: 320vh;
+    height: 340vh;
   }
 
   .narrative-stage {
@@ -330,6 +330,7 @@
     color: var(--color-text);
     opacity: 0.06;
     transition: opacity 0.5s ease;
+    cursor: pointer;
   }
 
   .narrative-item a {

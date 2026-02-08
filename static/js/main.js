@@ -91,9 +91,9 @@
   var track = document.getElementById('narrative-track');
   if (!track) return;
 
-  var TOTAL_STEPS = 13;
-  // Steps 3+4 both highlight text index 3 (cigars) with different photos
-  var STEP_TO_TEXT = [0, 1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  var TOTAL_STEPS = 15;
+  // Steps 0+1 = family (two photos), steps 3+4 = cigars (two photos)
+  var STEP_TO_TEXT = [0, 0, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   var list = document.getElementById('narrative-list');
   var textCol = track.querySelector('.narrative-text-col');
@@ -150,6 +150,38 @@
         photos[j].classList.remove('active');
       }
     }
+  }
+
+  // Build reverse map: text index → first step that shows it
+  var TEXT_TO_STEP = {};
+  for (var s = 0; s < TOTAL_STEPS; s++) {
+    var ti = STEP_TO_TEXT[s];
+    if (TEXT_TO_STEP[ti] === undefined) TEXT_TO_STEP[ti] = s;
+  }
+
+  // Click a dimmed item to scroll it into focus
+  for (var k = 0; k < items.length; k++) {
+    (function(idx) {
+      items[idx].addEventListener('click', function(e) {
+        // Don't intercept link clicks
+        if (e.target.closest('a')) return;
+
+        // Already active? Nothing to do
+        var activeTextIndex = STEP_TO_TEXT[currentStep] || 0;
+        if (idx === activeTextIndex) return;
+
+        var targetStep = TEXT_TO_STEP[idx];
+        if (targetStep === undefined) return;
+
+        var maxScroll = track.offsetHeight - window.innerHeight;
+        if (maxScroll <= 0) return;
+
+        var progress = targetStep / (TOTAL_STEPS - 1);
+        var targetY = track.offsetTop + progress * maxScroll;
+
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      });
+    })(k);
   }
 
   window.addEventListener('scroll', function() {

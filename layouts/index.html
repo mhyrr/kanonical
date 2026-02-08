@@ -21,7 +21,7 @@
 </section>
 
 {{/* Narrative Intro Statement */}}
-<p class="text-center text-sub italic mt-16 mb-0">Credentials are sooo boring. I like this list better.</p>
+<p class="text-center text-sub italic mt-16 md:mb-0 mb-8">Credentials are sooo boring. I like this list better.</p>
 
 {{/* Narrative Scroll - Desktop */}}
 <div class="narrative-track hidden md:block" id="narrative-track">
@@ -29,14 +29,15 @@
     <div class="narrative-text-col">
       <div class="narrative-list" id="narrative-list">
         <div class="narrative-item">3 amazing kids and 1 <a href="https://www.justadream.co">amazing wife</a></div>
-        <div class="narrative-item">Still goes to church</div>
         <div class="narrative-item">Splits time between Maryland and Delaware</div>
         <div class="narrative-item">Will choose a cigar and whiskey with friends over nearly any other activity</div>
+        <div class="narrative-item">Still goes to church</div>
         <div class="narrative-item">45 and feels like a wide-eyed little kid</div>
         <div class="narrative-item">Like <a href="https://www.goodreads.com/quotes/1896-when-i-have-a-little-money-i-buy-books-and">Erasmus</a>, would choose books first over food and clothes</div>
         <div class="narrative-item">Wrote software or led software teams for a living for 20 years</div>
         <div class="narrative-item"><a href="/rving/">Drove across the country</a> in a rented RV. <a href="/rv-trip-2/">Twice!</a></div>
         <div class="narrative-item">Runs a lot</div>
+        <div class="narrative-item">Lifts heavy things</div>
         <div class="narrative-item">Raced cars and taught others how to do it</div>
         <div class="narrative-item">Helped build a company from 2 to 250+</div>
         <div class="narrative-item">Loves building things out of (wood | words | code | ideas)</div>
@@ -45,18 +46,20 @@
     <div class="narrative-photo-col">
       <div class="narrative-photo-frame">
         <img class="narrative-photo active" src="/img/narr_family.jpg" alt="Family at the Tetons" />
-        <img class="narrative-photo" src="/img/narr_church.jpg" alt="Church procession" />
+        <img class="narrative-photo" src="/img/narr_wife.jpeg" alt="Date night" />
         <img class="narrative-photo" src="/img/narr_beach.jpg" alt="Delaware beach" />
         <img class="narrative-photo" src="/img/narr_fire.jpg" alt="Campfire at dusk" />
         <img class="narrative-photo" src="/img/narr_cigar.jpg" alt="Cigar night" />
+        <img class="narrative-photo" src="/img/narr_church.jpg" alt="Church procession" />
         <img class="narrative-photo" src="/img/narr_adventure.jpg" alt="Mountaintop adventure" />
         <img class="narrative-photo" src="/img/narr_library.jpg" alt="Home library" />
         <img class="narrative-photo" src="/img/narr_comp.jpeg" alt="Behind the laptop" />
         <img class="narrative-photo" src="/img/narr_rv.jpeg" alt="RV in the Badlands" />
         <img class="narrative-photo" src="/img/narr_run.jpg" alt="Fitness" />
+        <img class="narrative-photo" src="/img/narr_strong1.jpeg" alt="Lifting" />
         <img class="narrative-photo" src="/img/narr_car.jpeg" alt="Autocross racing" style="object-position: 70% center;" />
         <img class="narrative-photo" src="/img/narr_company.jpg" alt="Building a company" />
-        <img class="narrative-photo" src="/img/narr_wood.jpg" alt="Woodworking" />
+        <img class="narrative-photo" src="/img/narr_wood.jpeg" alt="Woodworking" />
       </div>
     </div>
   </div>
@@ -66,24 +69,25 @@
 <div class="md:hidden space-y-10 mb-16 max-w-lg mx-auto">
   {{ $mobileItems := slice
     (dict "text" "3 amazing kids and 1 amazing wife" "img" "/img/narr_family.jpg" "alt" "Family")
-    (dict "text" "Still goes to church" "img" "/img/narr_church.jpg" "alt" "Church")
     (dict "text" "Splits time between Maryland and Delaware" "img" "/img/narr_beach.jpg" "alt" "Beach")
     (dict "text" "Will choose a cigar and whiskey with friends over nearly any other activity" "img" "/img/narr_fire.jpg" "alt" "Fire pit")
+    (dict "text" "Still goes to church" "img" "/img/narr_church.jpg" "alt" "Church")
     (dict "text" "45 and feels like a wide-eyed little kid" "img" "/img/narr_adventure.jpg" "alt" "Adventure")
     (dict "text" "Like Erasmus, would choose books first over food and clothes" "img" "/img/narr_library.jpg" "alt" "Library")
     (dict "text" "Wrote software or led software teams for a living for 20 years" "img" "/img/narr_comp.jpeg" "alt" "Computer")
     (dict "text" "Drove across the country in a rented RV. Twice!" "img" "/img/narr_rv.jpeg" "alt" "RV trip")
     (dict "text" "Runs a lot" "img" "/img/narr_run.jpg" "alt" "Running")
+    (dict "text" "Lifts heavy things" "img" "/img/narr_strong1.jpeg" "alt" "Lifting")
     (dict "text" "Raced cars and taught others how to do it" "img" "/img/narr_car.jpeg" "alt" "Racing")
     (dict "text" "Helped build a company from 2 to 250+" "img" "/img/narr_company.jpg" "alt" "Company")
-    (dict "text" "Loves building things out of (wood | words | code | ideas)" "img" "/img/narr_wood.jpg" "alt" "Building")
+    (dict "text" "Loves building things out of (wood | words | code | ideas)" "img" "/img/narr_wood.jpeg" "alt" "Building")
   }}
   {{ range $mobileItems }}
   <div class="narrative-mobile-item">
     <div class="aspect-[3/4] rounded-lg overflow-hidden mb-3">
       <img src="{{ .img }}" alt="{{ .alt }}" class="w-full h-full object-cover" loading="lazy" />
     </div>
-    <p class="text-lg font-serif">{{ .text }}</p>
+    <p class="text-lg font-serif font-bold text-center mt-3">{{ .text }}</p>
   </div>
   {{ end }}
 </div>
