@@ -85,6 +85,107 @@
 })();
 
 // =====================
+// Narrative Scroll
+// =====================
+(function() {
+  var track = document.getElementById('narrative-track');
+  if (!track) return;
+
+  var TOTAL_STEPS = 13;
+  // Steps 3+4 both highlight text index 3 (cigars) with different photos
+  var STEP_TO_TEXT = [0, 1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+  var list = document.getElementById('narrative-list');
+  var textCol = track.querySelector('.narrative-text-col');
+  var items = list.querySelectorAll('.narrative-item');
+  var photos = track.querySelectorAll('.narrative-photo');
+
+  var currentStep = -1;
+  var ticking = false;
+
+  function update() {
+    var rect = track.getBoundingClientRect();
+    var scrolled = Math.max(0, -rect.top);
+    var maxScroll = track.offsetHeight - window.innerHeight;
+    if (maxScroll <= 0) return;
+
+    var progress = Math.min(1, scrolled / maxScroll);
+    var step = Math.min(TOTAL_STEPS - 1, Math.round(progress * (TOTAL_STEPS - 1)));
+
+    if (step === currentStep) return;
+    currentStep = step;
+
+    var textIndex = STEP_TO_TEXT[step];
+
+    // Update text opacity
+    for (var i = 0; i < items.length; i++) {
+      var dist = Math.abs(i - textIndex);
+      if (dist === 0) {
+        items[i].style.opacity = '1';
+      } else if (dist === 1) {
+        items[i].style.opacity = '0.25';
+      } else if (dist === 2) {
+        items[i].style.opacity = '0.12';
+      } else {
+        items[i].style.opacity = '0.06';
+      }
+    }
+
+    // Align active text item with photo center
+    var activeItem = items[textIndex];
+    var photoFrame = track.querySelector('.narrative-photo-frame');
+    var stageRect = track.querySelector('.narrative-stage');
+    var photoTop = photoFrame.offsetTop;
+    var photoCenter = photoTop + photoFrame.offsetHeight / 2;
+    var listTop = textCol.offsetTop;
+    var itemCenter = activeItem.offsetTop + activeItem.offsetHeight / 2;
+    var offset = (photoCenter - listTop) - itemCenter;
+    list.style.transform = 'translateY(' + offset + 'px)';
+
+    // Update photos
+    for (var j = 0; j < photos.length; j++) {
+      if (j === step) {
+        photos[j].classList.add('active');
+      } else {
+        photos[j].classList.remove('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+})();
+
+// =====================
+// Mobile Narrative Fade-in
+// =====================
+(function() {
+  var mobileItems = document.querySelectorAll('.narrative-mobile-item');
+  if (!mobileItems.length) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  mobileItems.forEach(function(item) {
+    observer.observe(item);
+  });
+})();
+
+// =====================
 // Page Transitions
 // =====================
 (function() {
